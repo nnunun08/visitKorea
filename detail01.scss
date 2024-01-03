@@ -54,6 +54,7 @@
         justify-content: center;
         min-height: 407px;
         margin-bottom: 40px;
+        margin-top: 85px;
         .left {
             width: 50%;
             box-sizing: border-box;
@@ -86,13 +87,94 @@
             }
         }
     }
+    .division-grey {
+        min-height: 0;
+        margin-top: 0;
+        .left {
+            background-color: #DEDEDE;
+            padding: 23px 32px;
+            .caption {
+                font-size: 20px;
+                font-weight: 300;
+                margin-bottom: 12px;
+            }
+            .line {
+                width: 66px;
+                height: 1px;
+                background-color: #000;
+                margin-bottom: 20px;
+            }
+            .h3 {
+                font-size: 24px;
+                font-weight: bold;
+                margin-bottom: 42px;
+            }
+            p {
+                font-size: 16px;
+                line-height: 175%;
+            }
+        }
+        .right {
+            background-color: #DEDEDE;
+            padding: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    .division-border {
+        margin-top: 30px;
+        .left {
+            padding: 17px 32px 27px;
+            .caption {
+                font-size: 20px;
+                font-weight: 300;
+                margin-bottom: 12px;
+            }
+            .line {
+                width: 66px;
+                height: 1px;
+                background-color: #000;
+                margin-bottom: 20px;
+            }
+            .h3 {
+                font-size: 24px;
+                font-weight: bold;
+                margin-bottom: 42px;
+                span {
+                    font-weight: 400;
+                }
+            }
+            p {
+                font-size: 16px;
+                line-height: 175%;
+            }
+            b {
+                font-weight: bold;
+            }
+        }
+        .right {
+            background-color: transparent;
+            padding: 0;
+            padding-right: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                width: 100%;
+            }
+        }
+    }
 
     .tableWrap {
         table {
             width: 100%;
             border-collapse: collapse;
             font-size: 13px;
-            margin-bottom: 95px;
+            margin-bottom: 45px;
             td {
                 vertical-align: top;
                 border: 1px solid #BBBBBB;
@@ -160,6 +242,10 @@
         .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
             background: rgba(240, 81, 77, 0.10);
         }
+        .division-border {
+            border: 3px solid #FF7062;
+            box-sizing: border-box;
+        }
     }
 }
 
@@ -174,5 +260,8 @@
             width: 100%;
             border-radius: 0;
         }
+    }
+    .page-content .division-border .right {
+        padding: 17px 32px;
     }
 }

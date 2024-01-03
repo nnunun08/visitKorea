@@ -53,6 +53,7 @@
   justify-content: center;
   min-height: 407px;
   margin-bottom: 40px;
+  margin-top: 85px;
 }
 .page-content .division .left {
   width: 50%;
@@ -86,11 +87,92 @@
   font-size: 16px;
   line-height: 140%;
 }
+.page-content .division-grey {
+  min-height: 0;
+  margin-top: 0;
+}
+.page-content .division-grey .left {
+  background-color: #DEDEDE;
+  padding: 23px 32px;
+}
+.page-content .division-grey .left .caption {
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 12px;
+}
+.page-content .division-grey .left .line {
+  width: 66px;
+  height: 1px;
+  background-color: #000;
+  margin-bottom: 20px;
+}
+.page-content .division-grey .left .h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 42px;
+}
+.page-content .division-grey .left p {
+  font-size: 16px;
+  line-height: 175%;
+}
+.page-content .division-grey .right {
+  background-color: #DEDEDE;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page-content .division-grey .right img {
+  width: 100%;
+}
+.page-content .division-border {
+  margin-top: 30px;
+}
+.page-content .division-border .left {
+  padding: 17px 32px 27px;
+}
+.page-content .division-border .left .caption {
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 12px;
+}
+.page-content .division-border .left .line {
+  width: 66px;
+  height: 1px;
+  background-color: #000;
+  margin-bottom: 20px;
+}
+.page-content .division-border .left .h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 42px;
+}
+.page-content .division-border .left .h3 span {
+  font-weight: 400;
+}
+.page-content .division-border .left p {
+  font-size: 16px;
+  line-height: 175%;
+}
+.page-content .division-border .left b {
+  font-weight: bold;
+}
+.page-content .division-border .right {
+  background-color: transparent;
+  padding: 0;
+  padding-right: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page-content .division-border .right img {
+  width: 100%;
+}
 .page-content .tableWrap table {
   width: 100%;
   border-collapse: collapse;
   font-size: 13px;
-  margin-bottom: 95px;
+  margin-bottom: 45px;
 }
 .page-content .tableWrap table td {
   vertical-align: top;
@@ -154,6 +236,10 @@
 .page-content.theme-red .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
   background: rgba(240, 81, 77, 0.1);
 }
+.page-content.theme-red .division-border {
+  border: 3px solid #FF7062;
+  box-sizing: border-box;
+}
 
 @media screen and (max-width: 767px) {
   .page-content .division {
@@ -166,5 +252,8 @@
   .page-content .division .right {
     width: 100%;
     border-radius: 0;
+  }
+  .page-content .division-border .right {
+    padding: 17px 32px;
   }
 }/*# sourceMappingURL=detail01.css.map */
