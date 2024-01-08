@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./common.css">
+    <link rel="stylesheet" href="./main.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://mattstow.com/experiment/responsive-image-maps/jquery.rwdImageMaps.min.js"></script>
+    <!-- <script src="./jquery.rwdImageMaps.min.js"></script> -->
+</head>
+<body>
+
+    <div class="mapArea">
+        <div class="inner">
+            <div class="left">
+                <div class="dropdw" onclick="dropToggle()">
+                    <div class="tab-in">SEOUL</div><i class="dr-down">arrow</i>
+                    <ul style="display: none;">
+                        <li class="on"><span>Seoul</span></li>
+                        <li class=""><span>Incheon</span></li>
+                        <li class=""><span>Gyeonggi-do</span></li>
+                        <li class=""><span>Gangwon-do</span></li>
+                        <li class=""><span>Busan</span></li>
+                        <li class=""><span>Chungcheongbuk-do</span></li>
+                        <li class=""><span>Chungcheongnam-do</span></li>
+                        <li><span>Daegu</span></li>
+                        <!--li><span>Daejeon</span></li-->
+                        <li><span>Gwangju</span></li>
+                        <li class=""><span>Gyeongsangbuk-do</span></li>
+                        <li class=""><span>Gyeongsangnam-do</span></li>
+                        <li><span>Jeju-do</span></li>
+                        <li class=""><span>Jeollabuk-do</span></li>
+                        <li class=""><span>Jeollanam-do</span></li>
+                        <!--li><span>Sejong</span></li-->
+                        <li class=""><span>Ulsan</span></li>
+                    </ul>
+                </div>
+                <script>
+                    const dropdw = document.querySelector('.dropdw')
+                    function dropToggle() {
+                        dropdw.classList.toggle('ac')
+                    }
+                    const mapList = document.querySelectorAll('.mapArea .inner .left .dropdw.ac ul li')
+
+                    mapList.forEach(e => {
+                        e.addEventListener('click', () => {
+                            dropToggle()
+                        })
+                    });
+                </script>
+
+                <ul class="mapImg">
+                    <li><img src="./img/main/eng_map_seoul.png" usemap="#visitKoreaMap"></li>
+                </ul>
+                
+                <map name="visitKoreaMap">
+                    <area alt="naver" title="naver" href="#" coords="295,44,279,72,253,79,171,82,176,102,206,102,225,127,219,150,242,170,225,212,330,229,352,225,376,251,387,281,404,271,399,228,356,147,321,105" shape="poly">
+                    <!-- <area alt="daum" title="daum" href="#" coords="166,84,145,115,136,115,130,136,117,141,124,153,124,171,137,187,137,202,126,193,128,219,140,219,158,244,170,235,198,242,224,212,242,170,218,150,224,128,207,102,176,102" shape="poly"> -->
+                </map>
+            </div>
+            <div class="right">
+                <ul>
+                    <li><img src="./img/main/map_seoul.png" alt="seoul"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        $(document).ready(function(e) {
+            $('img[usemap]').rwdImageMaps();
+        });
+        window.addEventListener("resize", function(e) {
+            setTimeout((e) => {
+                console.log('resize')
+                $('img[usemap]').rwdImageMaps(); 
+            }, 500);
+        })
+    </script>
+</body>
+</html>
