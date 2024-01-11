@@ -18,55 +18,106 @@
                 <div class="dropdw" onclick="dropToggle()">
                     <div class="tab-in">SEOUL</div><i class="dr-down">arrow</i>
                     <ul style="display: none;">
-                        <li class="on"><span>Seoul</span></li>
-                        <li class=""><span>Incheon</span></li>
-                        <li class=""><span>Gyeonggi-do</span></li>
-                        <li class=""><span>Gangwon-do</span></li>
-                        <li class=""><span>Busan</span></li>
-                        <li class=""><span>Chungcheongbuk-do</span></li>
-                        <li class=""><span>Chungcheongnam-do</span></li>
+                        <li><span>Seoul</span></li>
+                        <li><span>Incheon</span></li>
+                        <li><span>Gyeonggi-do</span></li>
+                        <li><span>Gangwon-do</span></li>
+                        <li><span>Daejeon</span></li>
+                        <li><span>Sejong</span></li>
+                        <li><span>Busan</span></li>
+                        <li><span>Chungcheongbuk-do</span></li>
+                        <li><span>Chungcheongnam-do</span></li>
                         <li><span>Daegu</span></li>
-                        <!--li><span>Daejeon</span></li-->
                         <li><span>Gwangju</span></li>
-                        <li class=""><span>Gyeongsangbuk-do</span></li>
-                        <li class=""><span>Gyeongsangnam-do</span></li>
+                        <li><span>Gyeongsangbuk-do</span></li>
+                        <li><span>Gyeongsangnam-do</span></li>
                         <li><span>Jeju-do</span></li>
-                        <li class=""><span>Jeollabuk-do</span></li>
-                        <li class=""><span>Jeollanam-do</span></li>
-                        <!--li><span>Sejong</span></li-->
-                        <li class=""><span>Ulsan</span></li>
+                        <li><span>Jeollabuk-do</span></li>
+                        <li><span>Jeollanam-do</span></li>
+                        <li><span>Ulsan</span></li>
                     </ul>
                 </div>
-                <script>
-                    const dropdw = document.querySelector('.dropdw')
-                    function dropToggle() {
-                        dropdw.classList.toggle('ac')
-                    }
-                    const mapList = document.querySelectorAll('.mapArea .inner .left .dropdw.ac ul li')
-
-                    mapList.forEach(e => {
-                        e.addEventListener('click', () => {
-                            dropToggle()
-                        })
-                    });
-                </script>
 
                 <ul class="mapImg">
-                    <li><img src="./img/main/map/map_en_1.png" usemap="#visitKoreaMap"></li>
+                    <li name="Seoul" class="ac"><img src="./img/main/map/map_en_4.png" alt="Seoul"></li>
+                    <li name="Gangwon-do"><img src="./img/main/map/map_en_1.png" alt="Gangwon" usemap="#visitKoreaMap"></li>
+                    <li name="Gyeonggi-do"><img src="./img/main/map/map_en_2.png" alt="Gyeonggi"></li>
+                    <li name="Incheon"><img src="./img/main/map/map_en_3.png" alt="Incheon"></li>
+                    <li name="Chungcheongbuk-do"><img src="./img/main/map/map_en_5.png" alt="Chungcheongbuk"></li>
+                    <li name="Chungcheongnam-do"><img src="./img/main/map/map_en_6.png" alt="Chungcheongnam"></li>
+                    <li name="Daejeon"><img src="./img/main/map/map_en_7.png" alt="Daejeon"></li>
+                    <li name="Sejong"><img src="./img/main/map/map_en_8.png" alt="Sejong"></li>
+                    <li name="Gyeongsangbuk-do"><img src="./img/main/map/map_en_9.png" alt="Gyeongsangbuk"></li>
+                    <li name="Daegu"><img src="./img/main/map/map_en_10.png" alt="Daegu"></li>
+                    <li name="Gyeongsangnam-do"><img src="./img/main/map/map_en_11.png" alt="Gyeongsangnam"></li>
+                    <li name="Ulsan"><img src="./img/main/map/map_en_12.png" alt="Ulsan"></li>
+                    <li name="Busan"><img src="./img/main/map/map_en_13.png" alt="Busan"></li>
+                    <li name="Jeollabuk-do"><img src="./img/main/map/map_en_14.png" alt="Jeollabuk"></li>
+                    <li name="Jeollanam-do"><img src="./img/main/map/map_en_15.png" alt="Jeollanam"></li>
+                    <li name="Gwangju"><img src="./img/main/map/map_en_16.png" alt="Gwangju"></li>
+                    <li name="Jeju-do"><img src="./img/main/map/map_en_17.png" alt="Jeju"></li>
                 </ul>
-                
+
                 <map name="visitKoreaMap">
                     <area alt="naver" title="naver" href="#" coords="295,44,279,72,253,79,171,82,176,102,206,102,225,127,219,150,242,170,225,212,330,229,352,225,376,251,387,281,404,271,399,228,356,147,321,105" shape="poly">
-                    <!-- <area alt="daum" title="daum" href="#" coords="166,84,145,115,136,115,130,136,117,141,124,153,124,171,137,187,137,202,126,193,128,219,140,219,158,244,170,235,198,242,224,212,242,170,218,150,224,128,207,102,176,102" shape="poly"> -->
                 </map>
+
             </div>
             <div class="right">
-                <ul>
-                    <li><img src="./img/main/local/en_seoul.png" alt="seoul"></li>
+                <div class="regionName">
+                    SEOUL Map
+                </div>
+                <ul class="localImg">
+                    <li name="Seoul" class="ac"><img src="./img/main/local/en_seoul.png" alt="Seoul"></li>
+                    <li name="Gangwon-do"><img src="./img/main/local/en_ganwon.png" alt="Gangwon" usemap="#visitKoreaMap"></li>
+                    <li name="Gyeonggi-do"><img src="./img/main/local/en_gyeonggi.png" alt="Gyeonggi"></li>
+                    <li name="Incheon"><img src="./img/main/local/en_inchen.png" alt="Incheon"></li>
+                    <li name="Chungcheongbuk-do"><img src="./img/main/local/en_choongbook.png" alt="Chungcheongbuk"></li>
+                    <li name="Chungcheongnam-do"><img src="./img/main/local/en_choongnam.png" alt="Chungcheongnam"></li>
+                    <li name="Daejeon"><img src="./img/main/local/en_daegoo.png" alt="Daejeon"></li>
+                    <li name="Sejong"><img src="./img/main/local/en_sejong.png" alt="Sejong"></li>
+                    <li name="Gyeongsangbuk-do"><img src="./img/main/local/en_gyengbook.png" alt="Gyeongsangbuk"></li>
+                    <li name="Daegu"><img src="./img/main/local/en_daegoo.png" alt="Daegu"></li>
+                    <li name="Gyeongsangnam-do"><img src="./img/main/local/en_gyengnam.png" alt="Gyeongsangnam"></li>
+                    <li name="Ulsan"><img src="./img/main/local/en_ulsan.png" alt="Ulsan"></li>
+                    <li name="Busan"><img src="./img/main/local/en_busan.png" alt="Busan"></li>
+                    <li name="Jeollabuk-do"><img src="./img/main/local/en_junbook.png" alt="Jeollabuk"></li>
+                    <li name="Jeollanam-do"><img src="./img/main/local/en_junnam.png" alt="Jeollanam"></li>
+                    <li name="Gwangju"><img src="./img/main/local/en_gwangjoo.png" alt="Gwangju"></li>
+                    <li name="Jeju-do"><img src="./img/main/local/en_jeju.png" alt="Jeju"></li>
                 </ul>
             </div>
         </div>
     </div>
+
+    <script>
+        const mapArea = document.querySelector('.mapArea')
+        const dropdw = document.querySelector('.dropdw')
+        const mapList = document.querySelectorAll('.dropdw li')
+        const regionName = document.querySelector('.regionName')
+        const tabIn = document.querySelector('.dropdw .tab-in')
+
+        function dropToggle() {
+            dropdw.classList.toggle('ac')
+        }
+
+        mapList.forEach(e => {
+            e.addEventListener('click', () => {
+                let region = e.childNodes[0].innerText
+                let upper_region = region.toUpperCase();
+                let mapImg = document.querySelector(`.mapImg [name="${region}"]`)
+                let localImg = document.querySelector(`.localImg [name="${region}"]`)
+                tabIn.innerText = region
+                regionName.innerText = upper_region + ' MAP'
+                document.querySelectorAll('.mapImg li').forEach(i => i.className = '')
+                document.querySelectorAll('.localImg li').forEach(i => i.className = '')
+                mapImg.classList.add('ac')
+                localImg.classList.add('ac')
+                mapArea.className = ''
+                mapArea.className = `mapArea ${region}`
+            })
+        });
+    </script>
     
     <script>
         $(document).ready(function(e) {

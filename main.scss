@@ -4,12 +4,14 @@
 }
 
 .mapArea {
-    margin-top: 77px;
-    margin-bottom: 52px;
+    margin-top: 80px;
+    margin-bottom: 80px;
     background-color: #f5f5f5;
     .inner {
         display: flex;
         justify-content: space-between;
+        gap: 20px;
+        max-width: 1200px;
         .left {
             position: relative;
             .dropdw {
@@ -76,9 +78,100 @@
             }
         }
         .right {
-            width: 684px;
+            position: relative;
+            .regionName {
+                position: absolute;
+                top: 30px;
+                left: 30px;
+                font-size: 32px;
+                font-weight: bold;
+                color: #1A1311;
+            }
+            li {
+                display: none;
+                border-radius: 20px;
+                overflow: hidden;
+                &.ac {
+                    display: block;
+                }
+                &[name="Seoul"] {
+                    background-color: #fff;
+                }
+                &[name="Gangwon"] {
+                    background-color: #fff;
+                }
+                &[name="Gyeonggi-do"] {
+                    background-color: #fff;
+                }
+                &[name="Incheon"] {
+                    background-color: #fff;
+                }
+                &[name="Chungcheongbuk-do"] {
+                    background-color: #fff;
+                }
+                &[name="Chungcheongnam-do"] {
+                    background-color: #fff;
+                }
+                &[name="Daejeon"] {
+                    background-color: #fff;
+                }
+                &[name="Sejong"] {
+                    background-color: #fff;
+                }
+                &[name="Gyeongsangbuk-do"] {
+                    background-color: #fff;
+                }
+                &[name="Daegu"] {
+                    background-color: #fff;
+                }
+                &[name="Gyeongsangnam-do"] {
+                    background-color: #fff;
+                }
+                &[name="Ulsan"] {
+                    background-color: #fff;
+                }
+                &[name="Busan"] {
+                    background-color: #fff;
+                }
+                &[name="Jeollabuk-do"] {
+                    background-color: #fff;
+                }
+                &[name="Jeollanam-do"] {
+                    background-color: #fff;
+                }
+                &[name="Gwangju"] {
+                    background-color: #fff;
+                }
+                &[name="Jeju"] {
+                    background-color: #fff;
+                }
+            }
             img {
                 width: 100%;
+            }
+        }
+        .left,
+        .right {
+            flex: 1 0 auto;
+            width: calc((100% - 20px) / 2);
+        }
+        
+        .mapImg {
+            position: relative;
+            li {
+                display: none;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%) scale(0.9);
+                &.ac {
+                    display: block;
+                }
+            }
+
+            img {
+                height: 600px;
+                margin: 0 auto;
             }
         }
     }
