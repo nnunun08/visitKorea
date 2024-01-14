@@ -155,6 +155,9 @@
   flex: 1 0 auto;
   width: calc((100% - 20px) / 2);
 }
+.mapArea .inner .imgMap {
+  transform: scale(0.8);
+}
 .mapArea .inner .mapImg {
   position: relative;
 }
@@ -162,14 +165,12 @@
   display: none;
   position: absolute;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%) scale(0.9);
+  left: 0;
 }
 .mapArea .inner .mapImg li.ac {
   display: block;
 }
 .mapArea .inner .mapImg img {
-  height: 600px;
   margin: 0 auto;
 }
 

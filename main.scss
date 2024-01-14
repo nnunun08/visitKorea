@@ -155,22 +155,25 @@
             flex: 1 0 auto;
             width: calc((100% - 20px) / 2);
         }
-        
+        .imgMap {
+            transform: scale(0.8);
+        }
         .mapImg {
             position: relative;
             li {
                 display: none;
                 position: absolute;
                 top: 0;
-                left: 50%;
-                transform: translateX(-50%) scale(0.9);
+                // left: 50%;
+                // transform: translateX(-50%) scale(0.9);
+                left: 0;
                 &.ac {
                     display: block;
                 }
             }
 
             img {
-                height: 600px;
+                // height: 600px;
                 margin: 0 auto;
             }
         }

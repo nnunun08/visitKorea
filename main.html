@@ -16,7 +16,7 @@
         <div class="inner">
             <div class="left">
                 <div class="dropdw" onclick="dropToggle()">
-                    <div class="tab-in">SEOUL</div><i class="dr-down">arrow</i>
+                    <div class="tab-in">Seoul</div><i class="dr-down">arrow</i>
                     <ul style="display: none;">
                         <li><span>Seoul</span></li>
                         <li><span>Incheon</span></li>
@@ -38,29 +38,35 @@
                     </ul>
                 </div>
 
-                <ul class="mapImg">
-                    <li name="Seoul" class="ac"><img src="./img/main/map/map_en_4.png" alt="Seoul"></li>
-                    <li name="Gangwon-do"><img src="./img/main/map/map_en_1.png" alt="Gangwon" usemap="#visitKoreaMap"></li>
-                    <li name="Gyeonggi-do"><img src="./img/main/map/map_en_2.png" alt="Gyeonggi"></li>
-                    <li name="Incheon"><img src="./img/main/map/map_en_3.png" alt="Incheon"></li>
-                    <li name="Chungcheongbuk-do"><img src="./img/main/map/map_en_5.png" alt="Chungcheongbuk"></li>
-                    <li name="Chungcheongnam-do"><img src="./img/main/map/map_en_6.png" alt="Chungcheongnam"></li>
-                    <li name="Daejeon"><img src="./img/main/map/map_en_7.png" alt="Daejeon"></li>
-                    <li name="Sejong"><img src="./img/main/map/map_en_8.png" alt="Sejong"></li>
-                    <li name="Gyeongsangbuk-do"><img src="./img/main/map/map_en_9.png" alt="Gyeongsangbuk"></li>
-                    <li name="Daegu"><img src="./img/main/map/map_en_10.png" alt="Daegu"></li>
-                    <li name="Gyeongsangnam-do"><img src="./img/main/map/map_en_11.png" alt="Gyeongsangnam"></li>
-                    <li name="Ulsan"><img src="./img/main/map/map_en_12.png" alt="Ulsan"></li>
-                    <li name="Busan"><img src="./img/main/map/map_en_13.png" alt="Busan"></li>
-                    <li name="Jeollabuk-do"><img src="./img/main/map/map_en_14.png" alt="Jeollabuk"></li>
-                    <li name="Jeollanam-do"><img src="./img/main/map/map_en_15.png" alt="Jeollanam"></li>
-                    <li name="Gwangju"><img src="./img/main/map/map_en_16.png" alt="Gwangju"></li>
-                    <li name="Jeju-do"><img src="./img/main/map/map_en_17.png" alt="Jeju"></li>
-                </ul>
+                <div class="imgMap">
+                    <ul class="mapImg">
+                        <li name="Seoul" class="ac"><img src="./img/main/map/map_en_4.png" alt="Seoul" usemap="#visitKoreaMap"></li>
+                        <li name="Gangwon-do"><img src="./img/main/map/map_en_1.png" alt="Gangwon" usemap="#visitKoreaMap"></li>
+                        <li name="Gyeonggi-do"><img src="./img/main/map/map_en_2.png" alt="Gyeonggi" usemap="#visitKoreaMap"></li>
+                        <li name="Incheon"><img src="./img/main/map/map_en_3.png" alt="Incheon" usemap="#visitKoreaMap"></li>
+                        <li name="Chungcheongbuk-do"><img src="./img/main/map/map_en_5.png" alt="Chungcheongbuk" usemap="#visitKoreaMap"></li>
+                        <li name="Chungcheongnam-do"><img src="./img/main/map/map_en_6.png" alt="Chungcheongnam" usemap="#visitKoreaMap"></li>
+                        <li name="Daejeon"><img src="./img/main/map/map_en_7.png" alt="Daejeon" usemap="#visitKoreaMap"></li>
+                        <li name="Sejong"><img src="./img/main/map/map_en_8.png" alt="Sejong" usemap="#visitKoreaMap"></li>
+                        <li name="Gyeongsangbuk-do"><img src="./img/main/map/map_en_9.png" alt="Gyeongsangbuk" usemap="#visitKoreaMap"></li>
+                        <li name="Daegu"><img src="./img/main/map/map_en_10.png" alt="Daegu" usemap="#visitKoreaMap"></li>
+                        <li name="Gyeongsangnam-do"><img src="./img/main/map/map_en_11.png" alt="Gyeongsangnam" usemap="#visitKoreaMap"></li>
+                        <li name="Ulsan"><img src="./img/main/map/map_en_12.png" alt="Ulsan" usemap="#visitKoreaMap"></li>
+                        <li name="Busan"><img src="./img/main/map/map_en_13.png" alt="Busan" usemap="#visitKoreaMap"></li>
+                        <li name="Jeollabuk-do"><img src="./img/main/map/map_en_14.png" alt="Jeollabuk" usemap="#visitKoreaMap"></li>
+                        <li name="Jeollanam-do"><img src="./img/main/map/map_en_15.png" alt="Jeollanam" usemap="#visitKoreaMap"></li>
+                        <li name="Gwangju"><img src="./img/main/map/map_en_16.png" alt="Gwangju" usemap="#visitKoreaMap"></li>
+                        <li name="Jeju-do"><img src="./img/main/map/map_en_17.png" alt="Jeju" usemap="#visitKoreaMap"></li>
+                    </ul>
+                    <map id="visitKoreaMap">
+                        <area target="" alt="" title="" onclick="mapChange('Seoul')" href="javascript:void()" coords="184,150,169,164,155,166,162,189,171,193,178,188,187,191,198,186,203,179,198,173,188,168,192,159" shape="poly">
+                        <area target="" alt="" title="" onclick="mapChange('Gangwon')" href="javascript:void()" coords="352,6,343,41,315,55,226,51,187,62,194,82,263,118,251,134,251,154,287,173,278,231,296,238,308,224,351,231,403,258,474,252,483,236,482,219,442,151,387,79,361,8" shape="poly">
+                        <area target="" alt="" title="" onclick="mapChange('Gyeonggi')" href="javascript:void()" coords="180,65,155,103,136,111,134,141,119,144,123,172,144,166,150,189,140,202,134,221,121,218,117,231,130,229,138,244,152,240,145,258,167,276,198,268,214,278,262,248,275,225,286,176,251,159,249,134,260,116,220,78,194,84" shape="poly">
+                        <area target="" alt="" title="" onclick="mapChange('Incheon')" href="javascript:void()" coords="124,173,144,167,149,188,140,201,129,203,124,190" shape="poly">
+                        <area target="" alt="" title="" onclick="mapChange('Chungcheongbuk')" href="javascript:void()" coords="276,227,263,249,215,281,232,301,223,305,216,324,229,349,243,357,249,353,249,360,244,372,244,382,256,393,263,415,280,420,291,420,304,411,309,393,316,390,312,380,296,376,289,371,296,339,283,326,304,307,317,309,316,294,343,285,353,295,366,291,367,274,383,263,386,255,396,250,308,224,303,237,284,242" shape="poly">
+                    </map>
+                </div>
 
-                <map name="visitKoreaMap">
-                    <area alt="naver" title="naver" href="#" coords="295,44,279,72,253,79,171,82,176,102,206,102,225,127,219,150,242,170,225,212,330,229,352,225,376,251,387,281,404,271,399,228,356,147,321,105" shape="poly">
-                </map>
 
             </div>
             <div class="right">
@@ -103,11 +109,11 @@
 
         mapList.forEach(e => {
             e.addEventListener('click', () => {
-                let region = e.childNodes[0].innerText
+                let region = e.childNodes[0].innerText;
                 let upper_region = region.toUpperCase();
                 let mapImg = document.querySelector(`.mapImg [name="${region}"]`)
                 let localImg = document.querySelector(`.localImg [name="${region}"]`)
-                tabIn.innerText = region
+                tabIn.innerText = region;
                 regionName.innerText = upper_region + ' MAP'
                 document.querySelectorAll('.mapImg li').forEach(i => i.className = '')
                 document.querySelectorAll('.localImg li').forEach(i => i.className = '')
@@ -117,6 +123,21 @@
                 mapArea.className = `mapArea ${region}`
             })
         });
+
+        const mapChange = (e) => {
+            let region = e
+            let upper_region = region.toUpperCase();
+            let mapImg = document.querySelector(`.mapImg [name="${region}"]`)
+            let localImg = document.querySelector(`.localImg [name="${region}"]`)
+            tabIn.innerText = region;
+            regionName.innerText = upper_region + ' MAP'
+            document.querySelectorAll('.mapImg li').forEach(i => i.className = '')
+            document.querySelectorAll('.localImg li').forEach(i => i.className = '')
+            mapImg.classList.add('ac')
+            localImg.classList.add('ac')
+            mapArea.className = ''
+            mapArea.className = `mapArea ${region}`
+        }
     </script>
     
     <script>
