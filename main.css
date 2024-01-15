@@ -97,55 +97,55 @@
   display: block;
 }
 .mapArea .inner .right li[name=Seoul] {
-  background-color: #fff;
+  background-color: #F4AA96;
 }
-.mapArea .inner .right li[name=Gangwon] {
-  background-color: #fff;
+.mapArea .inner .right li[name=Gangwon-do] {
+  background-color: #8C95B7;
 }
 .mapArea .inner .right li[name=Gyeonggi-do] {
-  background-color: #fff;
+  background-color: #F4AA96;
 }
 .mapArea .inner .right li[name=Incheon] {
-  background-color: #fff;
+  background-color: #F4AA96;
 }
 .mapArea .inner .right li[name=Chungcheongbuk-do] {
-  background-color: #fff;
+  background-color: #ADC6A9;
 }
 .mapArea .inner .right li[name=Chungcheongnam-do] {
-  background-color: #fff;
+  background-color: #ADC6A9;
 }
 .mapArea .inner .right li[name=Daejeon] {
-  background-color: #fff;
+  background-color: #ADC6A9;
 }
 .mapArea .inner .right li[name=Sejong] {
-  background-color: #fff;
+  background-color: #ADC6A9;
 }
 .mapArea .inner .right li[name=Gyeongsangbuk-do] {
-  background-color: #fff;
+  background-color: #F8DD90;
 }
 .mapArea .inner .right li[name=Daegu] {
-  background-color: #fff;
+  background-color: #F8DD90;
 }
 .mapArea .inner .right li[name=Gyeongsangnam-do] {
-  background-color: #fff;
+  background-color: #F8DD90;
 }
 .mapArea .inner .right li[name=Ulsan] {
-  background-color: #fff;
+  background-color: #F8DD90;
 }
 .mapArea .inner .right li[name=Busan] {
-  background-color: #fff;
+  background-color: #F8DD90;
 }
 .mapArea .inner .right li[name=Jeollabuk-do] {
-  background-color: #fff;
+  background-color: #F9D2D6;
 }
 .mapArea .inner .right li[name=Jeollanam-do] {
-  background-color: #fff;
+  background-color: #F9D2D6;
 }
 .mapArea .inner .right li[name=Gwangju] {
-  background-color: #fff;
+  background-color: #F9D2D6;
 }
-.mapArea .inner .right li[name=Jeju] {
-  background-color: #fff;
+.mapArea .inner .right li[name=Jeju-do] {
+  background-color: #8C95B7;
 }
 .mapArea .inner .right img {
   width: 100%;
@@ -156,10 +156,7 @@
   width: calc((100% - 20px) / 2);
 }
 .mapArea .inner .imgMap {
-  transform: scale(0.8);
-}
-.mapArea .inner .mapImg {
-  position: relative;
+  transform: scale(0.5);
 }
 .mapArea .inner .mapImg li {
   display: none;
