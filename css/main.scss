@@ -156,17 +156,18 @@
             width: calc((100% - 20px) / 2);
         }
         .imgMap {
-            transform: scale(0.5);
+            // transform: scale(0.65);
+            margin-top: 18px;
         }
         .mapImg {
             // position: relative;
             li {
                 display: none;
                 position: absolute;
-                top: 0;
-                // left: 50%;
-                // transform: translateX(-50%) scale(0.9);
-                left: 0;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) scale(0.65);
+                // left: 0;
                 &.ac {
                     display: block;
                 }
@@ -188,6 +189,13 @@
         flex-direction: column;
         align-items: center;
     }
+    .mapArea {
+        margin-top: 40px;
+    }
+    .mapArea .inner .left {
+        width: 100%;
+        height: 610px;
+    }
     .mapArea .inner .left .dropdw {
         width: 100%;
     }
@@ -198,5 +206,9 @@
             margin: 0 auto;
             display: block;
         }
+        .regionName {
+            font-size: 21px;
+        }
     }
+    
 }

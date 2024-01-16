@@ -4,673 +4,1195 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./common.css">
-    <link rel="stylesheet" href="./detail.css">
 </head>
 <body>
     
-    <div class="common-inner">
-        <div class="template__type1__section">
-
-            <!-- evoke : 템플릿 시작 -->
-            <section class="page-content theme-navy">
-
-                <!-- comp -->
-                <div class="visualImg">
-                    <img src="./img/detail01/img01.jpg" alt="...">
-                    <div class="imgName">
-                        동해 해돋이 명소로 꼽히는 추암 촛대바위
+    <contents>
+        <style>
+            /* common.css */
+            @charset "UTF-8";
+            @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap');
+            html, body, div, span, applet, object, iframe,
+            h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+            a, abbr, acronym, address, big, cite, code,
+            del, dfn, em, img, ins, kbd, q, s, samp,
+            small, strike, strong, sub, sup, tt, var,
+            b, u, i, center,
+            dl, dt, dd, ol, ul, li,
+            fieldset, form, label, legend,
+            table, caption, tbody, tfoot, thead, tr, th, td,
+            article, aside, canvas, details, embed,
+            figure, figcaption, footer, header, hgroup,
+            menu, nav, output, ruby, section, summary,
+            time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+            }
+            /* HTML5 display-role reset for older browsers */
+            article, aside, details, figcaption, figure,
+            footer, header, hgroup, menu, nav, section {
+            display: block;
+            }
+            body {
+            line-height: 1;
+            }
+            ol, ul {
+            list-style: none;
+            }
+            blockquote, q {
+            quotes: none;
+            }
+            blockquote:before, blockquote:after,
+            q:before, q:after {
+            content: "";
+            content: none;
+            }
+            table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            }
+            Select {
+            font-family: inherit; /* 폰트 상속 */
+            background: url(../img/btn-drop-arrow.svg) no-repeat 98% 50%;
+            /* 네이티브 화살표를 커스텀 화살표로 대체 */
+            -webkit-appearance: none;
+            /* 네이티브 외형 감추기 */
+            -moz-appearance: none;
+            appearance: none;
+            }
+            Select::-ms-expand {
+            display: none; /* 화살표 없애기 for IE10, 11*/
+            }
+            input {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            -webkit-border-radius: 0;
+            border-radius: 0;
+            }
+            /* IE10 이상에서 input box 에 추가된 지우기 버튼 제거 */
+            input::-ms-clear {
+            display: none;
+            }
+            /* input type number 에서 화살표 제거 */
+            input[type=number]::-webkit-inner-spin-button,
+            input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            }
+            body {
+                background: #f5f5f5;
+            }
+            .common-inner {
+                padding: 0 30px;
+                max-width: 1300px;
+                box-sizing: border-box;
+                margin: 0 auto;
+                margin-top: 40px;
+                padding: 0 40px;
+                padding-bottom: 120px;
+            }
+            .template__type1__section {
+                padding: 30px;
+                border: 1px solid #e0e0e0;
+                background: #fff;
+                border-radius: 18px;
+            }
+            @media (max-width: 1200px) {
+                .common-inner {
+                    padding: 0 20px;
+                }
+            }
+        
+            .page-content {
+            color: #000;
+            letter-spacing: -0.5px;
+            line-height: 140%;
+            font-family: "NotoSans", "Noto Sans KR", "Verdana", "Arial", "Georgia", "Malgun Gothic", "Dotum", sans-serif;
+            }
+            .page-content .fullSize {
+            margin-left: -30px;
+            margin-right: -30px;
+            }
+            .page-content .visualImg {
+            max-width: 926px;
+            margin: 0 auto;
+            }
+            .page-content .visualImg img {
+            width: 100%;
+            }
+            .page-content .visualImg .imgName {
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%; /* 140% */
+            letter-spacing: -0.5px;
+            text-align: center;
+            margin-bottom: 40px;
+            }
+            .page-content .pageDesc {
+            margin-bottom: 80px;
+            }
+            .page-content .pageDesc li + li {
+            margin-top: 30px;
+            }
+            .page-content .pageDesc p {
+            color: #000;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 172%; /* 172.308% */
+            letter-spacing: -0.5px;
+            }
+            .page-content .pageDesc p::before {
+            content: "";
+            display: inline-block;
+            width: 5px;
+            height: 5px;
+            border-radius: 5px;
+            margin-bottom: 3px;
+            background-color: #000;
+            }
+            .page-content .division {
+            display: flex;
+            align-items: stretch;
+            justify-content: center;
+            min-height: 407px;
+            margin-bottom: 40px;
+            margin-top: 85px;
+            }
+            .page-content .division.divisionAuto {
+            min-height: auto;
+            }
+            .page-content .division.divisionAuto .left,
+            .page-content .division.divisionAuto .right {
+            padding: 35px 6.5%;
+            }
+            .page-content .division .h2 {
+            font-size: 36px;
+            font-weight: bold;
+            line-height: 100%;
+            margin-bottom: 27px;
+            }
+            .page-content .division .left {
+            width: 50%;
+            box-sizing: border-box;
+            border-radius: 0 45px 45px 0;
+            overflow: hidden;
+            }
+            .page-content .division .left img {
+            width: 100%;
+            height: 100%;
+            -o-object-fit: cover;
+                object-fit: cover;
+            display: block;
+            }
+            .page-content .division .left.bgFill {
+            display: flex;
+            align-items: center;
+            padding: 6.5%;
+            color: #fff;
+            }
+            .page-content .division .left .h2 {
+            margin: 0;
+            }
+            .page-content .division .right {
+            background-color: #000;
+            box-sizing: border-box;
+            border-radius: 45px 0 0 45px;
+            width: 50%;
+            color: #fff;
+            padding: 100px 80px;
+            padding: 6.5%;
+            }
+            .page-content .division .right p {
+            font-size: 16px;
+            line-height: 140%;
+            }
+            .page-content .division-grey {
+            min-height: 0;
+            margin-top: 0;
+            }
+            .page-content .division-grey .left {
+            background-color: #DEDEDE;
+            padding: 23px 32px;
+            }
+            .page-content .division-grey .left .caption {
+            font-size: 20px;
+            font-weight: 300;
+            margin-bottom: 12px;
+            }
+            .page-content .division-grey .left .line {
+            width: 66px;
+            height: 1px;
+            background-color: #000;
+            margin-bottom: 20px;
+            }
+            .page-content .division-grey .left .h3 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 42px;
+            }
+            .page-content .division-grey .left p {
+            font-size: 16px;
+            line-height: 175%;
+            }
+            .page-content .division-grey .right {
+            background-color: #DEDEDE;
+            padding: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            }
+            .page-content .division-grey .right img {
+            width: 100%;
+            }
+            .page-content .division-border {
+            margin-top: 30px;
+            }
+            .page-content .division-border .left {
+            padding: 17px 32px 27px;
+            flex: 1 0 0;
+            }
+            .page-content .division-border .left .caption {
+            font-size: 20px;
+            font-weight: 300;
+            margin-bottom: 12px;
+            }
+            .page-content .division-border .left .line {
+            width: 66px;
+            height: 1px;
+            background-color: #000;
+            margin-bottom: 20px;
+            }
+            .page-content .division-border .left .h3 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 42px;
+            }
+            .page-content .division-border .left .h3 span {
+            font-weight: 400;
+            }
+            .page-content .division-border .left p {
+            font-size: 16px;
+            line-height: 175%;
+            }
+            .page-content .division-border .left b {
+            font-weight: bold;
+            }
+            .page-content .division-border .right {
+            flex: 0 0 auto;
+            background-color: transparent;
+            padding: 0;
+            padding-right: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            }
+            .page-content .division-border .right img {
+            width: 100%;
+            }
+            .page-content .division-border-2 .left {
+            width: 83%;
+            padding-right: 5.8%;
+            }
+            .page-content .division-border-2 .right {
+            width: 35%;
+            max-width: 414px;
+            }
+            .page-content .division-border-2 .right img {
+            max-height: 375px;
+            -o-object-fit: contain;
+                object-fit: contain;
+            }
+            .page-content .tableWrap table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+            margin-bottom: 45px;
+            }
+            .page-content .tableWrap table td {
+            vertical-align: top;
+            border: 1px solid #BBBBBB;
+            box-sizing: border-box;
+            }
+            .page-content .tableWrap table td:nth-child(1) {
+            border-left: 0;
+            vertical-align: middle;
+            }
+            .page-content .tableWrap table td:nth-child(1) img {
+            width: 100%;
+            min-width: 50px;
+            aspect-ratio: 1/1;
+            -o-object-fit: contain;
+                object-fit: contain;
+            }
+            .page-content .tableWrap table td:nth-child(2) {
+            border-right: 0;
+            padding: 40px 70px;
+            padding: 3.3% 5.8%;
+            padding: 40px 5.8%;
+            }
+            .page-content .tableWrap table .h3 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 28px;
+            }
+            .page-content .tableWrap table .h3::before {
+            display: inline-block;
+            color: #000;
+            margin-right: 6px;
+            }
+            .page-content .tableWrap table tr:nth-child(1) .h3::before {
+            content: "①";
+            }
+            .page-content .tableWrap table tr:nth-child(2) .h3::before {
+            content: "②";
+            }
+            .page-content .tableWrap table tr:nth-child(3) .h3::before {
+            content: "③";
+            }
+            .page-content .tableWrap table tr:nth-child(4) .h3::before {
+            content: "④";
+            }
+            .page-content .tableWrap table p {
+            font-size: 13px;
+            margin-bottom: 7px;
+            }
+            .page-content .tableWrap table li {
+            font-size: 13px;
+            line-height: 100%;
+            padding-left: 22px;
+            position: relative;
+            word-break: break-all;
+            }
+            .page-content .tableWrap table li::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 15px;
+            height: 15px;
+            display: inline-block;
+            }
+            .page-content .tableWrap table li.location::before {
+            background-image: url(./img/common/ic_location.svg);
+            }
+            .page-content .tableWrap table li.tel::before {
+            background-image: url(./img/common/ic_tel.svg);
+            }
+            .page-content .tableWrap table li.web::before {
+            background-image: url(./img/common/ic_web.svg);
+            }
+            .page-content .tableWrap table li.price::before {
+            background-image: url(./img/common/ic_price.svg);
+            }
+            .page-content .tableWrap table li.cart::before {
+            background-image: url(./img/common/ic_cart.svg);
+            }
+            .page-content .tableWrap table li.noti::before {
+            background-image: url(./img/common/ic_noti.svg);
+            }
+            .page-content .tableWrap table li + li {
+            margin-top: 7px;
+            }
+            .page-content.theme-red .color {
+            color: #F0514D !important;
+            }
+            .page-content.theme-red .bgFill {
+            background-color: #F0514D !important;
+            }
+            .page-content.theme-red .pageDesc p::before {
+            background-color: #F0514D;
+            }
+            .page-content.theme-red .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+            background: rgba(240, 81, 77, 0.1);
+            }
+            .page-content.theme-red .division-border {
+            border: 3px solid #F0514D;
+            box-sizing: border-box;
+            }
+            .page-content.theme-navy .color {
+            color: #036A9B !important;
+            }
+            .page-content.theme-navy .bgFill {
+            background-color: #036A9B !important;
+            }
+            .page-content.theme-navy .pageDesc p::before {
+            background-color: #036A9B;
+            }
+            .page-content.theme-navy .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+            background: rgba(3, 106, 155, 0.1);
+            }
+            .page-content.theme-navy .division-border {
+            border: 3px solid #036A9B;
+            box-sizing: border-box;
+            }
+            .page-content.theme-yellow .color {
+            color: #EDB51E !important;
+            }
+            .page-content.theme-yellow .bgFill {
+            background-color: #EDB51E !important;
+            }
+            .page-content.theme-yellow .pageDesc p::before {
+            background-color: #EDB51E;
+            }
+            .page-content.theme-yellow .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+            background: rgba(237, 181, 30, 0.15);
+            }
+            .page-content.theme-yellow .division-border {
+            border: 3px solid #EDB51E;
+            box-sizing: border-box;
+            }
+            .page-content.theme-green .color {
+            color: #4C9667 !important;
+            }
+            .page-content.theme-green .bgFill {
+            background-color: #4C9667 !important;
+            }
+            .page-content.theme-green .pageDesc p::before {
+            background-color: #4C9667;
+            }
+            .page-content.theme-green .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+            background: rgba(76, 150, 103, 0.1);
+            }
+            .page-content.theme-green .division-border {
+            border: 3px solid #4C9667;
+            box-sizing: border-box;
+            }
+            .page-content.theme-pink .color {
+            color: #F598A6 !important;
+            }
+            .page-content.theme-pink .bgFill {
+            background-color: #F598A6 !important;
+            }
+            .page-content.theme-pink .pageDesc p::before {
+            background-color: #F598A6;
+            }
+            .page-content.theme-pink .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+            background: rgba(245, 152, 166, 0.15);
+            }
+            .page-content.theme-pink .division-border {
+            border: 3px solid #F598A6;
+            box-sizing: border-box;
+            }
+            .page-content.theme-blue .color {
+            color: #2587C8 !important;
+            }
+            .page-content.theme-blue .bgFill {
+            background-color: #2587C8 !important;
+            }
+            .page-content.theme-blue .pageDesc p::before {
+            background-color: #2587C8;
+            }
+            .page-content.theme-blue .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+            background: rgba(37, 135, 200, 0.15);
+            }
+            .page-content.theme-blue .division-border {
+            border: 3px solid #2587C8;
+            box-sizing: border-box;
+            }
+            @media screen and (max-width: 767px) {
+            .page-content .division {
+                flex-direction: column;
+            }
+            .page-content .division .left {
+                width: 100%;
+                border-radius: 0;
+            }
+            .page-content .division .right {
+                width: 100%;
+                border-radius: 0;
+            }
+            .page-content .division-border-2 .left {
+                width: 100%;
+                padding: 17px 32px 27px;
+            }
+            .page-content .division-border .left {
+                flex: 1 0 auto;
+            }
+            .page-content .division-border .right {
+                padding: 17px 32px;
+            }
+            .page-content .division-border-2 .right {
+                max-width: 100%;
+            }
+            .page-content .division-border-2 .right img {
+                width: 100%;
+                -o-object-fit: contain;
+                object-fit: contain;
+                max-height: 240px;
+            }
+            .page-content .tableWrap {
+                display: block;
+            }
+            .page-content .tableWrap table {
+                display: block;
+            }
+            .page-content .tableWrap table colgroup {
+                display: none;
+            }
+            .page-content .tableWrap table td {
+                display: block;
+                width: 100%;
+                border: 1px solid #BBBBBB !important;
+                margin-top: -1px;
+            }
+            .page-content .tableWrap table td:nth-child(1) {
+                display: flex;
+            }
+            .page-content .tableWrap table td:nth-child(1) img {
+                max-height: 350px;
+                width: 50%;
+                margin: 0 auto;
+            }
+            }
+        </style>
+        <div class="common-inner">
+            <div class="template__type1__section">
+                <!-- evoke : 템플릿 시작 -->
+                <section class="page-content theme-navy">
+                    <!-- comp -->
+                    <div class="visualImg">
+                        <img src="./img/detail/img01.jpg" alt="...">
+                        <div class="imgName">
+                            동해 해돋이 명소로 꼽히는 추암 촛대바위
+                        </div>
                     </div>
-                </div>
-
-                <!-- comp -->
-                <div class="pageDesc">
-                    <ul>
-                        <li>
+                    <!-- comp -->
+                    <div class="pageDesc">
+                        <ul>
+                            <li>
+                                <p>
+                                    바다와 산, 강 가운데 하나만 아름다워도 여행지로 충분할 테지만, 강원도에선 이 모두가 흡족할 만큼 어여쁘다. 수평선까지 시원하게 펼쳐지는 동해 풍경과 백두대간이 그려내는 놀라운 절경, 그리고 산맥 사이를 굽이치는 강의 장관이 여행객을 맞이한다. 고우면서 장엄한 경치를 집약한 듯 수려한 강원도가 한국 여행의 백미를 드러내는 것이다.<br>
+                                    강원도 여행은 강릉에서 시작해보자. 주문진, 경포 같은 해변이 근사해 바닷가를 돌아다니는 것만으로 뿌듯하다. 강릉솔향수목원이나 대관령자연휴양림에서는 가슴이 툭 트이는 숲의 정경을 만끽할 수 있다. 안목해변 커피거리에 늘어선 카페에서 진한 커피 향을 음미하면서 강릉 여행을 멋스럽게 마무리한다.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    다음은 동해다. 이름부터 동해이니만큼 바다가 건네는 풍경이 대단하다. 추암동 앞바다에 솟은 추암촛대바위는 인생 사진을 찍기에 모자람이 없고, 벽화 마을로 유명한 논골담길과 그 인근 스카이워크 체험 시설인 도째비골 스카이밸리는 고공에서 바다를 내려다보는 짜릿한 경험을 선사한다. 바다를 감상했으니 내륙으로 향하자. 정선의 가리왕산 케이블카와 양떼목장이 혼자든 가족과 함께하든 누구에게나 잊지 못할 순간을 보장한다. 한국 사람이면 모르는 이가 없을 정도로 이름난 횡성 한우와 나물밥을 맛보는 시간 또한 강원도 여행의 백미로 꼽힐 만하다.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    횡성에서 가까운 원주는 한지의 고장이다. 좋은 닥나무가 군락을 이뤄 한지의 품질이 빼어나기 때문이다. 원주한지테마파크에서 원주 한지의 역사와 관련 제품을 만나는 재미가 남다르다. 원주에서 북쪽으로 얼마쯤 가면 춘천이 나온다. 가슴 벅찬 소양강 풍정, 남이섬의 고운 자연 속에서 여행의 감성을 북돋운다. 이외에도 속초, 고성, 영월 등 여행지가 수두룩한 강원도에서 다채로운 경험을 이어간다.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- comp -->
+                    <div class="division fullSize">
+                        <div class="left">
+                            <img src="./img/detail/img02.jpg" alt="...">
+                        </div>
+                        <div class="right bgFill">
+                            <div class="h2">강릉 한과</div>
                             <p>
-                                바다와 산, 강 가운데 하나만 아름다워도 여행지로 충분할 테지만, 강원도에선 이 모두가 흡족할 만큼 어여쁘다. 수평선까지 시원하게 펼쳐지는 동해 풍경과 백두대간이 그려내는 놀라운 절경, 그리고 산맥 사이를 굽이치는 강의 장관이 여행객을 맞이한다. 고우면서 장엄한 경치를 집약한 듯 수려한 강원도가 한국 여행의 백미를 드러내는 것이다.<br>
-                                강원도 여행은 강릉에서 시작해보자. 주문진, 경포 같은 해변이 근사해 바닷가를 돌아다니는 것만으로 뿌듯하다. 강릉솔향수목원이나 대관령자연휴양림에서는 가슴이 툭 트이는 숲의 정경을 만끽할 수 있다. 안목해변 커피거리에 늘어선 카페에서 진한 커피 향을 음미하면서 강릉 여행을 멋스럽게 마무리한다.
+                                먹거리 선물로 만족도가 높은 한과는 한국 전통 과자다. 과거에 왕족과 백성 가릴 것 없이 모두가 선호했는데, 백성의 경우에는 회갑연 같은 행사에서만 맛보는 귀한 식품이었다. 그중 강릉 한과는 찹쌀을 첨가물 없이 발효한 뒤 반죽해 만든다. 오래 보관해도 상하지 않고 신선한 맛을 유지하는 한국의 별미다.
                             </p>
-                        </li>
-                        <li>
+                        </div>
+                    </div>
+        
+                    <div class="tableWrap fullSize">
+                        <table>
+                            <colgroup><col width="380px"><col width="840px"></colgroup>
+                            <tr>
+                                <td><img src="./img/detail/tb_img01.png" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">선미한과 모둠 한과</div>
+                                    <p>
+                                        한국에서 개발한 찰벼 품종인 백옥찰을 20일 이상 자연 발효해 만드는 ‘선미한과’의 선물 세트다. 1939년에 개업한 최씨방앗간에서 이어진 역사, 50년 된 무쇠 가마솥을 쓰는 등 고집스레 간직해 온 제조 방식이 한과에 웅숭깊은 맛을 부여한다. 백년초, 찹쌀, 포도, 통쌀, 치자, 찹쌀과즐 등 여섯 가지 한과가 하나하나 주옥같다.
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            강원도 강릉시 사천면 한과마을길 22-39(선미한과)
+                                        </li>
+                                        <li class="tel">
+                                            033-647-1805
+                                        </li>
+                                        <li class="web">
+                                            www.sunmi-hangwa.com
+                                        </li>
+                                        <li class="price">
+                                            청송강릉모둠 4만원 대
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="./img/detail/tb_img02.png" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">명일한과 꼬마강정</div>
+                                    <p>
+                                        한과의 변신이 이채롭다. ‘명일한과’는 4대째 명맥을 이은 강릉 한과 가게로, 중소벤처기업부가 장인 정신을 인정해 백년소공인에 지정할 만큼 명망이 높다. 다양한 제품 중 꼬마강정은 남녀노소 모두 즐기기에 맞춤인 제품이다. 입에 쏙 들어가는 크기라 먹기 편하고 담백하니 고소한 맛은 중독성이 대단하다.
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            강원도 강릉시 사천면 한과마을길 55-7(명일한과)
+                                        </li>
+                                        <li class="tel">
+                                            033-642-0101
+                                        </li>
+                                        <li class="web">
+                                            www.hangamall.com
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!-- comp -->
+                    <div class="division division-border division-border-2 fullSize">
+                        <div class="left">
+                            <div class="caption">Mini Interview</div>
+                            <div class="line"></div>
+                            <div class="h3">선미한과 <span>김지혜 실장</span></div>
                             <p>
-                                다음은 동해다. 이름부터 동해이니만큼 바다가 건네는 풍경이 대단하다. 추암동 앞바다에 솟은 추암촛대바위는 인생 사진을 찍기에 모자람이 없고, 벽화 마을로 유명한 논골담길과 그 인근 스카이워크 체험 시설인 도째비골 스카이밸리는 고공에서 바다를 내려다보는 짜릿한 경험을 선사한다. 바다를 감상했으니 내륙으로 향하자. 정선의 가리왕산 케이블카와 양떼목장이 혼자든 가족과 함께하든 누구에게나 잊지 못할 순간을 보장한다. 한국 사람이면 모르는 이가 없을 정도로 이름난 횡성 한우와 나물밥을 맛보는 시간 또한 강원도 여행의 백미로 꼽힐 만하다.
+                                <b>Q 어떤 마음으로 한과를 만들고 있나요?</b>강릉에서 대대로 한과를 빚은 가문의 일원으로서 자부심을 가지고 있습니다. 부모님과 함께 품격 있는 한과를 제공하고자 노력하는 중이죠. 천연 감미료인
+                                조청만으로 버무려 자연 그대로의 단맛이 일품이고, 순수 콩물로 반죽해 고소하다는 평가가 많습니다. 강릉 한과를 알리는 데 보탬이 된다는 생각에
+                                보람을 느낍니다.
                             </p>
-                        </li>
-                        <li>
                             <p>
-                                횡성에서 가까운 원주는 한지의 고장이다. 좋은 닥나무가 군락을 이뤄 한지의 품질이 빼어나기 때문이다. 원주한지테마파크에서 원주 한지의 역사와 관련 제품을 만나는 재미가 남다르다. 원주에서 북쪽으로 얼마쯤 가면 춘천이 나온다. 가슴 벅찬 소양강 풍정, 남이섬의 고운 자연 속에서 여행의 감성을 북돋운다. 이외에도 속초, 고성, 영월 등 여행지가 수두룩한 강원도에서 다채로운 경험을 이어간다.
+                                <b>Q 새로운 시도를 하고 있다고요. </b>
+                                한식 디저트 문화를 대중화하기 위해 매장에서 티
+                                라운지를 운영해요. 전통 한과에 서양 디저트의
+                                재료와 기법을 접목한 것이지요. 건강한 제철 재료를 써 맞이차, 한입 유과, 약과, 디저트 한 상 차림을 내드립니다. 기업의 성장보다 전통 식품 대중화와 세계화를 목표로 삼고 열심히 한과를 연구하고 개발하고 있습니다.
                             </p>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- comp -->
-                <div class="division fullSize">
-                    <div class="left">
-                        <img src="./img/detail01/img02.jpg" alt="...">
+                        </div>
+                        <div class="right">
+                            <img src="./img/navy/보헤미안박이추대표1.jpg" alt="...">
+                        </div>
                     </div>
-                    <div class="right bgFill">
-                        <div class="h2">강릉 한과</div>
-                        <p>
-                            먹거리 선물로 만족도가 높은 한과는 한국 전통 과자다. 과거에 왕족과 백성 가릴 것 없이 모두가 선호했는데, 백성의 경우에는 회갑연 같은 행사에서만 맛보는 귀한 식품이었다. 그중 강릉 한과는 찹쌀을 첨가물 없이 발효한 뒤 반죽해 만든다. 오래 보관해도 상하지 않고 신선한 맛을 유지하는 한국의 별미다.
-                        </p>
+                    <!-- comp -->
+                    <div class="division divisionAuto fullSize">
+                        <div class="left bgFill">
+                            <div class="h2">횡성 나물밥 키트</div>
+                        </div>
+                        <div class="right bgFill">
+                            <p>
+                                그 유명한 강원도 나물밥의 재료 대부분이 횡성에서 난다는 사실은 횡성을 여행할 때 꼭 알아야 할 정보다. 산맥으로 둘러싸인 횡성은 산나물이 풍부해 싱싱한 나물밥을 맛볼 수 있기 때문이다. 횡성에선 어떤 식당에 들르든 나물밥 맛이 훌륭하거니와, 키트를 구입해 두고두고 맛보며 소중한 사람에게 선물까지 하면 더할 나위 없다.
+                            </p>
+                        </div>
                     </div>
-                </div>
-
-                
-                <div class="tableWrap fullSize">
-                    <table>
-                        <colgroup><col width="380px"><col width="840px"></colgroup>
-                        <tr>
-                            <td><img src="./img/detail01/tb_img01.png" alt="..."></td>
-                            <td>
-                                <div class="h3 color">선미한과 모둠 한과</div>
-                                <p>
-                                    한국에서 개발한 찰벼 품종인 백옥찰을 20일 이상 자연 발효해 만드는 ‘선미한과’의 선물 세트다. 1939년에 개업한 최씨방앗간에서 이어진 역사, 50년 된 무쇠 가마솥을 쓰는 등 고집스레 간직해 온 제조 방식이 한과에 웅숭깊은 맛을 부여한다. 백년초, 찹쌀, 포도, 통쌀, 치자, 찹쌀과즐 등 여섯 가지 한과가 하나하나 주옥같다.
-                                </p>
-                                <ul class="color">
-                                    <li class="location">
-                                        강원도 강릉시 사천면 한과마을길 22-39(선미한과)
-                                    </li>
-                                    <li class="tel">
-                                        033-647-1805
-                                    </li>
-                                    <li class="web">
-                                        www.sunmi-hangwa.com
-                                    </li>
-                                    <li class="price">
-                                        청송강릉모둠 4만원 대
-                                    </li>
-                                </ul>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><img src="./img/detail01/tb_img02.png" alt="..."></td>
-                            <td>
-                                <div class="h3 color">명일한과 꼬마강정</div>
-                                <p>
-                                    한과의 변신이 이채롭다. ‘명일한과’는 4대째 명맥을 이은 강릉 한과 가게로, 중소벤처기업부가 장인 정신을 인정해 백년소공인에 지정할 만큼 명망이 높다. 다양한 제품 중 꼬마강정은 남녀노소 모두 즐기기에 맞춤인 제품이다. 입에 쏙 들어가는 크기라 먹기 편하고 담백하니 고소한 맛은 중독성이 대단하다.
-                                </p>
-                                <ul class="color">
-                                    <li class="location">
-                                        강원도 강릉시 사천면 한과마을길 55-7(명일한과)
-                                    </li>
-                                    <li class="tel">
-                                        033-642-0101
-                                    </li>
-                                    <li class="web">
-                                        www.hangamall.com
-                                    </li>
-                                </ul>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-
-                <!-- comp -->
-                <div class="division division-border division-border-2 fullSize">
-                    <div class="left">
-                        <div class="caption">Mini Interview</div>
-                        <div class="line"></div>
-                        <div class="h3">선미한과 <span>김지혜 실장</span></div>
-                        <p>
-                            <b>Q 어떤 마음으로 한과를 만들고 있나요?</b>강릉에서 대대로 한과를 빚은 가문의 일원으로서 자부심을 가지고 있습니다. 부모님과 함께 품격 있는 한과를 제공하고자 노력하는 중이죠. 천연 감미료인
-                            조청만으로 버무려 자연 그대로의 단맛이 일품이고, 순수 콩물로 반죽해 고소하다는 평가가 많습니다. 강릉 한과를 알리는 데 보탬이 된다는 생각에
-                            보람을 느낍니다. 
-                        </p>
-                        <p>
-                            <b>Q 새로운 시도를 하고 있다고요. </b> 
-                            한식 디저트 문화를 대중화하기 위해 매장에서 티
-                            라운지를 운영해요. 전통 한과에 서양 디저트의
-                            재료와 기법을 접목한 것이지요. 건강한 제철 재료를 써 맞이차, 한입 유과, 약과, 디저트 한 상 차림을 내드립니다. 기업의 성장보다 전통 식품 대중화와 세계화를 목표로 삼고 열심히 한과를 연구하고 개발하고 있습니다.
-                        </p>
+        
+                    <div class="tableWrap fullSize">
+                        <table>
+                            <colgroup><col width="380px"><col width="840px"></colgroup>
+                            <tr>
+                                <td><img src="./img/detail/tb_img05.png" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">강원도 홈스랑 나물밥 키트 세트</div>
+                                    <p>
+                                        직접 재배한 유기농 농산물로 만든 네 가지 나물밥 키트를 모았다. 20년 경력의 농부 형제가 특허 받은 기술력을 바탕으로 단호박 나물밥, 강원 나물밥, 버섯 나물밥, 무시래기밥을 개발한 것이다. 화학비료 없이 고랭지에서 나물을 기르는 정성 덕분에 청정한 강원도 자연의 맛을 고스란히 느낄 수 있다.
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            강원도 횡성군 횡성읍 읍상로 42(횡성 어사매장터)
+                                        </li>
+                                        <li class="tel">
+                                            033-344-3773
+                                        </li>
+                                        <li class="price">
+                                            1만원 미만
+                                        </li>
+                                        <li class="cart">
+                                            횡성군 마트
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
-                    <div class="right">
-                        <img src="./img/navy/보헤미안박이추대표1.jpg" alt="...">
+                    <!-- comp -->
+                    <div class="division fullSize">
+                        <div class="left">
+                            <img src="./img/detail/img02.jpg" alt="...">
+                        </div>
+                        <div class="right bgFill">
+                            <div class="h2">더담 생막걸리</div>
+                            <p>
+                                푸른 동해를 바라보면서 막걸리를 마시는 분위기야 굳이 말할 필요가 있을까. 더담은 푸른 바다를 빼닮아 그지없이 맑은 막걸리를 주조한다. 1등급 강원도 쌀로 세 번 빚고 100일간 숙성해 최상의 맛을 완성했다. 목 넘김이 황홀하리만치 부드러운 데다 숙취가 적어 동해의 특산주로 이름을 알리고 있다.
+                            </p>
+                        </div>
                     </div>
-                </div>
-
-                <!-- comp -->
-                <div class="division divisionAuto fullSize">
-                    <div class="left bgFill">
-                        <div class="h2">횡성 나물밥 키트</div>
+        
+                    <div class="tableWrap fullSize">
+                        <table>
+                            <colgroup><col width="380px"><col width="840px"></colgroup>
+                            <tr>
+                                <td><img src="./img/detail/tb_img07.png" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">더담 생막걸리 9도 & 12도</div>
+                                    <p>
+                                        기다림의 미학, 동해 더담 생막걸리의 종류는 두 가지다. 단맛, 쓴맛, 신맛이 조화하는 알코올 도수 12도 제품은 감칠맛이 뛰어나며 얼음을 띄워 온더락으로 마셔도 잘 어울린다. 알코올 도수 9도 제품의 경우 지나치게 가볍거나 달지 않고 은근하게 담백한 맛이 깊은 인상을 남긴다.
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            강원도 동해시 천곡로 100(이마트 동해점)
+                                        </li>
+                                        <li class="tel">
+                                            033-539-7123
+                                        </li>
+                                        <li class="price">
+                                            9도 1만원 미만, 12도 1만원 대
+                                        </li>
+                                        <li class="cart">
+                                            동해시 편의점 및 마트
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
-                    <div class="right bgFill">
-                        <p>
-                            그 유명한 강원도 나물밥의 재료 대부분이 횡성에서 난다는 사실은 횡성을 여행할 때 꼭 알아야 할 정보다. 산맥으로 둘러싸인 횡성은 산나물이 풍부해 싱싱한 나물밥을 맛볼 수 있기 때문이다. 횡성에선 어떤 식당에 들르든 나물밥 맛이 훌륭하거니와, 키트를 구입해 두고두고 맛보며 소중한 사람에게 선물까지 하면 더할 나위 없다.
-                        </p>
+                    <!-- comp -->
+                    <div class="division fullSize">
+                        <div class="left">
+                            <img src="./img/detail/img02.jpg" alt="...">
+                        </div>
+                        <div class="right bgFill">
+                            <div class="h2">강원도 감자</div>
+                            <p>
+                                해발 600m가 넘는 고랭지가 많은 지형과 일교차가 큰 기후가 강원도를 감자 재배 최적지로 만들었다. 강원도 사람의 삶과 함께해온 감자는 전, 수제비, 송편 등 다양한 음식의 주재료로 쓰였다. 최근에는 로컬 매장이 개발한 과자와 굿즈가 인기를 끌면서 강원도를 넘어 한국의 특산물로 자리매김하고 있다.
+                            </p>
+                        </div>
                     </div>
-                </div>
-
-                
-                <div class="tableWrap fullSize">
-                    <table>
-                        <colgroup><col width="380px"><col width="840px"></colgroup>
-                        <tr>
-                            <td><img src="./img/detail01/tb_img05.png" alt="..."></td>
-                            <td>
-                                <div class="h3 color">강원도 홈스랑 나물밥 키트 세트</div>
-                                <p>
-                                    직접 재배한 유기농 농산물로 만든 네 가지 나물밥 키트를 모았다. 20년 경력의 농부 형제가 특허 받은 기술력을 바탕으로 단호박 나물밥, 강원 나물밥, 버섯 나물밥, 무시래기밥을 개발한 것이다. 화학비료 없이 고랭지에서 나물을 기르는 정성 덕분에 청정한 강원도 자연의 맛을 고스란히 느낄 수 있다.
-                                </p>
-                                <ul class="color">
-                                    <li class="location">
-                                        강원도 횡성군 횡성읍 읍상로 42(횡성 어사매장터)
-                                    </li>
-                                    <li class="tel">
-                                        033-344-3773 
-                                    </li>
-                                    <li class="price">
-                                        1만원 미만 
-                                    </li>
-                                    <li class="cart">
-                                        횡성군 마트 
-                                    </li>
-                                </ul>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-
-                <!-- comp -->
-                <div class="division fullSize">
-                    <div class="left">
-                        <img src="./img/detail01/img02.jpg" alt="...">
+        
+                    <div class="tableWrap fullSize">
+                        <table>
+                            <colgroup><col width="380px"><col width="840px"></colgroup>
+                            <tr>
+                                <td><img src="./img/detail/tb_img07.png" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">슬로우슬로우담담 감자 굿즈</div>
+                                    <p>
+                                        강원도의 일상에서 빼놓을 수 없는 감자의 생김새를 본뜬 잔에 시선이 꽂힌다. 사랑스러운 자태가 가지고 싶은 마음을 샘솟게 한다. 강릉에서 활동하는 최소연 도예가가 강원도 사람들의 삶을 생각하며 빚은 잔은 술이나 차를 담아 마시기에 안성맞춤이다. 감자 모양의 젓가락 받침도 있다.
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            강원도 강릉시 임영로180번길 15(슬로우슬로우담담)
+                                        </li>
+                                        <li class="tel">
+                                            0507-1333-2757
+                                        </li>
+                                        <li class="web">
+                                            slowslowdamdam.kr
+                                        </li>
+                                        <li class="price">
+                                            2만원 대
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="./img/detail/tb_img07.png" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">감자아일랜드 감자 맥주</div>
+                                    <p>
+                                        지역에서 자란 농산물로 수제 맥주를 만들겠다는 청년들이 뭉쳐 만든 ‘감자아일랜드’의 대표 메뉴가 바로 감자 맥주다. 강원도 감자로 독일 맥주의 풍미를 내겠다는 목표대로 감자 맛이 은은하게 밴 맥주가 감동적일 정도로 맛있다. 감자 맥주 외에도 옥수수, 단팥, 사과, 복숭아 맥주도 있으니 골라가며 감상해도 좋겠다.
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            강원도 춘천시 방송길 77(감자아일랜드)
+                                        </li>
+                                        <li class="tel">
+                                            0507-1356-4681
+                                        </li>
+                                        <li class="web">
+                                            gamjaisland.imweb.me
+                                        </li>
+                                        <li class="price">
+                                            1만원 미만
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="./img/detail/tb_img07.png" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">감자유원지 감자 과자</div>
+                                    <p>
+                                        감자 빵, 감자 맥주처럼 감자 관련 식품이 다채롭게 변주되고 있는 가운데 최근에는 강릉의 ‘감자유원지’가 제조한 과자인 포파칩이 인기다. 유난히 크거나 못생겼다는 이유로 버려지는 감자를 모아 만들었기에 지역 감자 농가와의 상생을 실천하는 의미가 남다르다. 소금, 치즈, 갈릭버터 등의 제품이 전부 맛있는 것은 물론이다.
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            강원도 강릉시 경강로2115번길 7(감자유원지)
+                                        </li>
+                                        <li class="tel">
+                                            507-1370-7117
+                                        </li>
+                                        <li class="price">
+                                            1만원 미만
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
-                    <div class="right bgFill">
-                        <div class="h2">더담 생막걸리</div>
-                        <p>
-                            푸른 동해를 바라보면서 막걸리를 마시는 분위기야 굳이 말할 필요가 있을까. 더담은 푸른 바다를 빼닮아 그지없이 맑은 막걸리를 주조한다. 1등급 강원도 쌀로 세 번 빚고 100일간 숙성해 최상의 맛을 완성했다. 목 넘김이 황홀하리만치 부드러운 데다 숙취가 적어 동해의 특산주로 이름을 알리고 있다.
-                        </p>
+                    <!-- comp -->
+                    <div class="division fullSize">
+                        <div class="left">
+                            <img src="./img/detail/img02.jpg" alt="...">
+                        </div>
+                        <div class="right bgFill">
+                            <div class="h2">강릉 자수</div>
+                            <p>
+                                공들여 무늬를 수놓는 자수는 오랜 세월 한국 사람의 정서를 대변하는 존재였다. 자식을 향한 사랑, 부모를 위하는 효심, 배우자를 아끼는 마음을 자수에 담아낸 것이다. 특히 강릉 자수는 문양이 유달리 화려해 안목 있는 이가 선호한다. 강릉에선 리넨 보자기 등 트렌디한 자수 제품을 구입할 수 있다.
+                            </p>
+                        </div>
                     </div>
-                </div>
-
-
-                
-                <div class="tableWrap fullSize">
-                    <table>
-                        <colgroup><col width="380px"><col width="840px"></colgroup>
-                        <tr>
-                            <td><img src="./img/detail01/tb_img07.png" alt="..."></td>
-                            <td>
-                                <div class="h3 color">더담 생막걸리 9도 & 12도</div>
-                                <p>
-                                    기다림의 미학, 동해 더담 생막걸리의 종류는 두 가지다. 단맛, 쓴맛, 신맛이 조화하는 알코올 도수 12도 제품은 감칠맛이 뛰어나며 얼음을 띄워 온더락으로 마셔도 잘 어울린다. 알코올 도수 9도 제품의 경우 지나치게 가볍거나 달지 않고 은근하게 담백한 맛이 깊은 인상을 남긴다.
-                                </p>
-                                <ul class="color">
-                                    <li class="location">
-                                        강원도 동해시 천곡로 100(이마트 동해점)
-                                    </li>
-                                    <li class="tel">
-                                        033-539-7123 
-                                    </li>
-                                    <li class="price">
-                                        9도 1만원 미만, 12도 1만원 대 
-                                    </li>
-                                    <li class="cart">
-                                        동해시 편의점 및 마트 
-                                    </li>
-                                </ul>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-
-                <!-- comp -->
-                <div class="division fullSize">
-                    <div class="left">
-                        <img src="./img/detail01/img02.jpg" alt="...">
+                    <div class="tableWrap fullSize">
+                        <table>
+                            <colgroup><col width="380px"><col width="840px"></colgroup>
+                            <tr>
+                                <td><img src="./img/detail/tb_img07.png" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">강릉자수Giv컴퍼니 노리개</div>
+                                    <p>
+                                        비단의 한 종류인 모본단에 비단실로 곱게 수를 놓았다. 여기에 전통 매듭, 딸기 술을 붙여 한층 멋스러운 분위기를 연출했다. 전체 길이가 30cm가 안 되어 집 안을 비롯해 허리춤, 가방에 달아도 부담이 없다. 이 밖에도 액자, 커피 방향제, 귀걸이, 키 링 등 강릉 자수를 활용한 제품이 강릉 여행의 즐거움을 배가한다.
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            강원도 강릉시 경강로 2027-1(강릉자수Giv컴퍼니)
+                                        </li>
+                                        <li class="tel">
+                                            070-4414-2022
+                                        </li>
+                                        <li class="web">
+                                            givstory.com
+                                        </li>
+                                        <li class="price">
+                                            6만원 대
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="./img/detail/tb_img07.png" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">강릉자수Giv컴퍼니 리넨 보자기</div>
+                                    <p>
+                                        강릉수보자기의 화목문 그림을 새긴 제품으로, 흰색 바탕과 연파랑 바탕, 두 제품 모두 빼어난 아름다움을 자랑한다. 예전에 강릉수보자기는 혼례 때 사용했기 때문에 정성에 정성을 다해 수개월 작업한 끝에 탄생했다. 그 마음이 오롯이 담긴 리넨 보자기를 가족이나 소중한 지인에게 건네면 의미가 깊어지겠다.
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            강원도 강릉시 경강로 2027-1(강릉자수Giv컴퍼니)
+                                        </li>
+                                        <li class="tel">
+                                            070-4414-2022
+                                        </li>
+                                        <li class="web">
+                                            givstory.com
+                                        </li>
+                                        <li class="price">
+                                            1만원 대
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
-                    <div class="right bgFill">
-                        <div class="h2">강원도 감자</div>
-                        <p>
-                            해발 600m가 넘는 고랭지가 많은 지형과 일교차가 큰 기후가 강원도를 감자 재배 최적지로 만들었다. 강원도 사람의 삶과 함께해온 감자는 전, 수제비, 송편 등 다양한 음식의 주재료로 쓰였다. 최근에는 로컬 매장이 개발한 과자와 굿즈가 인기를 끌면서 강원도를 넘어 한국의 특산물로 자리매김하고 있다.
-                        </p>
+                    <!-- comp -->
+                    <div class="division fullSize">
+                        <div class="left">
+                            <img src="./img/detail/img02.jpg" alt="...">
+                        </div>
+                        <div class="right bgFill">
+                            <div class="h2">춘천 남이섬 굿즈</div>
+                            <p>
+                                K-드라마 열풍의 시작을 알린 <겨울연가>의 촬영지인 남이섬은 연중 관광객의 발길이 이어진다. ‘동화의 나라, 노래의 섬’을 콘셉트로 다채한 문화 관련 행사를 열며 기념품 숍의 굿즈 역시 풍성하다.
+                            </p>
+                        </div>
                     </div>
-                </div>
-
-
-                
-                <div class="tableWrap fullSize">
-                    <table>
-                        <colgroup><col width="380px"><col width="840px"></colgroup>
-                        <tr>
-                            <td><img src="./img/detail01/tb_img07.png" alt="..."></td>
-                            <td>
-                                <div class="h3 color">슬로우슬로우담담 감자 굿즈</div>
-                                <p>
-                                    강원도의 일상에서 빼놓을 수 없는 감자의 생김새를 본뜬 잔에 시선이 꽂힌다. 사랑스러운 자태가 가지고 싶은 마음을 샘솟게 한다. 강릉에서 활동하는 최소연 도예가가 강원도 사람들의 삶을 생각하며 빚은 잔은 술이나 차를 담아 마시기에 안성맞춤이다. 감자 모양의 젓가락 받침도 있다.    
-                                </p>
-                                <ul class="color">
-                                    <li class="location">
-                                        강원도 강릉시 임영로180번길 15(슬로우슬로우담담)
-                                    </li>
-                                    <li class="tel">
-                                        0507-1333-2757 
-                                    </li>
-                                    <li class="web">
-                                        slowslowdamdam.kr 
-                                    </li>
-                                    <li class="price">
-                                        2만원 대
-                                    </li>
-                                </ul>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><img src="./img/detail01/tb_img07.png" alt="..."></td>
-                            <td>
-                                <div class="h3 color">감자아일랜드 감자 맥주</div>
-                                <p>
-                                    지역에서 자란 농산물로 수제 맥주를 만들겠다는 청년들이 뭉쳐 만든 ‘감자아일랜드’의 대표 메뉴가 바로 감자 맥주다. 강원도 감자로 독일 맥주의 풍미를 내겠다는 목표대로 감자 맛이 은은하게 밴 맥주가 감동적일 정도로 맛있다. 감자 맥주 외에도 옥수수, 단팥, 사과, 복숭아 맥주도 있으니 골라가며 감상해도 좋겠다.
-                                </p>
-                                <ul class="color">
-                                    <li class="location">
-                                        강원도 춘천시 방송길 77(감자아일랜드)
-                                    </li>
-                                    <li class="tel">
-                                        0507-1356-4681
-                                    </li>
-                                    <li class="web">
-                                        gamjaisland.imweb.me 
-                                    </li>
-                                    <li class="price">
-                                        1만원 미만
-                                    </li>
-                                </ul>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><img src="./img/detail01/tb_img07.png" alt="..."></td>
-                            <td>
-                                <div class="h3 color">감자유원지 감자 과자</div>
-                                <p>
-                                    감자 빵, 감자 맥주처럼 감자 관련 식품이 다채롭게 변주되고 있는 가운데 최근에는 강릉의 ‘감자유원지’가 제조한 과자인 포파칩이 인기다. 유난히 크거나 못생겼다는 이유로 버려지는 감자를 모아 만들었기에 지역 감자 농가와의 상생을 실천하는 의미가 남다르다. 소금, 치즈, 갈릭버터 등의 제품이 전부 맛있는 것은 물론이다.
-                                </p>
-                                <ul class="color">
-                                    <li class="location">
-                                        강원도 강릉시 경강로2115번길 7(감자유원지)
-                                    </li>
-                                    <li class="tel">
-                                        507-1370-7117 
-                                    </li>
-                                    <li class="price">
-                                        1만원 미만
-                                    </li>
-                                </ul>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-
-                <!-- comp -->
-                <div class="division fullSize">
-                    <div class="left">
-                        <img src="./img/detail01/img02.jpg" alt="...">
+                    <div class="tableWrap fullSize">
+                        <table>
+                            <colgroup><col width="380px"><col width="840px"></colgroup>
+                            <tr>
+                                <td><img src="./img/detail/tb_img07.png" alt="..."></td>
+                                <td>
+                                    <div class="h3 color"> 눈사람 인형</div>
+                                    <p>
+                                        남이섬의 마스코트가 눈사람인 이유는 드라마 <겨울연가>의 두 주인공이 남이섬에서 눈사람을 만들며 사랑을 확인했기 때문이다. 2002년에 방영했기에 그 명장면은 사람들의 기억에서 점점 사라지고 있지만, 눈사람은 오늘날까지 남이섬의 상징으로 남았다. 말랑말랑한 감촉에 깜찍한 표정의 눈사람 인형을 끌어안으면 잠이 솔솔 온다
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            강원도 춘천시 남산면 남이섬길 1(남이섬 아트숍)
+                                        </li>
+                                        <li class="tel">
+                                            031-580-8114
+                                        </li>
+                                        <li class="web">
+                                            www.namisum.com
+                                        </li>
+                                        <li class="price">
+                                            1만원 대
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="./img/detail/tb_img07.png" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">소주병 업사이클링 제품</div>
+                                    <p>
+                                        놀러 온 사람들이 버린 쓰레기 탓에 남이섬은 1980년대까지 몸살을 앓았다. 2000년대 들어 쓰레기를 치우고 아름다운 모습을 되찾았지만, 시름하던 시절을 기억하는 남이섬은 그때로 돌아가지 않겠다 약속한다. 버려진 소주병을 냅킨꽂이, 시계, 접시 등으로 업사이클링한 것이다. 자연을 지키겠다는 그 약속, 남이섬처럼 아름답다.
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            강원도 춘천시 남산면 남이섬길 1(남이섬 아트숍)
+                                        </li>
+                                        <li class="tel">
+                                            031-580-8114
+                                        </li>
+                                        <li class="web">
+                                            www.namisum.com
+                                        </li>
+                                        <li class="price">
+                                            1만원 미만
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
-                    <div class="right bgFill">
-                        <div class="h2">강릉 자수</div>
-                        <p>
-                            공들여 무늬를 수놓는 자수는 오랜 세월 한국 사람의 정서를 대변하는 존재였다. 자식을 향한 사랑, 부모를 위하는 효심, 배우자를 아끼는 마음을 자수에 담아낸 것이다. 특히 강릉 자수는 문양이 유달리 화려해 안목 있는 이가 선호한다. 강릉에선 리넨 보자기 등 트렌디한 자수 제품을 구입할 수 있다.
-                        </p>
+                    <!-- comp -->
+                    <div class="division fullSize">
+                        <div class="left">
+                            <img src="./img/detail/img02.jpg" alt="...">
+                        </div>
+                        <div class="right bgFill">
+                            <div class="h2">원주 한지 소품</div>
+                            <p>
+                                한지의 주재료인 닥나무가 잘 자라는 원주는 전통적으로 한지의 대량생산지였다. 조선시대에 강원도 감찰사가 거처하는 관청인 감영의 소재지여서 감영을 중심으로 한지 마을과 인쇄 골목이 형성되기도 했다. 오늘날에도 원주 한지는 정부로부터 700년간 보관할 수 있다는 인증을 받을 만큼 우수하다.
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div class="tableWrap fullSize">
-                    <table>
-                        <colgroup><col width="380px"><col width="840px"></colgroup>
-                        <tr>
-                            <td><img src="./img/detail01/tb_img07.png" alt="..."></td>
-                            <td>
-                                <div class="h3 color">강릉자수Giv컴퍼니 노리개</div>
-                                <p>
-                                    비단의 한 종류인 모본단에 비단실로 곱게 수를 놓았다. 여기에 전통 매듭, 딸기 술을 붙여 한층 멋스러운 분위기를 연출했다. 전체 길이가 30cm가 안 되어 집 안을 비롯해 허리춤, 가방에 달아도 부담이 없다. 이 밖에도 액자, 커피 방향제, 귀걸이, 키 링 등 강릉 자수를 활용한 제품이 강릉 여행의 즐거움을 배가한다.
-                                </p>
-                                <ul class="color">
-                                    <li class="location">
-                                        강원도 강릉시 경강로 2027-1(강릉자수Giv컴퍼니) 
-                                    </li>
-                                    <li class="tel">
-                                        070-4414-2022 
-                                    </li>
-                                    <li class="web">
-                                        givstory.com
-                                    </li>
-                                    <li class="price">
-                                        6만원 대
-                                    </li>
-                                </ul>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><img src="./img/detail01/tb_img07.png" alt="..."></td>
-                            <td>
-                                <div class="h3 color">강릉자수Giv컴퍼니 리넨 보자기</div>
-                                <p>
-                                    강릉수보자기의 화목문 그림을 새긴 제품으로, 흰색 바탕과 연파랑 바탕, 두 제품 모두 빼어난 아름다움을 자랑한다. 예전에 강릉수보자기는 혼례 때 사용했기 때문에 정성에 정성을 다해 수개월 작업한 끝에 탄생했다. 그 마음이 오롯이 담긴 리넨 보자기를 가족이나 소중한 지인에게 건네면 의미가 깊어지겠다.  
-                                </p>
-                                <ul class="color">
-                                    <li class="location">
-                                        강원도 강릉시 경강로 2027-1(강릉자수Giv컴퍼니) 
-                                    </li>
-                                    <li class="tel">
-                                        070-4414-2022 
-                                    </li>
-                                    <li class="web">
-                                        givstory.com
-                                    </li>
-                                    <li class="price">
-                                        1만원 대
-                                    </li>
-                                </ul>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-
-                <!-- comp -->
-                <div class="division fullSize">
-                    <div class="left">
-                        <img src="./img/detail01/img02.jpg" alt="...">
+                    <div class="tableWrap fullSize">
+                        <table>
+                            <colgroup><col width="380px"><col width="840px"></colgroup>
+                            <tr>
+                                <td><img src="./img/detail/tb_img07.png" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">원주한지테마파크 한지 사각등</div>
+                                    <p>
+                                        한지로 문양을 오려 붙인 수공예 무드등이다. 연화문, 매화, 창살 문양 등을 재단했으며, 한지 특성상 불빛이 은은히 새어 나와 눈이 피로해지는 상황을 막아준다. 방에 두고 불을 켜면 분위기가 아늑하고 편안해져 오로지 자신에게 집중하는 시간을 보내기 좋은 제품이다.
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            강원도 원주시 한지공원길151 (원주한지테마파크)
+                                        </li>
+                                        <li class="tel">
+                                            033-734-4739
+                                        </li>
+                                        <li class="web">
+                                            www.hanjinshop.com
+                                        </li>
+                                        <li class="noti">
+                                            5월 원주한지문화제
+                                        </li>
+                                        <li class="price">
+                                            6만원 대
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="./img/detail/tb_img07.png" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">원주한지테마파크 한지 넥타이</div>
+                                    <p>
+                                        한지와 실크를 결합한 직물로 만든 넥타이는 두 소재의 장점이 고루 드러나는 덕분에 더욱 고급스럽다. 디자인이 세련되고 인체에 무해하며, 사계절 착용 가능해 기능성과 품격을 모두 잡았다. 수분 저항성이 강해 물로 세탁할 수 있고 구겨져도 금방 펴지는 복원력 또한 탁월하다.
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            강원도 원주시 한지공원길 151(원주한지테마파크)
+                                        </li>
+                                        <li class="tel">
+                                            033-734-4739
+                                        </li>
+                                        <li class="web">
+                                            www.hanjinshop.com
+                                        </li>
+                                        <li class="price">
+                                            5만원 대
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="./img/detail/tb_img07.png" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">원주한지테마파크 한지 서랍</div>
+                                    <p>
+                                        슬쩍 보기만 해도 곁에 두고 사용하고픈 감정이 솟구치는 서랍은 화려하고 고혹적인 무늬가 인상적이다. 서랍을 포함해 보석함, 필통, 지방함, 명함함 등에 전부 전통 문양이 멋들어지게 새겨져 있다. 원주 한지로 수놓은 함 관련 제품이 이처럼 다양하니 차근차근 수집해가는 재미가 쏠쏠하다.
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            강원도 원주시 한지공원길 151(원주한지테마파크)
+                                        </li>
+                                        <li class="tel">
+                                            033-734-4739
+                                        </li>
+                                        <li class="web">
+                                            www.hanjinshop.com
+                                        </li>
+                                        <li class="price">
+                                            5만원 대
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
-                    <div class="right bgFill">
-                        <div class="h2">춘천 남이섬 굿즈</div>
-                        <p>
-                            K-드라마 열풍의 시작을 알린 <겨울연가>의 촬영지인 남이섬은 연중 관광객의 발길이 이어진다. ‘동화의 나라, 노래의 섬’을 콘셉트로 다채한 문화 관련 행사를 열며 기념품 숍의 굿즈 역시 풍성하다.
-                        </p>
+                    <!-- comp -->
+                    <div class="division fullSize">
+                        <div class="left">
+                            <img src="./img/detail/img02.jpg" alt="...">
+                        </div>
+                        <div class="right bgFill">
+                            <div class="h2">바다유리 공예품</div>
+                            <p>
+                                환경을 살려야 한다는 구호가 더욱 절실하게 다가오는 지금, 바다에 나뒹구는 유리 조각을 업사이클링한 제품이 있어 얼마나 감사한지. 파도에 쓸려 생명을 다치게 하는 유리 조각이 반지 등으로 쓰임을 얻었다.
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div class="tableWrap fullSize">
-                    <table>
-                        <colgroup><col width="380px"><col width="840px"></colgroup>
-                        <tr>
-                            <td><img src="./img/detail01/tb_img07.png" alt="..."></td>
-                            <td>
-                                <div class="h3 color"> 눈사람 인형</div>
-                                <p>
-                                    남이섬의 마스코트가 눈사람인 이유는 드라마 <겨울연가>의 두 주인공이 남이섬에서 눈사람을 만들며 사랑을 확인했기 때문이다. 2002년에 방영했기에 그 명장면은 사람들의 기억에서 점점 사라지고 있지만, 눈사람은 오늘날까지 남이섬의 상징으로 남았다. 말랑말랑한 감촉에 깜찍한 표정의 눈사람 인형을 끌어안으면 잠이 솔솔 온다
-                                </p>
-                                <ul class="color">
-                                    <li class="location">
-                                        강원도 춘천시 남산면 남이섬길 1(남이섬 아트숍)
-                                    </li>
-                                    <li class="tel">
-                                        031-580-8114
-                                    </li>
-                                    <li class="web">
-                                        www.namisum.com
-                                    </li>
-                                    <li class="price">
-                                        1만원 대
-                                    </li>
-                                </ul>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><img src="./img/detail01/tb_img07.png" alt="..."></td>
-                            <td>
-                                <div class="h3 color">소주병 업사이클링 제품</div>
-                                <p>
-                                    놀러 온 사람들이 버린 쓰레기 탓에 남이섬은 1980년대까지 몸살을 앓았다. 2000년대 들어 쓰레기를 치우고 아름다운 모습을 되찾았지만, 시름하던 시절을 기억하는 남이섬은 그때로 돌아가지 않겠다 약속한다. 버려진 소주병을 냅킨꽂이, 시계, 접시 등으로 업사이클링한 것이다. 자연을 지키겠다는 그 약속, 남이섬처럼 아름답다.
-                                </p>
-                                <ul class="color">
-                                    <li class="location">
-                                        강원도 춘천시 남산면 남이섬길 1(남이섬 아트숍)
-                                    </li>
-                                    <li class="tel">
-                                        031-580-8114
-                                    </li>
-                                    <li class="web">
-                                        www.namisum.com
-                                    </li>
-                                    <li class="price">
-                                        1만원 미만
-                                    </li>
-                                </ul>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-
-                <!-- comp -->
-                <div class="division fullSize">
-                    <div class="left">
-                        <img src="./img/detail01/img02.jpg" alt="...">
+                    <div class="tableWrap fullSize">
+                        <table>
+                            <colgroup><col width="380px"><col width="840px"></colgroup>
+                            <tr>
+                                <td><img src="./img/detail/tb_img07.png" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">다 한 조각 바다유리 목걸이·반지·선캐처</div>
+                                    <p>
+                                        맥주병, 소주병의 빛이 이렇게 예쁘구나 싶다. 동해 해안을 돌아다니면서 주운 유리 중 맥주병이나 소주병 등의 조각을 골라 목걸이와 반지, 선캐처를 만들었다. 업사이클링 제품이라고는 생각조차 하지 못할 정도로 곱고 영롱해 일단 마주한 이상 도무지 구입하지 않을 방도가 없다. 참으로 기특한 제품이다.
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            강원도 동해시 발한로 204-1(묘한 동해)
+                                        </li>
+                                        <li class="tel">
+                                            0507-1309-1060
+                                        </li>
+                                        <li class="price">
+                                            반지 2만원 대, 목걸이 1만원 대
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
-                    <div class="right bgFill">
-                        <div class="h2">원주 한지 소품</div>
-                        <p>
-                            한지의 주재료인 닥나무가 잘 자라는 원주는 전통적으로 한지의 대량생산지였다. 조선시대에 강원도 감찰사가 거처하는 관청인 감영의 소재지여서 감영을 중심으로 한지 마을과 인쇄 골목이 형성되기도 했다. 오늘날에도 원주 한지는 정부로부터 700년간 보관할 수 있다는 인증을 받을 만큼 우수하다.
-                        </p>
+                    <!-- comp -->
+                    <div class="division division-border division-border-2 fullSize">
+                        <div class="left">
+                            <div class="caption">Mini Interview</div>
+                            <div class="line"></div>
+                            <div class="h3">바다 한 조각 <span>임지희 대표</span></div>
+                            <p>
+                                <b>Q 바다유리 공예품을 어떻게 만들게 되었나요?</b>
+                                2009년 무렵 처음 서핑을 한 이후 매주 주말에 바다로 가 서핑을 즐겼어요. 그렇게 바다를 사랑하게 되면서 작은 다짐을 했죠. 세상 하나뿐인 바다를 정화하겠다는 결심이에요. 그러다 해외에서 우연히 바다유리 업사이클링 제품을 목격했어요. 그때부터 바다유리 등을 모아 공예품을 제작했죠. <br>
+                                2000년대에 강릉에 왔을 때는 주변에 건물이 없었어요. 오로지 바다가 드넓게 펼쳐졌을 뿐이었죠. 커피를 공부하기 좋은 환경이다 싶었습니다. 현재 커피 거리가 생겨 사람들이 커피 맛을 보러 강릉을 찾고 있잖아요. 강릉에 오셔서 바다와 산을 누리고 커피를 맛보면서 편히 쉬시길 바랍니다.
+                            </p>
+                            <p>
+                                <b>Q 바다 한 조각이라는 업체 이름이 예쁘네요. </b>
+                                바다유리는 단 하나도 같은 것이 없어요. 색상, 크기, 모양이 전부 다르죠. 바다유리를 업사이클링해 만든 제품이 세상에서 단 하나만 존재하는 이유입니다. 바다도 결국에는 세상에서 유일한 존재잖아요. 바다유리 공예품을 만나는 분들이 환경을 소중히 여기는 마음을 지닐 수 있도록 정성을 다해 만들고 있습니다.
+                            </p>
+                        </div>
+                        <div class="right">
+                            <img src="./img/detail/img02.jpg" alt="...">
+                        </div>
                     </div>
-                </div>
-                <div class="tableWrap fullSize">
-                    <table>
-                        <colgroup><col width="380px"><col width="840px"></colgroup>
-                        <tr>
-                            <td><img src="./img/detail01/tb_img07.png" alt="..."></td>
-                            <td>
-                                <div class="h3 color">원주한지테마파크 한지 사각등</div>
-                                <p>
-                                    한지로 문양을 오려 붙인 수공예 무드등이다. 연화문, 매화, 창살 문양 등을 재단했으며, 한지 특성상 불빛이 은은히 새어 나와 눈이 피로해지는 상황을 막아준다. 방에 두고 불을 켜면 분위기가 아늑하고 편안해져 오로지 자신에게 집중하는 시간을 보내기 좋은 제품이다.
-                                </p>
-                                <ul class="color">
-                                    <li class="location">
-                                        강원도 원주시 한지공원길151 (원주한지테마파크) 
-                                    </li>
-                                    <li class="tel">
-                                        033-734-4739
-                                    </li>
-                                    <li class="web">
-                                        www.hanjinshop.com
-                                    </li>
-                                    <li class="noti">
-                                        5월 원주한지문화제
-                                    </li>
-                                    <li class="price">
-                                        6만원 대
-                                    </li>
-                                </ul>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><img src="./img/detail01/tb_img07.png" alt="..."></td>
-                            <td>
-                                <div class="h3 color">원주한지테마파크 한지 넥타이</div>
-                                <p>
-                                    한지와 실크를 결합한 직물로 만든 넥타이는 두 소재의 장점이 고루 드러나는 덕분에 더욱 고급스럽다. 디자인이 세련되고 인체에 무해하며, 사계절 착용 가능해 기능성과 품격을 모두 잡았다. 수분 저항성이 강해 물로 세탁할 수 있고 구겨져도 금방 펴지는 복원력 또한 탁월하다.
-                                </p>
-                                <ul class="color">
-                                    <li class="location">
-                                        강원도 원주시 한지공원길 151(원주한지테마파크)
-                                    </li>
-                                    <li class="tel">
-                                        033-734-4739 
-                                    </li>
-                                    <li class="web">
-                                        www.hanjinshop.com 
-                                    </li>
-                                    <li class="price">
-                                        5만원 대
-                                    </li>
-                                </ul>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><img src="./img/detail01/tb_img07.png" alt="..."></td>
-                            <td>
-                                <div class="h3 color">원주한지테마파크 한지 서랍</div>
-                                <p>
-                                    슬쩍 보기만 해도 곁에 두고 사용하고픈 감정이 솟구치는 서랍은 화려하고 고혹적인 무늬가 인상적이다. 서랍을 포함해 보석함, 필통, 지방함, 명함함 등에 전부 전통 문양이 멋들어지게 새겨져 있다. 원주 한지로 수놓은 함 관련 제품이 이처럼 다양하니 차근차근 수집해가는 재미가 쏠쏠하다. 
-                                </p>
-                                <ul class="color">
-                                    <li class="location">
-                                        강원도 원주시 한지공원길 151(원주한지테마파크)
-                                    </li>
-                                    <li class="tel">
-                                        033-734-4739 
-                                    </li>
-                                    <li class="web">
-                                        www.hanjinshop.com 
-                                    </li>
-                                    <li class="price">
-                                        5만원 대
-                                    </li>
-                                </ul>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-
-                <!-- comp -->
-                <div class="division fullSize">
-                    <div class="left">
-                        <img src="./img/detail01/img02.jpg" alt="...">
+                    <!-- comp -->
+                    <div class="division fullSize">
+                        <div class="left">
+                            <img src="./img/detail/img02.jpg" alt="...">
+                        </div>
+                        <div class="right bgFill">
+                            <div class="h2">정선 운기석 제품</div>
+                            <p>
+                                운기석은 정선에서만 채광하는 천연 광물질이다. 나무 무늬 운(橒), 기운 기(氣), 돌 석(石)을 쓰는 이름에서 특성을 상상할 수 있는데, 직접 보니 과연 그러하다. 나무 무늬 돌이 어쩜 이리 신비로운 기운을 뿜어내는지. 무늬가 아름답고 인체에 좋은 성분을 함유한 운기석은 다양한 가공품으로 만날 수 있다.
+                            </p>
+                        </div>
                     </div>
-                    <div class="right bgFill">
-                        <div class="h2">바다유리 공예품</div>
-                        <p>
-                            환경을 살려야 한다는 구호가 더욱 절실하게 다가오는 지금, 바다에 나뒹구는 유리 조각을 업사이클링한 제품이 있어 얼마나 감사한지. 파도에 쓸려 생명을 다치게 하는 유리 조각이 반지 등으로 쓰임을 얻었다.
-                        </p>
+                    <div class="tableWrap fullSize">
+                        <table>
+                            <colgroup><col width="380px"><col width="840px"></colgroup>
+                            <tr>
+                                <td><img src="./img/detail/tb_img07.png" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">운기석9020 운기석 노트·펜</div>
+                                    <p>
+                                        3단 노트는 운기석 가루로 한지를 다듬어 종이의 질감을 부드럽게 하고 강도를 높였다. 중앙에 운기석 한지를 삽입해 카드나 명함을 수납할 수 있도록 했다. 또 목성을 모티브로 디자인한 펜은 그 모습이 이채로워 운기석 소품 중에서도 가장 인기 있는 제품 중 하나로 꼽힌다.
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            강원도 정선군 정선읍 5일장길 38-4
+                                        </li>
+                                        <li class="tel">
+                                            033-562-3579
+                                        </li>
+                                        <li class="web">
+                                            ungiseok9020.modoo.at
+                                        </li>
+                                        <li class="price">
+                                            펜 2만원 대
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="./img/detail/tb_img07.png" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">운기석9020 운기석 팔찌</div>
+                                    <p>
+                                        우드 색상의 운기석을 바탕으로 다양한 젬스톤을 활용해 디자인한다. 젬스톤에 따라 다양한 색상 연출이 가능할뿐더러, 운기석이 원석 고유의 무늬와 색상으로 분위기를 잡아주어 세련된 느낌을 끌어올린다. 실리콘 소재 스트랩을 붙인 핏 팔찌, 재물운을 상징하는 전설의 동물 비휴를 형상화한 비휴 팔찌도 판매한다.
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            강원도 정선군 정선읍 5일장길 38-4
+                                        </li>
+                                        <li class="tel">
+                                            033-562-3579
+                                        </li>
+                                        <li class="web">
+                                            ungiseok9020.modoo.at
+                                        </li>
+                                        <li class="price">
+                                            7만원 대
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
-                </div>
-                <div class="tableWrap fullSize">
-                    <table>
-                        <colgroup><col width="380px"><col width="840px"></colgroup>
-                        <tr>
-                            <td><img src="./img/detail01/tb_img07.png" alt="..."></td>
-                            <td>
-                                <div class="h3 color">다 한 조각 바다유리 목걸이·반지·선캐처</div>
-                                <p>
-                                    맥주병, 소주병의 빛이 이렇게 예쁘구나 싶다. 동해 해안을 돌아다니면서 주운 유리 중 맥주병이나 소주병 등의 조각을 골라 목걸이와 반지, 선캐처를 만들었다. 업사이클링 제품이라고는 생각조차 하지 못할 정도로 곱고 영롱해 일단 마주한 이상 도무지 구입하지 않을 방도가 없다. 참으로 기특한 제품이다.
-                                </p>
-                                <ul class="color">
-                                    <li class="location">
-                                        강원도 동해시 발한로 204-1(묘한 동해)
-                                    </li>
-                                    <li class="tel">
-                                        0507-1309-1060 
-                                    </li>
-                                    <li class="price">
-                                        반지 2만원 대, 목걸이 1만원 대
-                                    </li>
-                                </ul>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-
-                <!-- comp -->
-                <div class="division division-border division-border-2 fullSize">
-                    <div class="left">
-                        <div class="caption">Mini Interview</div>
-                        <div class="line"></div>
-                        <div class="h3">바다 한 조각 <span>임지희 대표</span></div>
-                        <p>
-                            <b>Q 바다유리 공예품을 어떻게 만들게 되었나요?</b> 
-                            2009년 무렵 처음 서핑을 한 이후 매주 주말에 바다로 가 서핑을 즐겼어요. 그렇게 바다를 사랑하게 되면서 작은 다짐을 했죠. 세상 하나뿐인 바다를 정화하겠다는 결심이에요. 그러다 해외에서 우연히 바다유리 업사이클링 제품을 목격했어요. 그때부터 바다유리 등을 모아 공예품을 제작했죠. <br>
-                            2000년대에 강릉에 왔을 때는 주변에 건물이 없었어요. 오로지 바다가 드넓게 펼쳐졌을 뿐이었죠. 커피를 공부하기 좋은 환경이다 싶었습니다. 현재 커피 거리가 생겨 사람들이 커피 맛을 보러 강릉을 찾고 있잖아요. 강릉에 오셔서 바다와 산을 누리고 커피를 맛보면서 편히 쉬시길 바랍니다.
-                        </p>
-                        <p>
-                            <b>Q 바다 한 조각이라는 업체 이름이 예쁘네요. </b> 
-                            바다유리는 단 하나도 같은 것이 없어요. 색상, 크기, 모양이 전부 다르죠. 바다유리를 업사이클링해 만든 제품이 세상에서 단 하나만 존재하는 이유입니다. 바다도 결국에는 세상에서 유일한 존재잖아요. 바다유리 공예품을 만나는 분들이 환경을 소중히 여기는 마음을 지닐 수 있도록 정성을 다해 만들고 있습니다. 
-                        </p>
+                    <!-- comp -->
+                    <div class="division division-border division-border-2 fullSize">
+                        <div class="left">
+                            <div class="caption">Mini Interview</div>
+                            <div class="line"></div>
+                            <div class="h3">운기석9020 <span>이민경·이동암 대표</span></div>
+                            <p>
+                                <b>Q 운기석 제품을 언제부터 제작했나요? </b>
+                                1990년에 아버지가 운기석을 발견해 광산을 열었어요. 처음 시도해보았기에 돌을 다듬어 어엿한 제품으로 판매하는 과정이 무척 힘들었죠. 사업이 생각보다 순조롭지 않아 어려움을 겪었어도 아버지는 열심히 노력하셨어요. 그 모습을 보고 오빠인 제가 먼저 운기석 제품 제작에 뛰어들었고, 동생인 이민경 대표도 최근에 합류했습니다.
+                            </p>
+                            <p>
+                                <b>Q 운기석 제품이 이리 다양할 줄 몰랐습니다. </b>
+                                그냥 봐도 신비로운 운기석은 액세서리, 조형물, 벽지 등 활용할 수 있는 가능성이 정말 큽니다. 오직 정선에서만 채광하기에 지역을 대표하는 특산물이기도 하고요. 언젠가는 꼭 한국 하면 떠오르는 특산물로 발돋움해보겠다는 소망을 가지고 있습니다. 정선의 운기석을 사랑해주시길 바랍니다.
+                            </p>
+                        </div>
+                        <div class="right">
+                            <img src="./img/navy/보헤미안박이추대표1.jpg" alt="...">
+                        </div>
                     </div>
-                    <div class="right">
-                        <img src="./img/detail01/img02.jpg" alt="...">
-                    </div>
-                </div>
-
-                <!-- comp -->
-                <div class="division fullSize">
-                    <div class="left">
-                        <img src="./img/detail01/img02.jpg" alt="...">
-                    </div>
-                    <div class="right bgFill">
-                        <div class="h2">정선 운기석 제품</div>
-                        <p>
-                            운기석은 정선에서만 채광하는 천연 광물질이다. 나무 무늬 운(橒), 기운 기(氣), 돌 석(石)을 쓰는 이름에서 특성을 상상할 수 있는데, 직접 보니 과연 그러하다. 나무 무늬 돌이 어쩜 이리 신비로운 기운을 뿜어내는지. 무늬가 아름답고 인체에 좋은 성분을 함유한 운기석은 다양한 가공품으로 만날 수 있다.
-                        </p>
-                    </div>
-                </div>
-                <div class="tableWrap fullSize">
-                    <table>
-                        <colgroup><col width="380px"><col width="840px"></colgroup>
-                        <tr>
-                            <td><img src="./img/detail01/tb_img07.png" alt="..."></td>
-                            <td>
-                                <div class="h3 color">운기석9020 운기석 노트·펜</div>
-                                <p>
-                                    3단 노트는 운기석 가루로 한지를 다듬어 종이의 질감을 부드럽게 하고 강도를 높였다. 중앙에 운기석 한지를 삽입해 카드나 명함을 수납할 수 있도록 했다. 또 목성을 모티브로 디자인한 펜은 그 모습이 이채로워 운기석 소품 중에서도 가장 인기 있는 제품 중 하나로 꼽힌다.
-                                </p>
-                                <ul class="color">
-                                    <li class="location">
-                                        강원도 정선군 정선읍 5일장길 38-4
-                                    </li>
-                                    <li class="tel">
-                                        033-562-3579 
-                                    </li>
-                                    <li class="web">
-                                        ungiseok9020.modoo.at 
-                                    </li>
-                                    <li class="price">
-                                        펜 2만원 대
-                                    </li>
-                                </ul>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><img src="./img/detail01/tb_img07.png" alt="..."></td>
-                            <td>
-                                <div class="h3 color">운기석9020 운기석 팔찌</div>
-                                <p>
-                                    우드 색상의 운기석을 바탕으로 다양한 젬스톤을 활용해 디자인한다. 젬스톤에 따라 다양한 색상 연출이 가능할뿐더러, 운기석이 원석 고유의 무늬와 색상으로 분위기를 잡아주어 세련된 느낌을 끌어올린다. 실리콘 소재 스트랩을 붙인 핏 팔찌, 재물운을 상징하는 전설의 동물 비휴를 형상화한 비휴 팔찌도 판매한다.
-                                </p>
-                                <ul class="color">
-                                    <li class="location">
-                                        강원도 정선군 정선읍 5일장길 38-4
-                                    </li>
-                                    <li class="tel">
-                                        033-562-3579 
-                                    </li>
-                                    <li class="web">
-                                        ungiseok9020.modoo.at 
-                                    </li>
-                                    <li class="price">
-                                        7만원 대
-                                    </li>
-                                </ul>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-
-                <!-- comp -->
-                <div class="division division-border division-border-2 fullSize">
-                    <div class="left">
-                        <div class="caption">Mini Interview</div>
-                        <div class="line"></div>
-                        <div class="h3">운기석9020 <span>이민경·이동암 대표</span></div>
-                        <p>
-                            <b>Q 운기석 제품을 언제부터 제작했나요? </b>
-                            1990년에 아버지가 운기석을 발견해 광산을 열었어요. 처음 시도해보았기에 돌을 다듬어 어엿한 제품으로 판매하는 과정이 무척 힘들었죠. 사업이 생각보다 순조롭지 않아 어려움을 겪었어도 아버지는 열심히 노력하셨어요. 그 모습을 보고 오빠인 제가 먼저 운기석 제품 제작에 뛰어들었고, 동생인 이민경 대표도 최근에 합류했습니다.
-                        </p>
-                        <p>
-                            <b>Q 운기석 제품이 이리 다양할 줄 몰랐습니다. </b> 
-                            그냥 봐도 신비로운 운기석은 액세서리, 조형물, 벽지 등 활용할 수 있는 가능성이 정말 큽니다. 오직 정선에서만 채광하기에 지역을 대표하는 특산물이기도 하고요. 언젠가는 꼭 한국 하면 떠오르는 특산물로 발돋움해보겠다는 소망을 가지고 있습니다. 정선의 운기석을 사랑해주시길 바랍니다.
-                        </p>
-                    </div>
-                    <div class="right">
-                        <img src="./img/navy/보헤미안박이추대표1.jpg" alt="...">
-                    </div>
-                </div>
-                
-
-            </section>
-            <!-- evoke : 템플릿 끝 -->
-
+        
+                </section>
+                <!-- evoke : 템플릿 끝 -->
+            </div>
         </div>
-    </div>
+    </contents>
 
 </body>
 </html>
