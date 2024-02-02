@@ -3,7 +3,7 @@
   color: #000;
   letter-spacing: -0.5px;
   line-height: 140%;
-  font-family: "NotoSans", "Noto Sans KR", "Verdana", "Arial", "Georgia", "Malgun Gothic", "Dotum", sans-serif;
+  font-family: system-ui, -apple-system, "Poppins", "MS PGothic", "Microsoft YaHei", "Arial", sans-serif;
 }
 .page-content .fullSize {
   margin-left: -30px;
@@ -33,7 +33,7 @@
 }
 .page-content .pageDesc p {
   color: #000;
-  font-size: 13px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 172%; /* 172.308% */
@@ -203,7 +203,7 @@
 .page-content .tableWrap table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 13px;
+  font-size: 14px;
   margin-bottom: 45px;
 }
 .page-content .tableWrap table td {
@@ -251,11 +251,11 @@
   content: "④";
 }
 .page-content .tableWrap table p {
-  font-size: 13px;
+  font-size: 14px;
   margin-bottom: 7px;
 }
 .page-content .tableWrap table li {
-  font-size: 13px;
+  font-size: 14px;
   line-height: 100%;
   padding-left: 22px;
   position: relative;
