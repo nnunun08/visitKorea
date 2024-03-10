@@ -1,0 +1,1266 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="common-inner">
+        <div class="template__type1__section">
+            <!-- evoke : 템플릿 시작 -->
+            <contents>
+                <style>
+                    /* common.css */
+                    @charset "UTF-8";
+                    /* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap'); */
+                    html, body, div, span, applet, object, iframe,
+                    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+                    a, abbr, acronym, address, big, cite, code,
+                    del, dfn, em, img, ins, kbd, q, s, samp,
+                    small, strike, strong, sub, sup, tt, var,
+                    b, u, i, center,
+                    dl, dt, dd, ol, ul, li,
+                    fieldset, form, label, legend,
+                    table, caption, tbody, tfoot, thead, tr, th, td,
+                    article, aside, canvas, details, embed,
+                    figure, figcaption, footer, header, hgroup,
+                    menu, nav, output, ruby, section, summary,
+                    time, mark, audio, video {
+                    margin: 0;
+                    padding: 0;
+                    border: 0;
+                    font-size: 100%;
+                    font: inherit;
+                    vertical-align: baseline;
+                    }
+                    /* HTML5 display-role reset for older browsers */
+                    article, aside, details, figcaption, figure,
+                    footer, header, hgroup, menu, nav, section {
+                    display: block;
+                    }
+                    body {
+                    line-height: 1;
+                    }
+                    ol, ul {
+                    list-style: none;
+                    }
+                    blockquote, q {
+                    quotes: none;
+                    }
+                    blockquote:before, blockquote:after,
+                    q:before, q:after {
+                    content: "";
+                    content: none;
+                    }
+                    table {
+                    border-collapse: collapse;
+                    border-spacing: 0;
+                    }
+                    Select {
+                    font-family: inherit; /* 폰트 상속 */
+                    background: url(../img/btn-drop-arrow.svg) no-repeat 98% 50%;
+                    /* 네이티브 화살표를 커스텀 화살표로 대체 */
+                    -webkit-appearance: none;
+                    /* 네이티브 외형 감추기 */
+                    -moz-appearance: none;
+                    appearance: none;
+                    }
+                    Select::-ms-expand {
+                    display: none; /* 화살표 없애기 for IE10, 11*/
+                    }
+                    input {
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    -webkit-border-radius: 0;
+                    border-radius: 0;
+                    }
+                    /* IE10 이상에서 input box 에 추가된 지우기 버튼 제거 */
+                    input::-ms-clear {
+                    display: none;
+                    }
+                    /* input type number 에서 화살표 제거 */
+                    input[type=number]::-webkit-inner-spin-button,
+                    input[type=number]::-webkit-outer-spin-button {
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    }
+                    body {
+                        background: #f5f5f5;
+                    }
+                    .common-inner {
+                        padding: 0 30px;
+                        max-width: 1300px;
+                        box-sizing: border-box;
+                        margin: 0 auto;
+                        margin-top: 40px;
+                        padding: 0 40px;
+                        padding-bottom: 120px;
+                    }
+                    .template__type1__section {
+                        padding: 30px;
+                        border: 1px solid #e0e0e0;
+                        background: #fff;
+                        border-radius: 18px;
+                    }
+                    @media (max-width: 1200px) {
+                        .common-inner {
+                            padding: 0 20px;
+                        }
+                    }
+                
+                    .page-content {
+                    color: #000;
+                    letter-spacing: -0.5px;
+                    line-height: 140%;
+                    font-family: system-ui, -apple-system, "Poppins", "MS PGothic", "Microsoft YaHei", "Arial", sans-serif;
+                    max-width: none;
+                    }
+                    .page-content .fullSize {
+                    margin-left: -30px;
+                    margin-right: -30px;
+                    }
+                    .page-content .visualImg {
+                    max-width: 926px;
+                    margin: 0 auto;
+                    }
+                    .page-content .visualImg img {
+                    width: 100%;
+                    }
+                    .page-content .visualImg .imgName {
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 140%; /* 140% */
+                    letter-spacing: -0.5px;
+                    text-align: center;
+                    margin-bottom: 40px;
+                    }
+                    .page-content .pageDesc {
+                    margin-bottom: 80px;
+                    }
+                    .page-content .pageDesc li + li {
+                    margin-top: 30px;
+                    }
+                    .page-content .pageDesc p {
+                    color: #000;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 172%; /* 172.308% */
+                    letter-spacing: -0.5px;
+                    }
+                    .page-content .pageDesc p::before {
+                    content: "";
+                    display: inline-block;
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 5px;
+                    margin-bottom: 3px;
+                    background-color: #000;
+                    }
+                    .page-content .division {
+                    display: flex;
+                    align-items: stretch;
+                    justify-content: center;
+                    margin-bottom: 40px;
+                    margin-top: 85px;
+                    }
+                    .page-content .division.divisionAuto {
+                    min-height: auto;
+                    }
+                    .page-content .division.divisionAuto .left,
+                    .page-content .division.divisionAuto .right {
+                    padding: 35px 6.5%;
+                    }
+                    .page-content .division .h2 {
+                    font-size: 36px;
+                    font-weight: bold;
+                    line-height: 100%;
+                    margin-bottom: 27px;
+                    }
+                    .page-content .division .left {
+                    width: 50%;
+                    box-sizing: border-box;
+                    border-radius: 0 45px 45px 0;
+                    overflow: hidden;
+                    }
+                    .page-content .division .left img {
+                    width: 100%;
+                    height: 100%;
+                    -o-object-fit: cover;
+                        object-fit: cover;
+                    display: block;
+                    }
+                    .page-content .division .left.bgFill {
+                    display: flex;
+                    align-items: center;
+                    padding: 6.5%;
+                    color: #fff;
+                    }
+                    .page-content .division .left .h2 {
+                    margin: 0;
+                    }
+                    .page-content .division .right {
+                    background-color: #000;
+                    box-sizing: border-box;
+                    border-radius: 45px 0 0 45px;
+                    width: 50%;
+                    color: #fff;
+                    padding: 100px 80px;
+                    padding: 6.5%;
+                    }
+                    .page-content .division .right p {
+                    font-size: 16px;
+                    line-height: 140%;
+                    }
+                    .page-content .division-grey {
+                    min-height: 0;
+                    margin-top: 0;
+                    }
+                    .page-content .division-grey .left {
+                    background-color: #DEDEDE;
+                    padding: 23px 32px;
+                    }
+                    .page-content .division-grey .left .caption {
+                    font-size: 20px;
+                    font-weight: 300;
+                    margin-bottom: 12px;
+                    }
+                    .page-content .division-grey .left .caption::after {
+                        display: none;
+                    }
+                    .page-content .division-grey .left .line {
+                    width: 66px;
+                    height: 1px;
+                    background-color: #000;
+                    margin-bottom: 20px;
+                    }
+                    .page-content .division-grey .left .h3 {
+                    font-size: 24px;
+                    font-weight: bold;
+                    margin-bottom: 42px;
+                    }
+                    .page-content .division-grey .left p {
+                    font-size: 16px;
+                    line-height: 175%;
+                    }
+                    .page-content .division-grey .right {
+                    background-color: #DEDEDE;
+                    padding: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    }
+                    .page-content .division-grey .right img {
+                    width: 100%;
+                    }
+                    .page-content .division-border {
+                    margin-top: 30px;
+                    }
+                    .page-content .division-border .left {
+                    padding: 17px 32px 27px;
+                    flex: 1 0 0;
+                    }
+                    .page-content .division-border .left .caption {
+                    font-size: 20px;
+                    font-weight: 300;
+                    margin-bottom: 12px;
+                    }
+                    .page-content .division-border .left .line {
+                    width: 66px;
+                    height: 1px;
+                    background-color: #000;
+                    margin-bottom: 20px;
+                    }
+                    .page-content .division-border .left .h3 {
+                    font-size: 24px;
+                    font-weight: bold;
+                    margin-bottom: 42px;
+                    }
+                    .page-content .division-border .left .h3 span {
+                    font-weight: 400;
+                    }
+                    .page-content .division-border .left p {
+                    font-size: 16px;
+                    line-height: 175%;
+                    }
+                    .page-content .division-border .left b {
+                    font-weight: bold;
+                    }
+                    .page-content .division-border .right {
+                    flex: 0 0 auto;
+                    background-color: transparent;
+                    padding: 0;
+                    padding-right: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    }
+                    .page-content .division-border .right img {
+                    width: 100%;
+                    }
+                    .page-content .division-border-2 .left {
+                    width: 83%;
+                    padding-right: 5.8%;
+                    }
+                    .page-content .division-border-2 .right {
+                    width: 35%;
+                    max-width: 414px;
+                    }
+                    .page-content .division-border-2 .right img {
+                    max-height: 375px;
+                    -o-object-fit: contain;
+                        object-fit: contain;
+                    }
+                    .page-content .tableWrap table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    font-size: 14px;
+                    margin-bottom: 45px;
+                    }
+                    .page-content .tableWrap table td {
+                    vertical-align: top;
+                    border: 1px solid #BBBBBB;
+                    box-sizing: border-box;
+                    text-align: left;
+                    }
+                    .page-content .tableWrap table td:nth-child(1) {
+                    border-left: 0;
+                    vertical-align: middle;
+                    }
+                    .page-content .tableWrap table td:nth-child(1) img {
+                    width: 100%;
+                    min-width: 50px;
+                    -o-object-fit: contain;
+                        object-fit: contain;
+                    }
+                    .page-content .tableWrap table td:nth-child(2) {
+                    border-right: 0;
+                    padding: 40px 70px;
+                    padding: 3.3% 5.8%;
+                    padding: 40px 5.8%;
+                    }
+                    .page-content .tableWrap table .h3 {
+                    font-size: 24px;
+                    font-weight: bold;
+                    margin-bottom: 28px;
+                    }
+                    .page-content .tableWrap table .h3::before {
+                    display: inline-block;
+                    color: #000;
+                    margin-right: 6px;
+                    }
+                    .page-content .tableWrap table tr:nth-child(1) .h3::before {
+                    content: "①";
+                    }
+                    .page-content .tableWrap table tr:nth-child(2) .h3::before {
+                    content: "②";
+                    }
+                    .page-content .tableWrap table tr:nth-child(3) .h3::before {
+                    content: "③";
+                    }
+                    .page-content .tableWrap table tr:nth-child(4) .h3::before {
+                    content: "④";
+                    }
+                    .page-content .tableWrap table p {
+                    font-size: 14px;
+                    margin-bottom: 7px;
+                    }
+                    .page-content .tableWrap table li {
+                    font-size: 14px;
+                    line-height: 100%;
+                    padding-left: 22px;
+                    position: relative;
+                    word-break: break-all;
+                    }
+                    .page-content .tableWrap table li::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 15px;
+                    height: 15px;
+                    display: inline-block;
+                    }
+                    .page-content .tableWrap table li.location::before {
+                    background-image: url(./img/common/ic_location.svg);
+                    }
+                    .page-content .tableWrap table li.tel::before {
+                    background-image: url(./img/common/ic_tel.svg);
+                    }
+                    .page-content .tableWrap table li.web::before {
+                    background-image: url(./img/common/ic_web.svg);
+                    }
+                    .page-content .tableWrap table li.price::before {
+                    background-image: url(./img/common/ic_price.svg);
+                    }
+                    .page-content .tableWrap table li.cart::before {
+                    background-image: url(./img/common/ic_cart.svg);
+                    }
+                    .page-content .tableWrap table li.noti::before {
+                    background-image: url(./img/common/ic_noti.svg);
+                    }
+                    .page-content .tableWrap table li + li {
+                    margin-top: 7px;
+                    }
+                    .page-content.theme-red .color {
+                    color: #F0514D !important;
+                    }
+                    .page-content.theme-red .bgFill {
+                    background-color: #F0514D !important;
+                    }
+                    .page-content.theme-red .pageDesc p::before {
+                    background-color: #F0514D;
+                    }
+                    .page-content.theme-red .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+                    background: rgba(240, 81, 77, 0.1);
+                    }
+                    .page-content.theme-red .division-border {
+                    border: 3px solid #F0514D;
+                    box-sizing: border-box;
+                    }
+                    .page-content.theme-navy .color {
+                    color: #036A9B !important;
+                    }
+                    .page-content.theme-navy .bgFill {
+                    background-color: #036A9B !important;
+                    }
+                    .page-content.theme-navy .pageDesc p::before {
+                    background-color: #036A9B;
+                    }
+                    .page-content.theme-navy .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+                    background: rgba(3, 106, 155, 0.1);
+                    }
+                    .page-content.theme-navy .division-border {
+                    border: 3px solid #036A9B;
+                    box-sizing: border-box;
+                    }
+                    .page-content.theme-yellow .color {
+                    color: #EDB51E !important;
+                    }
+                    .page-content.theme-yellow .bgFill {
+                    background-color: #EDB51E !important;
+                    }
+                    .page-content.theme-yellow .pageDesc p::before {
+                    background-color: #EDB51E;
+                    }
+                    .page-content.theme-yellow .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+                    background: rgba(237, 181, 30, 0.15);
+                    }
+                    .page-content.theme-yellow .division-border {
+                    border: 3px solid #EDB51E;
+                    box-sizing: border-box;
+                    }
+                    .page-content.theme-green .color {
+                    color: #4C9667 !important;
+                    }
+                    .page-content.theme-green .bgFill {
+                    background-color: #4C9667 !important;
+                    }
+                    .page-content.theme-green .pageDesc p::before {
+                    background-color: #4C9667;
+                    }
+                    .page-content.theme-green .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+                    background: rgba(76, 150, 103, 0.1);
+                    }
+                    .page-content.theme-green .division-border {
+                    border: 3px solid #4C9667;
+                    box-sizing: border-box;
+                    }
+                    .page-content.theme-pink .color {
+                    color: #F598A6 !important;
+                    }
+                    .page-content.theme-pink .bgFill {
+                    background-color: #F598A6 !important;
+                    }
+                    .page-content.theme-pink .pageDesc p::before {
+                    background-color: #F598A6;
+                    }
+                    .page-content.theme-pink .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+                    background: rgba(245, 152, 166, 0.15);
+                    }
+                    .page-content.theme-pink .division-border {
+                    border: 3px solid #F598A6;
+                    box-sizing: border-box;
+                    }
+                    .page-content.theme-blue .color {
+                    color: #2587C8 !important;
+                    }
+                    .page-content.theme-blue .bgFill {
+                    background-color: #2587C8 !important;
+                    }
+                    .page-content.theme-blue .pageDesc p::before {
+                    background-color: #2587C8;
+                    }
+                    .page-content.theme-blue .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+                    background: rgba(37, 135, 200, 0.15);
+                    }
+                    .page-content.theme-blue .division-border {
+                    border: 3px solid #2587C8;
+                    box-sizing: border-box;
+                    }
+                    @media screen and (max-width: 767px) {
+                    .page-content .division {
+                        flex-direction: column;
+                    }
+                    .page-content .division .left {
+                        width: 100%;
+                        border-radius: 0;
+                    }
+                    .page-content .division .right {
+                        width: 100%;
+                        border-radius: 0;
+                    }
+                    .page-content .division-border-2 .left {
+                        width: 100%;
+                        padding: 17px 32px 27px;
+                    }
+                    .page-content .division-border .left {
+                        flex: 1 0 auto;
+                    }
+                    .page-content .division-border .right {
+                        padding: 17px 32px;
+                    }
+                    .page-content .division-border-2 .right {
+                        max-width: 100%;
+                    }
+                    .page-content .division-border-2 .right img {
+                        width: 100%;
+                        -o-object-fit: contain;
+                        object-fit: contain;
+                        max-height: 240px;
+                    }
+                    .page-content .tableWrap {
+                        display: block;
+                    }
+                    .page-content .tableWrap table {
+                        display: block;
+                    }
+                    .page-content .tableWrap table colgroup {
+                        display: none;
+                    }
+                    .page-content .tableWrap table td {
+                        display: block;
+                        width: 100%;
+                        border: 1px solid #BBBBBB !important;
+                        margin-top: -1px;
+                    }
+                    .page-content .tableWrap table td:nth-child(1) {
+                        display: flex;
+                    }
+                    .page-content .tableWrap table td:nth-child(1) img {
+                        max-height: 350px;
+                        width: 50%;
+                        margin: 0 auto;
+                    }
+                    }
+                </style>
+                <section class="page-content theme-red">
+                    <!-- comp -->
+                    <div class="visualImg">
+                        <img src="./img/detail/gyg/img01.jpg" alt="...">
+                        <div class="imgName">불이 밝혀진 수원 화성행궁의 야간 모습</div>
+                    </div>
+                    <!-- comp -->
+                    <div class="pageDesc">
+                        <ul>
+                            <li>
+                                <p>
+                                    서울 여행에서 꼭 들러야 하는 근교 도시를 꼽으라면 ‘경기도’다. 서울을 빙 둘러싼 경기도는 넓은 규모에 도시와 자연 모두를 모두 만족시키는 여행지다. 경기도에서 가장 많은 인구수를 보유한 곳은 수원. 많은 인구수만큼이나 각종 기업과 대학이 밀집되어 있다. 수원을 방문했다면 화성과 함께 화성행궁 근처 맛집과 카페, 숍 등이 가득한 행리단길을 꼭 둘러봐야 한다.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    경기도는 어느 곳이나 관광할 거리가 풍부한 곳이지만 아름다운 풍경을 자랑하는 곳으로 파주를 추천한다. 파주 벽초지수목원에는 봄이 되면 수백 종의 야생화들이 알록달록하게 피어나는데 관광객들의 발길을 사로잡기에 충분하다.  
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                   자연을 좀 더 가까이에서 체험하고 싶다면 포천으로 향해보자. 포천(抱川)이라는 지명이 ‘냇물을 품고 있다’는 뜻으로 지명처럼 물과 숲이 조화를 이루는 관광지가 많다. 버려진 채석장을 친환경 복합 문화 공간으로 재탄생시킨 포천아트밸리가 서울에서 차로 1시간 정도 거리에 있다. '천주호', '전망대', '조각공원' 등 둘러볼 거리도 많고, 화강암을 채석했던 웅덩이에 자연스레 형성된 천주호는 1급수의 맑은 물이 가득한 호수다. 드라마 <달의 연인_보보경심려>, <푸른바다의 전설>, <화유기> 등 다수의 드라마 배경지로도 등장했다. 2020년 유네스코에 등재된 한탄강 유네스코 지질공원도 빼놓을 수 없다. 광활한 용암대지 위에 흐르는 한탄강변을 따라 30m에 달하는 장엄한 현무암 협곡이 발달되어 있는데 '한국의 그랜드 캐니언'이라고 불릴 만하다.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- comp -->
+                    <div class="division fullSize">
+                        <div class="left">
+                            <img src="./img/detail/gyg/img02.jpg" alt="...">
+                        </div>
+                        <div class="right bgFill">
+                            <div class="h2">경기도 쌀 디저트</div>
+                            <p>
+                                경기도는 비옥한 땅에서 자라는 ‘경기미’로 유명한 곳이다. 우수한 경기도 쌀로 만든 다양한 디저트는 밀가루로 만든 디저트와는 또 다른 식감과 맛을 선사한다. 부드러운 우유 크림을 곁들인 롤케이크부터 파운드케이크, 쌀크림빵, 쌀카스텔라 등 다양한 디저트를 고루 맛보길 추천한다.
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="tableWrap fullSize">
+                        <table>
+                            <colgroup><col width="380px"><col width="840px"></colgroup>
+                            <tr>
+                                <td><img src="./img/detail/gyg/tb_img01.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">달롤 쌀 롤케이크</div>
+                                    <p>
+                                        한강 주변 김포의 기름진 평야에서 생산된 ‘김포금쌀’로 만든 롤케이크다. 김포금쌀은 에로부터 밥맛이 좋기로 유명해 임금님 수라상에 오를 정도로 최고급 품질을 자랑한다. 달롤의 롤케이크는 밀가루 대신 쌀가루를 이용해 만들기 때문에 글루텐프리 제품으로 소화가 잘되고 구름처럼 부드럽고 폭신하다. 우유크림 롤케이크와 초당옥수수 크림 롤케이크, 쌀식빵 등 다채로운 디저트를 판매한다. 
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            경기도 구리시 경춘로 261(달롤 롯데백화점 구리점)
+                                        </li>
+                                        <li class="tel">
+                                            010-3317-5038
+                                        </li>
+                                        <li class="web">
+                                            smartstore.naver.com/dalroll
+                                        </li>
+                                        <li class="price">
+                                            롤케이크 조각 1만원 미만
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><img src="./img/detail/gyg/tb_img02.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">열두톨 쌀파운드케이크</div>
+                                    <p>
+                                        ‘열두톨’은 고양에서 재배되는 가와지쌀을 활용해 만든 파운드케이크를 판매하는 곳. 디저트에 최적화하기 위해 쌀가루를 직접 제분하는 덕분에 부드러운 식감이 돋보인다. 고소한 플레인 파운드, 진한 쑥향과 앙금의 달콤함을 더한 강화사자발약쑥파운드 등이 있다.
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            경기도 고양시 일산동구 일산로427번길 17-1(열두톨)
+                                        </li>
+                                        <li class="tel">
+                                            010-3758-9878 
+                                        </li>
+                                        <li class="web">
+                                            smartstore.naver.com/12tol 
+                                        </li>
+                                        <li class="price">
+                                            쌀파운드케이크 플레인 조각 1만원 미만
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><img src="./img/detail/gyg/tb_img03.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">흥만소 이천쌀크림빵</div>
+                                    <p>
+                                        이천쌀을 사용해 만든 쌀크림빵은 밀가루를 전혀 사용하지 않았다. 밥공기 1/5 양에 해당되는 쌀알이 빵 안에 들어 있다는 것이 특징이다. 겉은 바삭하고 속은 촉촉한 쌀크림빵은 안에 들어 있는 크림 맛에 따라 쌀, 밤, 팥, 옥수수, 흑임자, 인절미, 초코, 말차 등 여덟 가지 맛으로 골라 먹는 재미가 있다. 흥만소 카페에서 구입 가능하고 온라인 쇼핑몰로 주문할 수도 있다.
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            경기도 이천시 향교로 3(쌀 베이커리카페 흥만소) 
+                                        </li>
+                                        <li class="tel">
+                                            0507-1316-8077 
+                                        </li>
+                                        <li class="web">
+                                            smartstore.naver.com/heungmanso
+                                        </li>
+                                        <li class="price">
+                                            이천쌀크림빵 1만원 미만
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><img src="./img/detail/gyg/tb_img04.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">경기미당 쌀카스텔라 인절미</div>
+                                    <p>
+                                       안산에 위치한 떡집 ‘경기미당’에서는 100% 쌀로 만든 카스텔라 고명을 더한 ‘카스텔라 인절미’를 개발했다. 부드러운 쌀 카스텔라와 쫄깃한 인절미가 환상적인 조화를 이룬다. 안산시 대부도의 전용 논에서 수확한 쌀로 만들어 신뢰를 더욱 높여준다
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            경기도 안산시 상록구 송호1길 48(경기미당 본점) 
+                                        </li>
+                                        <li class="tel">
+                                            0507-1312-4833 
+                                        </li>
+                                        <li class="web">
+                                            smartstore.naver.com/barunfnd 
+                                        </li>
+                                        <li class="price">
+                                            쌀카스테라 인절미 1팩 1만원 미만
+                                        <li class="cart">
+                                            경기미당 파주점, 청라점, 광교점, 은계점, 시흥플랑드점, 송산점, 호평점
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+                    <!-- comp -->
+                    <div class="division division-border fullSize">
+                        <div class="left">
+                            <div class="caption">Mini Interview</div>
+                            <div class="line"></div>
+                            <div class="h3">열두톨 <span>심하늬 대표</span></div>
+                            <p>
+                                <b>Q ‘열두톨’이라는 가게 이름이 특이합니다.</b> 1991년 일산신도시 개발을 위해 지표 조사 과정 가운데 12톨의 볍씨가 발견되었습니다. 이 볍씨는 한반도에서 최초로 재배한 벼인 가와지볍씨라고 합니다. 가와지쌀을 이용한 디저트를 만들기에 열두톨이라 이름을 지었습니다. 
+                            </p>
+                            <p>
+                                <b>Q 쌀로 만든 파운드를 개발하게 된 동기는요?</b> 가와지쌀을 이용한 디저트를 연구하던 중 누구나 접하기 쉬운 파운드케이크를 떠올리게 되었습니다. 전문가들에게 베이킹 노하우를 배우며 상품을 개발했습니다.
+                            </p>
+                        </div>
+                        <div class="right">
+                            <img src="./img/detail/gyg/img03.jpg" alt="...">
+                        </div>
+                    </div>
+
+                    <!-- comp -->
+                    <div class="division fullSize">
+                        <div class="left">
+                            <img src="./img/detail/gyg/img04.jpg" alt="...">
+                        </div>
+                        <div class="right bgFill">
+                            <div class="h2">파주 장단콩 초콜릿</div>
+                            <p>
+                                ‘장단삼백(長湍三白)’은 파주개성 인삼과 한수위 파주쌀, 장단콩을 의미하는 단어로 임금님 수라상에 오를 만큼 품질이 일품인 작물을 일컫는다. 이 가운데 파주시 장단 지역에서 재배되는 장단콩은 순수 국내 토종 재래종 콩으로 다른 지역 콩보다 품질이 우수하고 맛이 뛰어나다. 
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="tableWrap fullSize">
+                        <table>
+                            <colgroup><col width="380px"><col width="840px"></colgroup>
+                            <tr>
+                                <td><img src="./img/detail/gyg/tb_img05.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">DMZ 초콜릿</div>
+                                    <p>
+                                        ‘장단콩초콜릿’은 파주 지역 특산물인 장단콩을 볶은 후 초콜릿을 입힌 초코볼 형태의 간식이다. 파주 장단콩은 전통적으로 한국의 영양 식품으로 손꼽혔고, 매년 ‘파주장단콩축제’가 열릴 만큼 파주의 대표 특산물로 자리 잡았다
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            경기도 파주시 탄현면 필승로 396(파주장단콩웰빙마루) 
+                                        </li>
+                                        <li class="tel">
+                                            031-943-2662 
+                                        </li>
+                                        <li class="web">
+                                            dmzdreamfood.modoo.at 
+                                        </li>
+                                        <li class="price">
+                                            DMZ 삼각 장단콩 서리태 초콜릿 120g 1만원 대 
+                                        </li>
+                                        <li class="noti"> 
+                                            파주 장단콩 오란다 만들기, 고추장 만들기, 초콜릿 만들기
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <!-- comp -->
+                    <div class="division fullSize">
+                        <div class="left">
+                            <img src="./img/detail/gyg/img05.jpg" alt="...">
+                        </div>
+                        <div class="right bgFill">
+                            <div class="h2">여주 도자기 제품</div>
+                            <p>
+                                질 좋은 백토, 점토 등 흙과 물이 풍부한 여주는 일찍부터 도예가 발달했다. 여주 도자기 역사는 1000년 전 고려 초로 거슬러 올라갈 정도로 오랜 전통을 자랑한다. 도자의 역사를 잇는다는 자부심으로 여주 지역 도예인들은 여주 도자기 공동 브랜드를 만들어 여주 도자기의 장인 정신에 모던함을 접목하고 있다.
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="tableWrap fullSize">
+                        <table>
+                            <colgroup><col width="380px"><col width="840px"></colgroup>
+                            <tr>
+                                <td><img src="./img/detail/gyg/tb_img06.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">이도 여주세라믹스튜디오</div>
+                                    <p>
+                                        여주 도자기를 구입하고 싶을 때 이도를 방문해보자. 파스타 접시, 머그컵, 찻잔 등 세련되고 실용적인 아이템이 가득하다. 이윤신 도예가가 설립한 이도는 한국적 조형미와 현대적 감각의 디자인을 융합해 실생활에서 사용하기에 편리한 도자기 식기를 선보인다
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            경기도 여주시 북내면 가정1길 62(이도 여주세라믹스튜디오) 
+                                        </li>
+                                        <li class="tel">
+                                            031-881-5525 
+                                        </li>
+	                                <li class="web">
+	                                    www.yidomall.com 
+	                                </li>
+                                        <li class="price">
+                                            율 국그릇 뚜껑세트 6만원 대 
+                                        </li>
+                                        <li class="cart"> 
+                                            이도 롯데백화점 동탄점, 현대백화점 더현대 서울, 청담점
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><img src="./img/detail/gyg/tb_img07.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">여주도자나날센터</div>
+                                    <p>
+                                        여주 도자기의 우수성을 알리기 위해 만든 여주 도자기 공동 브랜드 ‘나날’ 제품을 판매하는 곳이다. 여주시에서 직접 선정한 전문 도예 작가의 컬렉션 라인을 만날 수 있다.
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            경기도 여주시 천송동 297-23(여주도자나날센터) 
+                                        </li>
+                                        <li class="tel">
+                                            031-887-3351 
+                                        </li>
+                                        <li class="web">
+                                            smartstore.naver.com/_yj_nanal
+                                        </li>
+                                        <li class="price">
+                                            달와 1인 식기세트 8만원 대
+                                        </li>
+                                        <li class="noti">
+                                            5월 여주도자기축제 
+                                        </li>
+                                        <li class="cart">
+                                            여주퍼블릭마켓, 신세계프리미엄아울렛 여주점
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><img src="./img/detail/gyg/tb_img08.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">오부자옹기</div>
+                                    <p>
+                                        국가무형문화재 제96호 옹기장 김일만 장인이 만든 옹기류를 판매하는 곳이다. 항아리와 식기, 소품부터 큰 항아리에 이르기까지 종류가 다양하다. 옛날 방식 그대로 전통 발 물레를 사용하며 아버지와 아들 4명이 모두 옹기를 빚어 ‘오부자옹기’라는 이름을 붙였다.
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            경기도 여주시 금사면 이여로 1213-12(오부자옹기) 
+                                        </li>
+                                        <li class="price">
+                                            머그컵 3만원 대 
+                                        </li>
+                                        <li class="tel">
+                                            010-4454-9335 
+                                        </li>
+                                        <li class="web">
+                                            smartstore.naver.com/obuzaonggi
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+                    <!-- comp -->
+                    <div class="division fullSize">
+                        <div class="left">
+                            <img src="./img/detail/gyg/img06.jpg" alt="...">
+                        </div>
+                        <div class="right bgFill">
+                            <div class="h2">유리섬박물관 공예품</div>
+                            <p>
+                                이탈리아의 무라노섬에서 영감받아 설립된 유리섬박물관은 기원전 3000년 전부터 시작된 유리 공예의 역사와 유리 예술 문화를 소개하는 복합 문화 체험 공간이다. 박물관 내 아트 숍에서는 작가들이 만든 다양한 아트 글라스와 유리 그릇, 컵 등의 제품을 판매한다.
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="tableWrap fullSize">
+                        <table>
+                            <colgroup><col width="380px"><col width="840px"></colgroup>
+                            <tr>
+                                <td><img src="./img/detail/gyg/tb_img09.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">유리섬박물관 공예품</div>
+                                    <p>
+                                       직접 유리공예를 체험해볼 수 있는 유리공예 스튜디오를 운영하며, 홈페이지를 방문하면 아트 글라스와 트로피, 조형물 등을 주문 제작할 수도 있다. 투명함과 컬러풀한 색이 조화를 이루며 수준 높은 공예미를 선사하는 조형물은 훌륭한 인테리어 소품이 되어준다.  
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            경기도 안산시 단원구 부흥로 254(유리섬박물관) 
+                                        </li>
+                                        <li class="tel">
+                                            032-885-6262 
+                                        </li>
+	                                <li class="web">
+	                                    www.glassisland.co.kr 
+	                                </li>
+                                        <li class="price">
+                                            블루 유리잔 10만원 대, 옐로우 화병 8만원 대
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+                    <!-- comp -->
+                    <div class="division fullSize">
+                        <div class="left">
+                            <img src="./img/detail/gyg/img07.jpg" alt="...">
+                        </div>
+                        <div class="right bgFill">
+                            <div class="h2">한국민속촌 굿즈</div>
+                            <p>
+                                용인에 위치한 한국민속촌은 한국의 민속적인 삶과 공간을 재현하고 생활상을 소개하기 위해 만든 테마파크다. 마당놀이 등 전통문화 공연을 상시로 선보여 한국 전통문화에 관심 있는 외국인 관광객들에게 꾸준히 사랑받고 있다.
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="tableWrap fullSize">
+                        <table>
+                            <colgroup><col width="380px"><col width="840px"></colgroup>
+                            <tr>
+                                <td><img src="./img/detail/gyg/tb_img10.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">한국민속촌 피크닉매트</div>
+                                    <p>나들이를 가거나 민속촌을 돌아본 뒤 잠시 쉬고 싶을 때 요긴하게 사용할 수 있는 아이템은 바로피크닉매트다. 한국민속촌 굿즈답게 한복을 입은 선비와 여인이 꽃길을 걷는 일러스트가 그려져 있다.  
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            경기도 용인시 기흥구 민속촌로 90 (한국민속촌) 
+                                        </li>
+                                        <li class="tel">
+                                            031-288-0000 
+                                        </li>
+	                                <li class="web">
+	                                    smartstore.naver.com/kfvmall 
+	                                </li>
+                                        <li class="price">
+                                            1만원 대
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><img src="./img/detail/gyg/tb_img11.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">엽전약과</div>
+                                    <p>
+                                        궁중에서 즐기던 전통 약과를 재현해 만들었다. 사양벌꿀을 넣어 만들어 달콤하면서도 쫀득한 식감이 매력적인데, 특히 조선시대 동전인 엽전을 본뜬 독특한 모양이 눈길을 끈다.  
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            경기도 용인시 기흥구 민속촌로 90 (한국민속촌) 
+                                        </li>
+                                        <li class="tel">
+                                            031-288-0000 
+                                        </li>
+                                        <li class="web">
+                                            smartstore.naver.com/kfvmall/profile 
+                                        </li>
+                                        <li class="price">
+                                            1만원 대
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+                    <!-- comp -->
+                    <div class="division fullSize">
+                        <div class="left">
+                            <img src="./img/detail/gyg/img08.jpg" alt="...">
+                        </div>
+                        <div class="right bgFill">
+                            <div class="h2">경기도 백자</div>
+                            <p>
+                                경기도 광주는 조선시대 500년간 도자기를 생산한 곳이다. 특히 광주시 분원리는 왕실 도자기를 굽던 사옹원 분원이 있던 곳으로 관청에서 사용하는 수준 높은 백자를 만들었다. 광주시에서는 왕실 도자기의 전통을 잇기 위해 1998년부터 매년 도자기 축제를 개최하고 있다.
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="tableWrap fullSize">
+                        <table>
+                            <colgroup><col width="380px"><col width="840px"></colgroup>
+                            <tr>
+                                <td><img src="./img/detail/gyg/tb_img12.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">한기석 백자</div>
+                                    <p>
+                                       한기석 작가는 사옹원 분원 관요의 5대 후손으로 250년이 넘는 전통을 지닌 가업을 잇고 있다. 조선 사대부의 사상을 담아 화려하지만 사치스럽지 않고 담백하면서도 멋스러운 백자의 매력을 보여주는 작품을 만들고 있다. 매장을 방문하려면 사전에 예약해야 한다.  
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            	경기도 광주시 도척면 도척로 330번길 31(지평도예) 
+                                        </li>
+                                        <li class="tel">
+                                            010-9828-3386   
+                                        </li>
+	                                <li class="web">
+	                                    smartstore.naver.com/guanyao 
+	                                </li>
+                                        <li class="price">
+                                            백자청화모란문와인잔 7만원 대
+                                        </li>
+                                        <li class="noti">
+                                            5월 광주 왕실 도자기축제
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+                    <!-- comp -->
+                    <div class="division fullSize">
+                        <div class="left">
+                            <img src="./img/detail/gyg/img09.jpg" alt="...">
+                        </div>
+                        <div class="right bgFill">
+                            <div class="h2">DMZ 굿즈</div>
+                            <p>
+                                천혜의 생태 환경을 지닌 비무장지대는 통일의 염원을 간직한 역사박물관으로 불리는 곳이다. DMZ는 사람의 발길이 닿지 않아 오랫동안 다양한 동식물이 공존하는 서식지로 각광받아왔고, 평화의 소중함을 느낄 수 있어 ‘외국인이 꼭 가보고 싶은 한국 여행지 1위’에 이름을 올리기도 했다.
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="tableWrap fullSize">
+                        <table>
+                            <colgroup><col width="380px"><col width="840px"></colgroup>
+                            <tr>
+                                <td><img src="./img/detail/gyg/tb_img13.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">철조망 기념품과 모자</div>
+                                    <p>
+                                      임진각 기념품점에서는 북한 지폐, DMZ 로고가 새겨진 모자와 머그컵, 군복 티셔츠 등 다양한 밀리터리 굿즈를 구입할 수 있다. DMZ 굿즈를 통해 DMZ에 대한 추억을 오래도록 간직해보자. 
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            	경기도 파주시 문산읍 임진각로 164(임진각역사매장) 
+                                        </li>
+                                        <li class="tel">
+                                            031-953-4744   
+                                        </li>
+	                                <li class="web">
+	                                    tour.paju.go.kr 
+	                                </li>
+                                        <li class="price">
+                                            철조망 기념품 4만원 대, 모자 1만원 대
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+                    <!-- comp -->
+                    <div class="division fullSize">
+                        <div class="left">
+                            <img src="./img/detail/gyg/img10.jpg" alt="...">
+                        </div>
+                        <div class="right bgFill">
+                            <div class="h2">수원화성 굿즈</div>
+                            <p>
+                                수원화성은 벽돌과 거중기를 이용해 축성한 18세기 건축물로 대한민국 성곽 건축 역사상 가장 독보적인 건축물로 평가받는다. 수원화성의 모양을 본따 만든 화성빵, 수원화성의 모습을 담은 기념품, 수원화성을 미니어처로 조립하고 채석하는 만들기 키트 등 다채로운 아이템을 만날 수 있다.
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="tableWrap fullSize">
+                        <table>
+                            <colgroup><col width="380px"><col width="840px"></colgroup>
+                            <tr>
+                                <td><img src="./img/detail/gyg/tb_img14.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">수원화성빵</div>
+                                    <p>수원화성을 기념하기 위해 수원화성의 모양을 본뜬 ‘수원화성빵'을 만들었다. 일반 밀가루가 아닌 타피오카 가루를 사용해 칼로리가 낮아서 다이어트에 도움을 주고 일반 빵보다 쫄깃한 식감이 돋보인다. 
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            경기도 수원시 팔달구 창룡대로 18(수원화성빵 행궁화성박물관점) 
+                                        </li>
+                                        <li class="tel">
+                                            031-239-2978 
+                                        </li>
+	                                <li class="web">
+	                                    hwasungbbang.modoo.at  
+	                                </li>
+                                        <li class="price">
+                                            5개 1박스 1만원 대
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><img src="./img/detail/gyg/tb_img15.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">수원화성 거울</div>
+                                    <p>
+                                        수원화성 북쪽에 설치한 수문인 ‘화홍문’의 아름다운 모습을 그대로 담은 전통 손거울이다. 한국전통의 멋을 담아 나전기법으로 제작되어 고급스러움을 더해준다. 견고한 종이 상자에 넣어주는데, 선물용으로도 좋다. 
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            경기도 수원시 팔달구 창룡대로 21(수원화성박물관)  
+                                        </li>
+                                        <li class="tel">
+                                            031-6216-2759  
+                                        </li>
+                                        <li class="price">
+                                            1만원 대 
+                                        </li>
+                                        <li class="cart">
+                                            수원박물관, 수원시청, 수원역 종합관광안내소, 수원화성기념품 숍
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+                    <!-- comp -->
+                    <div class="division fullSize">
+                        <div class="left">
+                            <img src="./img/detail/gyg/img11.jpg" alt="...">
+                        </div>
+                        <div class="right bgFill">
+                            <div class="h2">포천 담은막걸리</div>
+                            <p>
+                                85년 전통을 자랑하는 포천의 일동막걸리는 지역 특산주로 지정되며 가치를 인정받았다. 청정 포천쌀을 주원료로 만들고 전통 제조 비법을 첨가해 제품의 완성도를 높인 프리미엄 막걸리다. 우리나라 국무총리가 일본 국왕 즉위식에 참석해 선물할 정도로 우리나라를 대표하는 특산물이라고 자부할 만한 맛이다.
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="tableWrap fullSize">
+                        <table>
+                            <colgroup><col width="380px"><col width="840px"></colgroup>
+                            <tr>
+                                <td><img src="./img/detail/gyg/tb_img16.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">포천 담은막걸리</div>
+                                    <p>
+                                      선명한 우윳빛과 부드러우면서도 걸쭉한 맛으로 ‘구름 막걸리’라는 별명을 지니고 있다. 시큼한 맛이 덜하고 탄산은 없으면서도 담백한 단맛을 내 막걸리를 처음 접하는 사람도 부담 없이 먹을 수 있다. 
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            경기도 포천시 일동면 운악청계로 1597(1932포천일동막걸리)  
+                                        </li>
+                                        <li class="tel">
+                                            031-532-3007  
+                                        </li>
+	                                <li class="web">
+	                                    smartstore.naver.com/1932  
+	                                </li>
+                                        <li class="price">
+                                            1만원 대 
+                                        </li>
+                                        <li class="cart">
+                                            전국 대형 마트, 서울시 종로구 계동길 5(담은막걸리 매장)
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+                    <!-- comp -->
+                    <div class="division fullSize">
+                        <div class="left">
+                            <img src="./img/detail/gyg/img12.jpg" alt="...">
+                        </div>
+                        <div class="right bgFill">
+                            <div class="h2">연천 전곡선사 굿즈</div>
+                            <p>
+                                1978년 처음 발견된 전곡리 선사 유적은 중요성을 인정받아 국가사적으로 지정되었다. 주먹도끼, 사냥돌, 주먹찌르개 등 다양한 종류의 석기가 발견되었고, 동북아시아 최초의 주먹도끼 발견으로 연천은 역사적인 의미가 아주 깊은 곳이다. 전곡리 유적과 전곡선사박물관은 구석기시대 생활상을 보여주는 중요한 장소다. 전곡선사박물관에서는 화살촉 석기 목걸이, 선사시대 사냥 모습을 담은 사냥 주머니 등 선사 유적과 관련된 다양한 기념품을 만날 수 있다.
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="tableWrap fullSize">
+                        <table>
+                            <colgroup><col width="380px"><col width="840px"></colgroup>
+                            <tr>
+                                <td><img src="./img/detail/gyg/tb_img17.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">매머드 레고</div>
+                                    <p>긴 털과 커다란 상아가 눈에 띄는 포유류. 바로 매머드다. 신생대 초원지대에서 살았던 화석동물의 대표 주자 매머드를 블록으로 간단하게 만들어보는 키트다. 전곡선사박물관에는 매머드 조형물이 전시되어 있으니 참고해봐도 좋겠다. 
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            경기도 연천군 전곡읍 평화로 443번길 2(전곡선사박물관) 
+                                        </li>
+                                        <li class="tel">
+                                            031-830-5600 
+                                        </li>
+	                                <li class="price">
+	                                    1만원 미만  
+	                                </li>
+                                        <li class="cart">
+                                            5월 연천 구석기축제
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><img src="./img/detail/gyg/tb_img18.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">주먹도끼 크레용</div>
+                                    <p>
+                                        돌도끼 모양이 재미있는 크레용 세트. 1981년 연천 전곡리에서 출토된 주먹도끼의 견본을 토대로 제작했다. 주먹도끼의 형태를 손으로 섬세하게 재현했고, 돌에서 추출한 미네랄 안료를 이용해 주먹도끼의 색감을 그대로 재현했다. 토기색, 맘모스색, 주먹도끼색 등 세 가지 컬러로 준비되었다. 
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            경기도 연천군 전곡읍 평화로443번길 2(전곡선사박물관)  
+                                        </li>
+                                        <li class="tel">
+                                            031-830-5600   
+                                        </li>
+                                        <li class="web">
+                                            smartstore.naver.com/gmuseumshop
+                                        </li>
+                                        <li class="price">
+                                            1만원 미만
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+                    <!-- comp -->
+                    <div class="division division-grey fullSize">
+                        <div class="left">
+                            <div class="caption">Tourist Attraction</div>
+                            <div class="line"></div>
+                            <div class="h3">포천 한탄강 하늘다리</div>
+                            <p>
+                            하늘다리에서 시작해 북쪽 멍우리 협곡을 구경하고 다시 하늘다리로 돌아오는 6km 구간의 산책 코스로 유명하다. 다리 위에 서면 한탄강 주상절리와 아름다운 풍경이 시원하게 펼쳐진다.
+                            </p>
+                        </div>
+                        <div class="right">
+                            <img src="./img/detail/gyg/img13.jpg" alt="...">
+                        </div>
+                    </div>
+                         
+                </section>
+            </contents>
+            <!-- evoke : 템플릿 끝 -->
+        </div>
+    </div>
+
+</body>
+</html>

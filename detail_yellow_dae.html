@@ -1,0 +1,979 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="common-inner">
+        <div class="template__type1__section">
+            <!-- evoke : 템플릿 시작 -->
+            <contents>
+                <style>
+                    /* common.css */
+                    @charset "UTF-8";
+                    /* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap'); */
+                    html, body, div, span, applet, object, iframe,
+                    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+                    a, abbr, acronym, address, big, cite, code,
+                    del, dfn, em, img, ins, kbd, q, s, samp,
+                    small, strike, strong, sub, sup, tt, var,
+                    b, u, i, center,
+                    dl, dt, dd, ol, ul, li,
+                    fieldset, form, label, legend,
+                    table, caption, tbody, tfoot, thead, tr, th, td,
+                    article, aside, canvas, details, embed,
+                    figure, figcaption, footer, header, hgroup,
+                    menu, nav, output, ruby, section, summary,
+                    time, mark, audio, video {
+                    margin: 0;
+                    padding: 0;
+                    border: 0;
+                    font-size: 100%;
+                    font: inherit;
+                    vertical-align: baseline;
+                    }
+                    /* HTML5 display-role reset for older browsers */
+                    article, aside, details, figcaption, figure,
+                    footer, header, hgroup, menu, nav, section {
+                    display: block;
+                    }
+                    body {
+                    line-height: 1;
+                    }
+                    ol, ul {
+                    list-style: none;
+                    }
+                    blockquote, q {
+                    quotes: none;
+                    }
+                    blockquote:before, blockquote:after,
+                    q:before, q:after {
+                    content: "";
+                    content: none;
+                    }
+                    table {
+                    border-collapse: collapse;
+                    border-spacing: 0;
+                    }
+                    Select {
+                    font-family: inherit; /* 폰트 상속 */
+                    background: url(../img/btn-drop-arrow.svg) no-repeat 98% 50%;
+                    /* 네이티브 화살표를 커스텀 화살표로 대체 */
+                    -webkit-appearance: none;
+                    /* 네이티브 외형 감추기 */
+                    -moz-appearance: none;
+                    appearance: none;
+                    }
+                    Select::-ms-expand {
+                    display: none; /* 화살표 없애기 for IE10, 11*/
+                    }
+                    input {
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    -webkit-border-radius: 0;
+                    border-radius: 0;
+                    }
+                    /* IE10 이상에서 input box 에 추가된 지우기 버튼 제거 */
+                    input::-ms-clear {
+                    display: none;
+                    }
+                    /* input type number 에서 화살표 제거 */
+                    input[type=number]::-webkit-inner-spin-button,
+                    input[type=number]::-webkit-outer-spin-button {
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    }
+                    body {
+                        background: #f5f5f5;
+                    }
+                    .common-inner {
+                        padding: 0 30px;
+                        max-width: 1300px;
+                        box-sizing: border-box;
+                        margin: 0 auto;
+                        margin-top: 40px;
+                        padding: 0 40px;
+                        padding-bottom: 120px;
+                    }
+                    .template__type1__section {
+                        padding: 30px;
+                        border: 1px solid #e0e0e0;
+                        background: #fff;
+                        border-radius: 18px;
+                    }
+                    @media (max-width: 1200px) {
+                        .common-inner {
+                            padding: 0 20px;
+                        }
+                    }
+                
+                    .page-content {
+                    color: #000;
+                    letter-spacing: -0.5px;
+                    line-height: 140%;
+                    font-family: system-ui, -apple-system, "Poppins", "MS PGothic", "Microsoft YaHei", "Arial", sans-serif;
+                    max-width: none;
+                    }
+                    .page-content .fullSize {
+                    margin-left: -30px;
+                    margin-right: -30px;
+                    }
+                    .page-content .visualImg {
+                    max-width: 926px;
+                    margin: 0 auto;
+                    }
+                    .page-content .visualImg img {
+                    width: 100%;
+                    }
+                    .page-content .visualImg .imgName {
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 140%; /* 140% */
+                    letter-spacing: -0.5px;
+                    text-align: center;
+                    margin-bottom: 40px;
+                    }
+                    .page-content .pageDesc {
+                    margin-bottom: 80px;
+                    }
+                    .page-content .pageDesc li + li {
+                    margin-top: 30px;
+                    }
+                    .page-content .pageDesc p {
+                    color: #000;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 172%; /* 172.308% */
+                    letter-spacing: -0.5px;
+                    }
+                    .page-content .pageDesc p::before {
+                    content: "";
+                    display: inline-block;
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 5px;
+                    margin-bottom: 3px;
+                    background-color: #000;
+                    }
+                    .page-content .division {
+                    display: flex;
+                    align-items: stretch;
+                    justify-content: center;
+                    margin-bottom: 40px;
+                    margin-top: 85px;
+                    }
+                    .page-content .division.divisionAuto {
+                    min-height: auto;
+                    }
+                    .page-content .division.divisionAuto .left,
+                    .page-content .division.divisionAuto .right {
+                    padding: 35px 6.5%;
+                    }
+                    .page-content .division .h2 {
+                    font-size: 36px;
+                    font-weight: bold;
+                    line-height: 100%;
+                    margin-bottom: 27px;
+                    }
+                    .page-content .division .left {
+                    width: 50%;
+                    box-sizing: border-box;
+                    border-radius: 0 45px 45px 0;
+                    overflow: hidden;
+                    }
+                    .page-content .division .left img {
+                    width: 100%;
+                    height: 100%;
+                    -o-object-fit: cover;
+                        object-fit: cover;
+                    display: block;
+                    }
+                    .page-content .division .left.bgFill {
+                    display: flex;
+                    align-items: center;
+                    padding: 6.5%;
+                    color: #fff;
+                    }
+                    .page-content .division .left .h2 {
+                    margin: 0;
+                    }
+                    .page-content .division .right {
+                    background-color: #000;
+                    box-sizing: border-box;
+                    border-radius: 45px 0 0 45px;
+                    width: 50%;
+                    color: #fff;
+                    padding: 100px 80px;
+                    padding: 6.5%;
+                    }
+                    .page-content .division .right p {
+                    font-size: 16px;
+                    line-height: 140%;
+                    }
+                    .page-content .division-grey {
+                    min-height: 0;
+                    margin-top: 0;
+                    }
+                    .page-content .division-grey .left {
+                    background-color: #DEDEDE;
+                    padding: 23px 32px;
+                    }
+                    .page-content .division-grey .left .caption {
+                    font-size: 20px;
+                    font-weight: 300;
+                    margin-bottom: 12px;
+                    }
+                    .page-content .division-grey .left .caption::after {
+                        display: none;
+                    }
+                    .page-content .division-grey .left .line {
+                    width: 66px;
+                    height: 1px;
+                    background-color: #000;
+                    margin-bottom: 20px;
+                    }
+                    .page-content .division-grey .left .h3 {
+                    font-size: 24px;
+                    font-weight: bold;
+                    margin-bottom: 42px;
+                    }
+                    .page-content .division-grey .left p {
+                    font-size: 16px;
+                    line-height: 175%;
+                    }
+                    .page-content .division-grey .right {
+                    background-color: #DEDEDE;
+                    padding: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    }
+                    .page-content .division-grey .right img {
+                    width: 100%;
+                    }
+                    .page-content .division-border {
+                    margin-top: 30px;
+                    }
+                    .page-content .division-border .left {
+                    padding: 17px 32px 27px;
+                    flex: 1 0 0;
+                    }
+                    .page-content .division-border .left .caption {
+                    font-size: 20px;
+                    font-weight: 300;
+                    margin-bottom: 12px;
+                    }
+                    .page-content .division-border .left .line {
+                    width: 66px;
+                    height: 1px;
+                    background-color: #000;
+                    margin-bottom: 20px;
+                    }
+                    .page-content .division-border .left .h3 {
+                    font-size: 24px;
+                    font-weight: bold;
+                    margin-bottom: 42px;
+                    }
+                    .page-content .division-border .left .h3 span {
+                    font-weight: 400;
+                    }
+                    .page-content .division-border .left p {
+                    font-size: 16px;
+                    line-height: 175%;
+                    }
+                    .page-content .division-border .left b {
+                    font-weight: bold;
+                    }
+                    .page-content .division-border .right {
+                    flex: 0 0 auto;
+                    background-color: transparent;
+                    padding: 0;
+                    padding-right: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    }
+                    .page-content .division-border .right img {
+                    width: 100%;
+                    }
+                    .page-content .division-border-2 .left {
+                    width: 83%;
+                    padding-right: 5.8%;
+                    }
+                    .page-content .division-border-2 .right {
+                    width: 35%;
+                    max-width: 414px;
+                    }
+                    .page-content .division-border-2 .right img {
+                    max-height: 375px;
+                    -o-object-fit: contain;
+                        object-fit: contain;
+                    }
+                    .page-content .tableWrap table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    font-size: 14px;
+                    margin-bottom: 45px;
+                    }
+                    .page-content .tableWrap table td {
+                    vertical-align: top;
+                    border: 1px solid #BBBBBB;
+                    box-sizing: border-box;
+                    text-align: left;
+                    }
+                    .page-content .tableWrap table td:nth-child(1) {
+                    border-left: 0;
+                    vertical-align: middle;
+                    }
+                    .page-content .tableWrap table td:nth-child(1) img {
+                    width: 100%;
+                    min-width: 50px;
+                    -o-object-fit: contain;
+                        object-fit: contain;
+                    }
+                    .page-content .tableWrap table td:nth-child(2) {
+                    border-right: 0;
+                    padding: 40px 70px;
+                    padding: 3.3% 5.8%;
+                    padding: 40px 5.8%;
+                    }
+                    .page-content .tableWrap table .h3 {
+                    font-size: 24px;
+                    font-weight: bold;
+                    margin-bottom: 28px;
+                    }
+                    .page-content .tableWrap table .h3::before {
+                    display: inline-block;
+                    color: #000;
+                    margin-right: 6px;
+                    }
+                    .page-content .tableWrap table tr:nth-child(1) .h3::before {
+                    content: "①";
+                    }
+                    .page-content .tableWrap table tr:nth-child(2) .h3::before {
+                    content: "②";
+                    }
+                    .page-content .tableWrap table tr:nth-child(3) .h3::before {
+                    content: "③";
+                    }
+                    .page-content .tableWrap table tr:nth-child(4) .h3::before {
+                    content: "④";
+                    }
+                    .page-content .tableWrap table p {
+                    font-size: 14px;
+                    margin-bottom: 7px;
+                    }
+                    .page-content .tableWrap table li {
+                    font-size: 14px;
+                    line-height: 100%;
+                    padding-left: 22px;
+                    position: relative;
+                    word-break: break-all;
+                    }
+                    .page-content .tableWrap table li::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 15px;
+                    height: 15px;
+                    display: inline-block;
+                    }
+                    .page-content .tableWrap table li.location::before {
+                    background-image: url(./img/common/ic_location.svg);
+                    }
+                    .page-content .tableWrap table li.tel::before {
+                    background-image: url(./img/common/ic_tel.svg);
+                    }
+                    .page-content .tableWrap table li.web::before {
+                    background-image: url(./img/common/ic_web.svg);
+                    }
+                    .page-content .tableWrap table li.price::before {
+                    background-image: url(./img/common/ic_price.svg);
+                    }
+                    .page-content .tableWrap table li.cart::before {
+                    background-image: url(./img/common/ic_cart.svg);
+                    }
+                    .page-content .tableWrap table li.noti::before {
+                    background-image: url(./img/common/ic_noti.svg);
+                    }
+                    .page-content .tableWrap table li + li {
+                    margin-top: 7px;
+                    }
+                    .page-content.theme-red .color {
+                    color: #F0514D !important;
+                    }
+                    .page-content.theme-red .bgFill {
+                    background-color: #F0514D !important;
+                    }
+                    .page-content.theme-red .pageDesc p::before {
+                    background-color: #F0514D;
+                    }
+                    .page-content.theme-red .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+                    background: rgba(240, 81, 77, 0.1);
+                    }
+                    .page-content.theme-red .division-border {
+                    border: 3px solid #F0514D;
+                    box-sizing: border-box;
+                    }
+                    .page-content.theme-navy .color {
+                    color: #036A9B !important;
+                    }
+                    .page-content.theme-navy .bgFill {
+                    background-color: #036A9B !important;
+                    }
+                    .page-content.theme-navy .pageDesc p::before {
+                    background-color: #036A9B;
+                    }
+                    .page-content.theme-navy .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+                    background: rgba(3, 106, 155, 0.1);
+                    }
+                    .page-content.theme-navy .division-border {
+                    border: 3px solid #036A9B;
+                    box-sizing: border-box;
+                    }
+                    .page-content.theme-yellow .color {
+                    color: #EDB51E !important;
+                    }
+                    .page-content.theme-yellow .bgFill {
+                    background-color: #EDB51E !important;
+                    }
+                    .page-content.theme-yellow .pageDesc p::before {
+                    background-color: #EDB51E;
+                    }
+                    .page-content.theme-yellow .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+                    background: rgba(237, 181, 30, 0.15);
+                    }
+                    .page-content.theme-yellow .division-border {
+                    border: 3px solid #EDB51E;
+                    box-sizing: border-box;
+                    }
+                    .page-content.theme-green .color {
+                    color: #4C9667 !important;
+                    }
+                    .page-content.theme-green .bgFill {
+                    background-color: #4C9667 !important;
+                    }
+                    .page-content.theme-green .pageDesc p::before {
+                    background-color: #4C9667;
+                    }
+                    .page-content.theme-green .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+                    background: rgba(76, 150, 103, 0.1);
+                    }
+                    .page-content.theme-green .division-border {
+                    border: 3px solid #4C9667;
+                    box-sizing: border-box;
+                    }
+                    .page-content.theme-pink .color {
+                    color: #F598A6 !important;
+                    }
+                    .page-content.theme-pink .bgFill {
+                    background-color: #F598A6 !important;
+                    }
+                    .page-content.theme-pink .pageDesc p::before {
+                    background-color: #F598A6;
+                    }
+                    .page-content.theme-pink .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+                    background: rgba(245, 152, 166, 0.15);
+                    }
+                    .page-content.theme-pink .division-border {
+                    border: 3px solid #F598A6;
+                    box-sizing: border-box;
+                    }
+                    .page-content.theme-blue .color {
+                    color: #2587C8 !important;
+                    }
+                    .page-content.theme-blue .bgFill {
+                    background-color: #2587C8 !important;
+                    }
+                    .page-content.theme-blue .pageDesc p::before {
+                    background-color: #2587C8;
+                    }
+                    .page-content.theme-blue .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+                    background: rgba(37, 135, 200, 0.15);
+                    }
+                    .page-content.theme-blue .division-border {
+                    border: 3px solid #2587C8;
+                    box-sizing: border-box;
+                    }
+                    @media screen and (max-width: 767px) {
+                    .page-content .division {
+                        flex-direction: column;
+                    }
+                    .page-content .division .left {
+                        width: 100%;
+                        border-radius: 0;
+                    }
+                    .page-content .division .right {
+                        width: 100%;
+                        border-radius: 0;
+                    }
+                    .page-content .division-border-2 .left {
+                        width: 100%;
+                        padding: 17px 32px 27px;
+                    }
+                    .page-content .division-border .left {
+                        flex: 1 0 auto;
+                    }
+                    .page-content .division-border .right {
+                        padding: 17px 32px;
+                    }
+                    .page-content .division-border-2 .right {
+                        max-width: 100%;
+                    }
+                    .page-content .division-border-2 .right img {
+                        width: 100%;
+                        -o-object-fit: contain;
+                        object-fit: contain;
+                        max-height: 240px;
+                    }
+                    .page-content .tableWrap {
+                        display: block;
+                    }
+                    .page-content .tableWrap table {
+                        display: block;
+                    }
+                    .page-content .tableWrap table colgroup {
+                        display: none;
+                    }
+                    .page-content .tableWrap table td {
+                        display: block;
+                        width: 100%;
+                        border: 1px solid #BBBBBB !important;
+                        margin-top: -1px;
+                    }
+                    .page-content .tableWrap table td:nth-child(1) {
+                        display: flex;
+                    }
+                    .page-content .tableWrap table td:nth-child(1) img {
+                        max-height: 350px;
+                        width: 50%;
+                        margin: 0 auto;
+                    }
+                    }
+                </style>
+                <section class="page-content theme-yellow">
+                    <!-- comp -->
+                    <div class="visualImg">
+                        <img src="./img/detail/dae/img01.jpg" alt="...">
+                        <div class="imgName">대구를 대표하는 관광지 팔공산 국립공원 정상의 모습</div>
+                    </div>
+                    <!-- comp -->
+                    <div class="pageDesc">
+                        <ul>
+                            <li>
+                                <p>
+                                    우리나라에서 가장 더운 지역 대구. 하지만 매년 여름 열리는 대구치맥페스티벌과 함께라면 더위도 문제없다. 놀이동산 이월드는 가족과 함께 나들이하기에 좋으며, 두류공원도 산책 코스로 좋다. 대구는 교통이 편리하고, 동대구역과 서대구역에 KTX가 정차한다. 오리배를 탈 수 있는 수성못과 독특한 외관이 인상적인 전시 공간 디아크는 대구의 야경 명소로 손꼽힌다. 우리나라 3대 시장인 서문시장 야시장도 꼭 가봐야 할 곳이다.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    대구에는 대구 12경이 있다. 대구 스타디움, 83타워, 서문시장, 동성로, 국채보상운동기념공원, 달성토성, 수성못, 신천, 강정보, 비슬산, 팔공산으로 저마다 색다른 특색을 지니고 있다. 또 음악이 흐르는 김광석 거리가 있다. 대구에는 시티 투어 버스를 통해 취향에 따라 코스별 여행을 할 수 있다.  
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    대구 최초의 유원지인 동구 금호강변의 동촌유원지는 다양한 놀이를 즐기기에 충분하다. 오리배와 카약 등 뱃놀이를 할 수 있고 체육 시설과 놀이 시설 등 편의 시설도 잘 갖춰졌다. 동촌유원지 언덕에 위치한 해맞이 동산에서는 북쪽으로 금호강과 팔공산까지 볼 수 있다. 금호강을 가로지는 해맞이다리는 금호강 서쪽과 동쪽을 연결하고 있는데 자전거나 1인용 스쿠터를 타며 산책을 즐기는 이들이 많다. 동구에 위치한 ‘안심창조밸리 연꽃단지’는 여름철 대구 대표 관광지다. 국내 최대 규모의 연근재배단지를 생태, 문화, 힐링공간으로 조성해 연꽃단지로 탈바꿈했다. 대구의 팔공산 남쪽에 있는 동화사는 대구의 대표적인 사찰로 대구 사람들이 가장 많이 찾는 절이다. 1500년의 역사를 자랑하며 <삼국유사>에 등장하는 대구 최대의 사찰로 역사적인 의미도 깊다.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- comp -->
+                    <div class="division fullSize">
+                        <div class="left">
+                            <img src="./img/detail/dae/img02.jpg" alt="...">
+                        </div>
+                        <div class="right bgFill">
+                            <div class="h2">근대골목단팥빵</div>
+                            <p>
+                                대구를 대표하는 빵집으로 ‘대구근대골목단팥빵’을 꼽는다. 이곳에서는 단팥빵에 방부제를 넣지 않고 팥소를 매일 직접 만들어 쓴다. 덕분에 팥 알갱이가 살아 있어 식감이 좋고, 호두를 씹는 맛도 있다. 단팥빵 외에 다양한 빵을 판매하며, 카페에서 음료를 마실 수도 있다. 슈크림, 팥, 녹차 맛, 딸기 맛, 생크림 단팥빵과 흑임자, 크라운산도, 쑥 맘모스도 인기가 많다.
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="tableWrap fullSize">
+                        <table>
+                            <colgroup><col width="380px"><col width="840px"></colgroup>
+                            <tr>
+                                <td><img src="./img/detail/dae/tb_img01.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">대구근대골목단팥빵 6종 세트</div>
+                                    <p>
+                                        대구를 대표하는 대구근대골목단팥빵의 베스트 제품으로 구성되어 있다. 단팥빵과 소보루 단팥빵, 콩떡콩떡, 크림치즈, 생크림 단팥빵, 치즈라떼 번으로 구성되어 있다. 앙금에 호두를 넣어 고소함과 오독한 식감을 즐길 수 있다.
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            대구 중구 남성로 7-1(대구근대골목단팥빵 본점) 
+                                        </li>
+                                        <li class="tel">
+                                            053-423-1883 
+                                        </li>
+                                        <li class="web">
+                                            smartstore.naver.com/daegubbang   
+                                        </li>
+                                        <li class="price">
+                                            1만원 대
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="./img/detail/dae/tb_img02.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">생크림 삼총사 세트</div>
+                                    <p>
+                                        생크림이 가득 차 있고, 견과류와 팥 소도 들어 있다. 옛날 단팥빵 맛에 달콤한 생크림을 더해 행복한 맛이 난다. 생크림 3종을 모두 맛볼 수 있는데, 냉동실에 보관해두었다가 냉장실에 3~4시간 놔두면 아이스크림처럼 맛있게 먹을 수 있다.
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            대구 중구 남성로 7-1(대구근대골목단팥빵 본점)  
+                                        </li>
+                                        <li class="tel">
+                                            053-423-1883 
+                                        </li>
+                                        <li class="web">
+                                            smartstore.naver.com/daegubbang  
+                                        </li>
+                                        <li class="price">
+                                            1만원 대
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+                    <!-- comp -->
+                    <div class="division fullSize">
+                        <div class="left">
+                            <img src="./img/detail/dae/img03.jpg" alt="...">
+                        </div>
+                        <div class="right bgFill">
+                            <div class="h2">
+                                수제화
+                            </div>
+                            <p>
+                                대구 향촌동에는 수제화 전문 골목이 있는데, 다양한 수제화 상점이 모여 있다. 대구근대골목과 함께 관광객이 꼭 들르는 장소다. 수제화 매장뿐 아니라 수제화의 역사를 알 수 있는 전시관도 있으며, 수제화 장인이 만든 구두를 신어볼 수 있다. 맞춤 구두를 제작하기 때문에 당일 구매도 가능하다.
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="tableWrap fullSize">
+                        <table>
+                            <colgroup><col width="380px"><col width="840px"></colgroup>
+                            <tr>
+                                <td><img src="./img/detail/dae/tb_img03.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">
+                                        향촌동 수제화 골목 
+                                    </div>
+                                    <p>
+                                        향촌동에 위치한 수제화 골목은 중앙로에서 종로를 동서로 연결하는 300m에 이르는 골목에 조성되어 있다. 수제화를 만들기 위한 디자인, 재단부터 재봉, 조립 공정을 담당하는 업체, 구두 수선업체, 염색과 광택 담당 업체 등 구두와 관련한 업체들이 모두 모여 있다. 수제화 골목에 위치한 향촌수제화 센터는 수제화외 역사를 한 눈에 살펴보고 가죽공예도 체험해볼 수 있어 구경할만하다.
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            대구 중구 서성로14길 78(향촌수제화센터) 
+                                        </li>
+                                        <li class="tel">
+                                            053-219-4558~9  
+                                        </li>
+                                        <li class="price">
+                                            업체마다 상이
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+                    <!-- comp : Tourist -->
+                    <div class="division division-grey fullSize">
+                        <div class="left"><div class="caption">Tourist Attraction</div><div class="line"></div>
+                            <div class="h3">
+                                대구 근대문화골목 
+                            </div>
+                            <p>
+                                알찬 골목 투어를 떠날 수 있는 근대문화골목 투어는 청라언덕을 시작으로 3•1운동 거리, 대구 최초 서양식 건물인 계산성당 등 역사가 깃든 거리를 여행할 수 있다. 김광석 다시 그리기 길은 아기자기한 벽화가 있어 사진 찍기에도 좋으며 골목골목을 돌아보는 재미가 있다. 대구 근대문화골목을 걷다 보면 여러 인물의 일화와 명소 또한 만날 수 있다.
+                            </p>
+                        </div><div class="right">
+                            <img src="./img/detail/dae/img04.jpg" alt="...">
+                        </div>
+                    </div>
+
+                    <!-- comp -->
+                    <div class="division fullSize">
+                        <div class="left">
+                            <img src="./img/detail/dae/img05.jpg" alt="...">
+                        </div>
+                        <div class="right bgFill">
+                            <div class="h2">한방차</div>
+                            <p>
+                                대구약령시는 350년 역사를 지닌 약전 골목으로, 한의학과 한약재를 체험할 수 있으며, 매년 한방문화축제가 개최된다. 약령시에서 판매하는 한방차는 국내산 한방 재료로 만드는데, 온수는 물론 냉수에도 우려 마시기 좋다. 한방차마다 어떤 약재를 쓰느냐에 따라 맛과 효능이 달라진다.
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="tableWrap fullSize">
+                        <table>
+                            <colgroup><col width="380px"><col width="840px"></colgroup>
+                            <tr>
+                                <td><img src="./img/detail/dae/tb_img04.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">새싹차 • 항상차 • 미소차 </div>
+                                    <p>
+                                        새싹차는 발모에 도움을 준다. 머그컵에 티백을 넣고 3분 후 티백을 아래위로 흔들면 된다. 항상차는 항상 지금 같은 차라는 의미로, 항산화 작용에 좋은 성분이 들어 있다. 미소차는 미세 먼지에 좋은 약재로 구성되어 있다. 티백이라 휴대하기 쉽고 마시기 간편해 어디서든 이용할 수 있다. 
+
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            대구 중구 남성로 25(대구약령시관광기념물전시판매장)
+                                        </li>
+                                        <li class="tel">
+                                            053-255-2233 
+                                        </li>
+                                        <li class="web">
+                                            www.dghanbang.com 
+                                        </li>
+                                        <li class="price">
+                                            새싹차 20g × 2 1만원 대
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="./img/detail/dae/tb_img05.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">한방 쌍화차 </div>
+                                    <p>
+                                        파우치로 깔끔하게 먹을 수 있는 쌍화차는 감기 증상이 있거나 몸살 기운이 있거나 몸이 허할 때 마시면 좋다. 달콤한 한약으로 감기 완화, 피로 해소, 면역력 강화에 효과적이다. 쌍화차는 무방부제, 무첨가물로 만들었으며, 환경호르몬이 배출되지 않는 안전한 포장지를 사용했다. 
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            대구 중구 남성로 25(대구약령시관광기념물전시판매장) 
+                                        </li>
+                                        <li class="tel">
+                                            053-255-2233 
+                                        </li>
+                                        <li class="web">
+                                            www.dghanbang.com 
+                                        </li>
+                                        <li class="price">
+                                            10포 3만원 대 
+                                        </li>
+                                        <li class="noti">
+                                            5월 대구약령시한방문화축제
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+                    <!-- comp : Mini Interview -->
+                    <div class="division division-border division-border-2 fullSize"><div class="left"><div class="caption">Mini Interview</div><div class="line"></div><div class="h3">
+                        대구약령시협동조합 
+                        <span>
+                        오인태 이사장    
+                        </span></div><p><b>
+                        Q 어떻게 해서 쌍화차를 선보이게 되었나요?   
+                        </b> 
+                        쌍화차는 본디 일하고 나서 먹거나 기운이 없을 때, 재충전이 필요할 때 마시면 좋습니다. 단, 쌍화차 특유의 쓴맛이나 떫은맛은 목 넘김이 좋지 않아 호불호가 갈립니다. 그래서 특유의 쓴맛과떫은맛을 뺀 쌍화차로 많은 사람이 편하게 마시도록 하고자 시작하게 되었습니다. 
+                        </p><p><b>
+                        Q 쌍화차는 어떤 점이 특별한가요? 
+                        </b> 
+                        약전골목 쌍화차는 여섯 가지 국내산 재료와 우수한 베트남산 계피를 사용해 만든 액상차입니다. 화학첨가물을 넣지 않으며, 원물을 그대로 담았습니다. 쓴맛이 없어 목 넘김이 부드럽습니다.  로컬 푸드 매장이나 오아시스 마켓에서 많은 인기를 누리고 있습니다. 쌍화차는 데워서 마셔도 좋지만, 차게 마셔도 좋습니다. 색다르게 먹고 싶다면 우유를 더해 쌍화라테로 마실 수도 있습니다. 꿀과 함께 견과류를 띄우면 맛있게 먹을 수 있습니다.
+                        </p></div><div class="right">
+                        <img src="./img/detail/dae/img06.jpg" alt="...">
+                        </div>
+                    </div>
+
+                    <!-- comp -->
+                    <div class="division fullSize">
+                        <div class="left">
+                            <img src="./img/detail/dae/img07.jpg" alt="...">
+                        </div>
+                        <div class="right bgFill">
+                            <div class="h2">금복주</div>
+                            <p>
+                                금복주는 대구의 시그너처 로컬 소주로 마실 때 목 넘김이 부드럽다. 1963년에 출시되어 1970~1980년대 대구•경상북도에서 인기를 끌었던 브랜드의 전통을 계승하면서도 현대적인 감각과 트렌디한 감성으로 재해석한 제품이다. 뉴트로 콘셉트로 제작해 청년층에게 인기가 많다.
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="tableWrap fullSize">
+                        <table>
+                            <colgroup><col width="380px"><col width="840px"></colgroup>
+                            <tr>
+                                <td><img src="./img/detail/dae/tb_img06.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">금복주</div>
+                                    <p>
+                                        금복주 캐릭터는 친근하고 마음씨 좋은 이웃집 할아버지 이미지로 평화롭고 순박한 우리의 민족성을 상징하기도 한다. 금복주 소주의 향은 거의 나지 않으며 독한 소주 느낌이 거의 없다. 소주왕 금복주는 360ml 기준 알코올 도수 16.9도로, 국내산 쌀 증류 원액을 첨가해 한층 깔끔하고 부드러운 맛을 느낄 수 있는 것이 특징이다. 
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            대구 달서구 성서로 276(금복주) 
+                                        </li>
+                                        <li class="tel">
+                                            053-582-5111 
+                                        </li>
+                                        <li class="web">
+                                            kumbokju.co.kr 
+                                        </li>
+                                        <li class="price">
+                                            1만원 미만
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+                    <!-- comp -->
+                    <div class="division fullSize">
+                        <div class="left">
+                            <img src="./img/detail/dae/img08.jpg" alt="...">
+                        </div>
+                        <div class="right bgFill">
+                            <div class="h2">목어 풍경</div>
+                            <p>
+                                대구 팔공총림 동화사는 파계사, 갓바위와 함께 방문하는 관광지다. 목어의 의미는 인내와 수행이다. 동화사를 방문한 기념품으로 불자에게는 수행의 의미를 일깨우고, 일반 방문객에게는 공간을 장식해 팔공산 동화사의 목어를 추억할 수 있게 했다. 대량 생산이 아닌 주문 생산 방식이라 더욱 소장가치가 있다.
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="tableWrap fullSize">
+                        <table>
+                            <colgroup><col width="380px"><col width="840px"></colgroup>
+                            <tr>
+                                <td><img src="./img/detail/dae/tb_img07.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">목어 풍경</div>
+                                    <p>
+                                        기존의 천편일률적인 금속제 풍경과 달리 목어가 뜻하는 인내와 수행의 의미를 전달하기 위해 전통 원단과 전통 바느질 기법으로 제작했다. 목어의 특별한 의미를 떠올리고 싶다면, 동화사를 방문한 기념으로 구매하길 추천한다.
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            대구 중구 중앙대로 382(동성로관광안내소)  
+                                        </li>
+                                        <li class="tel">
+                                            053-252-2696 
+                                        </li>
+                                        <li class="web">
+                                            tour.daegu.go.kr/index.do?menu_id=00004130 
+                                        </li>
+                                        <li class="price">
+                                            3만원 대
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+                    <!-- comp -->
+                    <div class="division fullSize">
+                        <div class="left">
+                            <img src="./img/detail/dae/img09.jpg" alt="...">
+                        </div>
+                        <div class="right bgFill">
+                            <div class="h2">연꽃 방향 제품</div>
+                            <p>
+                                대구 반야월 연꽃단지는 연꽃의 아름다움을 담은 꽃가마 방향제는 시집가는 새색시를 태우는 꽃가마 방향제다. 방향제는 피톤치드를 분비하는 편백나무 또는 커피 향처럼 다양한 향을 내는 알갱이 형태의 재료를 취향과 기호에 맞게 넣어서 사용할 수 있다.
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="tableWrap fullSize">
+                        <table>
+                            <colgroup><col width="380px"><col width="840px"></colgroup>
+                            <tr>
+                                <td><img src="./img/detail/dae/tb_img08.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">시집가는날</div>
+                                    <p>
+                                        연꽃의 아름다움을 담은 꽃가마 방향제는 시집가는 새색시를 태우던 꽃가마를 형상화했다. 가마의 전후좌우에는 반야월연꽃단지를 상징하는 연꽃 그림을 더했다. 연꽃 방향제는 한국의 전통 문화의 아름다움을 볼 수 있는 제품으로 인테리어로 추천한다. 
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            대구 중구 중앙대로 382(동성로관광안내소)  
+                                        </li>
+                                        <li class="tel">
+                                            053-252-2696 
+                                        </li>
+                                        <li class="web">
+                                            tour.daegu.go.kr/index.do?menu_id=00004130 
+                                        </li>
+                                        <li class="price">
+                                            대사이즈 6만원 대
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+                    <!-- comp -->
+                    <div class="division fullSize">
+                        <div class="left">
+                            <img src="./img/detail/dae/img10.jpg" alt="...">
+                        </div>
+                        <div class="right bgFill">
+                            <div class="h2">참소주</div>
+                            <p>
+                                ‘참소주’는 대구의 로컬 소주 회사 금복주의 주력 상품이자 대구•경상북도에서 사람들이 가장 많이 마시고 찾는 소주다. 경상도를 제외한 타 지역에서는 찾아보기 어려우므로 대구나 경상도를 방문했을 때 맛보는 것을 추천한다. 소주를 어떤 잔에 따르냐에 따라, 다양한 분위기를 연출할 수 있다.
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="tableWrap fullSize">
+                        <table>
+                            <colgroup><col width="380px"><col width="840px"></colgroup>
+                            <tr>
+                                <td><img src="./img/detail/dae/tb_img09.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">참소주</div>
+                                    <p>
+                                        대구와 경북권에서 ‘핵인싸템’으로 “소주 한 병이요”라고 외치면 묻지 않고 바로 가져다주는 것이 참소주다. 현재 소주 시장 트렌드에 맞게 알코올 도수는 16.9도이며, 초미세 나노막 멀티 수(水) 처리 공정을 통해 미네랄이 함유된 고순도 정제수를 사용한다. 희석식 소주라 특유의 화학약품 냄새가 나지 않고 호불호가 적다.
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            대구 달서구 성서로 276(금복주)
+                                        </li>
+                                        <li class="tel">
+                                            053-582-5111 
+                                        </li>
+                                        <li class="web">
+                                            kumbokju.co.kr
+                                        </li>
+                                        <li class="price">
+                                            1만원 미만
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+                </section>
+            </contents>
+            <!-- evoke : 템플릿 끝 -->
+        </div>
+    </div>
+
+</body>
+</html>

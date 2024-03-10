@@ -1,0 +1,1030 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="common-inner">
+        <div class="template__type1__section">
+            <contents>
+                <style>
+                    /* common.css */
+                    @charset "UTF-8";
+                    /* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap'); */
+                    html, body, div, span, applet, object, iframe,
+                    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+                    a, abbr, acronym, address, big, cite, code,
+                    del, dfn, em, img, ins, kbd, q, s, samp,
+                    small, strike, strong, sub, sup, tt, var,
+                    b, u, i, center,
+                    dl, dt, dd, ol, ul, li,
+                    fieldset, form, label, legend,
+                    table, caption, tbody, tfoot, thead, tr, th, td,
+                    article, aside, canvas, details, embed,
+                    figure, figcaption, footer, header, hgroup,
+                    menu, nav, output, ruby, section, summary,
+                    time, mark, audio, video {
+                    margin: 0;
+                    padding: 0;
+                    border: 0;
+                    font-size: 100%;
+                    font: inherit;
+                    vertical-align: baseline;
+                    }
+                    /* HTML5 display-role reset for older browsers */
+                    article, aside, details, figcaption, figure,
+                    footer, header, hgroup, menu, nav, section {
+                    display: block;
+                    }
+                    body {
+                    line-height: 1;
+                    }
+                    ol, ul {
+                    list-style: none;
+                    }
+                    blockquote, q {
+                    quotes: none;
+                    }
+                    blockquote:before, blockquote:after,
+                    q:before, q:after {
+                    content: "";
+                    content: none;
+                    }
+                    table {
+                    border-collapse: collapse;
+                    border-spacing: 0;
+                    }
+                    Select {
+                    font-family: inherit; /* 폰트 상속 */
+                    background: url(../img/btn-drop-arrow.svg) no-repeat 98% 50%;
+                    /* 네이티브 화살표를 커스텀 화살표로 대체 */
+                    -webkit-appearance: none;
+                    /* 네이티브 외형 감추기 */
+                    -moz-appearance: none;
+                    appearance: none;
+                    }
+                    Select::-ms-expand {
+                    display: none; /* 화살표 없애기 for IE10, 11*/
+                    }
+                    input {
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    -webkit-border-radius: 0;
+                    border-radius: 0;
+                    }
+                    /* IE10 이상에서 input box 에 추가된 지우기 버튼 제거 */
+                    input::-ms-clear {
+                    display: none;
+                    }
+                    /* input type number 에서 화살표 제거 */
+                    input[type=number]::-webkit-inner-spin-button,
+                    input[type=number]::-webkit-outer-spin-button {
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    }
+                    body {
+                        background: #f5f5f5;
+                    }
+                    .common-inner {
+                        padding: 0 30px;
+                        max-width: 1300px;
+                        box-sizing: border-box;
+                        margin: 0 auto;
+                        margin-top: 40px;
+                        padding: 0 40px;
+                        padding-bottom: 120px;
+                    }
+                    .template__type1__section {
+                        padding: 30px;
+                        border: 1px solid #e0e0e0;
+                        background: #fff;
+                        border-radius: 18px;
+                    }
+                    @media (max-width: 1200px) {
+                        .common-inner {
+                            padding: 0 20px;
+                        }
+                    }
+                
+                    .page-content {
+                    color: #000;
+                    letter-spacing: -0.5px;
+                    line-height: 140%;
+                    font-family: system-ui, -apple-system, "Poppins", "MS PGothic", "Microsoft YaHei", "Arial", "Malgun Gothic", "Dotum", sans-serif;
+                    max-width: none;
+                    }
+                    .page-content .fullSize {
+                    margin-left: -30px;
+                    margin-right: -30px;
+                    }
+                    .page-content .visualImg {
+                    max-width: 926px;
+                    margin: 0 auto;
+                    }
+                    .page-content .visualImg img {
+                    width: 100%;
+                    }
+                    .page-content .visualImg .imgName {
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 140%; /* 140% */
+                    letter-spacing: -0.5px;
+                    text-align: center;
+                    margin-bottom: 40px;
+                    }
+                    .page-content .pageDesc {
+                    margin-bottom: 80px;
+                    }
+                    .page-content .pageDesc li + li {
+                    margin-top: 30px;
+                    }
+                    .page-content .pageDesc p {
+                    color: #000;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 172%; /* 172.308% */
+                    letter-spacing: -0.5px;
+                    }
+                    .page-content .pageDesc p::before {
+                    content: "";
+                    display: inline-block;
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 5px;
+                    margin-bottom: 3px;
+                    background-color: #000;
+                    }
+                    .page-content .division {
+                    display: flex;
+                    align-items: stretch;
+                    justify-content: center;
+                    margin-bottom: 40px;
+                    margin-top: 85px;
+                    }
+                    .page-content .division.divisionAuto {
+                    min-height: auto;
+                    }
+                    .page-content .division.divisionAuto .left,
+                    .page-content .division.divisionAuto .right {
+                    padding: 35px 6.5%;
+                    }
+                    .page-content .division .h2 {
+                    font-size: 36px;
+                    font-weight: bold;
+                    line-height: 100%;
+                    margin-bottom: 27px;
+                    }
+                    .page-content .division .left {
+                    width: 50%;
+                    box-sizing: border-box;
+                    border-radius: 0 45px 45px 0;
+                    overflow: hidden;
+                    }
+                    .page-content .division .left img {
+                    width: 100%;
+                    height: 100%;
+                    -o-object-fit: cover;
+                        object-fit: cover;
+                    display: block;
+                    }
+                    .page-content .division .left.bgFill {
+                    display: flex;
+                    align-items: center;
+                    padding: 6.5%;
+                    color: #fff;
+                    }
+                    .page-content .division .left .h2 {
+                    margin: 0;
+                    }
+                    .page-content .division .right {
+                    background-color: #000;
+                    box-sizing: border-box;
+                    border-radius: 45px 0 0 45px;
+                    width: 50%;
+                    color: #fff;
+                    padding: 100px 80px;
+                    padding: 6.5%;
+                    }
+                    .page-content .division .right p {
+                    font-size: 16px;
+                    line-height: 140%;
+                    }
+                    .page-content .division-grey {
+                    min-height: 0;
+                    margin-top: 0;
+                    }
+                    .page-content .division-grey .left {
+                    background-color: #DEDEDE;
+                    padding: 23px 32px;
+                    }
+                    .page-content .division-grey .left .caption {
+                    font-size: 20px;
+                    font-weight: 300;
+                    margin-bottom: 12px;
+                    }
+                    .page-content .division-grey .left .caption::after {
+                        display: none;
+                    }
+                    .page-content .division-grey .left .line {
+                    width: 66px;
+                    height: 1px;
+                    background-color: #000;
+                    margin-bottom: 20px;
+                    }
+                    .page-content .division-grey .left .h3 {
+                    font-size: 24px;
+                    font-weight: bold;
+                    margin-bottom: 42px;
+                    }
+                    .page-content .division-grey .left p {
+                    font-size: 16px;
+                    line-height: 175%;
+                    }
+                    .page-content .division-grey .right {
+                    background-color: #DEDEDE;
+                    padding: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    }
+                    .page-content .division-grey .right img {
+                    width: 100%;
+                    }
+                    .page-content .division-border {
+                    margin-top: 30px;
+                    }
+                    .page-content .division-border .left {
+                    padding: 17px 32px 27px;
+                    flex: 1 0 0;
+                    }
+                    .page-content .division-border .left .caption {
+                    font-size: 20px;
+                    font-weight: 300;
+                    margin-bottom: 12px;
+                    }
+                    .page-content .division-border .left .line {
+                    width: 66px;
+                    height: 1px;
+                    background-color: #000;
+                    margin-bottom: 20px;
+                    }
+                    .page-content .division-border .left .h3 {
+                    font-size: 24px;
+                    font-weight: bold;
+                    margin-bottom: 42px;
+                    }
+                    .page-content .division-border .left .h3 span {
+                    font-weight: 400;
+                    }
+                    .page-content .division-border .left p {
+                    font-size: 16px;
+                    line-height: 175%;
+                    }
+                    .page-content .division-border .left b {
+                    font-weight: bold;
+                    }
+                    .page-content .division-border .right {
+                    flex: 0 0 auto;
+                    background-color: transparent;
+                    padding: 0;
+                    padding-right: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    }
+                    .page-content .division-border .right img {
+                    width: 100%;
+                    }
+                    .page-content .division-border-2 .left {
+                    width: 83%;
+                    padding-right: 5.8%;
+                    }
+                    .page-content .division-border-2 .right {
+                    width: 35%;
+                    max-width: 414px;
+                    }
+                    .page-content .division-border-2 .right img {
+                    max-height: 375px;
+                    -o-object-fit: contain;
+                        object-fit: contain;
+                    }
+                    .page-content .tableWrap table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    font-size: 14px;
+                    margin-bottom: 45px;
+                    }
+                    .page-content .tableWrap table td {
+                    vertical-align: top;
+                    border: 1px solid #BBBBBB;
+                    box-sizing: border-box;
+                    text-align: left;
+                    }
+                    .page-content .tableWrap table td:nth-child(1) {
+                    border-left: 0;
+                    vertical-align: middle;
+                    }
+                    .page-content .tableWrap table td:nth-child(1) img {
+                    width: 100%;
+                    min-width: 50px;
+                    -o-object-fit: contain;
+                        object-fit: contain;
+                    }
+                    .page-content .tableWrap table td:nth-child(2) {
+                    border-right: 0;
+                    padding: 40px 70px;
+                    padding: 3.3% 5.8%;
+                    padding: 40px 5.8%;
+                    }
+                    .page-content .tableWrap table .h3 {
+                    font-size: 24px;
+                    font-weight: bold;
+                    margin-bottom: 28px;
+                    }
+                    .page-content .tableWrap table .h3::before {
+                    display: inline-block;
+                    color: #000;
+                    margin-right: 6px;
+                    }
+                    .page-content .tableWrap table tr:nth-child(1) .h3::before {
+                    content: "①";
+                    }
+                    .page-content .tableWrap table tr:nth-child(2) .h3::before {
+                    content: "②";
+                    }
+                    .page-content .tableWrap table tr:nth-child(3) .h3::before {
+                    content: "③";
+                    }
+                    .page-content .tableWrap table tr:nth-child(4) .h3::before {
+                    content: "④";
+                    }
+                    .page-content .tableWrap table p {
+                    font-size: 14px;
+                    margin-bottom: 7px;
+                    }
+                    .page-content .tableWrap table li {
+                    font-size: 14px;
+                    line-height: 100%;
+                    padding-left: 22px;
+                    position: relative;
+                    word-break: break-all;
+                    }
+                    .page-content .tableWrap table li::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 15px;
+                    height: 15px;
+                    display: inline-block;
+                    }
+                    .page-content .tableWrap table li.location::before {
+                    background-image: url(./img/common/ic_location.svg);
+                    }
+                    .page-content .tableWrap table li.tel::before {
+                    background-image: url(./img/common/ic_tel.svg);
+                    }
+                    .page-content .tableWrap table li.web::before {
+                    background-image: url(./img/common/ic_web.svg);
+                    }
+                    .page-content .tableWrap table li.price::before {
+                    background-image: url(./img/common/ic_price.svg);
+                    }
+                    .page-content .tableWrap table li.cart::before {
+                    background-image: url(./img/common/ic_cart.svg);
+                    }
+                    .page-content .tableWrap table li.noti::before {
+                    background-image: url(./img/common/ic_noti.svg);
+                    }
+                    .page-content .tableWrap table li + li {
+                    margin-top: 7px;
+                    }
+                    .page-content.theme-red .color {
+                    color: #F0514D !important;
+                    }
+                    .page-content.theme-red .bgFill {
+                    background-color: #F0514D !important;
+                    }
+                    .page-content.theme-red .pageDesc p::before {
+                    background-color: #F0514D;
+                    }
+                    .page-content.theme-red .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+                    background: rgba(240, 81, 77, 0.1);
+                    }
+                    .page-content.theme-red .division-border {
+                    border: 3px solid #F0514D;
+                    box-sizing: border-box;
+                    }
+                    .page-content.theme-navy .color {
+                    color: #036A9B !important;
+                    }
+                    .page-content.theme-navy .bgFill {
+                    background-color: #036A9B !important;
+                    }
+                    .page-content.theme-navy .pageDesc p::before {
+                    background-color: #036A9B;
+                    }
+                    .page-content.theme-navy .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+                    background: rgba(3, 106, 155, 0.1);
+                    }
+                    .page-content.theme-navy .division-border {
+                    border: 3px solid #036A9B;
+                    box-sizing: border-box;
+                    }
+                    .page-content.theme-yellow .color {
+                    color: #EDB51E !important;
+                    }
+                    .page-content.theme-yellow .bgFill {
+                    background-color: #EDB51E !important;
+                    }
+                    .page-content.theme-yellow .pageDesc p::before {
+                    background-color: #EDB51E;
+                    }
+                    .page-content.theme-yellow .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+                    background: rgba(237, 181, 30, 0.15);
+                    }
+                    .page-content.theme-yellow .division-border {
+                    border: 3px solid #EDB51E;
+                    box-sizing: border-box;
+                    }
+                    .page-content.theme-green .color {
+                    color: #4C9667 !important;
+                    }
+                    .page-content.theme-green .bgFill {
+                    background-color: #4C9667 !important;
+                    }
+                    .page-content.theme-green .pageDesc p::before {
+                    background-color: #4C9667;
+                    }
+                    .page-content.theme-green .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+                    background: rgba(76, 150, 103, 0.1);
+                    }
+                    .page-content.theme-green .division-border {
+                    border: 3px solid #4C9667;
+                    box-sizing: border-box;
+                    }
+                    .page-content.theme-pink .color {
+                    color: #F598A6 !important;
+                    }
+                    .page-content.theme-pink .bgFill {
+                    background-color: #F598A6 !important;
+                    }
+                    .page-content.theme-pink .pageDesc p::before {
+                    background-color: #F598A6;
+                    }
+                    .page-content.theme-pink .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+                    background: rgba(245, 152, 166, 0.15);
+                    }
+                    .page-content.theme-pink .division-border {
+                    border: 3px solid #F598A6;
+                    box-sizing: border-box;
+                    }
+                    .page-content.theme-blue .color {
+                    color: #2587C8 !important;
+                    }
+                    .page-content.theme-blue .bgFill {
+                    background-color: #2587C8 !important;
+                    }
+                    .page-content.theme-blue .pageDesc p::before {
+                    background-color: #2587C8;
+                    }
+                    .page-content.theme-blue .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+                    background: rgba(37, 135, 200, 0.15);
+                    }
+                    .page-content.theme-blue .division-border {
+                    border: 3px solid #2587C8;
+                    box-sizing: border-box;
+                    }
+                    @media screen and (max-width: 767px) {
+                    .page-content .division {
+                        flex-direction: column;
+                    }
+                    .page-content .division .left {
+                        width: 100%;
+                        border-radius: 0;
+                    }
+                    .page-content .division .right {
+                        width: 100%;
+                        border-radius: 0;
+                    }
+                    .page-content .division-border-2 .left {
+                        width: 100%;
+                        padding: 17px 32px 27px;
+                    }
+                    .page-content .division-border .left {
+                        flex: 1 0 auto;
+                    }
+                    .page-content .division-border .right {
+                        padding: 17px 32px;
+                    }
+                    .page-content .division-border-2 .right {
+                        max-width: 100%;
+                    }
+                    .page-content .division-border-2 .right img {
+                        width: 100%;
+                        -o-object-fit: contain;
+                        object-fit: contain;
+                        max-height: 240px;
+                    }
+                    .page-content .tableWrap {
+                        display: block;
+                    }
+                    .page-content .tableWrap table {
+                        display: block;
+                    }
+                    .page-content .tableWrap table colgroup {
+                        display: none;
+                    }
+                    .page-content .tableWrap table td {
+                        display: block;
+                        width: 100%;
+                        border: 1px solid #BBBBBB !important;
+                        margin-top: -1px;
+                    }
+                    .page-content .tableWrap table td:nth-child(1) {
+                        display: flex;
+                    }
+                    .page-content .tableWrap table td:nth-child(1) img {
+                        max-height: 350px;
+                        width: 50%;
+                        margin: 0 auto;
+                    }
+                    }
+                </style>
+                <!-- evoke : 템플릿 시작 -->
+                <section class="page-content theme-pink">
+                    <!-- comp -->
+                    <div class="visualImg">
+                        <img src="./img/detail/jnb/img01.jpg" alt="...">
+                        <div class="imgName">단풍이 화려하게 물든 가을 내장산의 모습</div>
+                    </div>
+                    <!-- comp -->
+                    <div class="pageDesc">
+                        <ul>
+                            <li>
+                                <p>
+                                    한국 문화의 원형이 가장 잘 보존되어 있는 전라북도. 도심 중심에 한옥마을을 품은 전주는 전라북도를 대표하는 도시이자 가장 많은 인구수를 보유한 곳이다. 비빔밥과 콩나물국밥 외에도 어느 식당에 가든 음식이 맛있어 식도락가들이 가장 사랑하는 도시이기도 하다. 춘향과 몽룡이 사랑을 시작한 광한루가 있는 남원도 가볼 만하다. 광한루는 물론 남원관광단지를 오가는 모노레일을 타고 돌아보면 남원과 사랑에 빠질 수밖에 없다. 
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    군산과 익산에서는 일제강점기 근대건축 여행이 가능하다. 1930년대 우리나라 근대 역사를 고스란히 간직한 군산에서 근대문화유산 투어 코스를 따라 걷다 보면 곳곳에 남아 있는 일본식 주택과 근대건축물을 쉽게 볼 수 있다. 익산에서는 백제시대 유적으로 세계문화유산에 등록된 왕궁리유적과 미륵사지를 둘러보면 좋다. 정읍은 가을에 빼놓을 수 없는 여행지다. 내장산은 우리나라에서 가장 아름다운 단풍 관광지로 손꼽히며 내장사 역시 가을이 아름다운 사찰이다. 
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    전북의 숨겨진 여행지, 장수는 잔잔한 자연 풍경으로 마음을 사로잡는 곳이다. 논개의 충절을 느낄 수 있는 논개사당 의암사와 논개 생가가 유명하다. 억새 군락이 유명해 가을 산행으로 제격인 장안산도 있다. 고산자연휴양림과 대아수목원, 대둔산이 맞이하는 완주와 고추장 만들기 체험이 가능한 순창도 전라북도를 찾아야 하는 이유다.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- comp : contents -->
+                    <div class="division fullSize"><div class="left">
+                        <img src="./img/detail/jnb/img02.jpg" alt="..."></div><div class="right bgFill"><div class="h2">
+                            임실 치즈
+                        </div><p>
+                            한국 최초의 치즈 생산지 임실. 1967년 벨기에 태생의 고 지정환 신부가 임실에서 산양유로 치즈를 만든 것이 시작이었다. 임실 치즈의 대부분은 직접 운영하는 목장에서 생산한 우유로 만든다. 원료유와 제조 방법, 풍토 등에 따라 종류와 맛이 다양하다. 스모크 치즈나 포션 치즈 등으로 가공해 음식에 사용한다.
+                        </p></div></div><div class="tableWrap fullSize"><table><colgroup><col width="380px"><col width="840px"></colgroup>
+
+                        <tr><td>
+                            <img src="./img/detail/jnb/tb_img01.jpg" alt="..."></td><td><div class="h3 color">
+                                임실 스트링 치즈 
+                            </div><p>
+                                국내산 원유로 생산해 깨끗하고 신선한 진짜 자연 치즈다. 뛰어난 스트레칭 몰딩 공정으로 만들어 더욱 쫄깃하고 탄력 있는 식감과 부드러운 맛을 자랑한다. 치즈 결대로 쭉쭉 찢어서 그대로 먹거나 요리에 토핑으로 올려 먹어도 좋다. 토핑으로 사용할 때는 전자레인지에 10초 정도 살짝 데우면 치즈가 늘어나 더욱 맛있게 즐길 수 있다. 
+                            </p><ul class="color">
+                            <li class="location">
+                                전라북도 임실 성수면 도인2길 50(임실치즈테마파크) 
+                            </li>
+                            <li class="tel">
+                                063-643-9540 
+                            </li>
+                            <li class="web">
+                                cheesepark.kr 
+                            </li>
+                            <li class="price">
+                                100g 1만원 미만 
+                            </li>
+                            <li class="noti">
+                                치즈 만들기와 쌀피자 체험 프로그램 운영
+                            </li>
+                            </ul></td>
+                        </tr>
+
+                        <tr><td>
+                            <img src="./img/detail/jnb/tb_img02.jpg" alt="..."></td><td><div class="h3 color">
+                                임실 구워 먹는 치즈 
+                            </div><p>
+                                국내에서 처음 출시한 구워 먹는 치즈는 짠맛이 강하지 않은 담백한 맛이다. 적당한 두께로 자른 후 프라이팬을 달궈 기름 없이 구워 먹으면 진한 치즈 고유의 맛을 느낄 수 있고, 찌개에 넣어 먹거나 고기와 함께 구워 먹어도 맛있다. 
+                            </p><ul class="color">
+                            <li class="location">
+                                전라북도 임실 성수면 도인2길 50(임실치즈테마파크) 
+                            </li>
+                            <li class="tel">
+                                063-643-9540 
+                            </li>
+                            <li class="web">
+                                cheesepark.kr 
+                            </li>
+                            <li class="price">
+                                200g 1만원 대
+                            </li>
+                            </ul></td>
+                        </tr>
+
+                    </table></div>
+
+                    <!-- comp -->
+                    <div class="division division-grey fullSize">
+                        <div class="left">
+                            <div class="caption">Tourist Attraction</div>
+                            <div class="line"></div>
+                            <div class="h3">임실치즈테마파크</div>
+                            <p>임실 치즈의 맛과 멋이 깃든 체험 교육의 장, 드넓은 초지와 유럽풍의 아름다운 경관을 무대로 펼쳐지는 문화 관광의 장이자 임실 치즈를 테마로 한 국내 유일 체험형 관광지 임실치즈테마파크는 축구장 22개 넓이의 드넓은 초원에 조성되었다. 다양한 체험과 치즈 구입이 가능한 것은 물론 자연 속 아이들의 놀이 공간까지 갖추었다.
+                            </p>
+                        </div>
+                        <div class="right">
+                            <img src="./img/detail/jnb/img03.jpg" alt="...">
+                        </div>
+                    </div>
+
+
+                    <!-- comp : contents -->
+                    <div class="division fullSize"><div class="left">
+                        <img src="./img/detail/jnb/img04.jpg" alt="..."></div><div class="right bgFill"><div class="h2">
+                            전주 공예품
+                        </div><p>
+                            ‘손의 도시’로 불릴 정도로 전통 공예 산업의 본고장인 전주. 완판본과 한지공예, 부채 등 무형문화 자산이 풍부한 도시다. 특히 질 좋은 한지를 생산하고 주변 지역에서 대나무 공급이 원활해 조선시대부터 부채로 유명했다. 그뿐 아니라 전주 한옥마을에는 방문을 기념하는 아기자기한 굿즈도 구입할 수 있다.
+                        </p></div></div><div class="tableWrap fullSize"><table><colgroup><col width="380px"><col width="840px"></colgroup>
+
+                        <tr><td>
+                            <img src="./img/detail/jnb/tb_img03.jpg" alt="..."></td><td><div class="h3 color">
+                                전주공예품전시관 합죽선 
+                            </div><p>
+                                합죽선은 부채의 일종으로 대나무의 겉껍질로 살을 만들고 한지를 붙여 만든다. 접었다 폈다 하는 접선(摺扇)의 일종이며, 대나무의 겉대 두 쪽을 맞붙여 살을 만들었다 하여 합죽선이라 부른다. 접선 중 가장 품격이 높은 부채로 일반 접선과는 다르다. 기본적으로 대나무 겉껍질 두 쪽을 민어부레풀로 붙여 하나의 살을 만드는 과정이 상당히 까다롭다. 부채의 원래기능은 바람을 일으켜 더위를 쫓는 것이지만, 합죽선에는 산수화•사군자 등을 그려 넣어 미술적 가치를 더했다.  
+                            </p><ul class="color">
+                            <li class="location">
+                                전라북도 전주시 완산구 태조로 15(전주공예품전시관) 
+                            </li>
+                            <li class="tel">
+                                063-281-1610  
+                            </li>
+                            <li class="web">
+                                www.jeonjucraft.or.kr 
+                            </li>
+                            <li class="price">
+                                산수화 합죽선 25만원 대
+                            </li>
+                            </ul></td>
+                        </tr>
+
+                        <tr><td>
+                            <img src="./img/detail/jnb/tb_img04.jpg" alt="..."></td><td><div class="h3 color">
+                                전주 한옥마을 굿즈 
+                            </div><p>
+                                내•외국인이 가장 많이 찾는 전주한옥마을. 방문을 기념하는 아기자기한 굿즈의 종류가 다양하다. 전주한옥마을 이야기를 담은 감성윷놀이판은 한옥마을 거리를 윷판에 담아 윷놀이를 더욱 재미있게 만들어준다. 좌식 생활을 잘 보여주는 생활 필수품인 소반을 현대적으로 재해석한 미니어처 제품도 인기다. 전주비빔상, 찻상, 막걸리상을 도자기 미니어처로 표현해 기념품으로 제격이다. 
+                            </p><ul class="color">
+                            <li class="location">
+                                전라북도 전주시 완산구 은행로 96-1(전라북도 관광기념품 100선판매관) 
+                            </li>
+                            <li class="tel">
+                                063-288-9111
+                            </li>
+                            <li class="web">
+                                jbgiftshop.co.kr 
+                            </li>
+                            <li class="price">
+                                한옥 오너먼트 연필꽂이 볼펜꽂이 자석 1만원 대, 한옥마을 소반 이야기 쟁반 도자기 미니어처 1만원 대
+                            </li>
+                            </ul></td>
+                        </tr>
+
+                      </table></div>
+
+                    <!-- comp : contents -->
+                    <div class="division fullSize"><div class="left">
+                        <img src="./img/detail/jnb/img05.jpg" alt="..."></div><div class="right bgFill"><div class="h2">
+                            남원 목기
+                        </div><p>
+                            지리산을 낀 남원은 예로부터 좋은 목재를 구하기에 좋은 여건을 갖추고 있었다. 남원 목기는 조선 왕실에서 사용한 것으로, 지리산에서 자생하는 노각나무, 오리목나무, 물푸레나무 등을 재료로 장인이 세심하게 제작한다. 인체에 해롭지 않은 재료를 사용해 내구성 역시 뛰어나며, 사용할수록 빛깔이 한층 고와지는 것은 물론 윤기도 더해진다. 남원 목기 특유의 독특하면서도 은은한 향이 특징이다. 남원의 특수성을 살려 목기 단지를 조성하고, 목공예연구소를 개관하는 등 남원 목기 산업을 활성화하기 위해 노력하고 있다.
+                        </p></div></div><div class="tableWrap fullSize"><table><colgroup><col width="380px"><col width="840px"></colgroup>
+
+                        <tr><td>
+                            <img src="./img/detail/jnb/tb_img05.jpg" alt="..."></td><td><div class="h3 color">
+                                남원 목기  
+                            </div><p>
+                                남원 목기 중 운봉의 목기와 남원시의 소반이 유명하다. 산오리목, 물푸레나무 등을 재료로 장인의 손에서 정교한 공정을 거쳐 빚어진다. 장인의 손길을 거친 목기는 인체에 해롭지 않고 오래 변색되지 않으며, 뛰어난 내구성과 색상, 모양 등이 정교하다. 과거 왕실의 진상품이었으며, 조선왕조에서 사용했던 제기가 모두 남원에서 생산된 것이라는 것이 남원 목기의 품질과 역사를 대변한다. 요즘은 식기와 제기 찻잔 등 일상용품부터 목걸이나 손거울 등 소품까지 다양한 상품을 만든다.
+                            </p><ul class="color">
+                            <li class="location">
+                                전라북도 남원시 목공예길 10-8(남원목기사업협동조합) 
+                            </li>
+                            <li class="tel">
+                                063-626-9909 
+                            </li>
+                            <li class="price">
+                                물푸레제기 20만원 대
+                            </li>
+                            </ul></td>
+                        </tr>
+
+                      </table></div>
+
+                   <!-- comp : contents -->
+                    <div class="division fullSize"><div class="left">
+                        <img src="./img/detail/jnb/img06.jpg" alt="..."></div><div class="right bgFill"><div class="h2">
+                            부안 청자
+                        </div><p>
+                            부안의 변산반도 동부 일대는 대보화강암 지질대가 광범위하게 분포해 도자기의 원료가 되는 적황색 점토와 백토 등이 풍부하다. 예부터 질 좋은 도자기 생산지로 유명했으며, 고려시대에는 특히 청자로 명성이 높았다. 최근에는 찻잔이나 접시 등 생활용품은 물론 향초와 디퓨저 등 다양하게 생산된다.
+                        </p></div></div><div class="tableWrap fullSize"><table><colgroup><col width="380px"><col width="840px"></colgroup>
+
+                        <tr><td>
+                            <img src="./img/detail/jnb/tb_img06.jpg" alt="..."></td><td><div class="h3 color">
+                                부안청자박물관 청자  
+                            </div><p>
+                                부안 청자만의 격조와 멋스러움을 담은 다양한 제품을 판매 중이다. 금속이나 도자기, 목재 표면에 다양한 무늬를 새긴 뒤 그 속에 금, 은, 보석, 뼈, 자개를 박아 넣는 공법을 가리키는 상감기법을 응용한 찻잔, 커피잔, 반상기 세트까지 만나볼 수 있다. 청자 본연의 비취색을 재현해 고급스럽고 멋스럽다. 이외에도 부안청자박물관에서는 다양한 체험과 고려시대 명품 상감청자를 만나볼 수 있다. 
+                            </p><ul class="color">
+                            <li class="location">
+                                전라북도 부안 보안면 청자로 1493(부안청자박물관) 
+                            </li>
+                            <li class="tel">
+                                063-580-3964 
+                            </li>
+                            <li class="web">
+                                www.buan.go.kr/buancela 
+                            </li>
+                            <li class="price">
+                                청자모란꽃커피잔세트 6만원 대
+                            </li>
+                            </ul></td>
+                        </tr>
+
+                      </table></div>
+
+                    <!-- comp : contents -->
+                    <div class="division fullSize"><div class="left">
+                        <img src="./img/detail/jnb/img07.jpg" alt="..."></div><div class="right bgFill"><div class="h2">
+                            전주 모주
+                        </div><p>
+                            막걸리에 생강, 대추, 계피 등을 넣고 만든 술. 알코올이 거의 없는 약술로 막걸리를 발효시킨 후 각종 한약재를 넣고 끓여 만든다. 전주에서는 콩나물국밥과 함께 모주를 곁들이는 전통이 있어 콩나물국밥 식당에서는 모주를 어렵지 않게 볼 수 있다. 모주는 은은한 계피 향에 달달함이 느껴지는 건강한 발효 음료다.
+                        </p></div></div><div class="tableWrap fullSize"><table><colgroup><col width="380px"><col width="840px"></colgroup>
+
+                        <tr><td>
+                            <img src="./img/detail/jnb/tb_img07.jpg" alt="..."></td><td><div class="h3 color">
+                                전주 모주    
+                            </div><p>
+                                어머니의 사랑을 향기로운 술로 내린 전주 모주. 대추, 생강, 계피, 우리밀, 쌀 등 몸에 좋은 약재로 만들어 부드럽고 달콤한 맛과 천연 한방의 향취로 누구나 쉽게 즐길 수 있다. 추운 날씨에 모주를 따뜻하게 데워 마시면 온기가 온몸을 감싸 감기 예방에 특효다. 여름철 차가운 음식이나 음료를 많이 먹어 몸이 냉해졌을 때 모주를 마시면 속을 따뜻하게 해주기도 한다. 
+                            </p><ul class="color">
+                            <li class="location">
+                                전라북도 전주시 완산구 팔달로 128(모주초콜릿) 
+                            </li>
+                            <li class="tel">
+                                0505-723-1988
+                            </li>
+                            <li class="web">
+                                www.jjjujo.co.kr 
+                            </li>
+                            <li class="price">
+                                500ml 1만원 미만
+                            </li>
+                            <li class="cart">
+                                전주 한옥마을 마트 및 기념품 가게
+                            </li>
+                            </ul></td>
+                        </tr>
+
+                      </table></div>
+
+                    <!-- comp : contents -->
+                    <div class="division fullSize"><div class="left">
+                        <img src="./img/detail/jnb/img08.jpg" alt="..."></div><div class="right bgFill"><div class="h2">
+                            순창 고추장
+                        </div><p>
+                            고춧가루를 주원료로 찹쌀과 숙성된 콩을 섞어 만드는 한국의 전통 양념인 고추장. 순창에서는 섬진강 상류의 깨끗한 지하 암반수에 순창에서 자란 태양초 고추와 콩을 원료로 장인이 고추장을 담근다. 순창의 습한 기후에서 1년 이상 서서히 숙성하면 깊은 단맛이 더해진다.
+                        </p></div></div><div class="tableWrap fullSize"><table><colgroup><col width="380px"><col width="840px"></colgroup>
+
+                        <tr><td>
+                            <img src="./img/detail/jnb/tb_img08.jpg" alt="..."></td><td><div class="h3 color">
+                                순창 고추장     
+                            </div><p>
+                                마을 전체가 고추장 판매장이자 관광지인 순창 전통고추장 민속마을. 집집마다 마당에 커다란 고추장과 장아찌 항아리가 가득하고 처마에는 메주가 매달려 있다. 각 호의 고추장 제조 기능인이 저마다 고추장을 생산해 판매 중이다. 
+                            </p><ul class="color">
+                            <li class="location">
+                                전라북도 순창 순창읍 백산리 265-66(순창 전통고추장 민속마을)  
+                            </li>
+                            <li class="tel">
+                                063-653-0703
+                            </li>
+                            <li class="web">
+                                smartstore.naver.com/sunchangtown 
+                            </li>
+                            <li class="price">
+                                순창고추장 1kg 2~3만원 대 
+                            </li>
+                            <li class="noti">
+                                순창장류체험관에서 고추장 만들기 체험 가능
+                            </li>
+                            </ul></td>
+                        </tr>
+
+                      </table></div>
+
+                    <!-- comp : contents -->
+                    <div class="division fullSize"><div class="left">
+                        <img src="./img/detail/jnb/img09.jpg" alt="..."></div><div class="right bgFill"><div class="h2">
+                            장수 오미자
+                        </div><p>
+                            해발 400m 이상 고지대에 위치한 분지인 장수는 일교차가 커서 오미자를 재배하기에 최적의 조건을 갖췄다. 비옥한 고랭지에서 자란 장수 오미자는 색이 선명하고 맛이 깊다. 매운맛, 쓴맛, 신맛, 단맛, 짠맛 등 다섯 가지 맛을 내는 오미자는 열매 그대로 섭취하거나 오미자청, 오미자주 등으로 먹을 수 있다.
+                        </p></div></div><div class="tableWrap fullSize"><table><colgroup><col width="380px"><col width="840px"></colgroup>
+
+                        <tr><td>
+                            <img src="./img/detail/jnb/tb_img09.jpg" alt="..."></td><td><div class="h3 color">
+                                알에프와이너리 장수 오미자주     
+                            </div><p>
+                                오미자는 시잔드린 성분을 함유해 피부를 생기 있게 만들고 신진대사를 활발하게 해준다. 장수 오미자주는 오미자를 착즙하고 발효한 뒤에 숙성한 오미자 와인이라고 할 수 있다. 활성탄 여과로 깨끗하게 정제하고 블랜딩해 오미자 향이 진하게 난다. 맑고 고운 색상 덕분에 우선 눈이 즐겁다. 처음부터 오미자의 단맛이 부담스럽지 않게 다가와 알코올 향을 덮어주어 술이 약한 사람도 맛있게 즐길 수 있는 과실주다. 
+                            </p><ul class="color">
+                            <li class="location">
+                                전라북도 장수 계남면 침곡로 11-26 (SAPC거점산지유통센터) 
+                            </li>
+                            <li class="tel">
+                                063-351-6996
+                            </li>
+                            <li class="web">
+                                rfwinery.modoo.at rfwinery.modoo.at
+                            </li>
+                            <li class="price">
+                                360ml 1만원 미만
+                            </li>
+                            </ul></td>
+                        </tr>
+                        <tr><td>
+                            <img src="./img/detail/jnb/tb_img10.jpg" alt="..."></td><td><div class="h3 color">
+                                장수드림 오미자청     
+                            </div><p>
+                                장수 오미자를 설탕과 1:1 비율로 3개월 이상 숙성해 만들어 오미자 본연의 향과 다섯 가지 맛, 붉고 고운 색을 그대로 지니고 있다. 오미자청을 탄산수에 희석해 마시면 시원한 오미자 에이드가 완성되고, 육류 요리를 할 때 오미자청을 넣으면 육류를 부드럽게 해 소스로 활용하기도 좋다. 
+                            </p><ul class="color">
+                            <li class="location">
+                                전라북도 장수 장수읍 와동길 56 (장수드림협동조합)  
+                            </li>
+                            <li class="tel">
+                                063-351-3500 
+                            </li>
+                            <li class="web">
+                                jangsudream.com 
+                            </li>
+                            <li class="price">
+                                375ml 1만원 대
+                            </li>
+                            </ul></td>
+                        </tr>
+
+                      </table></div>
+
+                 <!-- comp : contents -->
+                    <div class="division fullSize"><div class="left">
+                        <img src="./img/detail/jnb/img10.jpg" alt="..."></div><div class="right bgFill"><div class="h2">
+                            정읍 전통주
+                        </div><p>
+                            정읍 지역에서는 청명주와 송명섭 막걸리가 유명하다. 청명주는 우리나라 24절기 중 청명일에 빚는 술 또는 마시는 술이라 하여 붙은 이름이다. 송명섭 막걸리는 대한민국 식품명인 제48호 송명섭 명인이 빚은 수제 막걸리로, 대량생산하지 않고 전통 방식으로 소량만 생산한다.
+                        </p></div></div><div class="tableWrap fullSize"><table><colgroup><col width="380px"><col width="840px"></colgroup>
+
+                        <tr><td>
+                            <img src="./img/detail/jnb/tb_img11.jpg" alt="..."></td><td><div class="h3 color">
+                                한영석발효연구소 청명주       
+                            </div><p>
+                                누룩 명인 한영석이 빚은 청명주. 쿰쿰한 누룩취 없이 산뜻한 화이트 와인을 마시듯 깔끔하게 즐길 수 있는 약주다. 레몬즙을 넣은 것 같은 짜릿한 산미 뒤로 적절하게 받쳐주는 단맛이 특징이다. 마치 살구를 먹은 것 같은 새콤달콤함을 느낄 수 있고, 천천히 산미를 느끼다 보면 점차 쌀의 고소함이 입안에 퍼진다. 다양한 누룩을 사용해 새로운 맛을 경험할 수 있도록 한 것 역시 청명주의 의도된 매력 중 하나다. 
+                            </p><ul class="color">
+                            <li class="location">
+                                전라북도 정읍시 답곡길 66(한영석의발효연구소) 
+                            </li>
+                            <li class="tel">
+                                010-5340-2112 
+                            </li>
+                            <li class="web">
+                                www.instagram.com/hanslab_kor 
+                            </li>
+                            <li class="price">
+                                375ml 2만원 대
+                            </li>
+                            </ul></td>
+                        </tr>
+                        <tr><td>
+                            <img src="./img/detail/jnb/tb_img12.jpg" alt="..."></td><td><div class="h3 color">
+                                송명섭 막걸리        
+                            </div><p>
+                                최근 인기를 얻고 있는 목 넘김이 가벼운 막걸리와는 전혀 다른 맛이다. 100% 우리나라에서 생산한 쌀과 전통 누룩 방식을 이용하고, 감미료를 첨가하지 않아 단맛 없이 시큼털털하고 걸쭉하다. 맵고 짠 음식이나 기름진 육류와 궁합이 좋아 전라북도의 한식과 곁들이기 좋다. 
+                            </p><ul class="color">
+                            <li class="location">
+                                전라북도 정읍시 태인면 태흥리 392-1 (태인양조장)   
+                            </li>
+                            <li class="tel">
+                                063-534-4018 
+                            </li>
+                            <li class="web">
+                                taein.modoo.at 
+                            </li>
+                            <li class="price">
+                                750ml 1만원 미만 
+                            </li>
+                            <li class="noti">
+                                정읍시 태인면 마트 일대
+                            </li>
+                            </ul></td>
+                        </tr>
+
+                      </table></div>
+
+
+                    <!-- comp : Mini Interview -->
+                    <div class="division division-border division-border-2 fullSize"><div class="left"><div class="caption">Mini Interview</div><div class="line"></div><div class="h3">
+                        한영석의발효연구소 
+                        <span>
+                        한영석 대표    
+                        </span></div><p><b>
+                        Q 청명주를 만들게 된 계기는 무엇인가요?  
+                        </b> 
+                        10여 년 전 척수염을 앓으면서 발효 식품에 대한 공부를 시작했는데, 그중에서도 식초에 빠졌습니다. 좋은 식초는 좋은 술에서 나오고, 좋은 술은 좋은 누룩에서 나온다는 것을 알게 됐죠. 그때부터 누룩에 대해 공부했고 수많은 시행착오 끝에 전통 누룩으로 청명주를 빚었습니다. 좋은 술을 만드는 누룩을 얻기 위해 7년간 누룩을 띄우고 술을 빚는 작업을 반복했습니다. 그렇게 해서지금의 청명주가 탄생했습니다.  
+                        </p><p><b>
+                        Q 한영석의 청명주는 어떻게 다른가요? 
+                        </b> 
+                        청명주를 만들기 위해서는 누룩 제조에 50일, 술 발효와 숙성에 90일 등 총 5개월의 시간이 걸립니다. 일반적인 전통주와 비교해 제조법이 까다롭고, 양조기간도 약 2배 이상 걸리는 셈이죠. 양조 기간이 긴 만큼 가격 경쟁력에서는 열세였지만 소비자의 입맛은 사로잡았어요. 앞으로 초심을 잃지 않고 계속 전통 누룩을 연구하고 여러 전통주를 만드는 시도를 이어갈 예정입니다.
+                        </p></div><div class="right">
+                        <img src="./img/detail/jnb/img11.jpg" alt="...">
+                        </div>
+                    </div>
+
+                    <!-- comp : contents -->
+                    <div class="division fullSize"><div class="left">
+                        <img src="./img/detail/jnb/img12.jpg" alt="..."></div><div class="right bgFill"><div class="h2">
+                            진안 인삼
+                        </div><p>
+                            진안은 전국 최대의 인삼 생산지로, 계절에 따른 기온 차가 뚜렷하고 주변 지역에 비해 서늘해 인삼을 재배하기에 좋은 조건을 갖췄다. 진안 인삼은 병충해가 적고 사포닌 함량이 많은 것이 특징이며, 가공한 후에도 진한 인삼의 풍미를 느낄 수 있다. 홍삼, 당삼, 인삼차, 인삼정 등으로 가공해 제조하기도 한다.
+                        </p></div></div><div class="tableWrap fullSize"><table><colgroup><col width="380px"><col width="840px"></colgroup>
+
+                        <tr><td>
+                            <img src="./img/detail/jnb/tb_img13.jpg" alt="..."></td><td><div class="h3 color">
+                                전북인삼농협 진안 인삼    
+                            </div><p>
+                                해발 400m 이상에 위치한 진안고원에서 수확했다. 몸집이 단단하고, 식감과 향이 뛰어난 진안 인삼은 초작지 재배가 많아 병충해가 적다. ‘가재골 진안홍삼’의 인삼은 짚과 청초 등 유기물을 듬뿍 넣어 땅 뒤집기로 땅속에 산소를 넣어주고 햇볕 소독을 하면서 1년 동안 땅을 관리해 화학비료를 쓰지 않고 무비료 농법으로 키운 제품이다. 
+                            </p><ul class="color">
+                            <li class="location">
+                                전라북도 진안 진안읍 진무로 1021(전북인삼농협)  
+                            </li>
+                            <li class="tel">
+                                063-433-3112 
+                            </li>
+                            <li class="web">
+                                jbinsam.com 
+                            </li>
+                            <li class="price">
+                                300g 2만원 대
+                            </li>
+                            </ul></td>
+                        </tr>
+
+                      </table></div>
+
+                    <!-- comp : contents -->
+                    <div class="division fullSize"><div class="left">
+                        <img src="./img/detail/jnb/img13.jpg" alt="..."></div><div class="right bgFill"><div class="h2">
+                            전주 초코파이
+                        </div><p>
+                            전주에서 3대째 이어온 빵집인 풍년제과에서 만든 수제 초코파이는 로컬 빵집에서 시작해 전국적으로 인기를 얻은 간식거리다. 부드러운 초콜릿 빵에 딸기잼과 크림을 넣고 모서리를 두꺼운 초콜릿 코팅으로 감싸 달콤한 맛을 더했다. 전주역과 버스터미널, 한옥마을 곳곳의 매장에서 판매하기 때문에 전주 여행 시 접근성이 뛰어나다.
+                        </p></div></div><div class="tableWrap fullSize"><table><colgroup><col width="380px"><col width="840px"></colgroup>
+
+                        <tr><td>
+                            <img src="./img/detail/jnb/tb_img14.jpg" alt="..."></td><td><div class="h3 color">
+                                풍년제과 초코파이  
+                            </div><p>
+                                오리지널 초코파이 외에도 다양한 맛을 즐길 수 있다. 코코아와 화이트 초콜릿의 부드럽고 깊은 맛을 느낄 수 있는 화이트 초코파이, 초코파이에 딸기크림으로 풍미를 더한 딸기 향 초코파이, 부드럽고 달콤 쌉싸름한 녹차 크림이 조화를 이루는 녹차 초코파이가 꾸준히 인기다. 이외에도 치즈크림으로 한층 더 풍부해진 치즈 초코파이, 크림치즈로 맛을 낸 크림치즈 초코파이, 진한 커피향의 모카 초코파이까지, 종류가 꽤 다양하다. 
+                            </p><ul class="color">
+                            <li class="location">
+                                전라북도 전주시 완산구 팔달로 180(PNB 풍년제과 본점)  
+                            </li>
+                            <li class="tel">
+                                0507-1426-6666 
+                            </li>
+                            <li class="web">
+                                pnb본점.com 
+                            </li>
+                            <li class="price">
+                                미니 초코파이 12개 세트 2만원 대
+                            </li>
+                            </ul></td>
+                        </tr>
+
+                      </table></div>
+        
+                </section>
+            </contents>
+            <!-- evoke : 템플릿 끝 -->
+        </div>
+    </div>
+
+</body>
+</html>

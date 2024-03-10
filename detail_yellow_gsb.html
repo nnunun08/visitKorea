@@ -1,0 +1,1435 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="common-inner">
+        <div class="template__type1__section">
+            <!-- evoke : 템플릿 시작 -->
+            <contents>
+                <style>
+                    /* common.css */
+                    @charset "UTF-8";
+                    /* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap'); */
+                    html, body, div, span, applet, object, iframe,
+                    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+                    a, abbr, acronym, address, big, cite, code,
+                    del, dfn, em, img, ins, kbd, q, s, samp,
+                    small, strike, strong, sub, sup, tt, var,
+                    b, u, i, center,
+                    dl, dt, dd, ol, ul, li,
+                    fieldset, form, label, legend,
+                    table, caption, tbody, tfoot, thead, tr, th, td,
+                    article, aside, canvas, details, embed,
+                    figure, figcaption, footer, header, hgroup,
+                    menu, nav, output, ruby, section, summary,
+                    time, mark, audio, video {
+                    margin: 0;
+                    padding: 0;
+                    border: 0;
+                    font-size: 100%;
+                    font: inherit;
+                    vertical-align: baseline;
+                    }
+                    /* HTML5 display-role reset for older browsers */
+                    article, aside, details, figcaption, figure,
+                    footer, header, hgroup, menu, nav, section {
+                    display: block;
+                    }
+                    body {
+                    line-height: 1;
+                    }
+                    ol, ul {
+                    list-style: none;
+                    }
+                    blockquote, q {
+                    quotes: none;
+                    }
+                    blockquote:before, blockquote:after,
+                    q:before, q:after {
+                    content: "";
+                    content: none;
+                    }
+                    table {
+                    border-collapse: collapse;
+                    border-spacing: 0;
+                    }
+                    Select {
+                    font-family: inherit; /* 폰트 상속 */
+                    background: url(../img/btn-drop-arrow.svg) no-repeat 98% 50%;
+                    /* 네이티브 화살표를 커스텀 화살표로 대체 */
+                    -webkit-appearance: none;
+                    /* 네이티브 외형 감추기 */
+                    -moz-appearance: none;
+                    appearance: none;
+                    }
+                    Select::-ms-expand {
+                    display: none; /* 화살표 없애기 for IE10, 11*/
+                    }
+                    input {
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    -webkit-border-radius: 0;
+                    border-radius: 0;
+                    }
+                    /* IE10 이상에서 input box 에 추가된 지우기 버튼 제거 */
+                    input::-ms-clear {
+                    display: none;
+                    }
+                    /* input type number 에서 화살표 제거 */
+                    input[type=number]::-webkit-inner-spin-button,
+                    input[type=number]::-webkit-outer-spin-button {
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    }
+                    body {
+                        background: #f5f5f5;
+                    }
+                    .common-inner {
+                        padding: 0 30px;
+                        max-width: 1300px;
+                        box-sizing: border-box;
+                        margin: 0 auto;
+                        margin-top: 40px;
+                        padding: 0 40px;
+                        padding-bottom: 120px;
+                    }
+                    .template__type1__section {
+                        padding: 30px;
+                        border: 1px solid #e0e0e0;
+                        background: #fff;
+                        border-radius: 18px;
+                    }
+                    @media (max-width: 1200px) {
+                        .common-inner {
+                            padding: 0 20px;
+                        }
+                    }
+                
+                    .page-content {
+                    color: #000;
+                    letter-spacing: -0.5px;
+                    line-height: 140%;
+                    font-family: system-ui, -apple-system, "Poppins", "MS PGothic", "Microsoft YaHei", "Arial", sans-serif;
+                    max-width: none;
+                    }
+                    .page-content .fullSize {
+                    margin-left: -30px;
+                    margin-right: -30px;
+                    }
+                    .page-content .visualImg {
+                    max-width: 926px;
+                    margin: 0 auto;
+                    }
+                    .page-content .visualImg img {
+                    width: 100%;
+                    }
+                    .page-content .visualImg .imgName {
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 140%; /* 140% */
+                    letter-spacing: -0.5px;
+                    text-align: center;
+                    margin-bottom: 40px;
+                    }
+                    .page-content .pageDesc {
+                    margin-bottom: 80px;
+                    }
+                    .page-content .pageDesc li + li {
+                    margin-top: 30px;
+                    }
+                    .page-content .pageDesc p {
+                    color: #000;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 172%; /* 172.308% */
+                    letter-spacing: -0.5px;
+                    }
+                    .page-content .pageDesc p::before {
+                    content: "";
+                    display: inline-block;
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 5px;
+                    margin-bottom: 3px;
+                    background-color: #000;
+                    }
+                    .page-content .division {
+                    display: flex;
+                    align-items: stretch;
+                    justify-content: center;
+                    margin-bottom: 40px;
+                    margin-top: 85px;
+                    }
+                    .page-content .division.divisionAuto {
+                    min-height: auto;
+                    }
+                    .page-content .division.divisionAuto .left,
+                    .page-content .division.divisionAuto .right {
+                    padding: 35px 6.5%;
+                    }
+                    .page-content .division .h2 {
+                    font-size: 36px;
+                    font-weight: bold;
+                    line-height: 100%;
+                    margin-bottom: 27px;
+                    }
+                    .page-content .division .left {
+                    width: 50%;
+                    box-sizing: border-box;
+                    border-radius: 0 45px 45px 0;
+                    overflow: hidden;
+                    }
+                    .page-content .division .left img {
+                    width: 100%;
+                    height: 100%;
+                    -o-object-fit: cover;
+                        object-fit: cover;
+                    display: block;
+                    }
+                    .page-content .division .left.bgFill {
+                    display: flex;
+                    align-items: center;
+                    padding: 6.5%;
+                    color: #fff;
+                    }
+                    .page-content .division .left .h2 {
+                    margin: 0;
+                    }
+                    .page-content .division .right {
+                    background-color: #000;
+                    box-sizing: border-box;
+                    border-radius: 45px 0 0 45px;
+                    width: 50%;
+                    color: #fff;
+                    padding: 100px 80px;
+                    padding: 6.5%;
+                    }
+                    .page-content .division .right p {
+                    font-size: 16px;
+                    line-height: 140%;
+                    }
+                    .page-content .division-grey {
+                    min-height: 0;
+                    margin-top: 0;
+                    }
+                    .page-content .division-grey .left {
+                    background-color: #DEDEDE;
+                    padding: 23px 32px;
+                    }
+                    .page-content .division-grey .left .caption {
+                    font-size: 20px;
+                    font-weight: 300;
+                    margin-bottom: 12px;
+                    }
+                    .page-content .division-grey .left .caption::after {
+                        display: none;
+                    }
+                    .page-content .division-grey .left .line {
+                    width: 66px;
+                    height: 1px;
+                    background-color: #000;
+                    margin-bottom: 20px;
+                    }
+                    .page-content .division-grey .left .h3 {
+                    font-size: 24px;
+                    font-weight: bold;
+                    margin-bottom: 42px;
+                    }
+                    .page-content .division-grey .left p {
+                    font-size: 16px;
+                    line-height: 175%;
+                    }
+                    .page-content .division-grey .right {
+                    background-color: #DEDEDE;
+                    padding: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    }
+                    .page-content .division-grey .right img {
+                    width: 100%;
+                    }
+                    .page-content .division-border {
+                    margin-top: 30px;
+                    }
+                    .page-content .division-border .left {
+                    padding: 17px 32px 27px;
+                    flex: 1 0 0;
+                    }
+                    .page-content .division-border .left .caption {
+                    font-size: 20px;
+                    font-weight: 300;
+                    margin-bottom: 12px;
+                    }
+                    .page-content .division-border .left .line {
+                    width: 66px;
+                    height: 1px;
+                    background-color: #000;
+                    margin-bottom: 20px;
+                    }
+                    .page-content .division-border .left .h3 {
+                    font-size: 24px;
+                    font-weight: bold;
+                    margin-bottom: 42px;
+                    }
+                    .page-content .division-border .left .h3 span {
+                    font-weight: 400;
+                    }
+                    .page-content .division-border .left p {
+                    font-size: 16px;
+                    line-height: 175%;
+                    }
+                    .page-content .division-border .left b {
+                    font-weight: bold;
+                    }
+                    .page-content .division-border .right {
+                    flex: 0 0 auto;
+                    background-color: transparent;
+                    padding: 0;
+                    padding-right: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    }
+                    .page-content .division-border .right img {
+                    width: 100%;
+                    }
+                    .page-content .division-border-2 .left {
+                    width: 83%;
+                    padding-right: 5.8%;
+                    }
+                    .page-content .division-border-2 .right {
+                    width: 35%;
+                    max-width: 414px;
+                    }
+                    .page-content .division-border-2 .right img {
+                    max-height: 375px;
+                    -o-object-fit: contain;
+                        object-fit: contain;
+                    }
+                    .page-content .tableWrap table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    font-size: 14px;
+                    margin-bottom: 45px;
+                    }
+                    .page-content .tableWrap table td {
+                    vertical-align: top;
+                    border: 1px solid #BBBBBB;
+                    box-sizing: border-box;
+                    text-align: left;
+                    }
+                    .page-content .tableWrap table td:nth-child(1) {
+                    border-left: 0;
+                    vertical-align: middle;
+                    }
+                    .page-content .tableWrap table td:nth-child(1) img {
+                    width: 100%;
+                    min-width: 50px;
+                    -o-object-fit: contain;
+                        object-fit: contain;
+                    }
+                    .page-content .tableWrap table td:nth-child(2) {
+                    border-right: 0;
+                    padding: 40px 70px;
+                    padding: 3.3% 5.8%;
+                    padding: 40px 5.8%;
+                    }
+                    .page-content .tableWrap table .h3 {
+                    font-size: 24px;
+                    font-weight: bold;
+                    margin-bottom: 28px;
+                    }
+                    .page-content .tableWrap table .h3::before {
+                    display: inline-block;
+                    color: #000;
+                    margin-right: 6px;
+                    }
+                    .page-content .tableWrap table tr:nth-child(1) .h3::before {
+                    content: "①";
+                    }
+                    .page-content .tableWrap table tr:nth-child(2) .h3::before {
+                    content: "②";
+                    }
+                    .page-content .tableWrap table tr:nth-child(3) .h3::before {
+                    content: "③";
+                    }
+                    .page-content .tableWrap table tr:nth-child(4) .h3::before {
+                    content: "④";
+                    }
+                    .page-content .tableWrap table p {
+                    font-size: 14px;
+                    margin-bottom: 7px;
+                    }
+                    .page-content .tableWrap table li {
+                    font-size: 14px;
+                    line-height: 100%;
+                    padding-left: 22px;
+                    position: relative;
+                    word-break: break-all;
+                    }
+                    .page-content .tableWrap table li::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 15px;
+                    height: 15px;
+                    display: inline-block;
+                    }
+                    .page-content .tableWrap table li.location::before {
+                    background-image: url(./img/common/ic_location.svg);
+                    }
+                    .page-content .tableWrap table li.tel::before {
+                    background-image: url(./img/common/ic_tel.svg);
+                    }
+                    .page-content .tableWrap table li.web::before {
+                    background-image: url(./img/common/ic_web.svg);
+                    }
+                    .page-content .tableWrap table li.price::before {
+                    background-image: url(./img/common/ic_price.svg);
+                    }
+                    .page-content .tableWrap table li.cart::before {
+                    background-image: url(./img/common/ic_cart.svg);
+                    }
+                    .page-content .tableWrap table li.noti::before {
+                    background-image: url(./img/common/ic_noti.svg);
+                    }
+                    .page-content .tableWrap table li + li {
+                    margin-top: 7px;
+                    }
+                    .page-content.theme-red .color {
+                    color: #F0514D !important;
+                    }
+                    .page-content.theme-red .bgFill {
+                    background-color: #F0514D !important;
+                    }
+                    .page-content.theme-red .pageDesc p::before {
+                    background-color: #F0514D;
+                    }
+                    .page-content.theme-red .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+                    background: rgba(240, 81, 77, 0.1);
+                    }
+                    .page-content.theme-red .division-border {
+                    border: 3px solid #F0514D;
+                    box-sizing: border-box;
+                    }
+                    .page-content.theme-navy .color {
+                    color: #036A9B !important;
+                    }
+                    .page-content.theme-navy .bgFill {
+                    background-color: #036A9B !important;
+                    }
+                    .page-content.theme-navy .pageDesc p::before {
+                    background-color: #036A9B;
+                    }
+                    .page-content.theme-navy .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+                    background: rgba(3, 106, 155, 0.1);
+                    }
+                    .page-content.theme-navy .division-border {
+                    border: 3px solid #036A9B;
+                    box-sizing: border-box;
+                    }
+                    .page-content.theme-yellow .color {
+                    color: #EDB51E !important;
+                    }
+                    .page-content.theme-yellow .bgFill {
+                    background-color: #EDB51E !important;
+                    }
+                    .page-content.theme-yellow .pageDesc p::before {
+                    background-color: #EDB51E;
+                    }
+                    .page-content.theme-yellow .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+                    background: rgba(237, 181, 30, 0.15);
+                    }
+                    .page-content.theme-yellow .division-border {
+                    border: 3px solid #EDB51E;
+                    box-sizing: border-box;
+                    }
+                    .page-content.theme-green .color {
+                    color: #4C9667 !important;
+                    }
+                    .page-content.theme-green .bgFill {
+                    background-color: #4C9667 !important;
+                    }
+                    .page-content.theme-green .pageDesc p::before {
+                    background-color: #4C9667;
+                    }
+                    .page-content.theme-green .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+                    background: rgba(76, 150, 103, 0.1);
+                    }
+                    .page-content.theme-green .division-border {
+                    border: 3px solid #4C9667;
+                    box-sizing: border-box;
+                    }
+                    .page-content.theme-pink .color {
+                    color: #F598A6 !important;
+                    }
+                    .page-content.theme-pink .bgFill {
+                    background-color: #F598A6 !important;
+                    }
+                    .page-content.theme-pink .pageDesc p::before {
+                    background-color: #F598A6;
+                    }
+                    .page-content.theme-pink .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+                    background: rgba(245, 152, 166, 0.15);
+                    }
+                    .page-content.theme-pink .division-border {
+                    border: 3px solid #F598A6;
+                    box-sizing: border-box;
+                    }
+                    .page-content.theme-blue .color {
+                    color: #2587C8 !important;
+                    }
+                    .page-content.theme-blue .bgFill {
+                    background-color: #2587C8 !important;
+                    }
+                    .page-content.theme-blue .pageDesc p::before {
+                    background-color: #2587C8;
+                    }
+                    .page-content.theme-blue .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+                    background: rgba(37, 135, 200, 0.15);
+                    }
+                    .page-content.theme-blue .division-border {
+                    border: 3px solid #2587C8;
+                    box-sizing: border-box;
+                    }
+                    @media screen and (max-width: 767px) {
+                    .page-content .division {
+                        flex-direction: column;
+                    }
+                    .page-content .division .left {
+                        width: 100%;
+                        border-radius: 0;
+                    }
+                    .page-content .division .right {
+                        width: 100%;
+                        border-radius: 0;
+                    }
+                    .page-content .division-border-2 .left {
+                        width: 100%;
+                        padding: 17px 32px 27px;
+                    }
+                    .page-content .division-border .left {
+                        flex: 1 0 auto;
+                    }
+                    .page-content .division-border .right {
+                        padding: 17px 32px;
+                    }
+                    .page-content .division-border-2 .right {
+                        max-width: 100%;
+                    }
+                    .page-content .division-border-2 .right img {
+                        width: 100%;
+                        -o-object-fit: contain;
+                        object-fit: contain;
+                        max-height: 240px;
+                    }
+                    .page-content .tableWrap {
+                        display: block;
+                    }
+                    .page-content .tableWrap table {
+                        display: block;
+                    }
+                    .page-content .tableWrap table colgroup {
+                        display: none;
+                    }
+                    .page-content .tableWrap table td {
+                        display: block;
+                        width: 100%;
+                        border: 1px solid #BBBBBB !important;
+                        margin-top: -1px;
+                    }
+                    .page-content .tableWrap table td:nth-child(1) {
+                        display: flex;
+                    }
+                    .page-content .tableWrap table td:nth-child(1) img {
+                        max-height: 350px;
+                        width: 50%;
+                        margin: 0 auto;
+                    }
+                    }
+                </style>
+                <section class="page-content theme-yellow">
+                    <!-- comp -->
+                    <div class="visualImg">
+                        <img src="./img/detail/gsb/img01.jpg" alt="...">
+                        <div class="imgName">세계문화유산으로 지정된 역사의 도시 경주의 모습</div>
+                    </div>
+                    <!-- comp -->
+                    <div class="pageDesc">
+                        <ul>
+                            <li>
+                                <p>
+                                    경상북도는 아름다운 자연과 깊은 역사, 다양한 문화로 가득 차 있다. 경상북도의 지역마다 각각의 매력을 가지고 있고 청정한 자연과 아름다운 산, 끝없는 들판과 푸른 바다가 어우러진 경치를 볼 수 있다. 경상북도는 태백산맥과 소백산맥이 놓여 있으며, 금강산, 백두대간 등 자연 속에서 트레킹과 하이킹을 즐길 수 있다. 또 아름다운 섬 여행지로 유명한 울릉도와 독도에서는 해상 생태 체험과 자연의 아름다움을 만끽할 수 있다. 
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    역사적 자원이 풍부한 경상북도는 고구려, 백제, 신라 등 옛 역사 유적과 문화재가 풍부하다. 경주는 세계문화유산으로 지정된 유적지인 불국사, 석굴암, 첨성대 등으로 유명하며, 신라의 유적과 문화를 체험할 수 있는 곳으로 많은 관광객이 방문한다. 황남동에 있는 신라시대 고분군인 대릉원은 경주 최대 번화가인 황리단길과 인접해 있다. 너른 평지 위에 고분들이 거리를 두고 띄엄띄엄 떨어져 있는데 왕의 무덤가를 거닐며 한가로운 분위기를 느껴보자. 세계문화유산에 지정된 하회마을과 안동 핫플레이스 월영교는 꼭 방문해야 하는 곳이다. 하회마을에는 전통 가옥들이 그대로 보존되어 멋스러움을 느낄 수 있고 봄이면 벚꽃을 가을이면 단풍이 우거져 빼어난 경치를 자랑한다. 월영교는 낮에도 아름답지만 밤이 되면 운치 있는 야경으로 더욱 유명하다. 
+                            </p>
+                            </li>
+                            <li>
+                                <p>
+                                    김천의 연화지는 전국적으로 유명한 벚꽃 명소다. SNS에서는 야간 벚꽃 촬영지로도 이름을 떨쳤다. 원래 조선 초기 농업용 저수지로 축조되었다가 연못 가장자리에 정자가 들어서면서부터 봄에는 벚꽃과 여름엔 연못을 가득 채운 연잎이 주변 경관과 어우러져 관광객들의 사랑을 받고 있다. 한국에서 진정한 아름다움과 문화를 경험하고 싶다면 경상북도로 여행을 떠나보자.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- comp -->
+                    <div class="division fullSize">
+                        <div class="left">
+                            <img src="./img/detail/gsb/img02.jpg" alt="...">
+                        </div>
+                        <div class="right bgFill">
+                            <div class="h2">안동소주</div>
+                            <p>
+                                안동소주는 한국에서 무형문화재로 지정되었을 정도로 대표적인 민속주다. 1281년 기록되었을 정도로 오랜 역사를 자랑한다. 일반 희석식 소주와 달리 증류식 방법으로 제조되며 알코올 도수가 45도의 고도주이면서도 뒷맛이 깨끗하다는 점이 특징이다. 안동지역 명문가들에 의해 전수되어 왔다는 사실도 술의 품격을 높인다
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="tableWrap fullSize">
+                        <table>
+                            <colgroup><col width="380px"><col width="840px"></colgroup>
+                            <tr>
+                                <td><img src="./img/detail/gsb/tb_img01.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">안동소주박물관 안동소주</div>
+                                    <p>
+                                        안동소주는 부드럽고 깔끔한 맛이 특징이며, 안동소주박물관은 안동소주의 역사와 제조 과정을 배울 수 있다. 안동소주의 유래와 제조 과정, 한국의 민속주 종류, 술의 계보, 시대별 주병, 주배를 중점적으로 전시하고, 안동소주를 직접 만들어볼 수 있는 체험장과 시음장도 자리한다. 이곳에 가면 안동소주를 시음할 수 있는데, 아름다운 호리병에 담긴 소주를 마실 때는 먼저 향을 맡아본 다음 맛을 보는 것이 좋다.
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            경상북도 안동시 강남로 71-1 안동소주박물관  
+                                        </li>
+                                        <li class="tel">
+                                            054-858-4541
+                                        </li>
+                                        <li class="web">
+                                            www.andongsoju.net 
+                                        </li>
+                                        <li class="price">
+                                            낱병 600ml 3만원 대
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+                    <!-- comp -->
+                    <div class="division fullSize">
+                        <div class="left">
+                            <img src="./img/detail/gsb/img03.jpg" alt="...">
+                        </div>
+                        <div class="right bgFill">
+                            <div class="h2">상주•예천 곶감</div>
+                            <p>
+                                말릴수록 단맛이 강해지며 쫀득함이 매력적이다. 특히, 곶감은 말리는 과정에서 흰 가루가 생기는데, 이 흰가루는 강해지며 쫀득함이 매력적이다. 12월에 열리는 상주 곶감축제에서는 다채로운 공연과 먹거리를 즐길 수 있다.
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="tableWrap fullSize">
+                        <table>
+                            <colgroup><col width="380px"><col width="840px"></colgroup>
+                            <tr>
+                                <td><img src="./img/detail/gsb/tb_img02.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">상주곶감 반건시</div>
+                                    <p>
+                                        감을 말린 것을 곶감이라고 하지만 건조 정도에 따라 건시와 이보다 부드러운 반건시로 나눈다. 껍질을 벗긴 감을 45일 정도 말리면 반건시로 재탄생한다. 반건시는 겉은 쫄깃하고 속은 젤리처럼 달콤한 맛이 일품이다.
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            경상북도 상주시 영남제일로 1154(상주곶감유통센터)  
+                                        </li>
+                                        <li class="tel">
+                                            054-536-0907
+                                        </li>
+                                        <li class="web">
+                                            www.sangjufng.co.kr
+                                        </li>
+                                        <li class="price">
+                                            반건시 20개입 3만원 대
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><img src="./img/detail/gsb/tb_img03.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">상주곶감 찹쌀떡</div>
+                                    <p>
+                                        상주곶감 찹쌀떡은 쫄깃한 찹쌀떡 속에 달콤한 곶감을 넣어 만든 떡이다. 간식으로 먹거나, 선물용으로 좋다.
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            경상북도 상주시 영남제일로 1154(상주곶감유통센터) 
+                                        </li>
+                                        <li class="tel">
+                                            054-536-0907 
+                                        </li>
+                                        <li class="web">
+                                            www.sangjufng.co.kr 
+                                        </li>
+                                        <li class="price">
+                                            18개입 3만원 대 
+                                        </li>
+                                        <li class="noti">
+                                            매년 12월 상주곶감축제
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><img src="./img/detail/gsb/tb_img04.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">곶감또개</div>
+                                    <p>
+                                        또개라는 말은 꽃과 함께 떨어진 어린 감을 말한다. 한입 크기로 잘라 말린 것으로 쫀득한 식감이 특징이다. 한입에 쏙 넣어 풍부한 달콤함을 입 안 가득 즐겨보거나, 샐러드, 요구르트에 토핑으로 얹어 먹기에도 좋다.
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            경상북도 상주시 영남제일로 1154(상주곶감유통센터)
+                                        </li>
+                                        <li class="tel">
+                                            054-536-0907
+                                        </li>
+                                        <li class="web">
+                                            www.sangjufng.co.kr
+                                        </li>
+                                        <li class="price">
+                                            곶감또개 0.75kg 3팩 1만원 대
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+                    <!-- comp -->
+                    <div class="division fullSize">
+                        <div class="left">
+                            <img src="./img/detail/gsb/img04.jpg" alt="...">
+                        </div>
+                        <div class="right bgFill">
+                            <div class="h2">
+                                영주 풍기 인삼
+                            </div>
+                            <p>
+                                영주는 인삼 재배 환경이 뛰어나, 품질 좋은 인삼이 재배된다. 인삼은 면역력 강화, 스트레스 완화, 항산화 작용 등의 효과가 있어 피로 해소나 체력 증진에 도움을 준다. 젤리와 정과, 티백 등 다양한 형태로 가공되어 인삼의 풍부한 영양과 특유의 향과 맛을 경험하고 싶다면 영주 풍기 인삼을 추천한다.
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="tableWrap fullSize">
+                        <table>
+                            <colgroup><col width="380px"><col width="840px"></colgroup>
+                            <tr>
+                                <td><img src="./img/detail/gsb/tb_img05.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">
+                                        홍삼 정과
+                                    </div>
+                                    <p>
+                                        홍삼 정과는 젤리 같은 식감이라 아이들도 거부감 없이 접할 수 있다. 맛은 적당히 달콤하면서 끝 맛은 홍삼의 쌉쌀함이 감돈다. 
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            경상북도 영주시 풍기읍 인삼로 8 (풍기인삼시장)   
+                                        </li>
+                                        <li class="tel">
+                                            0507-1319-7948 
+                                        </li>
+                                        <li class="price">
+                                            400g 5만원 대 
+                                        </li>
+                                        <li class="noti">
+                                            10월 풍기인삼축제, 인삼주 만들기 체험
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><img src="./img/detail/gsb/tb_img06.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">
+                                        홍삼 절편
+                                    </div>
+                                    <p>
+                                        홍삼 절편은 홍삼을 얇게 저민 후 꿀에 절인 것으로 맛이 좋고 영양이 풍부하다. 홍삼의 효능을 지니고 있어 면역력 강화, 피로 해소, 혈액순환 개선 효과가 있다.  
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            경상북도 영주시 풍기읍 인삼로 8(풍기인삼시장)
+                                        </li>
+                                        <li class="tel">
+                                            0507-1319-7948 
+                                        </li>
+                                        <li class="price">
+                                            20g 5본3만원 대 
+                                        </li>
+                                        <li class="noti">
+                                            10월 풍기인삼축제, 인삼주 만들기 체험
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+                    <!-- comp -->
+                    <div class="division fullSize">
+                        <div class="left">
+                            <img src="./img/detail/gsb/img05.jpg" alt="...">
+                        </div>
+                        <div class="right bgFill">
+                            <div class="h2">
+                                문경 찻사발
+                            </div>
+                            <p>
+                                문경 도자기는 맑고 깨끗한 물과 넉넉한 햇빛으로 품질이 우수하며, 아름다운 빛깔을 띤다. 문경은 한국에서 가장 오래된 도자기 생산지 중 하나로, 찻사발은 차를 마실 때 맛과 향을 더욱 잘 우러나오게 한다. 문경은 매년 문경찻사발축제를 개최하며 도자기의 우수성을 널리 알리고 있다.
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="tableWrap fullSize">
+                        <table>
+                            <colgroup><col width="380px"><col width="840px"></colgroup>
+                            <tr>
+                                <td><img src="./img/detail/gsb/tb_img07.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">
+                                        한국다완박물관 다완
+                                    </div>
+                                    <p>
+                                        다완박물관은 대한민국 찻사발 전통의 중심지인 문경의 전통을 잇기 위해 개관한 국내 최초의 찻사발 전문 박물관이다. 찻사발의 전통부터 현재까지 만날 수 있는 2500여 점의 명인 작품들을 만날 수 있고 다완과 다기 세트 등을 구입할 수 있다. 
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            경상북도 문경시 문경읍 온천5길 2-1(한국다완박물관)
+                                        </li>
+                                        <li class="tel">
+                                            054-572-5780
+                                        </li>
+                                        <li class="web">
+                                            kuy.kr 
+                                        </li>
+                                        <li class="price">
+                                            소사이즈 다완 6~8만원 대 
+                                        </li>
+                                        <li class="noti">
+                                            지역명사와 함께하는 문화여행 프로그램
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><img src="./img/detail/gsb/tb_img08.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">
+                                        호롱상회 문경 잔 세트
+                                    </div>
+                                    <p>
+                                        마음을 다스리는 차 한잔의 여유를 누리고 싶다면, 문경의 찻사발을 가지고 가길 추천한다. 다양한 찻사발의 종류가 있으며 색채와 형태가 자연스럽다. 문경의 흙과 망댕이 가마로 장작불에 구워만든 문경 잔은 한국의 향을 담아 갈 수 있다.
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            경상북도 문경시 문경읍 새재로 910(문경새재호롱상회) 
+                                        </li>
+                                        <li class="tel">
+                                            054-571-4777
+                                        </li>
+                                        <li class="web">
+                                            smartstore.naver.com/horong__store 
+                                        </li>
+                                        <li class="price">
+                                            3만원 대 
+                                        </li>
+                                        <li class="noti">
+                                            다완박물관 도자기 체험
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+
+                    <!-- comp -->
+                    <div class="division fullSize">
+                        <div class="left">
+                            <img src="./img/detail/gsb/img06.jpg" alt="...">
+                        </div>
+                        <div class="right bgFill">
+                            <div class="h2">
+                                경주교동법주
+                            </div>
+                            <p>
+                                경주교동법주는 조선시대 궁궐에서 빚던 술로 오랜 역사를 자랑한다. 일반 술은 멥쌀로 만드는데 교동법주는 찹쌀을 사용할 만큼 재료에 있어서도 고급술로 그윽한 향과 맑고 화려한 금색 빛깔이 품위를 느끼게 해준다.
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="tableWrap fullSize">
+                        <table>
+                            <colgroup><col width="380px"><col width="840px"></colgroup>
+                            <tr>
+                                <td><img src="./img/detail/gsb/tb_img09.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">
+                                        경주교동법주
+                                    </div>
+                                    <p>
+                                        경주 교동법주는 찹쌀 특유의 맛과 달콤한 맛을 느낄수 있는 것이 특징이며, 끝에 살짝 신맛이 난다. 교동법주는 방부 처리나 열처리 하지 않기 때문에 유통기한이 짧지만 그 맛이 좋아 자꾸 찾게 된다.  
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            경상북도 경주시 교촌안길 19-21(경주교동법주)
+                                        </li>
+                                        <li class="tel">
+                                            054-772-2051
+                                        </li>
+                                        <li class="web">
+                                            www.kyodongbeobju.com
+                                        </li>
+                                        <li class="price">
+                                            교동법주 송학 1호 4만원 대
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+                    <!-- comp -->
+                    <div class="division fullSize">
+                        <div class="left">
+                            <img src="./img/detail/gsb/img07.jpg" alt="...">
+                        </div>
+                        <div class="right bgFill">
+                            <div class="h2">
+                                독도 관련 굿즈
+                            </div>
+                            <p>
+                                독도는 동해 한가운데 위치한 섬으로, 한국의 역사와 문화에서 중요한 의미를 지난다. 동해의 맑은 바다와 우뚝 솟은 바위섬, 푸른 해조류들이 어울린 아름다운 풍경은 오래도록 기억에 남을 것이다.
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="tableWrap fullSize">
+                        <table>
+                            <colgroup><col width="380px"><col width="840px"></colgroup>
+                            <tr>
+                                <td><img src="./img/detail/gsb/tb_img10.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">
+                                        독도강치 마그넷
+                                    </div>
+                                    <p>
+                                        독도를 수호하는 귀여운 마스코트 강치와 독도, 바닷갈매기가 표현된 마그넷. 독도 강치는 일제강점기 시절 무분별한 포획으로 멸종에 이르렀다는 아픈 역사를 가진 동물이다. 독도 강치 마그넷은 독도의 모습을 오래도록 간직할 수 있는 가장 간편하고 기념이 될 만한 아이템이다. 영문으로 독도의 이름이 함께 새겨져 있다.
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            경상북도 울릉군 울릉읍 울릉순환로 164-2(저동커피)
+                                        </li>
+                                        <li class="tel">
+                                            010-2084-1148  
+                                        </li>
+                                        <li class="web">
+                                            smartstore.naver.com/waveonulleung
+                                        </li>
+                                        <li class="price">
+                                            8000원
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><img src="./img/detail/gsb/tb_img11.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">
+                                        독도강치 인형
+                                    </div>
+                                    <p>
+                                        플라스틱 없는 청정 자연섬을 표방하는 울릉군에서 울산의 사회적 기업 우시산과 협업해 만든 인형이다. 독도 강치는 우리나라 동해바다에서 살았던 바다사자를 본따 만든 것으로 '동해 수호'의 의미를 담았다. 폐 플라스틱 재생 솜을 사용해 만들어 환경까지 생각했다
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            경상북도 울릉군 울릉읍 울릉순환로 164-4(독도문방구)
+                                        </li>
+                                        <li class="tel">
+                                            010-8500-6044
+                                        </li>
+                                        <li class="web">
+                                            dokdostore.kr
+                                        </li>
+                                        <li class="price">
+                                            2만원 대
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="./img/detail/gsb/tb_img12.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">
+                                        카페 울라 티셔츠
+                                    </div>
+                                    <p>
+                                        독도 티셔츠는 독도를 모티브로 제작한 티셔츠다. 지도가 그려져 있고, 독도에 대한 메시지가 적혀 있다. 스탬프 이벤트로 원하는 날짜를 적으면 의류용 스탬프를 찍어주기도 한다. 
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            경상북도 울릉군 북면 추산길 88-13(카페 울라) 
+                                        </li>
+                                        <li class="tel">
+                                            054-791-7790  
+                                        </li>
+                                        <li class="web">
+                                            smartstore.naver.com/ullagoods 
+                                        </li>
+                                        <li class="price">
+                                            4만원 대 
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+                    <!-- comp -->
+                    <div class="division fullSize">
+                        <div class="left">
+                            <img src="./img/detail/gsb/img08.jpg" alt="...">
+                        </div>
+                        <div class="right bgFill">
+                            <div class="h2">
+                                안동 하회탈 굿즈
+                            </div>
+                            <p>
+                                안동 하회탈은 한국의 민속탈로 총 11가지이며, 각 탈은 특징적인 표정과 복장을 가지고 있다. 하회탈은 탈놀이인 하회별신굿에서 사용되며, 하회별신굿은 유네스코 세계무형문화유산으로 등재되어있다. 하회마을을 찾는 관광객들이 주머니에 하나쯤 챙겨가는 아이템이다.
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="tableWrap fullSize">
+                        <table>
+                            <colgroup><col width="380px"><col width="840px"></colgroup>
+                            <tr>
+                                <td><img src="./img/detail/gsb/tb_img13.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">
+                                        안동 하회탈 마그넷
+                                    </div>
+                                    <p>
+                                        안동 하회 마을의 하회세계탈박물관에서 판매하는 하회탈 마그넷은 하회탈의 다양한 탈을 형상화한 상품이다. 마그넷은 크기가 작고 가벼워 휴대가 간편하며, 가격도 저렴하여 관광객들에게 인기가 많다.      
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            경상북도 안동시 풍천면 전서로 206(하회세계탈박물관)
+                                        </li>
+                                        <li class="tel">
+                                            054-853-2288 
+                                        </li>
+                                        <li class="web">
+                                            www.mask.kr 
+                                        </li>
+                                        <li class="price">
+                                            1만원 미만 
+                                        </li>
+                                        <li class="noti">
+                                            매년 10월 안동국제탈춤페스티벌
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="./img/detail/gsb/tb_img14.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">
+                                        안동 하회탈 액자
+                                    </div>
+                                    <p>
+                                        하회탈 액자는 안동의 전통문화를 간직한 기념품으로, 안동 여행을 기념하기 좋은 선물이다. 안동 하회탈 액자는 안동의 아름다운 전통문화를 집에서도 간직할 수 있으며, 전통을 사랑하는 사람에게 좋은 선물이 될 것이다. 
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            경상북도 안동시 풍천면 전서로 206(하회세계탈박물관) 
+                                        </li>
+                                        <li class="tel">
+                                            054-853-2288
+                                        </li>
+                                        <li class="web">
+                                            www.mask.kr
+                                        </li>
+                                        <li class="price">
+                                            마름모 탈 액자 1만원 대
+                                        </li>
+                                        <li class="noti">
+                                            10월 안동국제탈춤페스티벌
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <!-- comp -->
+                    <div class="division fullSize">
+                        <div class="left">
+                            <img src="./img/detail/gsb/img09.jpg" alt="...">
+                        </div>
+                        <div class="right bgFill">
+                            <div class="h2">
+                                경주빵
+                            </div>
+                            <p>
+                                경주에 오면 꼭 양손 가득 사야 할 것이 있다. 바로 경주빵이다. 그 외에도 경주를 담은 빵이 많다. 경주의 황리단길과 곳곳의 명소를 다니다보면 다양한 경주빵을 판매하는 곳을 만날 수 있어, 여행하는 재미가 더해진다.
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="tableWrap fullSize">
+                        <table>
+                            <colgroup><col width="380px"><col width="840px"></colgroup>
+                            <tr>
+                                <td><img src="./img/detail/gsb/tb_img15.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">
+                                        경주 주령구빵
+                                    </div>
+                                    <p>
+                                        경주 주령구빵은 신라시대의 ‘주령구’에서 유래되었다. ‘주령구’는 신라시대에 놀이를 위해 사용된 14면체 주사위를 의미한다. 주사위에 벌칙이 쓰여 있어 주사위를 굴린 후 나온 벌칙을 수행했다. 빵이 주사위 모양이고, 앙금의 맛이 달라서 선물용으로 좋다.
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            경상북도 경주시 서라벌대로 209 (주렴구빵 본점) 
+                                        </li>
+                                        <li class="tel">
+                                            054-741-6090
+                                        </li>
+                                        <li class="price">
+                                            12개 1만원 대
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><img src="./img/detail/gsb/tb_img16.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">
+                                        경주 찰보리빵
+                                    </div>
+                                    <p>
+                                        부드럽고 고소한 경주빵은 한입 베어 물면 팥소의 달콤함과 반죽의 부드러움이 어우러진다. 팥소는 달콤하고 쫄깃한 맛이 있으며, 반죽은 촉촉하고 부드럽다.
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            경상북도 경주시 첨성로 67(천년애 경주빵 찰보리빵 찰보리떡)
+                                        </li>
+                                        <li class="tel">
+                                            054-773-6051
+                                        </li>
+                                        <li class="web">
+                                            www.chalboribbang.com
+                                        </li>
+                                        <li class="price">
+                                            천년애 찰보리빵 40개 3만원 대
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="./img/detail/gsb/tb_img17.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">
+                                        경주 약과
+                                    </div>
+                                    <p>
+                                        약과는 겉은 바삭하고 속은 촉촉한 것이 특징으로 귀족들이 즐겨 먹었다. 약과는 간식으로도 먹을 수 있으며, 아이스크림이나 빙수와 함께 먹어도 좋다. 경주 황리단길에 위치한 ‘경주약과방’은 오리지널•감태•유자•흑임자 맛 약과를 선보여 취향에 맞게 먹을 수 있다.
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            경상북도 경주시 포석로 1074 (경주약과방)
+                                        </li>
+                                        <li class="tel">
+                                            0507-1466-0258 
+                                        </li>
+                                        <li class="web">
+                                            www.instagram.com/yakgwabang   
+                                        </li>
+                                        <li class="price">
+                                            8구 세트 1만원 대 
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+                    <!-- comp -->
+                    <div class="division fullSize">
+                        <div class="left">
+                            <img src="./img/detail/gsb/img10.jpg" alt="...">
+                        </div>
+                        <div class="right bgFill">
+                            <div class="h2">
+                                경주 문화재 굿즈
+                            </div>
+                            <p>
+                                경주에서 생산한 특산품이나 경주의 특징을 담은 상품이다. 신라의 수도였던 경주에는 다양한 문화재와 유적지가 있고, 그런 만큼 경주의 아름다움을 담은 굿즈도 많다. 인테리어 소품으로 활용해 사진 찍기 좋은 아이템을 구입할 수 있다. 다양한 굿즈 구경하는 재미도 쏠쏠하고, 가격도 합리적이다.
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="tableWrap fullSize">
+                        <table>
+                            <colgroup><col width="380px"><col width="840px"></colgroup>
+                            <tr>
+                                <td><img src="./img/detail/gsb/tb_img18.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">
+                                        경주 한지 드림캐처
+                                    </div>
+                                    <p>
+                                        첨성대는 신라 선덕여왕 때 지은 천문대로, 경주를 상징하는 랜드마크 중 하나다. 한국 경주의 첨성대를 모티브로 한 드림캐처로, 소품으로 걸어두기 좋다. 드림캐처는 악몽을 막아주고 좋은 꿈을 꾸게 해준다.  
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            경상북도 경주시 포석로 1095(배리삼릉공원)
+                                        </li>
+                                        <li class="tel">
+                                            0507-1487-1145 
+                                        </li>
+                                        <li class="web">
+                                            smartstore.naver.com/baeri3park_
+                                        </li>
+                                        <li class="price">
+                                            3만원 대 
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="./img/detail/gsb/tb_img19.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">
+                                        대릉원 사계엽서
+                                    </div>
+                                    <p>
+                                        경주의 대릉원은 경주를 방문한 관광객이라면 누구나 인증샷을 남기는 포토 존이다. 대릉원의 사계절을 담은 엽서는 벽에 붙여서 미니 포스터처럼 활용할 수도 있고, 편지지로도 쓸 수 있다. 
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            경상북도 경주시 포석로 1095(배리삼릉공원)
+                                        </li>
+                                        <li class="tel">
+                                            0507-1487-1145 
+                                        </li>
+                                        <li class="web">
+                                            smartstore.naver.com/baeri3park_
+                                        </li>
+                                        <li class="price">
+                                            7000원
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+                    <!-- comp : Mini Interview -->
+                    <div class="division division-border division-border-2 fullSize"><div class="left"><div class="caption">Mini Interview</div><div class="line"></div><div class="h3">
+                        경주 배리삼릉공원 
+                        <span>
+                        이형진 대표 
+                        </span></div><p><b>
+                        Q 가게 이름이 배리삼릉공원인데, 그렇게 지은 이유가 있을까요? 
+                        </b> 
+                        한 작가의 전시에서 본 사진 속 멋드러진 소나무 숲이 경주 남산 초입에 있는 곳이더라고요. 원래 지명인 배리에서 지금은 배동으로 승격된 그곳에는 삼릉이 자리합니다. 우리가 하는 일이 이미 경주에 존재하는 것을 꺼내 다시금 사람들에게 소개해주는 역할이 아닐까 싶더라고요. 그런 의미에서 이런 생각을 불러일으킨 곳을 초석 삼아 이름 짓게 되었습니다. 
+                        </p><p><b>
+                        Q 경주를 담은 배리삼릉의 특별한 점은 무엇인가요?
+                        </b> 
+                        저희의 일은 여행지에서 그 지역을 이해하고 추억할 수 있는 기념품을 만드는 일입니다. 특별한 점이라고 한다면, 우선순위를 두는 부분이 상품보다는 사람이라는 점을 이야기할 수 있겠습니다. 저희는 경주를 찾는 여행자에게 우리가 좋아하는 이 지역을 제대로 소개하고 싶습니다. 그리고 그 작업을 이 지역에 살고 있는 사람과 이 지역을 좋아하는 사람의 아이디어와 기술로 채워가고 있어요. 경주에 관한 상품이 다시금 경주에서 작업하는, 경주에 정착하는 혹은 경주를 좋아하는 이들에게 돌아갈 수 있는 선순환 구조를 만들려고 노력하고 있습니다.
+                        </p></div><div class="right">
+                        <img src="./img/detail/gsb/img11.jpg" alt="...">
+                        </div>
+                    </div>
+
+                    <!-- comp : contents -->
+                    <div class="division fullSize"><div class="left">
+                        <img src="./img/detail/gsb/img12.jpg" alt="..."></div><div class="right bgFill"><div class="h2">
+                            울릉도 엿
+                        </div><p>
+                            한국에서 보기 드문 해양성 기후를 가진 울릉도는 연평균 온화한 기온으로 호박을 재배하기에 적합한 환경을 가지고 있다. 그래서 울릉도산 호박은 특히 그 맛이 달콤하기로 유명하다. 엿은 쌀과 엿기름, 그리고 호박을 첨가해서 만든다. 쫄깃하고 달콤해, 울릉도 여행에서 꼭 사야 하는 먹거리다.
+                        </p></div></div><div class="tableWrap fullSize"><table><colgroup><col width="380px"><col width="840px"></colgroup>
+
+                        <tr><td>
+                            <img src="./img/detail/gsb/tb_img20.jpg" alt="..."></td><td><div class="h3 color">
+                            울릉도 고릴라 울라 호박엿
+                            </div><p>
+                            울릉도 하면 호박! 호박엿은 입안에 넣는 순간 호박의 달달함과 엿의 특유한 식감이 살아 있다. 울라 호박엿은 입안에 많이 달라붙지 않고, 개별 포장되어 있어 선물용으로 많이 구매한다. 울릉도를 방문하면 호박엿, 호박 초콜릿 등 다양한 디저트를 접할 수 있으며, 울릉도를 여행하는 동안 달달한 기분을 느낄 것이다.
+                            </p><ul class="color">
+                            <li class="location">
+                                경상북도 울릉군 울릉읍 울릉순환로 171(울라 웰컴하우스)
+                            </li>
+                            <li class="tel">
+                                054-791-7790 
+                            </li>
+                            <li class="web">
+                                smartstore.naver.com/ullagoods 
+                            </li>
+                            <li class="price">
+                                울라 호박엿 4500원 
+                            </li>
+                            <li class="cart">
+                                일부 제품은 저동과 도동, 사동의 특산품 판매장에서도 구매 가능
+                            </li>
+                            </ul></td>
+                        </tr>
+
+                    </table></div>
+
+                    <!-- comp : Tourist -->
+                    <div class="division division-grey fullSize">
+                        <div class="left"><div class="caption">Tourist Attraction</div><div class="line"></div>
+                            <div class="h3">
+                                문경새재 도립공원
+                            </div>
+                            <p>
+                                문경새재는 과거 조선시대 영남과 기호 지방을 잇는 영남대로의 중심으로 사회•경제•문화 등 문물의 교류지이자 국방상의 요충지였다. ‘새재’는 ‘새(鳥)도 날아서 넘기 힘든 고개’라는 뜻이다. 한양으로 과거 보러 가던 선비들의 꿈이 담긴 곳이기도 하다. 산책로가 잘 조성되어 있고, 사진이 예쁘게 잘 나오는 곳이 많으며, 볼거리도 많다.
+                            </p>
+                        </div><div class="right">
+                            <img src="./img/detail/gsb/img13.jpg" alt="...">
+                        </div>
+                    </div>
+
+                    <!-- comp : contents -->
+                    <div class="division fullSize"><div class="left">
+                        <img src="./img/detail/gsb/img14.jpg" alt="..."></div><div class="right bgFill"><div class="h2">
+                            김천 자두 디저트
+                        </div><p>
+                            김천 자두는 과육이 부드럽고 맛이 좋다. 이 맛좋은 김천 자두로 디저트를 만들었으니 그 맛은 이미 보장된 셈이다. ‘철없는 자두’는 김천시 최초 자두 카페로 수제 자두청으로 만든 자두 음료와 ‘철없는 자두떡’, ‘자두 샌드’를 판매한다. 김호중 소리길에 위치하는데 자두청 음료와 함께 여행해보길 추천한다.
+                        </p></div></div><div class="tableWrap fullSize"><table><colgroup><col width="380px"><col width="840px"></colgroup>
+
+                        <tr><td>
+                            <img src="./img/detail/gsb/tb_img21.jpg" alt="..."></td><td><div class="h3 color">
+                                김천 자두 샌드
+                            </div><p>
+                                직접 딴 자두로 자두 샌드를 만들어 호불호 없이 누구나 맛있게 먹을 수 있다. 자두 특유의 달콤하면서 새콤한 맛이 샌드와 잘 어우러진다. 
+                            </p><ul class="color">
+                            <li class="location">
+                                경상북도 김천시 대학로 94-1(철없는자두)
+                            </li>
+                            <li class="tel">
+                                0507-1428-1804  
+                            </li>
+                            <li class="web">
+                                smartstore.naver.com/ohyaohyat 
+                            </li>
+                            <li class="price">
+                                9개 1만원 대 
+                            </li>
+                            </ul></td>
+                        </tr>
+
+                        <tr><td>
+                            <img src="./img/detail/gsb/tb_img22.jpg" alt="..."></td><td><div class="h3 color">
+                                오얏커피
+                            </div><p>
+                                커피와 자두가 만나 부드럽고 달콤한 커피의 맛을 즐길 수 있다.
+                            </p><ul class="color">
+                            <li class="location">
+                                경상북도 김천시 대학로 94-1(철없는자두)
+                            </li>
+                            <li class="tel">
+                                0507-1428-1804  
+                            </li>
+                            <li class="web">
+                                smartstore.naver.com/ohyaohyat 
+                            </li>
+                            <li class="price">
+                                1만원 대 
+                            </li>
+                            </ul></td>
+                        </tr>
+
+                        <tr><td>
+                            <img src="./img/detail/gsb/tb_img23.jpg" alt="..."></td><td><div class="h3 color">
+                                자두청 
+                            </div><p>
+                                6종류의 김천 자두를 사용해 달달하면서 상콤달콤한 맛이 난다. 무더운 여름, 자두청과 얼음을 함께 넣고 마시기 좋다. 
+                            </p><ul class="color">
+                            <li class="location">
+                                경상북도 김천시 대학로 94-1(철없는자두)
+                            </li>
+                            <li class="tel">
+                                0507-1428-1804  
+                            </li>
+                            <li class="web">
+                                smartstore.naver.com/ohyaohyat 
+                            </li>
+                            <li class="price">
+                                철없는자두청세트(2개입) 2만원 대 
+                            </li>
+                            <li class="noti">
+                                6~7월 김천 자두 온라인 축제
+                            </li>
+                            </ul></td>
+                        </tr>
+
+                        <tr><td>
+                            <img src="./img/detail/gsb/tb_img24.jpg" alt="..."></td><td><div class="h3 color">
+                                자두떡 
+                            </div><p>
+                                김천 자두와 찹쌀을 사용해 자두의 풍미가 살아 있는 자두떡이다. 개별 포장되어 있어 언제 어디서든 먹기 좋다. 
+                            </p><ul class="color">
+                            <li class="location">
+                                경상북도 김천시 대학로 94-1(철없는자두)
+                            </li>
+                            <li class="tel">
+                                0507-1428-1804  
+                            </li>
+                            <li class="web">
+                                smartstore.naver.com/ohyaohyat 
+                            </li>
+                            <li class="price">
+                                8개 1만원 대
+                            </li>
+                            </ul></td>
+                        </tr>
+
+                    </table></div>
+
+                </section>
+            </contents>
+            <!-- evoke : 템플릿 끝 -->
+        </div>
+    </div>
+
+</body>
+</html>

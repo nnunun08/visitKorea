@@ -1,0 +1,1157 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="common-inner">
+        <div class="template__type1__section">
+            <!-- evoke : 템플릿 시작 -->
+            <contents>
+                <style>
+                    /* common.css */
+                    @charset "UTF-8";
+                    /* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap'); */
+                    html, body, div, span, applet, object, iframe,
+                    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+                    a, abbr, acronym, address, big, cite, code,
+                    del, dfn, em, img, ins, kbd, q, s, samp,
+                    small, strike, strong, sub, sup, tt, var,
+                    b, u, i, center,
+                    dl, dt, dd, ol, ul, li,
+                    fieldset, form, label, legend,
+                    table, caption, tbody, tfoot, thead, tr, th, td,
+                    article, aside, canvas, details, embed,
+                    figure, figcaption, footer, header, hgroup,
+                    menu, nav, output, ruby, section, summary,
+                    time, mark, audio, video {
+                    margin: 0;
+                    padding: 0;
+                    border: 0;
+                    font-size: 100%;
+                    font: inherit;
+                    vertical-align: baseline;
+                    }
+                    /* HTML5 display-role reset for older browsers */
+                    article, aside, details, figcaption, figure,
+                    footer, header, hgroup, menu, nav, section {
+                    display: block;
+                    }
+                    body {
+                    line-height: 1;
+                    }
+                    ol, ul {
+                    list-style: none;
+                    }
+                    blockquote, q {
+                    quotes: none;
+                    }
+                    blockquote:before, blockquote:after,
+                    q:before, q:after {
+                    content: "";
+                    content: none;
+                    }
+                    table {
+                    border-collapse: collapse;
+                    border-spacing: 0;
+                    }
+                    Select {
+                    font-family: inherit; /* 폰트 상속 */
+                    background: url(../img/btn-drop-arrow.svg) no-repeat 98% 50%;
+                    /* 네이티브 화살표를 커스텀 화살표로 대체 */
+                    -webkit-appearance: none;
+                    /* 네이티브 외형 감추기 */
+                    -moz-appearance: none;
+                    appearance: none;
+                    }
+                    Select::-ms-expand {
+                    display: none; /* 화살표 없애기 for IE10, 11*/
+                    }
+                    input {
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    -webkit-border-radius: 0;
+                    border-radius: 0;
+                    }
+                    /* IE10 이상에서 input box 에 추가된 지우기 버튼 제거 */
+                    input::-ms-clear {
+                    display: none;
+                    }
+                    /* input type number 에서 화살표 제거 */
+                    input[type=number]::-webkit-inner-spin-button,
+                    input[type=number]::-webkit-outer-spin-button {
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    }
+                    body {
+                        background: #f5f5f5;
+                    }
+                    .common-inner {
+                        padding: 0 30px;
+                        max-width: 1300px;
+                        box-sizing: border-box;
+                        margin: 0 auto;
+                        margin-top: 40px;
+                        padding: 0 40px;
+                        padding-bottom: 120px;
+                    }
+                    .template__type1__section {
+                        padding: 30px;
+                        border: 1px solid #e0e0e0;
+                        background: #fff;
+                        border-radius: 18px;
+                    }
+                    @media (max-width: 1200px) {
+                        .common-inner {
+                            padding: 0 20px;
+                        }
+                    }
+                
+                    .page-content {
+                    color: #000;
+                    letter-spacing: -0.5px;
+                    line-height: 140%;
+                    font-family: system-ui, -apple-system, "Poppins", "MS PGothic", "Microsoft YaHei", "Arial", sans-serif;
+                    max-width: none;
+                    }
+                    .page-content .fullSize {
+                    margin-left: -30px;
+                    margin-right: -30px;
+                    }
+                    .page-content .visualImg {
+                    max-width: 926px;
+                    margin: 0 auto;
+                    }
+                    .page-content .visualImg img {
+                    width: 100%;
+                    }
+                    .page-content .visualImg .imgName {
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 140%; /* 140% */
+                    letter-spacing: -0.5px;
+                    text-align: center;
+                    margin-bottom: 40px;
+                    }
+                    .page-content .pageDesc {
+                    margin-bottom: 80px;
+                    }
+                    .page-content .pageDesc li + li {
+                    margin-top: 30px;
+                    }
+                    .page-content .pageDesc p {
+                    color: #000;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 172%; /* 172.308% */
+                    letter-spacing: -0.5px;
+                    }
+                    .page-content .pageDesc p::before {
+                    content: "";
+                    display: inline-block;
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 5px;
+                    margin-bottom: 3px;
+                    background-color: #000;
+                    }
+                    .page-content .division {
+                    display: flex;
+                    align-items: stretch;
+                    justify-content: center;
+                    margin-bottom: 40px;
+                    margin-top: 85px;
+                    }
+                    .page-content .division.divisionAuto {
+                    min-height: auto;
+                    }
+                    .page-content .division.divisionAuto .left,
+                    .page-content .division.divisionAuto .right {
+                    padding: 35px 6.5%;
+                    }
+                    .page-content .division .h2 {
+                    font-size: 36px;
+                    font-weight: bold;
+                    line-height: 100%;
+                    margin-bottom: 27px;
+                    }
+                    .page-content .division .left {
+                    width: 50%;
+                    box-sizing: border-box;
+                    border-radius: 0 45px 45px 0;
+                    overflow: hidden;
+                    }
+                    .page-content .division .left img {
+                    width: 100%;
+                    height: 100%;
+                    -o-object-fit: cover;
+                        object-fit: cover;
+                    display: block;
+                    }
+                    .page-content .division .left.bgFill {
+                    display: flex;
+                    align-items: center;
+                    padding: 6.5%;
+                    color: #fff;
+                    }
+                    .page-content .division .left .h2 {
+                    margin: 0;
+                    }
+                    .page-content .division .right {
+                    background-color: #000;
+                    box-sizing: border-box;
+                    border-radius: 45px 0 0 45px;
+                    width: 50%;
+                    color: #fff;
+                    padding: 100px 80px;
+                    padding: 6.5%;
+                    }
+                    .page-content .division .right p {
+                    font-size: 16px;
+                    line-height: 140%;
+                    }
+                    .page-content .division-grey {
+                    min-height: 0;
+                    margin-top: 0;
+                    }
+                    .page-content .division-grey .left {
+                    background-color: #DEDEDE;
+                    padding: 23px 32px;
+                    }
+                    .page-content .division-grey .left .caption {
+                    font-size: 20px;
+                    font-weight: 300;
+                    margin-bottom: 12px;
+                    }
+                    .page-content .division-grey .left .caption::after {
+                        display: none;
+                    }
+                    .page-content .division-grey .left .line {
+                    width: 66px;
+                    height: 1px;
+                    background-color: #000;
+                    margin-bottom: 20px;
+                    }
+                    .page-content .division-grey .left .h3 {
+                    font-size: 24px;
+                    font-weight: bold;
+                    margin-bottom: 42px;
+                    }
+                    .page-content .division-grey .left p {
+                    font-size: 16px;
+                    line-height: 175%;
+                    }
+                    .page-content .division-grey .right {
+                    background-color: #DEDEDE;
+                    padding: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    }
+                    .page-content .division-grey .right img {
+                    width: 100%;
+                    }
+                    .page-content .division-border {
+                    margin-top: 30px;
+                    }
+                    .page-content .division-border .left {
+                    padding: 17px 32px 27px;
+                    flex: 1 0 0;
+                    }
+                    .page-content .division-border .left .caption {
+                    font-size: 20px;
+                    font-weight: 300;
+                    margin-bottom: 12px;
+                    }
+                    .page-content .division-border .left .line {
+                    width: 66px;
+                    height: 1px;
+                    background-color: #000;
+                    margin-bottom: 20px;
+                    }
+                    .page-content .division-border .left .h3 {
+                    font-size: 24px;
+                    font-weight: bold;
+                    margin-bottom: 42px;
+                    }
+                    .page-content .division-border .left .h3 span {
+                    font-weight: 400;
+                    }
+                    .page-content .division-border .left p {
+                    font-size: 16px;
+                    line-height: 175%;
+                    }
+                    .page-content .division-border .left b {
+                    font-weight: bold;
+                    }
+                    .page-content .division-border .right {
+                    flex: 0 0 auto;
+                    background-color: transparent;
+                    padding: 0;
+                    padding-right: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    }
+                    .page-content .division-border .right img {
+                    width: 100%;
+                    }
+                    .page-content .division-border-2 .left {
+                    width: 83%;
+                    padding-right: 5.8%;
+                    }
+                    .page-content .division-border-2 .right {
+                    width: 35%;
+                    max-width: 414px;
+                    }
+                    .page-content .division-border-2 .right img {
+                    max-height: 375px;
+                    -o-object-fit: contain;
+                        object-fit: contain;
+                    }
+                    .page-content .tableWrap table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    font-size: 14px;
+                    margin-bottom: 45px;
+                    }
+                    .page-content .tableWrap table td {
+                    vertical-align: top;
+                    border: 1px solid #BBBBBB;
+                    box-sizing: border-box;
+                    text-align: left;
+                    }
+                    .page-content .tableWrap table td:nth-child(1) {
+                    border-left: 0;
+                    vertical-align: middle;
+                    }
+                    .page-content .tableWrap table td:nth-child(1) img {
+                    width: 100%;
+                    min-width: 50px;
+                    -o-object-fit: contain;
+                        object-fit: contain;
+                    }
+                    .page-content .tableWrap table td:nth-child(2) {
+                    border-right: 0;
+                    padding: 40px 70px;
+                    padding: 3.3% 5.8%;
+                    padding: 40px 5.8%;
+                    }
+                    .page-content .tableWrap table .h3 {
+                    font-size: 24px;
+                    font-weight: bold;
+                    margin-bottom: 28px;
+                    }
+                    .page-content .tableWrap table .h3::before {
+                    display: inline-block;
+                    color: #000;
+                    margin-right: 6px;
+                    }
+                    .page-content .tableWrap table tr:nth-child(1) .h3::before {
+                    content: "①";
+                    }
+                    .page-content .tableWrap table tr:nth-child(2) .h3::before {
+                    content: "②";
+                    }
+                    .page-content .tableWrap table tr:nth-child(3) .h3::before {
+                    content: "③";
+                    }
+                    .page-content .tableWrap table tr:nth-child(4) .h3::before {
+                    content: "④";
+                    }
+                    .page-content .tableWrap table p {
+                    font-size: 14px;
+                    margin-bottom: 7px;
+                    }
+                    .page-content .tableWrap table li {
+                    font-size: 14px;
+                    line-height: 100%;
+                    padding-left: 22px;
+                    position: relative;
+                    word-break: break-all;
+                    }
+                    .page-content .tableWrap table li::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 15px;
+                    height: 15px;
+                    display: inline-block;
+                    }
+                    .page-content .tableWrap table li.location::before {
+                    background-image: url(./img/common/ic_location.svg);
+                    }
+                    .page-content .tableWrap table li.tel::before {
+                    background-image: url(./img/common/ic_tel.svg);
+                    }
+                    .page-content .tableWrap table li.web::before {
+                    background-image: url(./img/common/ic_web.svg);
+                    }
+                    .page-content .tableWrap table li.price::before {
+                    background-image: url(./img/common/ic_price.svg);
+                    }
+                    .page-content .tableWrap table li.cart::before {
+                    background-image: url(./img/common/ic_cart.svg);
+                    }
+                    .page-content .tableWrap table li.noti::before {
+                    background-image: url(./img/common/ic_noti.svg);
+                    }
+                    .page-content .tableWrap table li + li {
+                    margin-top: 7px;
+                    }
+                    .page-content.theme-red .color {
+                    color: #F0514D !important;
+                    }
+                    .page-content.theme-red .bgFill {
+                    background-color: #F0514D !important;
+                    }
+                    .page-content.theme-red .pageDesc p::before {
+                    background-color: #F0514D;
+                    }
+                    .page-content.theme-red .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+                    background: rgba(240, 81, 77, 0.1);
+                    }
+                    .page-content.theme-red .division-border {
+                    border: 3px solid #F0514D;
+                    box-sizing: border-box;
+                    }
+                    .page-content.theme-navy .color {
+                    color: #036A9B !important;
+                    }
+                    .page-content.theme-navy .bgFill {
+                    background-color: #036A9B !important;
+                    }
+                    .page-content.theme-navy .pageDesc p::before {
+                    background-color: #036A9B;
+                    }
+                    .page-content.theme-navy .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+                    background: rgba(3, 106, 155, 0.1);
+                    }
+                    .page-content.theme-navy .division-border {
+                    border: 3px solid #036A9B;
+                    box-sizing: border-box;
+                    }
+                    .page-content.theme-yellow .color {
+                    color: #EDB51E !important;
+                    }
+                    .page-content.theme-yellow .bgFill {
+                    background-color: #EDB51E !important;
+                    }
+                    .page-content.theme-yellow .pageDesc p::before {
+                    background-color: #EDB51E;
+                    }
+                    .page-content.theme-yellow .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+                    background: rgba(237, 181, 30, 0.15);
+                    }
+                    .page-content.theme-yellow .division-border {
+                    border: 3px solid #EDB51E;
+                    box-sizing: border-box;
+                    }
+                    .page-content.theme-green .color {
+                    color: #4C9667 !important;
+                    }
+                    .page-content.theme-green .bgFill {
+                    background-color: #4C9667 !important;
+                    }
+                    .page-content.theme-green .pageDesc p::before {
+                    background-color: #4C9667;
+                    }
+                    .page-content.theme-green .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+                    background: rgba(76, 150, 103, 0.1);
+                    }
+                    .page-content.theme-green .division-border {
+                    border: 3px solid #4C9667;
+                    box-sizing: border-box;
+                    }
+                    .page-content.theme-pink .color {
+                    color: #F598A6 !important;
+                    }
+                    .page-content.theme-pink .bgFill {
+                    background-color: #F598A6 !important;
+                    }
+                    .page-content.theme-pink .pageDesc p::before {
+                    background-color: #F598A6;
+                    }
+                    .page-content.theme-pink .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+                    background: rgba(245, 152, 166, 0.15);
+                    }
+                    .page-content.theme-pink .division-border {
+                    border: 3px solid #F598A6;
+                    box-sizing: border-box;
+                    }
+                    .page-content.theme-blue .color {
+                    color: #2587C8 !important;
+                    }
+                    .page-content.theme-blue .bgFill {
+                    background-color: #2587C8 !important;
+                    }
+                    .page-content.theme-blue .pageDesc p::before {
+                    background-color: #2587C8;
+                    }
+                    .page-content.theme-blue .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+                    background: rgba(37, 135, 200, 0.15);
+                    }
+                    .page-content.theme-blue .division-border {
+                    border: 3px solid #2587C8;
+                    box-sizing: border-box;
+                    }
+                    @media screen and (max-width: 767px) {
+                    .page-content .division {
+                        flex-direction: column;
+                    }
+                    .page-content .division .left {
+                        width: 100%;
+                        border-radius: 0;
+                    }
+                    .page-content .division .right {
+                        width: 100%;
+                        border-radius: 0;
+                    }
+                    .page-content .division-border-2 .left {
+                        width: 100%;
+                        padding: 17px 32px 27px;
+                    }
+                    .page-content .division-border .left {
+                        flex: 1 0 auto;
+                    }
+                    .page-content .division-border .right {
+                        padding: 17px 32px;
+                    }
+                    .page-content .division-border-2 .right {
+                        max-width: 100%;
+                    }
+                    .page-content .division-border-2 .right img {
+                        width: 100%;
+                        -o-object-fit: contain;
+                        object-fit: contain;
+                        max-height: 240px;
+                    }
+                    .page-content .tableWrap {
+                        display: block;
+                    }
+                    .page-content .tableWrap table {
+                        display: block;
+                    }
+                    .page-content .tableWrap table colgroup {
+                        display: none;
+                    }
+                    .page-content .tableWrap table td {
+                        display: block;
+                        width: 100%;
+                        border: 1px solid #BBBBBB !important;
+                        margin-top: -1px;
+                    }
+                    .page-content .tableWrap table td:nth-child(1) {
+                        display: flex;
+                    }
+                    .page-content .tableWrap table td:nth-child(1) img {
+                        max-height: 350px;
+                        width: 50%;
+                        margin: 0 auto;
+                    }
+                    }
+                </style>
+                <section class="page-content theme-green">
+                    <!-- comp -->
+                    <div class="visualImg">
+                        <img src="./img/detail/ccb/img01.jpg" alt="...">
+                        <div class="imgName">
+                            청풍호 풍경을 한눈에 감상할 수 있는 제천 청풍호반케이블카
+                        </div>
+                    </div>
+                    <!-- comp -->
+                    <div class="pageDesc">
+                        <ul>
+                            <li>
+                                <p>
+                                    한국 정중앙에 위치한 충청북도에는 바다가 없다. 동쪽으로 경상북도, 서쪽으로 경기도와 충청남도, 북쪽으로 강원도, 남쪽으로 전라북도와 접한다. 충청도라는 명칭은 충주와 청주에서 유래했다. 고대에는 백제, 고구려, 신라가 번갈아 차지해 삼국시대의 격전지였다. 근대 이후 철도와 도로망이 충청남도를 지나가는 코스로 건설되어 자연환경이 잘 보존되어 있다. 또 호수가 많아 민물고기가 많이 난다. 지역별로 뚜렷한 특산물이 있는데, 주요 생산물은 쌀, 대추, 고추, 배추, 옥수수, 포도, 사과 등이다. 제천은 약초가 유명하고, 충주는 사과의 주요 산지다. 영동은 포도, 보은은 대추, 증평에는 인삼 재배가 성하다. 음성, 괴산에는 고추밭이 많고, 단양은 마늘 재배에 열심이다.
+                            </p>
+                            </li>
+                            <li>
+                                <p>
+                                    대통령의 별장이었던 청남대, 담배 공장을 개조해 만든 국립현대미술관 청주관, 왕의 요양처였던 초정행궁, 여름 여행지로 인기 높은 괴산의 계곡, 삼국시대 역사의 숨결이 담긴 중앙탑과 의림지 등 다양한 볼거리를 품고 있다. 천 년 고찰 법주사가 자리한 속리산과 월악산국립공원도 놓칠 수 없는 명소다. 
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    국토의 중심부에 있는 충청북도는 바다가 없지만 충주호(청풍호), 대청호 등 큰 호수가 많아 뛰어난 풍광을 자랑한다. 호수 주변에서는 다양한 수상 레저스포츠를 즐길 수 있고, 매운탕, 어죽 등 민물고기를 이용한 요리가 발달했다.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- comp : contents -->
+                    <div class="division fullSize"><div class="left">
+                        <img src="./img/detail/ccb/img02.jpg" alt="..."></div><div class="right bgFill"><div class="h2">
+                            충주 사과 디저트 
+                        </div><p>
+                            충주는 사과의 주산지다. 1907년 지현동 용운사 주변에 처음 사과나무를 심어 재배했다. 충주 사과는 일교차가 크고 일조량이 많은 날씨로 인해 맛과 향, 크기와 빚깔 모두 최상급으로 인정받는다. 충주에서는 한국의 전통과자와 접목한 다양한 사과 디저트를 만날 수 있다.
+                        </p></div></div><div class="tableWrap fullSize"><table><colgroup><col width="380px"><col width="840px"></colgroup>
+
+                        <tr><td>
+                            <img src="./img/detail/ccb/tb_img01.jpg" alt="..."></td><td><div class="h3 color">
+                                사과강정 
+                            </div><p>
+                                쫀득하게 말린 사과를 조청에 절이고 튀긴 찹쌀가루를 입힌 제품. 일반적인 과자보다 더 고급스러운 식감이 특징이다. 강렬한 사과 풍미와 진한 맛이 일품. 작게 잘라서 요거트에 넣거나 샐러드 토핑으로 올려도 좋다.      
+                            </p><ul class="color">
+                            <li class="location">
+                                충청북도 충주시 남한강로 24(충주시 로컬푸드직매장 충주씨샵)
+                            </li>
+                            <li class="tel">
+                                1661-7820
+                            </li>
+                            <li class="web">
+                                m.chungjuc.com 
+                            </li>
+                            <li class="price">
+                                1만원 미만
+                            </li>
+                            </ul></td>
+                        </tr>
+                        <tr><td>
+                            <img src="./img/detail/ccb/tb_img02.jpg" alt="..."></td><td><div class="h3 color">
+                                사과한과  
+                            </div><p>
+                                전통 한과를 만드는 과정에서 사과청을 이용한 제품이다. 한입 베어 물면 바삭 소리와 함께 은은한 사과 향이 난다. 170℃ 기름에 얇게 만 쌀 반죽을 튀긴 뒤 사과청을 바르고 표면에 튀밥을 입힌다.    
+                            </p><ul class="color">
+                            <li class="location">
+                                충청북도 충주시 남한강로 24(충주시로컬푸드직매장 충주씨샵)
+                            </li>
+                            <li class="tel">
+                                1661-7820 
+                            </li>
+                            <li class="web">
+                                m.chungjuc.com 
+                            </li>
+                            <li class="price">
+                                1만원 미만
+                            </li>
+                            </ul></td>
+                        </tr>
+                        <tr><td>
+                            <img src="./img/detail/ccb/tb_img03.jpg" alt="..."></td><td><div class="h3 color">
+                                충주사과빵  
+                            </div><p>
+                                타 지역을 오가는 길목에 충주가 있다면 반드시 멈춰서 사야 하는 아이템이다. 쌀로 만든 카스텔라 반죽을 이용해 만든 만주 형태의 빵에 사과 과육 알갱이가 보석처럼 박혀 있다. 많이 달지 않아 누구라도 한 봉지쯤 쉽게 비울 수 있다.     
+                            </p><ul class="color">
+                            <li class="location">
+                                충청북도 충주시 중앙탑면 중부내륙고속도로 230(충주휴게소 양평방향) 
+                            </li>
+                            <li class="tel">
+                                043-857-9229  
+                            </li>
+                            <li class="web">
+                                m.chungjuc.com 
+                            </li>
+                            <li class="price">
+                                1만원 미만
+                            </li>
+                            </ul></td>
+                        </tr>
+
+                    </table></div>
+
+
+                    <!-- comp : contents -->
+                    <div class="division fullSize"><div class="left">
+                        <img src="./img/detail/ccb/img03.jpg" alt="..."></div><div class="right bgFill"><div class="h2">
+                            보은 대추 디저트
+                        </div><p>
+                            보은은 일교차가 크고 일조량이 풍부하다. 토질인 황토 기운이 있어 물 빠짐이 적당해 과수 농사에 유리한 곳이다. 이런 땅과 기후 덕에 대추 맛도 뛰어나다. 보은 시내에 있는 '조은가'는 국내 최초의 대추 디저트 전문 기업이다. 대추 페이스트를 직접 생산해 다양한 디저트를 만든다.
+                        </p></div></div><div class="tableWrap fullSize"><table><colgroup><col width="380px"><col width="840px"></colgroup>
+
+                        <tr><td>
+                            <img src="./img/detail/ccb/tb_img04.jpg" alt="..."></td><td><div class="h3 color">
+                                조은가 대추단팥빵 
+                            </div><p>
+                                대추의 풍미가 진하게 느껴지는 단팥빵이다. 전국 어디서도 찾을 수 없는 독특한 맛을 자랑한다. 빵 자체도 폭신한 질감이 잘 살아 있다. 진한 대추차와 함께 먹으면 궁합이 좋다.  
+                            </p><ul class="color">
+                            <li class="location">
+                                충청북도 보은군 보은읍 삼산로 4(조은가) 
+                            </li>
+                            <li class="tel">
+                                043-544-5404 
+                            </li>
+                            <li class="web">
+                                joeunga.modoo.at 
+                            </li>
+                            <li class="price">
+                                1만원 미만
+                            </li>
+                          <li class="noti">
+                                10월 보은 대추축제
+                            </li>
+
+                            </ul></td>
+                        </tr>
+                        <tr><td>
+                            <img src="./img/detail/ccb/tb_img05.jpg" alt="..."></td><td><div class="h3 color">
+                                조은가 대추호두파이 
+                            </div><p>
+                                겉은 바삭하고 속은 촉촉한 호두파이에 대추를 듬뿍 넣었다. 일반적인 호두파이의 비슷비슷한 맛이 아닌 묵직하고 고급스러운 풍미가 특징이다. 사이즈가 크지 않아 포장해 가도 부담이 없다.      
+                            </p><ul class="color">
+                            <li class="location">
+                                충청북도 보은군 보은읍 삼산로 4(조은가) 
+                            </li>
+                            <li class="tel">
+                                043-544-5404 
+                            </li>
+                            <li class="web">
+                                joeunga.modoo.at 
+                            </li>
+                            <li class="price">
+                                1만원 미만
+                            </li>
+                            </ul></td>
+                        </tr>
+                      
+
+                    </table></div>
+
+                    <!-- comp : contents -->
+                    <div class="division fullSize"><div class="left">
+                        <img src="./img/detail/ccb/img04.jpg" alt="..."></div><div class="right bgFill"><div class="h2">
+                            영동 와인
+                        </div><p>
+                            영동은 대한민국 최대의 포도산지다. 최근 이 지역에 와이너리가 크게 늘어나며 와인 애호가의 호기심을 자극한다. 수십여개의 와이너리가 지역 곳곳에 숨어 있고 각각의 개성이 차별화 되는 다양한 와인을 만든다. 한 자리에서 여러가지 와인을 맛보고 싶다면 와인터널 방문을 추천한다.
+                        </p></div></div><div class="tableWrap fullSize"><table><colgroup><col width="380px"><col width="840px"></colgroup>
+
+                        <tr><td>
+                            <img src="./img/detail/ccb/tb_img06.jpg" alt="..."></td><td><div class="h3 color">
+                                여포의 꿈 화이트
+                            </div><p>
+                                청포도에 속하는 머스켓 오브 알렉산드리아 품종으로 만든 가벼운 화이트 와인이다. 부담스럽지 않은 단맛과 화사하게 피어오르는 과실 향기를 즐길 수 있다. 수많은 품평회에서 좋은 성적을 거둔 검증된 제품으로 해산물과 궁합이 좋다.      
+                            </p><ul class="color">
+                            <li class="location">
+                                충청북도 영동군 영동읍 매천리 산46번지 (영동와인터널)
+                            </li>
+                            <li class="tel">
+                                043-745-4343 
+                            </li>
+                            <li class="price">
+                                2만원 대
+                            </li>
+                          <li class="noti">
+                                가을 영동와인축제
+                            </li>
+
+                            </ul></td>
+                        </tr>
+                        <tr><td>
+                            <img src="./img/detail/ccb/tb_img07.jpg" alt="..."></td><td><div class="h3 color">
+                                샤토미소 캠벨 스위트 로제 
+                            </div><p>
+                                샤토미소는 영동군에서도 가장 깊숙한 산중에 있다. 전통적인 와인 제조법을 고수하며 오랜 숙성을 거쳐 묵직한 맛을 낸다. 살구, 복숭아의 풍부한 향기가 있는 스위트 와인으로 아름다운 빚깔을 즐길 수 있다. 디저트와 함께해도 좋다.       
+                            </p><ul class="color">
+                            <li class="location">
+                                충청북도 영동군 영동읍 매천리 산46번지 (영동와인터널)
+                            </li>
+                            <li class="tel">
+                                043-745-4343 
+                            </li>
+                            <li class="price">
+                                3만원 대 
+                            </li>
+                            <li class="cart">
+                                영동와인판매장
+                            </li>
+                            </ul></td>
+                        </tr>
+                      
+
+                    </table></div>
+
+                    <!-- comp : contents -->
+                    <div class="division fullSize"><div class="left">
+                        <img src="./img/detail/ccb/img05.jpg" alt="..."></div><div class="right bgFill"><div class="h2">
+                            충주 댄싱사이더
+                        </div><p>
+                            사이다는 사과 과즙을 발효시켜 만든 술이다. 나라와 지역별로 다양한 사과주가 존재하며 알코올 도수는 4도에서 8.5도까지 다양하다. ‘댄싱사이더 컴퍼니’는 미국에서 대학을 졸업한 청년들이 의기투합해 만들었다. 이들은 사과로 유명한 충주에 양조장을 차렸고, 해외에서 직접 양조사를 데려다 기술을 전수받았다.
+                        </p></div></div><div class="tableWrap fullSize"><table><colgroup><col width="380px"><col width="840px"></colgroup>
+
+                        <tr><td>
+                            <img src="./img/detail/ccb/tb_img08.jpg" alt="..."></td><td><div class="h3 color">
+                                 애플상그리아   
+                            </div><p>
+                                사과즙을 발효해 만든 사이다 베이스에 포도, 라임, 오렌지를 넣어 과일 맛이 가득한 상그리아 애플 사이다다. 치즈, 스테이크, 미트볼 등 느끼한 음식과 궁합이 좋다. 디자인이 화려한 붉은색 병은 인테리어 소품으로 활용 가능하다.    
+                            </p><ul class="color">
+                            <li class="location">
+                                충청북도 충주시 중앙탑면 인담길 35-1(댄싱사이더 컴퍼니) 
+                            </li>
+                            <li class="tel">
+                                043-844-1616 
+                            </li>
+                            <li class="web">
+                                dancingcider.com 
+                            </li>
+                          <li class="price">
+                                2만원 대
+                            </li>
+
+                            </ul></td>
+                        </tr>
+                        <tr><td>
+                            <img src="./img/detail/ccb/tb_img09.jpg" alt="..."></td><td><div class="h3 color">
+                                요새로제 
+                            </div><p>
+                                베리의 산뜻함을 고스란히 담은 로즈빛 애플 사이다. 부드러운 사과 풍미와 오미자, 라스베리가 잘 어우려져 깔끔한 피니시가 일품이다. 일반적인 애플 사이다보다 산미가 강한 편이다. 마시기 전에 미리 차갑게 해두면 더 맛있게 즐길 수 있다. 과일, 샐러드와 잘 어울린다.    
+                            </p><ul class="color">
+                            <li class="location">
+                                충청북도 충주시 중앙탑면 인담길 35-1(댄싱사이더 컴퍼니) 
+                            </li>
+                            <li class="tel">
+                                043-844-1616 
+                            </li>
+                            <li class="web">
+                                dancingcider.com 
+                            </li>
+                            <li class="price">
+                                1만원 미만
+                            </li>
+                            </ul></td>
+                        </tr>
+                      
+
+                    </table></div>
+
+
+                    <!-- comp : contents -->
+                    <div class="division fullSize"><div class="left">
+                        <img src="./img/detail/ccb/img06.jpg" alt="..."></div><div class="right bgFill"><div class="h2">
+                            진천종박물관 굿즈
+                        </div><p>
+                            종은 영혼을 깨우는 소리다. 한국 범종은 세계적으로 ‘한국종’이라는 학명으로 불릴 만큼 독보적이며, 세부 장식이 정교하고 울림 소리가 웅장하다. 진천종박물관은 한국종의 연구, 수집, 전시, 보존과 기획 전시, 각종 교육 활동을 통해 한국종의 예술적 가치와 우수성을 알리기 위해 지난 2005년 문을 열었다.
+                        </p></div></div><div class="tableWrap fullSize"><table><colgroup><col width="380px"><col width="840px"></colgroup>
+
+                        <tr><td>
+                            <img src="./img/detail/ccb/tb_img10.jpg" alt="..."></td><td><div class="h3 color">
+                                 에밀레풍경 
+                            </div><p>
+                                국보 제29호 성덕대왕신종(일명 에밀레종)을 축소해 만든 제품이다. 표면에 있는 비천상 등을 정교하게 재현한 디테일이 돋보인다. 청동으로 제작해 맑고 청아한 소리가 난다. 창문에 달아놓으면 바람이 불 때마다 기분이 좋아질 만한 아이템이다.  
+                            </p><ul class="color">
+                            <li class="location">
+                                충청북도 진천군 진천읍 백곡로 1504-12(진천종박물관) 
+                            </li>
+                            <li class="tel">
+                                043-539-3847 
+                            </li>
+                            <li class="web">
+                                www.jincheonbell.net 
+                            </li>
+                          <li class="price">
+                                1만원 대
+                            </li>
+
+                            </ul></td>
+                        </tr>
+                        <tr><td>
+                            <img src="./img/detail/ccb/tb_img11.jpg" alt="..."></td><td><div class="h3 color">
+                                십이지신 요령 
+                            </div><p>
+                                십이지신을 본떠 만든 요령(종 모양의 놋쇠 소재 방울)이다. 요령은 불교 의식에서 주로 쓰는 도구인데, 세워놓을 수 있어 인테리어 소품으로 유용하다. 띠별로 다른 디자인을 고를 수 있는데, 손으로 잡았을 때 느낌이 제법 묵직하다. 
+                            </p><ul class="color">
+                            <li class="location">
+                                충청북도 진천군 진천읍 백곡로 1504-12(진천종박물관) 
+                            </li>
+                            <li class="tel">
+                                043-539-3847 
+                            </li>
+                            <li class="web">
+                                www.jincheonbell.net 
+                            </li>
+                            <li class="price">
+                                5만원 미만
+                            </li>
+                            </ul></td>
+                        </tr>
+                      
+
+                    </table></div>
+
+             <!-- comp : contents -->
+                    <div class="division fullSize"><div class="left">
+                        <img src="./img/detail/ccb/img07.jpg" alt="..."></div><div class="right bgFill"><div class="h2">
+                            괴산 옥수수 디저트
+                        </div><p>
+                            괴산 찰옥수수는 껍질이 얇고 쫀득한 식감에 당도가 높은 것이 특징이다. 엽산, 철분, 비타민 B 등을 함유해 여름철 영양 간식으로 인기 높다.옥수수를 이용한 디저트 중 유명한 것은 카스텔라다. ‘올어바웃 카스테라’는 서울시 송파에서 시작해 귀촌한 카스텔라 전문점이다. 우리밀과 친환경 유정란으로 만들고 편백나무 틀에서 굽는다.
+                        </p></div></div><div class="tableWrap fullSize"><table><colgroup><col width="380px"><col width="840px"></colgroup>
+
+                        <tr><td>
+                            <img src="./img/detail/ccb/tb_img12.jpg" alt="..."></td><td><div class="h3 color">
+                                 괴산 찰옥수수 카스테라
+                            </div><p>
+                                머핀 모양으로 만들어 구운 동글동글한 카스텔라다. 오랜 세월 쌓인 노하우로 구워내 촉촉한 질감이 오래 유지된다. 속에 알알이 옥수수가 박혀 있어 옥수수가 터질 때마다 독특한 식감을 느낄 수 있다. 냉장고에 넣어두었다가 차갑게 먹어도 맛있다. 
+                            </p><ul class="color">
+                            <li class="location">
+                                충청북도 괴산군 청천면 송문로덕평1길 23(올어바웃 카스테라) 
+                            </li>
+                            <li class="tel">
+                                010-5382-3096
+                            </li>
+                            <li class="web">
+                                www.instagram.com/all_about_castella 
+                            </li>
+                          <li class="price">
+                                1만원 미만
+                            </li>
+
+                            </ul></td>
+                        </tr>
+
+                     </table></div>
+
+
+                    <!-- comp : Tourist -->
+                    <div class="division division-grey fullSize">
+                        <div class="left"><div class="caption">Tourist Attraction</div><div class="line"></div>
+                            <div class="h3">
+                                괴산 화양구곡
+                            </div>
+                            <p>
+                                괴산 화양구곡은 중국의 무이구곡(武夷九曲)에서 이름을 따왔다고 전해진다. 시작점인 경천벽부터 마지막 파천까지 이어지는 계곡 산책길은 경사가 완만해 남녀노소 누구나 편안하게 즐길 수 있다. 넓은 반석 위로 맑은 물이 흐르고, 주변의 울창한 숲이 장관을 이룬다.
+                            </p>
+                        </div><div class="right">
+                            <img src="./img/detail/ccb/img08.jpg" alt="...">
+                        </div>
+                    </div>
+
+
+                    <!-- comp : contents -->
+                    <div class="division fullSize"><div class="left">
+                        <img src="./img/detail/ccb/img09.jpg" alt="..."></div><div class="right bgFill"><div class="h2">
+                            진천 쌀 디저트
+                        </div><p>
+                            천혜의 자연과 비옥한 토지를 품은 진천은 예로부터 쌀로 유명했다. 차령산맥에 둘러싸인 분지에 위치한 지형 탓이다. 진천의 쌀 디저트는 밀가루 특성과 비슷한 신품종인 ‘가루쌀’로 만든다. 제분 비용이 적게 드는 진천 가루쌀은 밀가루를 대체하는데 유리하다. 쌀로 만든 디저트는 또 다른 매력을 선사한다.
+                        </p></div></div><div class="tableWrap fullSize"><table><colgroup><col width="380px"><col width="840px"></colgroup>
+
+                        <tr><td>
+                            <img src="./img/detail/ccb/tb_img13.jpg" alt="..."></td><td><div class="h3 color">
+                                 미잠미과 인절미 크림빵
+                            </div><p>
+                                진천 ‘미잠미과’는 가공용 쌀 ‘팔방미’를 활용해 쌀빵, 쌀쿠키, 쌀국수 등 쌀 가공품 130여 가지를 개발해 소비자에게 공급해오고 있다. 쌀소금빵, 쌀소보로, 현미식빵, 쌀카스텔라, 쌀브라우니, 쌀눈쌀 식빵, 쌀베이글 어니언, 찰떡파이 등이 베스트셀러다. 인절미 크림빵은 콩가루가 덮인 쌀빵 안에 인절미와 팥소, 생크림이 들어 있는 풍성한 빵. 하나만 시켜서 둘이 먹어도 모자라지 않는 양이다.    
+                            </p><ul class="color">
+                            <li class="location">
+                                충청북도 진천군 이월면 미리실길 125(미잠미과) 
+                            </li>
+                            <li class="tel">
+                                043-535-8183
+                            </li>
+                            <li class="web">
+                                www.mijam.co.kr 
+                            </li>
+                            <li class="price">
+                                1만원 미만
+                            </li>
+                            <li class="noti">
+                                10월 생거진천쌀축제
+                            </li>
+
+                            </ul></td>
+                        </tr>
+                        <tr><td>
+                            <img src="./img/detail/ccb/tb_img14.jpg" alt="..."></td><td><div class="h3 color">
+                                미잠미과 쌀쿠키 
+                            </div><p>
+                                선물용으로 딱 좋은 사이즈의 쿠키다. 쌀눈 성분이 살아 있어 영양이 풍부하며, 글루텐 프리 제품이라 소화가 잘된다. 인절미, 자색고구마 등 다양한 재료를 이용해 쿠키를 굽는다. 매장 2층에서 ‘논뷰’를 감상하며 음료와 함께 즐길 수 있다. 
+                            </p><ul class="color">
+                            <li class="location">
+                                충청북도 진천군 이월면 미리실길 125(미잠미과) 
+                            </li>
+                            <li class="tel">
+                                043-535-8183 
+                            </li>
+                            <li class="web">
+                                www.mijam.co.kr  
+                            </li>
+                            <li class="price">
+                                1만원 미만
+                            </li>
+                            </ul></td>
+                        </tr>
+                      
+                    <!-- comp : contents -->
+                    <div class="division fullSize"><div class="left">
+                        <img src="./img/detail/ccb/img10.jpg" alt="..."></div><div class="right bgFill"><div class="h2">
+                            제천 수제 맥주
+                        </div><p>
+                            제천의 명물 ‘솔티맥주’를 생산하는 양조장인 ‘뱅크크릭브루잉’은 충청북도 제천시 봉양읍 솔티마을에 있다. 이 마을의 옛 지명은 ‘소나무가 많은 언덕’이라는 뜻의 ‘솔티’다. 솔티맥주는 벨기에 방식으로 만든다. 풍성한 초콜릿, 과실, 오렌지 향 같은 복합적인 풍미를 느낄 수 있다. 벨기에 맥주는 대부분 두 번 발효시킨 이양주다. 오랜 시간 몇 단계의 발효 과정을 거치기 때문에 제품이 완성되기까지 보통 6~7주 정도 걸린다. 솔티맥주는 2019년 벨기에 국왕의 국빈방문때 청와대 공식만찬에 초대받은 양조장으로서 그 진가를 인정받았다.
+                        </p></div></div><div class="tableWrap fullSize"><table><colgroup><col width="380px"><col width="840px"></colgroup>
+
+                        <tr><td>
+                            <img src="./img/detail/ccb/tb_img15.jpg" alt="..."></td><td><div class="h3 color">
+                                 배론 트리펠
+                            </div><p>
+                                  솔티맥주중에서 가장 인기가 있는 맥주중 하나다. 가볍고 부드러운 목 넘김이 일품이다. 배론 리펠(Baeron Tripel)은 벨기에 수도원 맥주 레시를 가지고 벨기에 전통 방식으로 한국에서 만든 일이다 강한 블론드 맥주로 옅은 금색, 맥아 맛, 림 같은 식감, 부드럽고 적당한 쓴맛이 특징이다.
+                            </p><ul class="color">
+                            <li class="location">
+                                충청북도 제천시 백운면 금봉로 365 (솔티펍 리솜) 
+                            </li>
+                            <li class="tel">
+                                043-648-5669 
+                            </li>
+                            <li class="web">
+                                www.soltibeer.com
+                            </li>
+                            <li class="price">
+                                1만원 대
+                            </li>
+
+                            </ul></td>
+                        </tr>
+                        <tr><td>
+                            <img src="./img/detail/ccb/tb_img16.jpg" alt="..."></td><td><div class="h3 color">
+                                솔티8 
+                            </div><p>
+                                더블 IPA는 기본적인 IPA(페일 에일에 홉을 다량으로 넣어 만든 맥주 종류)보다 홉을 2배 넣어 쓴맛과 복잡한 향을 배가한 맥주다. 과거 유럽에서 인도 항로를 오가던 시절에 만들었다고 알려져 있다. 알코올 도수가 8도로 높은 편이며, 향긋하면서도 강렬한 풍미가 일품이다. 고기와 특히 궁합이 좋다.       
+                            </p><ul class="color">
+                            <li class="location">
+                                충청북도 제천시 백운면 금봉로 365(솔티펍 리솜) 
+                            </li>
+                            <li class="tel">
+                                043-648-5669 
+                            </li>
+                            <li class="web">
+                                www.soltibeer.com 
+                            </li>
+                            <li class="price">
+                                1만원 이상
+                            </li>
+                            </ul></td>
+                        </tr>
+
+                    <!-- comp : contents -->
+                    <div class="division fullSize"><div class="left">
+                        <img src="./img/detail/ccb/img11.jpg" alt="..."></div><div class="right bgFill"><div class="h2">
+                            음성 꽃동네 힐링쿠키
+                        </div><p>
+                            ‘꽃동네제빵소'는 2001년 장애 학생의 교육을 위해 개교한 꽃동네학교에서 장애 학생들의 직업 훈련과 자립을 도우려고 세운 학교 기업과 연계한 지역 주민 사업체다. HACCP 시설을 갖추어 60여 종의 제과 제빵 제품을 생산하며, 꽃동네학교 교사, 재학생, 졸업생, 꽃동네학교 학교 기업에 취업해 근무 중인 근로자(꽃동네학교 졸업생)로 구성되었다. 구성원 간의 활발한 협의를 거쳐 ‘꽃구움’이라는 브랜드명을 개발했고, 꽃같이 아름다운 사람들에게 위로와 용기와 힘을 북돋아주는 제품을 만든다. 대표상품은 무방부제, 무유화제, 무색소 쿠키다.
+                        </p></div></div><div class="tableWrap fullSize"><table><colgroup><col width="380px"><col width="840px"></colgroup>
+
+                        <tr><td>
+                            <img src="./img/detail/ccb/tb_img17.jpg" alt="..."></td><td><div class="h3 color">
+                                 초코칩 쿠키
+                            </div><p>
+                                  초코쿠키에 초코칩을 더한 짙은 컬러감의 쿠키. 쌉쌀하고 묵직한 맛이다. 기본 레시피를 충실히 따라 만들어 바삭한 느낌이 오래간다. 차가운 흰 우유와 먹거나 라테처럼 우유가 들어간 커피와 곁들이기 좋다.    
+                            </p><ul class="color">
+                            <li class="location">
+                                충청북도 음성군 대소면 대풍산단로 78 (음성 흥미진진한 팩토리 투어센터) 
+                            </li>
+                            <li class="tel">
+                                043-530-2405 
+                            </li>
+                            <li class="price">
+                                1만원 미만 
+                            </li>
+                            <li class="cart">
+                                꽃동네학교
+                            </li>
+
+                            </ul></td>
+                        </tr>
+                        <tr><td>
+                            <img src="./img/detail/ccb/tb_img18.jpg" alt="..."></td><td><div class="h3 color">
+                                아몬드 초코칩 쿠키
+                            </div><p>
+                                양질의 밀가루, 버터, 설탕을 기본으로 한 쿠키 반죽에 아몬드와 초코칩을 듬뿍 넣어 구워낸 제품이다. 기본 쿠키보다 씹는 맛이 좋은 편이다. 품질이 좋은 재료를 사용해 뒷맛이 텁텁하지 않고 깔끔하다. 
+                            </p><ul class="color">
+                            <li class="location">
+                                충청북도 음성군 대소면 대풍산단로 78(음성 흥미진진한 팩토리 투어센터)  
+                            </li>
+                            <li class="tel">
+                                043-530-2405 
+                            </li>
+                            <li class="price">
+                                1만원 미만
+                            </li>
+                            </ul></td>
+                        </tr>
+                      
+                    <!-- comp : contents -->
+                    <div class="division fullSize"><div class="left">
+                        <img src="./img/detail/ccb/img12.jpg" alt="..."></div><div class="right bgFill"><div class="h2">
+                            단양 낙하산 굿즈
+                        </div><p>
+                            단양은 패러글라이딩의 성지다.  ‘카페산’은 해발 500m 높이의 두산 활공장 정상에 있는 베이커리 카페겸 복합공간이다. 카페산에서 만드는 굿즈는 수명이 다한 패러글라이딩 기체를 수거해 만든다. 작은 지갑부터 우산, 의류까지 다양한 품목이 있다. 환경까지 고려하는 아이템이라 더욱 의미가 깊다.
+                        </p></div></div><div class="tableWrap fullSize"><table><colgroup><col width="380px"><col width="840px"></colgroup>
+
+                        <tr><td>
+                            <img src="./img/detail/ccb/tb_img19.jpg" alt="..."></td><td><div class="h3 color">
+                                 카페산 사코슈 가방
+                            </div><p>
+                                  미니멀한 디자인의 개성 넘치는 백. 사각거리는 질감이 특징이다. 가방 자체 무게가 깃털처럼 가벼워 장시간 착용해도 피로감이 덜하다. 스트리트 패션이나 여름 분위기 리조트 룩과 잘 어울린다. 내구성이 뛰어난 원단을 사용해 아웃도어 활동에 적합하다. 
+                            </p><ul class="color">
+                            <li class="location">
+                                충청북도 단양군 가곡면 두산길 196-86(카페산) 
+                            </li>
+                            <li class="tel">
+                                1644-4674 
+                            </li>
+                            <li class="web">
+                                www.sann.co.kr 
+                            </li>
+                            <li class="price">
+                                4만원 대 
+                            </li>
+                            <li class="noti">
+                                패러글라이딩 텐덤 비행
+                            </li>
+
+                            </ul></td>
+                        </tr>
+                        <tr><td>
+                            <img src="./img/detail/ccb/tb_img20.jpg" alt="..."></td><td><div class="h3 color">
+                                카페산 지갑
+                            </div><p>
+                                소재가 가벼워 여행용으로 사용하기 좋다. 톡톡 튀는 컬러감이 눈에 띄며, 제작할 때마다 디자인이 조금씩 달라진다. 필통과 한 세트로 구입해도 좋다. 지퍼가 있어 동전지갑으로도 유용하다. 
+                            </p><ul class="color">
+                            <li class="location">
+                                충청북도 단양군 가곡면 두산길 196-86(카페산)
+                            </li>
+                            <li class="tel">
+                                1644-4674 
+                            </li>
+                            <li class="web">
+                                www.sann.co.kr 
+                            </li>
+                            <li class="price">
+                                2만원 대
+                            </li>
+                            </ul></td>
+                        </tr>
+                      
+
+
+                    <!-- comp -->
+                    <div class="division division-border fullSize">
+                        <div class="left">
+                            <div class="caption">Mini Interview</div>
+                            <div class="line"></div>
+                            <div class="h3">카페산 경영팀<span>정지호 선임</span></div>
+                            <p>
+                                <b>Q 색깔이 알록달록한 이유가 있나요?  </b> 실제로 2년~4년 동안 하늘을 날아다니던 페러글라이더 기체 일부를 해체해 만든 업사이클링 제품이기 때문입니다. 전 세계 모든 패러글라이더 제작사들은 위급 상황에서도 기체를 빨리 찾을 수 있도록 톡톡 튀는 원색을 사용하고 있습니다. 시즌별로 배색을 다르게 하고 있어 제품 하나 하나가 모두 한정판입니다.
+                            </p>
+                            <p>
+                                <b>Q 관리 방법이 어렵지 않나요? </b> 깃털처럼 가볍지만 무척 튼튼한 더블립스탑 나일론 소재로 만들어서 쉽게 찢어지거나 헤지지 않습니다. 세탁은 중성세제로 손세탁을 하면 됩니다. 물기를 탁탁 털어 그늘에서 건조하는 것을 추천 드립니다.
+                            </p>
+                        </div>
+                        <div class="right">
+                            <img src="./img/detail/ccb/img13.jpg" alt="...">
+                        </div>
+                    </div>
+
+
+                </section>
+            </contents>
+            <!-- evoke : 템플릿 끝 -->
+        </div>
+    </div>
+
+</body>
+</html>
