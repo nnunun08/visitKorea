@@ -1,0 +1,1254 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="common-inner">
+        <div class="template__type1__section">
+            <!-- evoke : 템플릿 시작 -->
+            <contents>
+                <style>
+                    /* common.css */
+                    @charset "UTF-8";
+                    /* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap'); */
+                    html, body, div, span, applet, object, iframe,
+                    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+                    a, abbr, acronym, address, big, cite, code,
+                    del, dfn, em, img, ins, kbd, q, s, samp,
+                    small, strike, strong, sub, sup, tt, var,
+                    b, u, i, center,
+                    dl, dt, dd, ol, ul, li,
+                    fieldset, form, label, legend,
+                    table, caption, tbody, tfoot, thead, tr, th, td,
+                    article, aside, canvas, details, embed,
+                    figure, figcaption, footer, header, hgroup,
+                    menu, nav, output, ruby, section, summary,
+                    time, mark, audio, video {
+                    margin: 0;
+                    padding: 0;
+                    border: 0;
+                    font-size: 100%;
+                    font: inherit;
+                    vertical-align: baseline;
+                    }
+                    /* HTML5 display-role reset for older browsers */
+                    article, aside, details, figcaption, figure,
+                    footer, header, hgroup, menu, nav, section {
+                    display: block;
+                    }
+                    body {
+                    line-height: 1;
+                    }
+                    ol, ul {
+                    list-style: none;
+                    }
+                    blockquote, q {
+                    quotes: none;
+                    }
+                    blockquote:before, blockquote:after,
+                    q:before, q:after {
+                    content: "";
+                    content: none;
+                    }
+                    table {
+                    border-collapse: collapse;
+                    border-spacing: 0;
+                    }
+                    Select {
+                    font-family: inherit; /* 폰트 상속 */
+                    background: url(../img/btn-drop-arrow.svg) no-repeat 98% 50%;
+                    /* 네이티브 화살표를 커스텀 화살표로 대체 */
+                    -webkit-appearance: none;
+                    /* 네이티브 외형 감추기 */
+                    -moz-appearance: none;
+                    appearance: none;
+                    }
+                    Select::-ms-expand {
+                    display: none; /* 화살표 없애기 for IE10, 11*/
+                    }
+                    input {
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    -webkit-border-radius: 0;
+                    border-radius: 0;
+                    }
+                    /* IE10 이상에서 input box 에 추가된 지우기 버튼 제거 */
+                    input::-ms-clear {
+                    display: none;
+                    }
+                    /* input type number 에서 화살표 제거 */
+                    input[type=number]::-webkit-inner-spin-button,
+                    input[type=number]::-webkit-outer-spin-button {
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    }
+                    body {
+                        background: #f5f5f5;
+                    }
+                    .common-inner {
+                        padding: 0 30px;
+                        max-width: 1300px;
+                        box-sizing: border-box;
+                        margin: 0 auto;
+                        margin-top: 40px;
+                        padding: 0 40px;
+                        padding-bottom: 120px;
+                    }
+                    .template__type1__section {
+                        padding: 30px;
+                        border: 1px solid #e0e0e0;
+                        background: #fff;
+                        border-radius: 18px;
+                    }
+                    @media (max-width: 1200px) {
+                        .common-inner {
+                            padding: 0 20px;
+                        }
+                    }
+                
+                    .page-content {
+                    color: #000;
+                    letter-spacing: -0.5px;
+                    line-height: 140%;
+                    font-family: system-ui, -apple-system, "Poppins", "MS PGothic", "Microsoft YaHei", "Arial", sans-serif;
+                    max-width: none;
+                    }
+                    .page-content .fullSize {
+                    margin-left: -30px;
+                    margin-right: -30px;
+                    }
+                    .page-content .visualImg {
+                    max-width: 926px;
+                    margin: 0 auto;
+                    }
+                    .page-content .visualImg img {
+                    width: 100%;
+                    }
+                    .page-content .visualImg .imgName {
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 140%; /* 140% */
+                    letter-spacing: -0.5px;
+                    text-align: center;
+                    margin-bottom: 40px;
+                    }
+                    .page-content .pageDesc {
+                    margin-bottom: 80px;
+                    }
+                    .page-content .pageDesc li + li {
+                    margin-top: 30px;
+                    }
+                    .page-content .pageDesc p {
+                    color: #000;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 172%; /* 172.308% */
+                    letter-spacing: -0.5px;
+                    }
+                    .page-content .pageDesc p::before {
+                    content: "";
+                    display: inline-block;
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 5px;
+                    margin-bottom: 3px;
+                    background-color: #000;
+                    }
+                    .page-content .division {
+                    display: flex;
+                    align-items: stretch;
+                    justify-content: center;
+                    margin-bottom: 40px;
+                    margin-top: 85px;
+                    }
+                    .page-content .division.divisionAuto {
+                    min-height: auto;
+                    }
+                    .page-content .division.divisionAuto .left,
+                    .page-content .division.divisionAuto .right {
+                    padding: 35px 6.5%;
+                    }
+                    .page-content .division .h2 {
+                    font-size: 36px;
+                    font-weight: bold;
+                    line-height: 100%;
+                    margin-bottom: 27px;
+                    }
+                    .page-content .division .left {
+                    width: 50%;
+                    box-sizing: border-box;
+                    border-radius: 0 45px 45px 0;
+                    overflow: hidden;
+                    }
+                    .page-content .division .left img {
+                    width: 100%;
+                    height: 100%;
+                    -o-object-fit: cover;
+                        object-fit: cover;
+                    display: block;
+                    }
+                    .page-content .division .left.bgFill {
+                    display: flex;
+                    align-items: center;
+                    padding: 6.5%;
+                    color: #fff;
+                    }
+                    .page-content .division .left .h2 {
+                    margin: 0;
+                    }
+                    .page-content .division .right {
+                    background-color: #000;
+                    box-sizing: border-box;
+                    border-radius: 45px 0 0 45px;
+                    width: 50%;
+                    color: #fff;
+                    padding: 100px 80px;
+                    padding: 6.5%;
+                    }
+                    .page-content .division .right p {
+                    font-size: 16px;
+                    line-height: 140%;
+                    }
+                    .page-content .division-grey {
+                    min-height: 0;
+                    margin-top: 0;
+                    }
+                    .page-content .division-grey .left {
+                    background-color: #DEDEDE;
+                    padding: 23px 32px;
+                    }
+                    .page-content .division-grey .left .caption {
+                    font-size: 20px;
+                    font-weight: 300;
+                    margin-bottom: 12px;
+                    }
+                    .page-content .division-grey .left .caption::after {
+                        display: none;
+                    }
+                    .page-content .division-grey .left .line {
+                    width: 66px;
+                    height: 1px;
+                    background-color: #000;
+                    margin-bottom: 20px;
+                    }
+                    .page-content .division-grey .left .h3 {
+                    font-size: 24px;
+                    font-weight: bold;
+                    margin-bottom: 42px;
+                    }
+                    .page-content .division-grey .left p {
+                    font-size: 16px;
+                    line-height: 175%;
+                    }
+                    .page-content .division-grey .right {
+                    background-color: #DEDEDE;
+                    padding: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    }
+                    .page-content .division-grey .right img {
+                    width: 100%;
+                    }
+                    .page-content .division-border {
+                    margin-top: 30px;
+                    }
+                    .page-content .division-border .left {
+                    padding: 17px 32px 27px;
+                    flex: 1 0 0;
+                    }
+                    .page-content .division-border .left .caption {
+                    font-size: 20px;
+                    font-weight: 300;
+                    margin-bottom: 12px;
+                    }
+                    .page-content .division-border .left .line {
+                    width: 66px;
+                    height: 1px;
+                    background-color: #000;
+                    margin-bottom: 20px;
+                    }
+                    .page-content .division-border .left .h3 {
+                    font-size: 24px;
+                    font-weight: bold;
+                    margin-bottom: 42px;
+                    }
+                    .page-content .division-border .left .h3 span {
+                    font-weight: 400;
+                    }
+                    .page-content .division-border .left p {
+                    font-size: 16px;
+                    line-height: 175%;
+                    }
+                    .page-content .division-border .left b {
+                    font-weight: bold;
+                    }
+                    .page-content .division-border .right {
+                    flex: 0 0 auto;
+                    background-color: transparent;
+                    padding: 0;
+                    padding-right: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    }
+                    .page-content .division-border .right img {
+                    width: 100%;
+                    }
+                    .page-content .division-border-2 .left {
+                    width: 83%;
+                    padding-right: 5.8%;
+                    }
+                    .page-content .division-border-2 .right {
+                    width: 35%;
+                    max-width: 414px;
+                    }
+                    .page-content .division-border-2 .right img {
+                    max-height: 375px;
+                    -o-object-fit: contain;
+                        object-fit: contain;
+                    }
+                    .page-content .tableWrap table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    font-size: 14px;
+                    margin-bottom: 45px;
+                    }
+                    .page-content .tableWrap table td {
+                    vertical-align: top;
+                    border: 1px solid #BBBBBB;
+                    box-sizing: border-box;
+                    text-align: left;
+                    }
+                    .page-content .tableWrap table td:nth-child(1) {
+                    border-left: 0;
+                    vertical-align: middle;
+                    }
+                    .page-content .tableWrap table td:nth-child(1) img {
+                    width: 100%;
+                    min-width: 50px;
+                    -o-object-fit: contain;
+                        object-fit: contain;
+                    }
+                    .page-content .tableWrap table td:nth-child(2) {
+                    border-right: 0;
+                    padding: 40px 70px;
+                    padding: 3.3% 5.8%;
+                    padding: 40px 5.8%;
+                    }
+                    .page-content .tableWrap table .h3 {
+                    font-size: 24px;
+                    font-weight: bold;
+                    margin-bottom: 28px;
+                    }
+                    .page-content .tableWrap table .h3::before {
+                    display: inline-block;
+                    color: #000;
+                    margin-right: 6px;
+                    }
+                    .page-content .tableWrap table tr:nth-child(1) .h3::before {
+                    content: "①";
+                    }
+                    .page-content .tableWrap table tr:nth-child(2) .h3::before {
+                    content: "②";
+                    }
+                    .page-content .tableWrap table tr:nth-child(3) .h3::before {
+                    content: "③";
+                    }
+                    .page-content .tableWrap table tr:nth-child(4) .h3::before {
+                    content: "④";
+                    }
+                    .page-content .tableWrap table p {
+                    font-size: 14px;
+                    margin-bottom: 7px;
+                    }
+                    .page-content .tableWrap table li {
+                    font-size: 14px;
+                    line-height: 100%;
+                    padding-left: 22px;
+                    position: relative;
+                    word-break: break-all;
+                    }
+                    .page-content .tableWrap table li::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 15px;
+                    height: 15px;
+                    display: inline-block;
+                    }
+                    .page-content .tableWrap table li.location::before {
+                    background-image: url(/public/internal/musthaveitem/img/common/ic_location.svg);
+                    }
+                    .page-content .tableWrap table li.tel::before {
+                    background-image: url(/public/internal/musthaveitem/img/common/ic_tel.svg);
+                    }
+                    .page-content .tableWrap table li.web::before {
+                    background-image: url(/public/internal/musthaveitem/img/common/ic_web.svg);
+                    }
+                    .page-content .tableWrap table li.price::before {
+                    background-image: url(/public/internal/musthaveitem/img/common/ic_price.svg);
+                    }
+                    .page-content .tableWrap table li.cart::before {
+                    background-image: url(/public/internal/musthaveitem/img/common/ic_cart.svg);
+                    }
+                    .page-content .tableWrap table li.noti::before {
+                    background-image: url(/public/internal/musthaveitem/img/common/ic_noti.svg);
+                    }
+                    .page-content .tableWrap table li + li {
+                    margin-top: 7px;
+                    }
+                    .page-content.theme-red .color {
+                    color: #F0514D !important;
+                    }
+                    .page-content.theme-red .bgFill {
+                    background-color: #F0514D !important;
+                    }
+                    .page-content.theme-red .pageDesc p::before {
+                    background-color: #F0514D;
+                    }
+                    .page-content.theme-red .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+                    background: rgba(240, 81, 77, 0.1);
+                    }
+                    .page-content.theme-red .division-border {
+                    border: 3px solid #F0514D;
+                    box-sizing: border-box;
+                    }
+                    .page-content.theme-navy .color {
+                    color: #036A9B !important;
+                    }
+                    .page-content.theme-navy .bgFill {
+                    background-color: #036A9B !important;
+                    }
+                    .page-content.theme-navy .pageDesc p::before {
+                    background-color: #036A9B;
+                    }
+                    .page-content.theme-navy .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+                    background: rgba(3, 106, 155, 0.1);
+                    }
+                    .page-content.theme-navy .division-border {
+                    border: 3px solid #036A9B;
+                    box-sizing: border-box;
+                    }
+                    .page-content.theme-yellow .color {
+                    color: #EDB51E !important;
+                    }
+                    .page-content.theme-yellow .bgFill {
+                    background-color: #EDB51E !important;
+                    }
+                    .page-content.theme-yellow .pageDesc p::before {
+                    background-color: #EDB51E;
+                    }
+                    .page-content.theme-yellow .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+                    background: rgba(237, 181, 30, 0.15);
+                    }
+                    .page-content.theme-yellow .division-border {
+                    border: 3px solid #EDB51E;
+                    box-sizing: border-box;
+                    }
+                    .page-content.theme-green .color {
+                    color: #4C9667 !important;
+                    }
+                    .page-content.theme-green .bgFill {
+                    background-color: #4C9667 !important;
+                    }
+                    .page-content.theme-green .pageDesc p::before {
+                    background-color: #4C9667;
+                    }
+                    .page-content.theme-green .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+                    background: rgba(76, 150, 103, 0.1);
+                    }
+                    .page-content.theme-green .division-border {
+                    border: 3px solid #4C9667;
+                    box-sizing: border-box;
+                    }
+                    .page-content.theme-pink .color {
+                    color: #F598A6 !important;
+                    }
+                    .page-content.theme-pink .bgFill {
+                    background-color: #F598A6 !important;
+                    }
+                    .page-content.theme-pink .pageDesc p::before {
+                    background-color: #F598A6;
+                    }
+                    .page-content.theme-pink .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+                    background: rgba(245, 152, 166, 0.15);
+                    }
+                    .page-content.theme-pink .division-border {
+                    border: 3px solid #F598A6;
+                    box-sizing: border-box;
+                    }
+                    .page-content.theme-blue .color {
+                    color: #2587C8 !important;
+                    }
+                    .page-content.theme-blue .bgFill {
+                    background-color: #2587C8 !important;
+                    }
+                    .page-content.theme-blue .pageDesc p::before {
+                    background-color: #2587C8;
+                    }
+                    .page-content.theme-blue .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+                    background: rgba(37, 135, 200, 0.15);
+                    }
+                    .page-content.theme-blue .division-border {
+                    border: 3px solid #2587C8;
+                    box-sizing: border-box;
+                    }
+                    @media screen and (max-width: 767px) {
+                    .page-content .division {
+                        flex-direction: column;
+                    }
+                    .page-content .division .left {
+                        width: 100%;
+                        border-radius: 0;
+                    }
+                    .page-content .division .right {
+                        width: 100%;
+                        border-radius: 0;
+                    }
+                    .page-content .division-border-2 .left {
+                        width: 100%;
+                        padding: 17px 32px 27px;
+                    }
+                    .page-content .division-border .left {
+                        flex: 1 0 auto;
+                    }
+                    .page-content .division-border .right {
+                        padding: 17px 32px;
+                    }
+                    .page-content .division-border-2 .right {
+                        max-width: 100%;
+                    }
+                    .page-content .division-border-2 .right img {
+                        width: 100%;
+                        -o-object-fit: contain;
+                        object-fit: contain;
+                        max-height: 240px;
+                    }
+                    .page-content .tableWrap {
+                        display: block;
+                    }
+                    .page-content .tableWrap table {
+                        display: block;
+                    }
+                    .page-content .tableWrap table colgroup {
+                        display: none;
+                    }
+                    .page-content .tableWrap table td {
+                        display: block;
+                        width: 100%;
+                        border: 1px solid #BBBBBB !important;
+                        margin-top: -1px;
+                    }
+                    .page-content .tableWrap table td:nth-child(1) {
+                        display: flex;
+                    }
+                    .page-content .tableWrap table td:nth-child(1) img {
+                        max-height: 350px;
+                        width: 50%;
+                        margin: 0 auto;
+                    }
+                    }
+                </style>
+                <section class="page-content theme-yellow">
+                    <!-- comp -->
+                    <div class="visualImg">
+                        <img src="/public/internal/musthaveitem/img/detail/gsn/img01.jpg" alt="...">
+                        <div class="imgName">이국적인 풍경을 자랑하는 남해 독일마을</div>
+                    </div>
+                    <!-- comp -->
+                    <div class="pageDesc">
+                        <ul>
+                            <li>
+                                <p>
+                                    초록빛 자연 속에서 드라이브하기 좋은 경상남도. 남해 바다를 바라보면 비현실적이고 쨍한 푸르름이 두 눈 가득 담긴다. 화개장터가 있는 하동은 우리나라 차의 성지로, 다양한 차를 맛볼 수 있다. 여름에는 거제 몽돌해수욕장에서 물놀이를, 영남 알프스 밀양에서 얼음골 케이블카로 더위를 날려버릴 수 있다. 가을에는 함안의 해바라기 축제가 열린다. 창원의 진해해양공원은 짚라인을 탈 수 있는 곳으로 아름다운 남해안과 거가대교를 볼 수 있다. 짚트랙은 99타워에서 소쿠리섬까지 1,400m 거리를 최대 시속 80km 속도로 비행한다. 진주는 진주성이 유명한데, 진주성에서 남강의 아름다운 모습을 감상할 수 있다. 사천바다케이블카를 타면 남해의 풍경을 한눈에 감상할 수 있는데, 야경이 아름다워 꼭 이용해보기를 추천한다. 남해독일마을은 일찍부터 남해를 대표하는 관광지로 이름이 높았다. 1960~70년대 독일로 떠났던 광부와 간호사들이 은퇴 후 정착한 마을로 독일식 건물 40여 채가 모여 그림같은 풍경을 보여준다. 독일식 소시지와 맥주 등 독일 정통 음식도 즐기고 다양한 독일 문화도 만날 수 있다.  
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    산악과 해상 관광을 함께 누릴 수 있는 경상남도에는 매달 색다른 축제와 볼거리가 넘쳐난다. 통영과 남해를 중심으로 위치한 해상 공원은 섬과 바다의 매력을 모두 느낄 수 있어 경상남도 대표 여행지로 손꼽힌다. 
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    봄에는 하얀 눈꽃이 흩날리는 하동벚꽃축제와 순매원 매화축제가, 겨울에는 거제도를 빨갛게 물들이는 동백축제가 열린다. 이외에도 온천 여행과 도자기 체험, 딸기 체험 등 다양한 경험이 가능하다.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- comp -->
+                    <div class="division fullSize">
+                        <div class="left">
+                            <img src="/public/internal/musthaveitem/img/detail/gsn/img02.jpg" alt="...">
+                        </div>
+                        <div class="right bgFill">
+                            <div class="h2">남해 유자 디저트</div>
+                            <p>
+                                남해 유자는 과육이 탱글탱글하고 껍질이 얇아서 먹기 좋다. 또 유자차, 유자청, 유자술 등 다양한 음식과 음료에 사용된다. 남해 유자는 맛과 영양이 풍부해 건강에도 좋고, 특유의 상큼함이 먹을수록 매력적이다. 남해 여행하는 동안 유자를 활용한 디저트가 다양해 맛보는 재미가 쏠쏠하다.
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="tableWrap fullSize">
+                        <table>
+                            <colgroup><col width="380px"><col width="840px"></colgroup>
+                            <tr>
+                                <td><img src="/public/internal/musthaveitem/img/detail/gsn/tb_img01.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">남해제과 브레드멜 유자멜빵과 유자크림</div>
+                                    <p>
+                                        남해의 이야기를 굽는 빵 가게로 특산품인 죽방멸치와 마늘 모양을 본떠 만든 빵을 판매할 수 있다. 무농약 유자빵으로 만들었으며, 유자 크림도 함께 판매 중이다. 공간의 인테리어가 예쁘고, 멸치 모양의 귀여운 빵과 꾸덕한 크림의 조화가 완벽하다. 패키지가 세련되어 선물용으로도 좋다.
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            경상남도 남해군 남면 남서대로 788(남해제과 브레드멜)  
+                                        </li>
+                                        <li class="tel">
+                                            055-812-7788
+                                        </li>
+                                        <li class="web">
+                                            www.instagram.com/bread_mell 
+                                        </li>
+                                        <li class="price">
+                                            멜빵, 유자크림 1만원 미만
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><img src="/public/internal/musthaveitem/img/detail/gsn/tb_img02.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">유자할배 남해유자빵</div>
+                                    <p>
+                                        남해에서 자란 유기농 유자로 아버지와 아들이 함께 생산하고 있다. 남해 유자빵은 유자 커스터드 크림을 넣었으며, 부드러우면서 끝 맛이 상큼한 것이 특징이다. 
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            경상남도 남해군 삼동면 삼이로24번길 47-32(남해유자빵 본점) 
+                                        </li>
+                                        <li class="tel">
+                                            0507-1470-1994
+                                        </li>
+                                        <li class="web">
+                                            www.instagram.com/yuza.kr
+                                        </li>
+                                        <li class="price">
+                                            6구 3만원 대
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><img src="/public/internal/musthaveitem/img/detail/gsn/tb_img03.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">백년유자 희석용 액상유자청</div>
+                                    <p>
+                                        ‘백년유자’는 가게에 들어서면서 특별함을 실감할 수 있는 곳이다. 들어서자마자 유자청을 테이스팅할 수 있기 때문이다. 세 가지 청을 그 자리에서 맛볼 수 있으며, 친절한 사장님 덕분에 여행이 즐거워진다. 유자청은 ‘순수유자’와 ‘유자몽’, ‘트로피컬 유자’로 구성되어 있는데, 유자를 착즙한 액상 유자 원액으로, 각각 맛의 매력이 다르다. 
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            경상남도 남해군 남면 남서대로 768(백년유자2호점) 
+                                        </li>
+                                        <li class="tel">
+                                            055-864-6004 
+                                        </li>
+                                        <li class="web">
+                                            www.instagram.com/100yrs_yuja.namhae
+                                        </li>
+                                        <li class="price">
+                                            유자원액 2종세트 3만원 대 
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+
+                    <!-- comp : Mini Interview -->
+                    <div class="division division-border division-border-2 fullSize"><div class="left"><div class="caption">Mini Interview</div><div class="line"></div><div class="h3">
+                        백년유자
+                        <span>
+                        홍장식 대표 
+                        </span></div><p><b>
+                        Q 남해 유자청을 만들게 된 계기가 궁금합니다.  
+                        </b> 
+                        남해는 유자가 많이 자라는 곳입니다. 토종이기도 하고요. 유자는 활용도가 굉장히 높습니다. 그런데 안타깝게도 많은 유자가 버려지는 것을 알고 활용할 방법에 대해 고민을 했습니다. 카스텔라도 만들어보고, 초콜릿도 만들어보고요. 그런데 결국 유자에서 가장 중요한 것은 원액이라는 사실을 깨닫게 되었습니다. 경쟁력을 확보하기 위해 유자를 착즙한 유자 원액을 출발점으로 삼고 액상 유자 원액을 개발하게 되었습니다. 
+                        </p><p><b>
+                        Q 백년유자만의 특별한 점은 무엇인까요? 
+                        </b> 
+                        우선 많은 사람들로 하여금 유자를 맛보게 하고 유자를 온전히 활용하는 것을 무엇보다 중요하게 생각합니다. 그런 이유로 유자를 착즙한 액상 유자 원액 테이스팅에 집중합니다. 국내 최초 테이스팅 카페로, 손님들이 와서 직접 맛보고 취향에 따라 선택할 수 있습니다. 또 저희는 온 가족이 함께 유자 농사를 짓고, 청을 만들어 정성을 쏟고 있습니다. 그리고 저희가 만든 청은 찬물과도 함께 마실 수 있습니다.
+                        </p></div><div class="right">
+                        <img src="/public/internal/musthaveitem/img/detail/gsn/img03.jpg" alt="...">
+                        </div>
+                    </div>
+
+                    <!-- comp -->
+                    <div class="division fullSize">
+                        <div class="left">
+                            <img src="/public/internal/musthaveitem/img/detail/gsn/img04.jpg" alt="...">
+                        </div>
+                        <div class="right bgFill">
+                            <div class="h2">산청 곶감</div>
+                            <p>
+                                지리산 자락에 위치한 산청은 곶감으로 유명하다. 지리산 영향을 받아 깨끗한 환경에서 생산되는 산청 곶감은 ‘주황빛 보석’으로 씹을수록 달달하고 부드러운 맛이 일품이다. 지리산의 맑고 깨끗한 공기와 차가운 기후는 곶감이 자라기에 최적이다. 12월이 되면 산청에서는 지리산산청곶감축제가 열린다. 곶감을 사랑하는 많은 사람들이 방문하는 축제로, 곶감의 다양한 변신이 궁금하다면 꼭 가보길 추천한다.
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="tableWrap fullSize">
+                        <table>
+                            <colgroup><col width="380px"><col width="840px"></colgroup>
+                            <tr>
+                                <td><img src="/public/internal/musthaveitem/img/detail/gsn/tb_img04.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">지리산 산청 감말랭이</div>
+                                    <p>
+                                        달고 쫀득한 감말랭이는 감을 반으로 쪼개서 말렸다. 선홍빛 감말랭이는 간단하게 먹을 수 있는 건강 간식으로 자꾸만 손이 간다. 과하게 달지 않으면서도 입맛을 돋우는 영양 간식으로 아이들부터 어른들까지 즐길 수 있고, 감은 풍부한 영양식품으로 건강까지 챙길 수 있다. 
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            경상남도 산청군 산청읍 웅석봉로 3 (산청군 농협 하나로마트)  
+                                        </li>
+                                        <li class="tel">
+                                            055-970-2581 
+                                        </li>
+                                        <li class="price">
+                                            1만원 대
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><img src="/public/internal/musthaveitem/img/detail/gsn/tb_img05.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">반건시 곶감</div>
+                                    <p>
+                                        산청 곶감은 모양이 예쁘기로 유명하며, 식감이 쫀득쫀득하고 단맛이 가득하다. 냉동 보관하고, 먹기 30분 전에 꺼내 해동하면 된다. 반건시 곶감은 냉동 보관하면 최대 2년까지 보관 가능하다. 곶감은 명절 때 많이 구입하는 고급스러운 명절 선물이기도 하다. 
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            경상남도 산청군 산청읍 웅석봉로 3(산청군 농협 하나로마트) 
+                                        </li>
+                                        <li class="tel">
+                                            055-970-2581 
+                                        </li>
+                                        <li class="price">
+                                            1만원 대
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+                    <!-- comp -->
+                    <div class="division fullSize">
+                        <div class="left">
+                            <img src="/public/internal/musthaveitem/img/detail/gsn/img05.jpg" alt="...">
+                        </div>
+                        <div class="right bgFill">
+                            <div class="h2">
+                                창원 단감 디저트
+                            </div>
+                            <p>
+                                창원 감은 과육이 쫄깃하고 당도가 높으며, 향이 좋다. 비타민 C, 칼륨, 식이 섬유 등 다양한 영양소가 함유되어 있고, 맛도 우수해 오래도록 사랑받고 있다. 감말랭이, 감주, 감잎차 등 다양한 가공 식품으로 만날 수 있고, 단감빵이나 단감 젤리 등은 다른 곳에서는 맛보기 힘든 이 지역만의 특별한 아이템이다.
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="tableWrap fullSize">
+                        <table>
+                            <colgroup><col width="380px"><col width="840px"></colgroup>
+                            <tr>
+                                <td><img src="/public/internal/musthaveitem/img/detail/gsn/tb_img06.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">
+                                        미니단감빵
+                                    </div>
+                                    <p>
+                                        단감빵은 달콤한 단감잼에 단감 칩이 박혀 있어 부드럽고 말랑하게 씹히는 식감이 특징이다. 귀여운 케이스에 담아 선물용으로 좋다. 한입 베어 물면 단감잼과 단감소의 풍미가 입안을 가득 채운다. 단감이 이렇게 맛있을 수 있다니 놀라울 따름이다. 
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            경상남도 창원시 의창구 사림로45번길 59 (북카페 차오름)    
+                                        </li>
+                                        <li class="tel">
+                                            0507-1413-5953  
+                                        </li>
+                                        <li class="web">
+                                            www.instagram.com/today_chaoreum 
+                                        </li>
+                                        <li class="price">
+                                            2개 1만원 미만
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><img src="/public/internal/musthaveitem/img/detail/gsn/tb_img07.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">
+                                        단감 젤리
+                                    </div>
+                                    <p>
+                                        가을 제철에 수확한 창원 단감으로 지역 농가에서 만든 단감 젤리는 탱글탱글한 단감 과육이 그대로 살아 있다. 부드러운 식감으로 단감의 특별한 식감을 그대로 맛볼 수 있고, 실온에 보관 가능해 언제 어디서든 간편하게 먹을 수 있다.  
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            경상남도 창원시 성산구 창원대로 524(창원시 로컬푸드직매장)  
+                                        </li>
+                                        <li class="tel">
+                                            055-277-5633 
+                                        </li>
+                                        <li class="web">
+                                            smartstore.naver.com/changwon-dangam/products/5713952812? 
+                                        </li>
+                                        <li class="price">
+                                            130g 8개입 1만원 대
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><img src="/public/internal/musthaveitem/img/detail/gsn/tb_img08.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">
+                                        단감 칩
+                                    </div>
+                                    <p>
+                                        자꾸만 손이 가는 단감 칩! 품질을 인증받은 단감으로 첨가물 없이 건조해 안심하고 먹을 수 있다. 껍질과 씨 없이 말려 먹기도 편하고 맛도 좋다. 비타민 A•B•C, 식이 섬유가 풍부해 면역과 미용, 변비에도 효과적이다. 여행 중 아이들 간식으로도 좋고, 술안주로도 추천한다.
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            경상남도 창원시 성산구 창원대로 524(창원시 로컬푸드직매장)    
+                                        </li>
+                                        <li class="tel">
+                                            055-277-5633 
+                                        </li>
+                                        <li class="web">
+                                            egnmall.kr/index.html 
+                                        </li>
+                                        <li class="price">
+                                            80g×3개 1만원 대
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+
+                    <!-- comp -->
+                    <div class="division fullSize">
+                        <div class="left">
+                            <img src="/public/internal/musthaveitem/img/detail/gsn/img06.jpg" alt="...">
+                        </div>
+                        <div class="right bgFill">
+                            <div class="h2">
+                                하동 매실 액기스
+                            </div>
+                            <p>
+                                하동은 뒤로는 지리산, 앞으로는 지리산 삼신봉이 있으며 흐르는 맑은 섬진강 지류를 따라 골이 형성되어 있다. 그래서 자연 조건이 매실나무 재배에 알맞다. 이러한 환경에서 자란 매실은 그 향과 맛, 그리고 효능이 매우 좋다.
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="tableWrap fullSize">
+                        <table>
+                            <colgroup><col width="380px"><col width="840px"></colgroup>
+                            <tr>
+                                <td><img src="/public/internal/musthaveitem/img/detail/gsn/tb_img09.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">
+                                        지리산 농부마을 매실청
+                                    </div>
+                                    <p>
+                                        지리산 매실로 담근 5년 이상 발효된 매실 발효청이다. 섬진강을 따라 매실나무가 분포되어 집마다 매실이 있을 정도로 섬진강 인근은 매실로 유명하다. 매실청은 냉수 또는 온수에 타서 음료나차로 마시면 맛있게 먹을 수 있다. 요거트 위에 뿌려 먹어도 좋다.
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            경상남도 하동군 화개면 탑리(화개장터) 
+                                        </li>
+                                        <li class="tel">
+                                            055-883-5722 
+                                        </li>
+                                        <li class="web">
+                                            smartstore.naver.com/jirisannongbu/products/3814703875? 
+                                        </li>
+                                        <li class="price">
+                                            1000ml 1만원 대
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+
+                    <!-- comp -->
+                    <div class="division fullSize">
+                        <div class="left">
+                            <img src="/public/internal/musthaveitem/img/detail/gsn/img07.jpg" alt="...">
+                        </div>
+                        <div class="right bgFill">
+                            <div class="h2">
+                                하동 차
+                            </div>
+                            <p>
+                                하동은 매년 야생차문화축제를 열 정도로 녹차가 유명하다. 녹차 재배 시기가 되면 녹차 체험이나, 차 체험을 할 수 있다. 하동은 약 1000년 전에 차를 재배한 기록이 남아 있는 한국 차 시배지다. 하동의 녹차는 예부터 왕에게 진상하는 ‘왕의 녹차’라 불릴 정도로 품질을 인정받았다.
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="tableWrap fullSize">
+                        <table>
+                            <colgroup><col width="380px"><col width="840px"></colgroup>
+                            <tr>
+                                <td><img src="/public/internal/musthaveitem/img/detail/gsn/tb_img10.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">
+                                        지리산농부마을 하동녹차
+                                    </div>
+                                    <p>
+                                        ‘지리산농부마을’의 하동차는 손으로 직접 따는 수제 차로 맛과 품질이 우수하다. 깔끔하고 감칠맛이 돌며 부드러운 녹차를 음미할 수 있다. 물을 끓이고, 70~80℃ 정도로 식히는 것이 좋은으며 2~3분 정도 우린 다음, 잎을 꺼내는 것이 좋다.
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            경상남도 하동군 화개면 탑리(화개장터) 
+                                        </li>
+                                        <li class="tel">
+                                            055-883-5722 
+                                        </li>
+                                        <li class="web">
+                                            smartstore.naver.com/jirisannongbu/products/2361724287? 
+                                        </li>
+                                        <li class="price">
+                                            하동 녹차 우전 80g 5만원 대
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="/public/internal/musthaveitem/img/detail/gsn/tb_img11.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">
+                                        하동 쌍계명차
+                                    </div>
+                                    <p>
+                                        ‘김동곤 우전차 명인의 ‘상계명차’는 상쾌한 맛과 깊이 있는 차향을 느낄 수 있다. 김동곤 명인은 지리산 토박이, 쌍계사 스님에게 배운 제다법으로 각종 세계 명차 품평 대회에서 수상한 경력이 있다. 쌍계명차박물관은 화개장터에 위치해 차를 처음 접하는 사람도 방문해 차를 즐길 수 있다. 
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            경상남도 하동군 화개면 화개로 30(쌍계명차박물관) 
+                                        </li>
+                                        <li class="tel">
+                                            055-883-2440 
+                                        </li>
+                                        <li class="web">
+                                            www.sktea.com 
+                                        </li>
+                                        <li class="price">
+                                            지관 발효차 천고향세트 60g 6만원 대
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <!-- comp -->
+                    <div class="division fullSize">
+                        <div class="left">
+                            <img src="/public/internal/musthaveitem/img/detail/gsn/img08.jpg" alt="...">
+                        </div>
+                        <div class="right bgFill">
+                            <div class="h2">
+                                통영 꿀빵
+                            </div>
+                            <p>
+                                꿀빵은 밀가루 반죽에 팥소를 넣어 튀긴 뒤 겉면에 물엿과 통깨를 바른 빵으로, 경상남도 통영시의 특산품이다. 꿀빵은 꿀이 들어가지는 않으나, 표면에 바르는 물엿과 팥소의 맛이 달콤해 꿀빵이라는 이름이 붙었다. 통영에 가면 통영항 근처 중앙시장 꿀빵 거리에서 여러가지 꿀빵을 만날 수 있다.
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="tableWrap fullSize">
+                        <table>
+                            <colgroup><col width="380px"><col width="840px"></colgroup>
+                            <tr>
+                                <td><img src="/public/internal/musthaveitem/img/detail/gsn/tb_img12.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">
+                                        꿀빵거리 꿀빵
+                                    </div>
+                                    <p>
+                                        꿀빵거리에서는 시식용 꿀빵을 주기도 한다. 누가 만드느냐에 따라 특색이 다르니 다니면서 맛보는 것을 추천한다. 거북선꿀빵은 피가 얇고 앙금이 많이 들어 있다. 꿀 코팅의 달달함과 팥 앙금의 고소함을 맛보고 싶다면 선물용으로 추천한다. 중앙동 문화마당 일대는 꿀빵거리로 불릴만큼 꿀빵 판매점을 쉽게 찾을 수 있다. 직접 시식해 보고 구입하는 것도 가능하다. 
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            경상남도 통영시 중앙동 233(통영중앙전통시장) 
+                                        </li>
+                                        <li class="tel">
+                                            055-649-5225  
+                                        </li>
+                                        <li class="price">
+                                            10구 1만원 대
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+                    <!-- comp : Tourist -->
+                    <div class="division division-grey fullSize">
+                        <div class="left"><div class="caption">Tourist Attraction</div><div class="line"></div>
+                            <div class="h3">
+                                화개장터 
+                            </div>
+                            <p>
+                                화개장터는 지리산에서 시작된 화개천과 섬진강이 합류하는 지점에서 열리던 전통적인 재래식 시장이며, 전라도와 경상도의 경계를 이루어 전국에서도 이름난 시장이었다. 이곳에서 지리산 일대에서 나는 산나물과 약재, 전라도 곡창지대의 쌀과 보리 등을 거래했다. 하동읍에서 쌍계사로 이어지는 10리 벗꽃길이 시작되는 곳이라 봄이 되면 전국의 물산과 꽃이 어우러져 아름다운 풍경을 자아낸다.
+                            </p>
+                        </div><div class="right">
+                            <img src="/public/internal/musthaveitem/img/detail/gsn/img09.jpg" alt="...">
+                        </div>
+                    </div>
+
+                    <!-- comp -->
+                    <div class="division fullSize">
+                        <div class="left">
+                            <img src="/public/internal/musthaveitem/img/detail/gsn/img10.jpg" alt="...">
+                        </div>
+                        <div class="right bgFill">
+                            <div class="h2">
+                                통영 나전칠기
+                            </div>
+                            <p>
+                                고려시대부터 1000년을 이어온 나전은 우리나라를 대표하는 명품 공예다. 보는 순간 영롱한 모습에 저절로 감탄하게 된다. 나전칠기는 나무와 가죽, 대나무 등에 옻칠을 해 밑바탕 처리한 후, 그 위에 자개를 끊어가며 정교하게 붙이고, 다시 그 위에 옻칠해 완성한다. 25가지 공정으로 제작 기간이 짧게는 30일, 길게는 1년 이상 걸리는 고난도 수공예품이다. 통영 나전칠기는 한국 나전칠기의 중심이라고 하는데, 현재 한국의 나전칠기 공예를 이끌어가는 중심인물 대부분이 통영 출신이거나 통영에서 나전칠기를 연구하고 배웠다.
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="tableWrap fullSize">
+                        <table>
+                            <colgroup><col width="380px"><col width="840px"></colgroup>
+                            <tr>
+                                <td><img src="/public/internal/musthaveitem/img/detail/gsn/tb_img13.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">
+                                        자개스마트톡 & 나전칠기 마그넷
+                                    </div>
+                                    <p>
+                                        통영 나전칠기로 만든 스마트톡과 마그넷은 어디서도 볼 수 없는 독특한 기념품이다. 한국을 대표하는 공예품으로 관광객에게 인기가 많다. 고급스러우며 빛깔이 좋아 휴대폰에 부착하거나 냉장고에 붙여놓으면 장식 효과를 톡톡히 낸다.
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            경상남도 통영시 통새미길 18(어거스트램) 
+                                        </li>
+                                        <li class="tel">
+                                            0507-1319-0212  
+                                        </li>
+                                        <li class="web">
+                                            www.instagram.com/august_lamb_ty 
+                                        </li>
+                                        <li class="price">
+                                            마그넷 1만원 대 
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="/public/internal/musthaveitem/img/detail/gsn/tb_img14.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">
+                                        나전칠기 거울
+                                    </div>
+                                    <p>
+                                        나전칠기 거울은 파우치에 들어갈 정도로 아담한 사이즈다. 흔히 볼 수 있는 제품이 아니라서 고급지면서 특별한 선물이 될 수 있다.
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                          경상남도 통영시 도남로 281 (통영전통공예관) 
+                                        </li>
+                                        <li class="tel">
+                                            055-645-3266
+                                        </li>
+                                        <li class="web">
+                                            craft12.co.kr/shop 
+                                        </li>
+                                        <li class="price">
+                                            손거울 8만원 대
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+                    <!-- comp -->
+                    <div class="division fullSize">
+                        <div class="left">
+                            <img src="/public/internal/musthaveitem/img/detail/gsn/img11.jpg" alt="...">
+                        </div>
+                        <div class="right bgFill">
+                            <div class="h2">
+                                남해 멸치 • 미역 • 다시마
+                            </div>
+                            <p>
+                               남해 멸치는 다른 지역의 멸치보다 크기가 크고, 지방 함량이 높아 맛과 영양이 풍부하다. 남해의 해양 환경은 미역의 성장에 필요한 영양소가 풍부하고, 수온이 따뜻하여 미역이 잘 자란다. 남해 다시마는 맛있고 영양가가 풍부한 해조류로, 콜레스테롤 수치를 낮추고, 혈액순환을 개선하는 효과가 있다. 남해 여행을 하면서 해조류와 멸치를 먹어보는 것을 추천한다.
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="tableWrap fullSize">
+                        <table>
+                            <colgroup><col width="380px"><col width="840px"></colgroup>
+                            <tr>
+                                <td><img src="/public/internal/musthaveitem/img/detail/gsn/tb_img15.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">
+                                        앵강마켓 선물 세트
+                                    </div>
+                                    <p>
+                                        한국인이 밥반찬으로 자주 먹는 멸치는 식탁에서 빼놓아서는 안 될 식재료다. ‘앵강마켓’의 죽방멸치 선물 세트는 높은 품질과 세련된 디자인으로 많은 관광객이 구매하는 제품이다. 앵강마켓 1호 선물 세트는 멸치와 미역, 다시마로 구성되어 있으며, 광목 보자기로 고급스러운 느낌을 더했다. 
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            경상남도 남해군 남면 남서대로 772(앵강마켓)  
+                                        </li>
+                                        <li class="tel">
+                                            055-863-0772  
+                                        </li>
+                                        <li class="web">
+                                            smartstore.naver.com/ainriver/   
+                                        </li>
+                                        <li class="price">
+                                            소멸치 130g 5만원 대
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+                    <!-- comp -->
+                    <div class="division fullSize">
+                        <div class="left">
+                            <img src="/public/internal/musthaveitem/img/detail/gsn/img12.jpg" alt="...">
+                        </div>
+                        <div class="right bgFill">
+                            <div class="h2">
+                                의령 망개떡
+                            </div>
+                            <p>
+                                망개떡은 경상남도 의령 지역에서 만들어 먹던 향토 음식이다. 멥쌀로 만든 떡을 얇게 밀어 넣고 빚은 떡을 2장의 망개 잎으로 감싸 망개 잎의 상큼한 향이 배도록 했다. 재료인 팥으로 장시간 유통은 어렵지만 특유의 망개즙이 떡에 깊이 배어들어 자연 방부제 효과를 내면서 맛과 영양이 유지된다.
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="tableWrap fullSize">
+                        <table>
+                            <colgroup><col width="380px"><col width="840px"></colgroup>
+                            <tr>
+                                <td><img src="/public/internal/musthaveitem/img/detail/gsn/tb_img16.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">
+                                        의령 망개떡
+                                    </div>
+                                    <p>
+                                        의령에 가면 무조건 사야 하는 망개떡은 쫀득쫀득하고 식감이 좋아 입에 착착 달라붙는다. 망개잎 향 가득 머금은 망개떡은 남녀노소 누구나 맛있게 먹을 수 있다. ‘의령 망개떡’은 직접 빚어 하루 한정된 양만 생산하며, 재료 소진 시 영업을 종료하는 맛집이다. 
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            경상남도 의령군 의령읍 의병로18길 3-4(의령망개떡) 
+                                        </li>
+                                        <li class="tel">
+                                            0507-1341-2422  
+                                        </li>
+                                        <li class="web">
+                                            www.의령망개떡.com 
+                                        </li>
+                                        <li class="price">
+                                            7개 5000원
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+
+                    <!-- comp -->
+                    <div class="division fullSize">
+                        <div class="left">
+                            <img src="/public/internal/musthaveitem/img/detail/gsn/img13.jpg" alt="...">
+                        </div>
+                        <div class="right bgFill">
+                            <div class="h2">
+                                밀양 얼음골 사과 주스
+                            </div>
+                            <p>
+                                밀양 얼음골 사과는 천연기념물 얼음골의 신비로운 기후 조건으로 당도가 높고, 과즙이 풍부하다. 천혜의 청정 자연환경이 빚어낸 밀양 사과는 낮 동안 밀양의 햇볕을 쬐다 해가 지면 얼음골의 냉기를 머금으면서 단맛을 빚어내 ‘꿀사과’라고 불린다. 과육이 단단해 씹는 맛이 좋고 사과향이 진하다.
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="tableWrap fullSize">
+                        <table>
+                            <colgroup><col width="380px"><col width="840px"></colgroup>
+                            <tr>
+                                <td><img src="/public/internal/musthaveitem/img/detail/gsn/tb_img17.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">
+                                        얼음골 사과 주스
+                                    </div>
+                                    <p>
+                                        밀양 얼음골사과만 사용해 물 한 방울 섞지 않고 저온 착즙한 얼음골 사과 주스는 향과 맛이 풍부하다. 먹기 좋게 치어 팩으로 포장해 위생적이며 대용량이라 부족함 없이 마실 수 있다. 설탕, 색소, 방부제를 전혀 넣지 않아 안심할 수 있다.
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            경상남도 창원시 성산구 원이대로 362(경남관광기념품점) 
+                                        </li>
+                                        <li class="tel">
+                                            055-212-1340 
+                                        </li>
+                                        <li class="web">
+                                            smartstore.naver.com/gntostore/products/5575454023 
+                                        </li>
+                                        <li class="price">
+                                            220ml×8개 1만원 대
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+                </section>
+            </contents>
+            <!-- evoke : 템플릿 끝 -->
+        </div>
+    </div>
+
+</body>
+</html>

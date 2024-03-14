@@ -1,0 +1,1380 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="common-inner">
+        <div class="template__type1__section">
+            <!-- evoke : 템플릿 시작 -->
+            <contents>
+                <style>
+                    /* common.css */
+                    @charset "UTF-8";
+                    /* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap'); */
+                    html, body, div, span, applet, object, iframe,
+                    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+                    a, abbr, acronym, address, big, cite, code,
+                    del, dfn, em, img, ins, kbd, q, s, samp,
+                    small, strike, strong, sub, sup, tt, var,
+                    b, u, i, center,
+                    dl, dt, dd, ol, ul, li,
+                    fieldset, form, label, legend,
+                    table, caption, tbody, tfoot, thead, tr, th, td,
+                    article, aside, canvas, details, embed,
+                    figure, figcaption, footer, header, hgroup,
+                    menu, nav, output, ruby, section, summary,
+                    time, mark, audio, video {
+                    margin: 0;
+                    padding: 0;
+                    border: 0;
+                    font-size: 100%;
+                    font: inherit;
+                    vertical-align: baseline;
+                    }
+                    /* HTML5 display-role reset for older browsers */
+                    article, aside, details, figcaption, figure,
+                    footer, header, hgroup, menu, nav, section {
+                    display: block;
+                    }
+                    body {
+                    line-height: 1;
+                    }
+                    ol, ul {
+                    list-style: none;
+                    }
+                    blockquote, q {
+                    quotes: none;
+                    }
+                    blockquote:before, blockquote:after,
+                    q:before, q:after {
+                    content: "";
+                    content: none;
+                    }
+                    table {
+                    border-collapse: collapse;
+                    border-spacing: 0;
+                    }
+                    Select {
+                    font-family: inherit; /* 폰트 상속 */
+                    background: url(../img/btn-drop-arrow.svg) no-repeat 98% 50%;
+                    /* 네이티브 화살표를 커스텀 화살표로 대체 */
+                    -webkit-appearance: none;
+                    /* 네이티브 외형 감추기 */
+                    -moz-appearance: none;
+                    appearance: none;
+                    }
+                    Select::-ms-expand {
+                    display: none; /* 화살표 없애기 for IE10, 11*/
+                    }
+                    input {
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    -webkit-border-radius: 0;
+                    border-radius: 0;
+                    }
+                    /* IE10 이상에서 input box 에 추가된 지우기 버튼 제거 */
+                    input::-ms-clear {
+                    display: none;
+                    }
+                    /* input type number 에서 화살표 제거 */
+                    input[type=number]::-webkit-inner-spin-button,
+                    input[type=number]::-webkit-outer-spin-button {
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    }
+                    body {
+                        background: #f5f5f5;
+                    }
+                    .common-inner {
+                        padding: 0 30px;
+                        max-width: 1300px;
+                        box-sizing: border-box;
+                        margin: 0 auto;
+                        margin-top: 40px;
+                        padding: 0 40px;
+                        padding-bottom: 120px;
+                    }
+                    .template__type1__section {
+                        padding: 30px;
+                        border: 1px solid #e0e0e0;
+                        background: #fff;
+                        border-radius: 18px;
+                    }
+                    @media (max-width: 1200px) {
+                        .common-inner {
+                            padding: 0 20px;
+                        }
+                    }
+                
+                    .page-content {
+                    color: #000;
+                    letter-spacing: -0.5px;
+                    line-height: 140%;
+                    font-family: system-ui, -apple-system, "Poppins", "MS PGothic", "Microsoft YaHei", "Arial", sans-serif;
+                    max-width: none;
+                    }
+                    .page-content .fullSize {
+                    margin-left: -30px;
+                    margin-right: -30px;
+                    }
+                    .page-content .visualImg {
+                    max-width: 926px;
+                    margin: 0 auto;
+                    }
+                    .page-content .visualImg img {
+                    width: 100%;
+                    }
+                    .page-content .visualImg .imgName {
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 140%; /* 140% */
+                    letter-spacing: -0.5px;
+                    text-align: center;
+                    margin-bottom: 40px;
+                    }
+                    .page-content .pageDesc {
+                    margin-bottom: 80px;
+                    }
+                    .page-content .pageDesc li + li {
+                    margin-top: 30px;
+                    }
+                    .page-content .pageDesc p {
+                    color: #000;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 172%; /* 172.308% */
+                    letter-spacing: -0.5px;
+                    }
+                    .page-content .pageDesc p::before {
+                    content: "";
+                    display: inline-block;
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 5px;
+                    margin-bottom: 3px;
+                    background-color: #000;
+                    }
+                    .page-content .division {
+                    display: flex;
+                    align-items: stretch;
+                    justify-content: center;
+                    margin-bottom: 40px;
+                    margin-top: 85px;
+                    }
+                    .page-content .division.divisionAuto {
+                    min-height: auto;
+                    }
+                    .page-content .division.divisionAuto .left,
+                    .page-content .division.divisionAuto .right {
+                    padding: 35px 6.5%;
+                    }
+                    .page-content .division .h2 {
+                    font-size: 36px;
+                    font-weight: bold;
+                    line-height: 100%;
+                    margin-bottom: 27px;
+                    }
+                    .page-content .division .left {
+                    width: 50%;
+                    box-sizing: border-box;
+                    border-radius: 0 45px 45px 0;
+                    overflow: hidden;
+                    }
+                    .page-content .division .left img {
+                    width: 100%;
+                    height: 100%;
+                    -o-object-fit: cover;
+                        object-fit: cover;
+                    display: block;
+                    }
+                    .page-content .division .left.bgFill {
+                    display: flex;
+                    align-items: center;
+                    padding: 6.5%;
+                    color: #fff;
+                    }
+                    .page-content .division .left .h2 {
+                    margin: 0;
+                    }
+                    .page-content .division .right {
+                    background-color: #000;
+                    box-sizing: border-box;
+                    border-radius: 45px 0 0 45px;
+                    width: 50%;
+                    color: #fff;
+                    padding: 100px 80px;
+                    padding: 6.5%;
+                    }
+                    .page-content .division .right p {
+                    font-size: 16px;
+                    line-height: 140%;
+                    }
+                    .page-content .division-grey {
+                    min-height: 0;
+                    margin-top: 0;
+                    }
+                    .page-content .division-grey .left {
+                    background-color: #DEDEDE;
+                    padding: 23px 32px;
+                    }
+                    .page-content .division-grey .left .caption {
+                    font-size: 20px;
+                    font-weight: 300;
+                    margin-bottom: 12px;
+                    }
+                    .page-content .division-grey .left .caption::after {
+                        display: none;
+                    }
+                    .page-content .division-grey .left .line {
+                    width: 66px;
+                    height: 1px;
+                    background-color: #000;
+                    margin-bottom: 20px;
+                    }
+                    .page-content .division-grey .left .h3 {
+                    font-size: 24px;
+                    font-weight: bold;
+                    margin-bottom: 42px;
+                    }
+                    .page-content .division-grey .left p {
+                    font-size: 16px;
+                    line-height: 175%;
+                    }
+                    .page-content .division-grey .right {
+                    background-color: #DEDEDE;
+                    padding: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    }
+                    .page-content .division-grey .right img {
+                    width: 100%;
+                    }
+                    .page-content .division-border {
+                    margin-top: 30px;
+                    }
+                    .page-content .division-border .left {
+                    padding: 17px 32px 27px;
+                    flex: 1 0 0;
+                    }
+                    .page-content .division-border .left .caption {
+                    font-size: 20px;
+                    font-weight: 300;
+                    margin-bottom: 12px;
+                    }
+                    .page-content .division-border .left .line {
+                    width: 66px;
+                    height: 1px;
+                    background-color: #000;
+                    margin-bottom: 20px;
+                    }
+                    .page-content .division-border .left .h3 {
+                    font-size: 24px;
+                    font-weight: bold;
+                    margin-bottom: 42px;
+                    }
+                    .page-content .division-border .left .h3 span {
+                    font-weight: 400;
+                    }
+                    .page-content .division-border .left p {
+                    font-size: 16px;
+                    line-height: 175%;
+                    }
+                    .page-content .division-border .left b {
+                    font-weight: bold;
+                    }
+                    .page-content .division-border .right {
+                    flex: 0 0 auto;
+                    background-color: transparent;
+                    padding: 0;
+                    padding-right: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    }
+                    .page-content .division-border .right img {
+                    width: 100%;
+                    }
+                    .page-content .division-border-2 .left {
+                    width: 83%;
+                    padding-right: 5.8%;
+                    }
+                    .page-content .division-border-2 .right {
+                    width: 35%;
+                    max-width: 414px;
+                    }
+                    .page-content .division-border-2 .right img {
+                    max-height: 375px;
+                    -o-object-fit: contain;
+                        object-fit: contain;
+                    }
+                    .page-content .tableWrap table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    font-size: 14px;
+                    margin-bottom: 45px;
+                    }
+                    .page-content .tableWrap table td {
+                    vertical-align: top;
+                    border: 1px solid #BBBBBB;
+                    box-sizing: border-box;
+                    text-align: left;
+                    }
+                    .page-content .tableWrap table td:nth-child(1) {
+                    border-left: 0;
+                    vertical-align: middle;
+                    }
+                    .page-content .tableWrap table td:nth-child(1) img {
+                    width: 100%;
+                    min-width: 50px;
+                    -o-object-fit: contain;
+                        object-fit: contain;
+                    }
+                    .page-content .tableWrap table td:nth-child(2) {
+                    border-right: 0;
+                    padding: 40px 70px;
+                    padding: 3.3% 5.8%;
+                    padding: 40px 5.8%;
+                    }
+                    .page-content .tableWrap table .h3 {
+                    font-size: 24px;
+                    font-weight: bold;
+                    margin-bottom: 28px;
+                    }
+                    .page-content .tableWrap table .h3::before {
+                    display: inline-block;
+                    color: #000;
+                    margin-right: 6px;
+                    }
+                    .page-content .tableWrap table tr:nth-child(1) .h3::before {
+                    content: "①";
+                    }
+                    .page-content .tableWrap table tr:nth-child(2) .h3::before {
+                    content: "②";
+                    }
+                    .page-content .tableWrap table tr:nth-child(3) .h3::before {
+                    content: "③";
+                    }
+                    .page-content .tableWrap table tr:nth-child(4) .h3::before {
+                    content: "④";
+                    }
+                    .page-content .tableWrap table p {
+                    font-size: 14px;
+                    margin-bottom: 7px;
+                    }
+                    .page-content .tableWrap table li {
+                    font-size: 14px;
+                    line-height: 100%;
+                    padding-left: 22px;
+                    position: relative;
+                    word-break: break-all;
+                    }
+                    .page-content .tableWrap table li::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 15px;
+                    height: 15px;
+                    display: inline-block;
+                    }
+                    .page-content .tableWrap table li.location::before {
+                    background-image: url(/public/internal/musthaveitem/img/common/ic_location.svg);
+                    }
+                    .page-content .tableWrap table li.tel::before {
+                    background-image: url(/public/internal/musthaveitem/img/common/ic_tel.svg);
+                    }
+                    .page-content .tableWrap table li.web::before {
+                    background-image: url(/public/internal/musthaveitem/img/common/ic_web.svg);
+                    }
+                    .page-content .tableWrap table li.price::before {
+                    background-image: url(/public/internal/musthaveitem/img/common/ic_price.svg);
+                    }
+                    .page-content .tableWrap table li.cart::before {
+                    background-image: url(/public/internal/musthaveitem/img/common/ic_cart.svg);
+                    }
+                    .page-content .tableWrap table li.noti::before {
+                    background-image: url(/public/internal/musthaveitem/img/common/ic_noti.svg);
+                    }
+                    .page-content .tableWrap table li + li {
+                    margin-top: 7px;
+                    }
+                    .page-content.theme-red .color {
+                    color: #F0514D !important;
+                    }
+                    .page-content.theme-red .bgFill {
+                    background-color: #F0514D !important;
+                    }
+                    .page-content.theme-red .pageDesc p::before {
+                    background-color: #F0514D;
+                    }
+                    .page-content.theme-red .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+                    background: rgba(240, 81, 77, 0.1);
+                    }
+                    .page-content.theme-red .division-border {
+                    border: 3px solid #F0514D;
+                    box-sizing: border-box;
+                    }
+                    .page-content.theme-navy .color {
+                    color: #036A9B !important;
+                    }
+                    .page-content.theme-navy .bgFill {
+                    background-color: #036A9B !important;
+                    }
+                    .page-content.theme-navy .pageDesc p::before {
+                    background-color: #036A9B;
+                    }
+                    .page-content.theme-navy .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+                    background: rgba(3, 106, 155, 0.1);
+                    }
+                    .page-content.theme-navy .division-border {
+                    border: 3px solid #036A9B;
+                    box-sizing: border-box;
+                    }
+                    .page-content.theme-yellow .color {
+                    color: #EDB51E !important;
+                    }
+                    .page-content.theme-yellow .bgFill {
+                    background-color: #EDB51E !important;
+                    }
+                    .page-content.theme-yellow .pageDesc p::before {
+                    background-color: #EDB51E;
+                    }
+                    .page-content.theme-yellow .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+                    background: rgba(237, 181, 30, 0.15);
+                    }
+                    .page-content.theme-yellow .division-border {
+                    border: 3px solid #EDB51E;
+                    box-sizing: border-box;
+                    }
+                    .page-content.theme-green .color {
+                    color: #4C9667 !important;
+                    }
+                    .page-content.theme-green .bgFill {
+                    background-color: #4C9667 !important;
+                    }
+                    .page-content.theme-green .pageDesc p::before {
+                    background-color: #4C9667;
+                    }
+                    .page-content.theme-green .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+                    background: rgba(76, 150, 103, 0.1);
+                    }
+                    .page-content.theme-green .division-border {
+                    border: 3px solid #4C9667;
+                    box-sizing: border-box;
+                    }
+                    .page-content.theme-pink .color {
+                    color: #F598A6 !important;
+                    }
+                    .page-content.theme-pink .bgFill {
+                    background-color: #F598A6 !important;
+                    }
+                    .page-content.theme-pink .pageDesc p::before {
+                    background-color: #F598A6;
+                    }
+                    .page-content.theme-pink .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+                    background: rgba(245, 152, 166, 0.15);
+                    }
+                    .page-content.theme-pink .division-border {
+                    border: 3px solid #F598A6;
+                    box-sizing: border-box;
+                    }
+                    .page-content.theme-blue .color {
+                    color: #2587C8 !important;
+                    }
+                    .page-content.theme-blue .bgFill {
+                    background-color: #2587C8 !important;
+                    }
+                    .page-content.theme-blue .pageDesc p::before {
+                    background-color: #2587C8;
+                    }
+                    .page-content.theme-blue .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+                    background: rgba(37, 135, 200, 0.15);
+                    }
+                    .page-content.theme-blue .division-border {
+                    border: 3px solid #2587C8;
+                    box-sizing: border-box;
+                    }
+                    @media screen and (max-width: 767px) {
+                    .page-content .division {
+                        flex-direction: column;
+                    }
+                    .page-content .division .left {
+                        width: 100%;
+                        border-radius: 0;
+                    }
+                    .page-content .division .right {
+                        width: 100%;
+                        border-radius: 0;
+                    }
+                    .page-content .division-border-2 .left {
+                        width: 100%;
+                        padding: 17px 32px 27px;
+                    }
+                    .page-content .division-border .left {
+                        flex: 1 0 auto;
+                    }
+                    .page-content .division-border .right {
+                        padding: 17px 32px;
+                    }
+                    .page-content .division-border-2 .right {
+                        max-width: 100%;
+                    }
+                    .page-content .division-border-2 .right img {
+                        width: 100%;
+                        -o-object-fit: contain;
+                        object-fit: contain;
+                        max-height: 240px;
+                    }
+                    .page-content .tableWrap {
+                        display: block;
+                    }
+                    .page-content .tableWrap table {
+                        display: block;
+                    }
+                    .page-content .tableWrap table colgroup {
+                        display: none;
+                    }
+                    .page-content .tableWrap table td {
+                        display: block;
+                        width: 100%;
+                        border: 1px solid #BBBBBB !important;
+                        margin-top: -1px;
+                    }
+                    .page-content .tableWrap table td:nth-child(1) {
+                        display: flex;
+                    }
+                    .page-content .tableWrap table td:nth-child(1) img {
+                        max-height: 350px;
+                        width: 50%;
+                        margin: 0 auto;
+                    }
+                    }
+                </style>
+                <section class="page-content theme-red">
+                    <!-- comp -->
+                    <div class="visualImg">
+                        <img src="/public/internal/musthaveitem/img/detail/icn/img01.jpg" alt="...">
+                        <div class="imgName">고층 빌딩이 숲을 이룬 송도 국제도시의 모습</div>
+                    </div>
+                    <!-- comp -->
+                    <div class="pageDesc">
+                        <ul>
+                            <li>
+                                <p>
+                                    인천은 인천국제공항과 인천항을 보유한 대한민국의 관문이다. 서울에서 지하철, 버스 등을 이용하면 1시간 내외로 다녀올 수 있어 서울 근교 당일치기 여행지로 부담이 없다.인천은 우리나라에서 서양 문물을 처음으로 받아들인 개항 도시로 100년 전 조성한 항만, 한국 최초로 지은 근대건축물, 외국인 클럽 등 조계지 문화가 원도심 곳곳에 남아 있다. 특히 인천 중구의 개항장 문화지구는 1883년 개항한 인천항의 근대 역사가 잠들어 있어 거리 전체가 문화•역사 자원이라 할 수 있다. 다양한 문화재와 근대건축물은 물론 아기자기한 카페가 많아 영화 속 한 장면 같은 인증사진을 남기고자 하는 사람들의 발길이 끊이지 않는다. 
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    강화도는 ‘지붕 없는 박물관’이라 불릴 만큼 선사시대의 고인돌부터 고려시대를 거쳐 조선시대에 이르기까지 다양한 역사 유적지가 있는 대표 여행지다. 레트로 감성이 가득한 미술관과 카페가 가득해 데이트 코스로도 인기가 높다. 강화도에서 이어지는 교동도 또한 소문난 레트로 여행지로 1960~1970년대 감성이 그대로 묻어나는 시장과 학교 등을 둘러보기에 좋다. 교동도에서 나오는 길에 들르기 좋은 석모도는 오색의 노을과 오렌지빛 바다가 어우러져 ‘노을 맛집’으로 통한다. 이전의 장소와 색다른 분위기를 즐기고 싶다면 송도를 추천한다. 화려한 고층 빌딩 사이로 펼쳐진 푸른 공원과 넓은 호수가 조화를 이루는 송도 풍경은 절로 탄성을 자아낸다. 야경을 즐기기 좋은 호텔과 독특한 외관의 건축물을 감상하는 것은 송도 여행의 또 다른 즐거움이다.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                   답답한 도시를 벗어나고 싶다면 인천의 섬을 둘러보는 것도 좋다. 영종도에서 10분이면 갈 수 있으며, 해변을 전시장 삼아 다양한 조각품을 전시한 북도면의 신시모도부터 우리나라 최초의 등대가 있는 팔미도, CNN이 선정한 한국에서 가장 아름다운 섬인 목섬을 품은 선재도, 쾌속선으로 4시간을 달려야 하는 최북단 섬 백령도까지, 168개의 아름다운 섬은 일상에 쉼표를 찍기 좋은 장소다.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- comp -->
+                    <div class="division fullSize">
+                        <div class="left">
+                            <img src="/public/internal/musthaveitem/img/detail/icn/img02.jpg" alt="...">
+                        </div>
+                        <div class="right bgFill">
+                            <div class="h2">강화도 농산물 간편식</div>
+                            <p>
+                                일교차가 크고 토양 질이 우수한 강화도는 6년근 인삼, 섬쌀, 일반 고구마에 비해 당도가 높은 속노랑 고구마, 예로부터 약쑥이라 불려온 강화도 사자발약쑥 등 다양한 특산품이 있다. 강화의 주요 농산물을 손쉽게 먹을 수 있는 농산물 간편식을 고루 맛보길 추천한다.
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="tableWrap fullSize">
+                        <table>
+                            <colgroup><col width="380px"><col width="840px"></colgroup>
+                            <tr>
+                                <td><img src="/public/internal/musthaveitem/img/detail/icn/tb_img01.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">약석원 즉석밥 </div>
+                                    <p>
+                                        강화의 주요 농산물인 인삼, 찹쌀현미, 현미 등을 활용한 건강 간편식 제품. 강화섬 쌀과 아홉 가지 국내산 곡물, 연잎의 영양을 가득 담은 ‘강화섬 연잎건강밥’, 강화 인삼과 곡물로 맛과 식감을 모두 살린 ‘강화섬 인삼 건강밥’, 강화 속노랑 고구마를 넣어 밥맛이 달큰한 ‘강화고구마밥’ 등 다양한 즉석밥으로 구성되었다. 해썹(HACCP) 인증을 받은 시설에서 만들어 더욱 믿고 먹을 수 있으며, 실온 보관 가능하고 유통기한도 12개월로 넉넉하다.  
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            인천시 강화군 양도면 중앙로787번길 56-53 
+                                        </li>
+                                        <li class="tel">
+                                            0507-1320-5338 
+                                        </li>
+                                        <li class="web">
+                                            약석원.kr 
+                                        </li>
+                                        <li class="price">
+                                            1만원 미만
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>   
+
+                    <!-- comp -->
+                    <div class="division fullSize">
+                        <div class="left">
+                            <img src="/public/internal/musthaveitem/img/detail/icn/img03.jpg" alt="...">
+                        </div>
+                        <div class="right bgFill">
+                            <div class="h2">소래포구 꽃게빵</div>
+                            <p>
+                                소래포구는 수도권에서 멀지 않은 곳에서 포구의 정취를 느낄 수 있어 연간 500만 명 이상이 찾는 인천시 대표 관광지다. 다양한 제철 수산물을 맛볼 수 있는 어시장으로 꽃게가 유명하다. 소래꽃게빵은 소래포구축제 공식 인증 상품으로 소래포구에서 놓치지 말아야할 대표 관광 기념품이다.
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="tableWrap fullSize">
+                        <table>
+                            <colgroup><col width="380px"><col width="840px"></colgroup>
+                            <tr>
+                                <td><img src="/public/internal/musthaveitem/img/detail/icn/tb_img02.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">꽃게빵</div>
+                                    <p>
+                                        소래포구의 대표 해산물인 꽃게를 본따 만들었다. 꽃게 모양 틀에 100% 국내산 쌀가루와 꽃게 분말, 키토 분말을 넣어 만든 반죽을 넣고 구워 고구마 맛 앙금을 가득 채웠다. 귀여운 일러스트 패키지로 선물용으로도 인기다.  
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            인천시 남동구 만수로 120(소래꽃게빵) 
+                                        </li>
+                                        <li class="tel">
+                                            0507-1440-8366  
+                                        </li>
+                                        <li class="price">
+                                            1만원 대
+                                        </li>
+                                        <li class="noti">
+                                            9월 소래포구축제 
+                                        </li>
+                                        <li class="cart"> 
+                                            소래포구 전통어시장 2층 남동구 중소기업제품 전시판매장, 소래역사관 앞 부스, 새우타워, GS25 소래포구점, 청년미디어타워, 남동구청, 광명역 내 편의점
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+                    <!-- comp -->
+                    <div class="division fullSize">
+                        <div class="left">
+                            <img src="/public/internal/musthaveitem/img/detail/icn/img04.jpg" alt="...">
+                        </div>
+                        <div class="right bgFill">
+                            <div class="h2">강화도 순무</div>
+                            <p>
+                                순무는 1000년 동안 강화도에서만 재배되어 온 강화도 토종 특산품이다. 크기는 일반 무보다 작은 편이며, 겉은 붉은 자주색이 돌고 속은 하얗다. 첫맛은 알싸한데, 씹을수록 단맛이 느껴진다. 강화도의 질 좋은 새우젓과 깨끗한 물로 담근 순무김치가 대표적이며, 볶아서 나물을 해먹거나 조림을 해도 좋다.
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="tableWrap fullSize">
+                        <table>
+                            <colgroup><col width="380px"><col width="840px"></colgroup>
+                            <tr>
+                                <td><img src="/public/internal/musthaveitem/img/detail/icn/tb_img03.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">순무김치</div>
+                                    <p>
+                                        강화순무요리경연대회에서 대상을 수상한 안옥천 농부와 잡지 에디터 출신 딸 김경민이 함께 만드는 순무김치. 직접 키운 강화 순무와 대파, 마늘을 사용하고 강화도 새우젓과 제주 한라산 더덕, 신안 천일염을 더한다. 귀여운 패키지로 선물용으로도 훌륭하다. 
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            인천시 강화군 강화읍 남문안길 11(핑크김치)  
+                                        </li>
+                                        <li class="tel">
+                                            0507-1348-6471  
+                                        </li>
+	                                <li class="web">
+	                                    smartstore.naver.com/soonmoostore 
+	                                </li>
+                                        <li class="price">
+                                            1kg 1만원 대, 3kg 3만원 대
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><img src="/public/internal/musthaveitem/img/detail/icn/tb_img04.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">순무 쏨땀</div>
+                                    <p>
+                                        태국 대표 샐러드인 쏨땀을 순무로 재해석했다. 강화 순무와 당근을 주재료로 마늘과 땅콩, 태국고추, 레몬즙 등으로 맛을 냈다. 새콤 달콤하면서도 순무의 알싸한 맛이 강하게 느껴지는 것이 이색적이다. 발효될수록 매콤한 국물이 골고루 스며들어 부담 없이 먹을 수 있다. 기름진 음식을 먹고 난 뒤 느끼함을 싹 잡아주는 반찬으로 추천한다. 
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            인천시 강화군 강화읍 남문안길 11
+                                        </li>
+                                        <li class="tel">
+                                            0507-1348-6471 
+                                        </li>
+                                        <li class="price">
+                                            2만원 대
+                                        </li>
+                                        <li class="web">
+                                            smartstore.naver.com/soonmoostore
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><img src="/public/internal/musthaveitem/img/detail/icn/tb_img05.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color"> 순무차</div>
+                                    <p>
+                                        강화산 순무를 직접 채 썰어 첨가물 없이 가마솥에서 여러 번 고르게 볶아 익혀서 만든 차. 2티스푼을 다관에 넣고 뜨거운 물을 부어 30초 동안 우려내면 구수하면서도 깊은 맛이 난다. 
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            인천시 강화군 선원면 선원사지로51번길 24(다랑채)  
+                                        </li>
+                                        <li class="tel">
+                                            0507-1407-8460 
+                                        </li>
+                                        <li class="web">
+                                            smartstore.naver.com/darangchae 
+                                        </li>
+                                        <li class="price">
+                                            1만원 대 
+                                        </li>
+                                        <li class="cart">
+                                            강화소창기념품판매장(구 구세의원) 
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+                    <!-- comp -->
+                    <div class="division division-border fullSize">
+                        <div class="left">
+                            <div class="caption">Mini Interview</div>
+                            <div class="line"></div>
+                            <div class="h3">핑크김치<span>김경민 대표</span></div>
+                            <p>
+                                <b>Q 쏨땀, 페스토 등 다른 곳에서는 볼 수 없는 순무 제품이 많은데, 아이디어는 어디에서 얻으시나요?</b>순무는 대중적으로 배추나 무처럼 김치 재료 중 하나로 알려져 있습니다. 그러나 김치로만 즐기기엔 잠재력이 무한한 식재료인데, 우물 안에 갇혀 있다는 생각을 했습니다. 그러다 평소 즐겨 먹던 당근라페, 그린파파야로 만든 쏨땀에서 아이디어를 얻었습니다. 순무라페는 순무를 맵게만 즐겨온 세대에게 샐러드, 피클처럼 곁들일 수 있다는 새로운 인식을 심어준 메뉴입니다. 순무쏨땀 역시 고춧가루로 버무린 김치와 다른 결로 강화순무를 이색적인 매운맛으로 맛볼 수 없을까 고민하다가 역시 평소 즐겨 먹던 태국 요리에서 아이디어를 얻었습니다. 순무청은 김치 재료로 쓰이거나 건조해 시래기로 활용하는 정도로 그치는데, 생각보다 시간이 필요합니다. 공정 시간은 줄이면서 양질의 순무청을 바로 수확해서 만들 수 있는 메뉴는 없을까 고민하다가 페스토로 만들면 순무를 파스타로도 즐길 수 있는 메뉴가 되겠구나, 싶어 바질페스토 레시피를 적용해 순무청페스토를 개발했습니다. 
+                            </p>
+                            <p>
+                                <b>Q 앞으로의 계획을 알려주신다면요?</b> 관광객에게는 강화 순무를 전문적으로 소개하는 로컬 상점, 로컬 브랜드로, 지역 주민에게는 강화 순무를 색다르게 즐길 수 있는 메뉴를 소개해 지역 특산물의 잠재력을 소개하는 역할을 하고자 합니다.
+                            </p>
+                        </div>
+                        <div class="right">
+                            <img src="/public/internal/musthaveitem/img/detail/icn/img05.jpg" alt="...">
+                        </div>
+                    </div>
+
+                    <!-- comp -->
+                    <div class="division fullSize">
+                        <div class="left">
+                            <img src="/public/internal/musthaveitem/img/detail/icn/img06.jpg" alt="...">
+                        </div>
+                        <div class="right bgFill">
+                            <div class="h2">강화도 인삼</div>
+                            <p>
+                                강화도는 사면이 바다로 둘러싸여 해풍의 영향을 받는 서늘한 기후 조건과 특유의 토양 조건으로 인삼을 재배하기에 알맞은 조건을 갖추고 있다. 강화도에서 재배한 6년근 인삼이 최고의 인삼으로 손꼽히는 이유다. 강화인삼은 말리지 않은 홍삼을 비롯한 다양한 형태의 상품으로 선보이고 있다.
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="tableWrap fullSize">
+                        <table>
+                            <colgroup><col width="380px"><col width="840px"></colgroup>
+                            <tr>
+                                <td><img src="/public/internal/musthaveitem/img/detail/icn/tb_img06.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">6년 근 인삼</div>
+                                    <p>
+                                       6년 근 인삼은 육질이 단단하고 향이 강한 데다 인삼의 주성분인 사포닌이 풍부하다. 강화도는 인삼이 자랄 수 있는 천혜의 자연조건을 갖추어 국내에서 유일하게 6년근 인삼을 재배하는 곳이다. 강화인삼센터에서는 강화인삼협동조합에 가입한 53개 점포의 상인들이 직접 재배한 인삼을 시중보다 싼 가격에 구입할 수 있다.   
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            인천시 강화군 강화읍 강화대로 335(강화인삼센터)  
+                                        </li>
+                                        <li class="tel">
+                                            032-933-5001~3 
+                                        </li>
+	                                <li class="web">
+	                                    ghinsamshop.nonghyup.com 
+	                                </li>
+                                        <li class="price">
+                                            1kg 3만원 대
+                                        </li>
+                                        <li class="noti">
+                                            10월 강화고려인삼축제
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><img src="/public/internal/musthaveitem/img/detail/icn/tb_img07.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">6년 근 홍삼정</div>
+                                    <p>
+                                        6년 근 인삼을 쪄서 말린 뒤 영양을 그대로 담아 스틱형 파우치에 담았다. 홍삼 농축액에 사양벌꿀을 더해 홍삼의 기능성과 부드러운 맛의 밸런스를 잡은 것이 특징이다. 언제 어디서나 휴대하며 섭취할 수 있어 편리하고 면역과 피로 관리에 도움이 된다. 
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            인천시 강화군 강화읍 강화대로 335(강화인삼센터) 
+                                        </li>
+                                        <li class="tel">
+                                            032-933-5001~3 
+                                        </li>
+                                        <li class="web">
+                                            ghinsamshop.nonghyup.com 
+                                        </li>
+                                        <li class="price">
+                                            7만원 대 
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><img src="/public/internal/musthaveitem/img/detail/icn/tb_img08.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">홍삼 젤리</div>
+                                    <p>
+                                        홍삼의 쓴맛에 거부감이 있는 사람도 간식처럼 맛있게 먹을 수 있는 젤리 타입의 홍삼. 6년 근 홍삼이 주원료로 한천을 넣어 쫀득한 식감을 살렸다.   
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            인천시 강화군 강화읍 강화대로 335(강화인삼센터)   
+                                        </li>
+                                        <li class="tel">
+                                            032-933-5001~3   
+                                        </li>
+                                        <li class="web">
+                                            ghinsamshop.nonghyup.com
+                                        </li>
+                                        <li class="price">
+                                            1만원 미만
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+                    <!-- comp -->
+                    <div class="division fullSize">
+                        <div class="left">
+                            <img src="/public/internal/musthaveitem/img/detail/icn/img07.jpg" alt="...">
+                        </div>
+                        <div class="right bgFill">
+                            <div class="h2">강화도 화문석</div>
+                            <p>
+                                화문석(花紋席)은 ‘왕골을 건조해 꽃 모양 등으로 무늬를 넣어 짠 돗자리’를 뜻한다. 왕골 내부 기공이 습기를 머금고 내뿜으며 습도 조절 효과를 낸다. 덕분에 여름엔 시원하게 겨울에는 따뜻하게 사용할 수 있어 과거 왕에게 바치는 진상품으로 사랑받았다. 돗자리와 가방, 바구니 등 다양한 상품으로 생산된다.
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="tableWrap fullSize">
+                        <table>
+                            <colgroup><col width="380px"><col width="840px"></colgroup>
+                            <tr>
+                                <td><img src="/public/internal/musthaveitem/img/detail/icn/tb_img09.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">왕골 공예품</div>
+                                    <p>강화에서 재배한 왕골은 재질이 윤택하고 질기면서 탄력이 있고 속이 꽉 차 있어 강화 왕골 공예품은 다른 지역보다 더 으뜸으로 친다. 소품이나 음식을 담아두는 용도로 사용하는 삼합을 비롯해 컵 받침, 티 매트, 방석 등 왕골로 만든 다양한 제품이 있다. 
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            인천시 강화군 송해면 강화대로 891(강화도령 화문석) 
+                                        </li>
+                                        <li class="tel">
+                                            032-934-6858 
+                                        </li>
+	                                <li class="web">
+	                                    hwamunseok.com  
+	                                </li>
+                                        <li class="price">
+                                            방석 8만원 대, 컵받침 1만원 대, 바구니 11만원 대
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><img src="/public/internal/musthaveitem/img/detail/icn/tb_img10.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">화문석(돗자리)</div>
+                                    <p>
+                                        화문석은 물들인 왕골을 손으로 덧겹쳐가며 엮은 다음, 무늬에 따라 잘라낸 꽃돗자리다. 좌식 생활을 주로 해온 한국인들에게는 필수 살림 중 하나였다. 여름철에 화문석을 마루에 깔고 그 위에 눕거나 앉으면 더위를 덜 수 있어 널리 애용되었는데, 무늬 또한 아름다워 집 치장에도 한몫을 담당했다. 다양한 사이즈와 디자인의 돗자리가 있으며, 주문 제작도 가능하다. 
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            인천시 강화군 송해면 강화대로 891(강화도령 화문석) 
+                                        </li>
+                                        <li class="tel">
+                                            032-934-6858 
+                                        </li>
+                                        <li class="web">
+                                            hwamunseok.com  
+                                        </li>
+                                        <li class="price">
+                                            60~500만원 대(크기별 상이)
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+                    <!-- comp -->
+                    <div class="division fullSize">
+                        <div class="left">
+                            <img src="/public/internal/musthaveitem/img/detail/icn/img08.jpg" alt="...">
+                        </div>
+                        <div class="right bgFill">
+                            <div class="h2">소성주</div>
+                            <p>
+                                80년간 인천을 대표해온 막걸리. 신라 경덕왕 때 붙은 ‘소성’이라는 인천의 옛 지명을 인용한 소성주는 순수 백미만 사용해 효모를 일정 시간 증식•배양한 후 제조하기 때문에 품질과 맛이 월등하다. 일반 막걸리에서 느껴지는 텁텁한 맛과 단맛은 절제하고 최적의 조건에서 누룩을 발효시켜 깊은 풍미를 느낄 수 있다.
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="tableWrap fullSize">
+                        <table>
+                            <colgroup><col width="380px"><col width="840px"></colgroup>
+                            <tr>
+                                <td><img src="/public/internal/musthaveitem/img/detail/icn/tb_img11.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">인천탁주 소성주</div>
+                                    <p>
+                                       1990년 업계 최초로 쌀 먹걸리를 출시하고 지금까지 소성주를 만들어오고 있는 인천탁주. 오랜 세월 인천을 대표하는 질 좋은 막걸리를 빚으며 인천 양조업의 명맥을 잇고 있다. 인천탁주를 대표하는 소성주는 다른 지역에서 생산되는 막걸리와 달리 숙성 시간과 담금 횟수를 늘려 부드러우면서도 특유의 감칠맛이 매력적이다. 
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            인천시 부평구 안남로433번길 14(인천탁주) 
+                                        </li>
+                                        <li class="tel">
+                                            032-524-5016
+                                        </li>
+	                                <li class="web">
+	                                    sosungju.modoo.at 
+	                                </li>
+                                        <li class="price">
+                                            1만원 미만
+                                        </li>
+                                        <li class="cart">
+                                            전국 CU 편의점
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+                    <!-- comp -->
+                    <div class="division fullSize">
+                        <div class="left">
+                            <img src="/public/internal/musthaveitem/img/detail/icn/img09.jpg" alt="...">
+                        </div>
+                        <div class="right bgFill">
+                            <div class="h2">동인천 관련 문구</div>
+                            <p>
+                                동인천, 개항장 지역은 마을 전체가 박물관이라고 할 수 있을 정도로 1880년대 이후 지은 일본식, 서양식 근대건축물이 다수 남아 있고 문화 시설도 밀집해 있다. 이처럼 역사와 이야기가 담긴 동인천의 각 장소를 인천 청년들이 그림으로 그려 엽서와 북홀더 등 다양한 문구로 선보이고 있다.
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="tableWrap fullSize">
+                        <table>
+                            <colgroup><col width="380px"><col width="840px"></colgroup>
+                            <tr>
+                                <td><img src="/public/internal/musthaveitem/img/detail/icn/tb_img12.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">동인천 엽서 세트</div>
+                                    <p>
+                                      답동성당, 제물포구락부, 해 질 녘 자유공원 등 동인천을 상징하는 장소와 풍경을 엽서에 담았다. 8명의 작가가 각자의 개성을 살려 그린 그림 엽서 8장과 연필 3종이 들어 있다.  
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                         인천시 중구 신포로 19-8(인더로컬협동조합) 
+                                        </li>
+                                        <li class="tel">
+                                            032-719-7861   
+                                        </li>
+	                                <li class="web">
+	                                    inthelocal.co.kr  
+	                                </li>
+                                        <li class="price">
+                                            1만원 대
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><img src="/public/internal/musthaveitem/img/detail/icn/tb_img13.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">근대건축 3종 배지</div>
+                                    <p>
+                                        빼어난 건축미를 자랑하는 근대건축물을 본뜬 배지. 둥근 창문과 종탑, 뾰족한 돔 등 작은 배지에화려한 근대건축의 아름다움을 고스란히 담았다. 모자와 에코 백에 포인트 주기 좋은 제품. 
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            인천시 중구 신포로 19-8 
+                                        </li>
+                                        <li class="tel">
+                                            032-719-7861 
+                                        </li>
+                                        <li class="web">
+                                            inthelocal.co.kr  
+                                        </li>
+                                        <li class="price">
+                                            1만원 미만
+                                        </li>
+                                        <li class="noti">
+                                            8~10월 인천개항장 문화재 야행 
+                                        </li>
+                                     </ul>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><img src="/public/internal/musthaveitem/img/detail/icn/tb_img14.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">인천 개항 편지지 세트</div>
+                                    <p>
+                                        1900년대 초 옛 인천 개항장의 모습을 담은 편지지와 우표 3종을 세트로 구성했다. 
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            인천시 중구 신포로 19-8(인더로컬협동조합)  
+                                        </li>
+                                        <li class="tel">
+                                            032-719-7861  
+                                        </li>
+                                        <li class="web">
+                                            inthelocal.co.kr 
+                                        </li>
+                                        <li class="price">
+                                            1만원 미만
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+                    <!-- comp -->
+                    <div class="division fullSize">
+                        <div class="left">
+                            <img src="/public/internal/musthaveitem/img/detail/icn/img10.jpg" alt="...">
+                        </div>
+                        <div class="right bgFill">
+                            <div class="h2">인천 방향 제품</div>
+                            <p>
+                                인천에서 나고 자란 기획자들이 ‘우리만 알기 아까운’ 인천의 매력적인 장소와 풍경을 향으로 소개하기 위해 만든 브랜드 ‘소아인천’. 좋은 향은 사람들에게 좋은 기억과 경험을 심어주는 힘이 있다는 것을 알기에 인천을 좋은 향기로 기억할 수 있도록 제작했다. 디퓨저를 시작으로 인천의 대표 장소마다 특색을 담아 조향한 다양한 상품을 확대할 예정이다.
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="tableWrap fullSize">
+                        <table>
+                            <colgroup><col width="380px"><col width="840px"></colgroup>
+                            <tr>
+                                <td><img src="/public/internal/musthaveitem/img/detail/icn/tb_img15.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">아라뫼 디퓨저</div>
+                                    <p>
+                                      인천 원도심에 오랜 세월 자리한 자유공원의 녹음과 여유로움을 향에 담아내 ‘아라뫼’라는 이름을 붙였다. 아라뫼는 바다와 산이라는 뜻을 지닌 우리말로 자유공원이 자리한 위치를 이름에 담은 것이다. 10년 경력의 조향사가 시원한 허브 향과 흙 내음이 나는 파촐리, 부드러운 샌들우드 등으로 독자적인 향을 개발했다. 
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                         인천시 중구 신포로 19-8(인더로컬협동조합) 
+                                        </li>
+                                        <li class="tel">
+                                            032-719-7861   
+                                        </li>
+	                                <li class="web">
+	                                    inthelocal.co.kr  
+	                                </li>
+                                        <li class="price">
+                                            3만원 대
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+
+                    <!-- comp -->
+                    <div class="division fullSize">
+                        <div class="left">
+                            <img src="/public/internal/musthaveitem/img/detail/icn/img11.jpg" alt="...">
+                        </div>
+                        <div class="right bgFill">
+                            <div class="h2">강화도 소창</div>
+                            <p>
+                                소창은 목화솜에서 뽑아낸 실을 이용해 만든 면직물이다. 빨리 마르고 오염이 잘 안 되어 위생적이며, 여러 번 삶아 빨수록 흡수성과 내구성이 좋아진다. 최근 친환경 제품으로 다시 주목받기 시작한 소창은 침구, 스카프, 천 가방, 손수건, 수건, 앞치마 등 다양한 생활용품으로 선보이고 있다.
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="tableWrap fullSize">
+                        <table>
+                            <colgroup><col width="380px"><col width="840px"></colgroup>
+                            <tr>
+                                <td><img src="/public/internal/musthaveitem/img/detail/icn/tb_img16.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">스트링 파우치</div>
+                                    <p>강화 최초의 사립 미술 도서관이자 전시 기획과 책을 발간하는 강화미술도서관에서 만든 제품으로 소창에 콜라주 작업을 한 뒤 염색하고 열처리했다. 그림, 사진, 스티커, 단추 등 다양한 소재로 변주한 작품 다섯 가지 중 선택해 구입 가능하다.  
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            인천시 강화군 강화읍 신문길44번길 9(강화미술도서관)  
+                                        </li>
+                                        <li class="tel">
+                                            032-323-9240  
+                                        </li>
+	                                <li class="price">
+	                                    2만원 대 
+	                                </li>
+                                        <li class="cart">
+                                            소창 기념품판매장
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><img src="/public/internal/musthaveitem/img/detail/icn/tb_img17.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">스카프</div>
+                                    <p>
+                                       무형광 소창과 실을 사용하며, 세 번 삶아 정련하는 과정을 거쳐 부드럽고 가볍다. 소창 특유의 자연스러운 빛깔과 섬세한 레이스의 조화가 멋스럽다.    
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            인천시 강화군 강화읍 강화대로 429 중앙시장 A동 1층 바10(오소소)  
+                                        </li>
+                                        <li class="tel">
+                                            0507-1317-3617   
+                                        </li>
+                                        <li class="price">
+                                            2만원 대  
+                                        </li>
+                                        <li class="cart">
+                                            소창 기념품판매장
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><img src="/public/internal/musthaveitem/img/detail/icn/tb_img18.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">자수 양면 거울 & 명함집</div>
+                                    <p>
+                                        은은하게 염색한 소창으로 장식한 거울과 명함집. 그 위에 강화 특산품인 인삼, 순무, 섬쌀 등을 자수로 새겨 넣어 포인트를 주었다. 
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            인천시 강화군 강화읍 신문길18번길 (소창 기념품판매장)   
+                                        </li>
+                                        <li class="tel">
+                                            032-932-1015  
+                                        </li>
+                                        <li class="price">
+                                            3만원 대
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><img src="/public/internal/musthaveitem/img/detail/icn/tb_img19.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">턱받이 & 발싸개</div>
+                                    <p>
+                                        건조 속도가 빠르고 잘 오염되지 않아 위생적으로 사용할 수 있는 소창. 신생아부터 사용할 수 있는 턱받이와 발싸개는 삶아 빨수록 흡수성과 내구성이 좋아진다. 천연 염색, 미술 강사, 재봉 전문 기술을 보유한 공예가가 함께 만든 제품으로 정갈하고 멋스러운 디자인이 돋보인다.
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            인천시 강화군 강화읍 강화대로 430 1층 가-9호(메이드인강화)  
+                                        </li>
+                                        <li class="tel">
+                                            010-5394-2382  
+                                        </li>
+                                        <li class="web">
+                                            madeinganghwa.modoo.at 
+                                        </li>
+                                        <li class="price">
+                                            12만원 대
+                                        </li>
+                                        <li class="cart">
+                                            소창 기념품판매장
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><img src="/public/internal/musthaveitem/img/detail/icn/tb_img20.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">손수건</div>
+                                    <p>
+                                        부드러운 재질에 수분 흡수율과 항균성이 뛰어나 손수건으로 만들기에 제격인 소창. 다양한 컬러로 염색하고 섬세한 자수와 나염 조각보 등 다양한 기법으로 디자인한 손수건을 선보인다. 특히 순무와 인삼 섬쌀 등 강화도 특산물을 새긴 도장을 찍거나 자수를 넣은 손수건이 인기다.  
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            인천시 강화군 강화읍 신문길18번길 15 (소창 기념품판매장)  
+                                        </li>
+                                        <li class="tel">
+                                            032-932-1015 
+                                        </li>
+                                        <li class="price">
+                                            1만원 대 
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+                    <!-- comp -->
+                    <div class="division fullSize">
+                        <div class="left">
+                            <img src="/public/internal/musthaveitem/img/detail/icn/img12.jpg" alt="...">
+                        </div>
+                        <div class="right bgFill">
+                            <div class="h2">템플스테이 굿즈</div>
+                            <p>
+                                인천의 연등국제선원과 전등사 등은 서울에서 멀지 않은 거리에서 템플스테이를 즐길 수 있는 곳이다. 템플스테이 사찰에서는 불교용품뿐 아니라 전통 불교를 현대적으로 디자인한 다양한 굿즈를 만날 수 있다. 대중성에 중점을 두고 지나치게 불교적이지 않으면서도 불교적 가치를 담은 굿즈가 많다.
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="tableWrap fullSize">
+                        <table>
+                            <colgroup><col width="380px"><col width="840px"></colgroup>
+                            <tr>
+                                <td><img src="/public/internal/musthaveitem/img/detail/icn/tb_img21.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">꽃살문 명함집</div>
+                                    <p>정교하고 화려한 조각으로 한국적 미의식과 공간미를 드러내는 꽃살문 모양으로 제작한 명함집. 고장 없는 개폐 기능과 부드러운 그립감, 가벼운 무게로 실용성을 더했다. 20장 정도의 명함을 수납 할 수 있을 만큼 내부 공간이 넉넉하다. 
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            인천시 강화군 길상면 전등사로 37-41(전등사)  
+                                        </li>
+                                        <li class="tel">
+                                            032-937-0125  
+                                        </li>
+	                                <li class="web">
+	                                    www.jeondeungsa.org  
+	                                </li>
+                                        <li class="price">
+                                            3만원 대
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><img src="/public/internal/musthaveitem/img/detail/icn/tb_img22.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">목어 USB</div>
+                                    <p>
+                                        밤낮으로 눈을 감지 않으므로 항상 눈을 뜨고 정진하라는 의미를 지닌 목어. 보통의 USB는 크기가 작아 종종 잃어버리곤 하는데, 물고기 형태와 선명하고 컬러풀한 색감으로 절대 잃어버릴 수 없는 존재감을 자랑한다. 64GB 용량으로 넉넉하게 사용 가능하다.  
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            인천시 강화군 길상면 전등사로 37-41(전등사)   
+                                        </li>
+                                        <li class="tel">
+                                            032-937-0125    
+                                        </li>
+                                        <li class="web">
+                                            www.jeondeungsa.org 
+                                        </li>
+                                        <li class="price">
+                                            2만원 대
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><img src="/public/internal/musthaveitem/img/detail/icn/tb_img23.jpg" alt="..."></td>
+                                <td>
+                                    <div class="h3 color">배지 3종 세트</div>
+                                    <p>
+                                        핀 배지 3종은 귀여운 동자승, 청초한 연꽃, 화려한 목어 모양으로 불교문화와 한국 전통미의 조화가 돋보인다. 선명한 컬러와 입체감 있는 디자인으로 가방, 모자, 티셔츠 등 어디에 달아도 포인트가 된다. 
+                                    </p>
+                                    <ul class="color">
+                                        <li class="location">
+                                            인천시 강화군 길상면 전등사로 37-41(전등사)   
+                                        </li>
+                                        <li class="tel">
+                                            032-937-0125    
+                                        </li>
+                                        <li class="web">
+                                            www.jeondeungsa.org 
+                                        </li>
+                                        <li class="price">
+                                            1만원 대
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+                    <!-- comp -->
+                    <div class="division division-grey fullSize">
+                        <div class="left">
+                            <div class="caption">Tourist Attraction</div>
+                            <div class="line"></div>
+                            <div class="h3">동막해수욕장</div>
+                            <p>
+                           푹신한 모래사장과 울창한 소나무 숲이 우거져 있어 자연의 아름다움과 해수욕의 즐거움을 선사하는 동막해수욕장. 밀물 때는 청정 바다에서 해수욕을 즐기고 썰물 때는 드넓은 갯벌에서 각종 조개를 비롯해 칠게, 가무락, 갯지렁이 등 다양한 바다 생물을 볼 수 있다. 동막해수욕장 옆에 있는 분오리돈대는 강화 낙조 포인트 중 하나다. 동막해수욕장을 포함한 장화리에서 동막리에 이르는 해안도로에서 보는 풍경도 아름다우며, 도로변에 예쁜 카페가 많아 차를 세워 커피 한잔하는 여유를 누리기에도 좋다.
+                            </p>
+                        </div>
+                        <div class="right">
+                            <img src="/public/internal/musthaveitem/img/detail/icn/img13.jpg" alt="...">
+                        </div>
+                    </div>
+                         
+                </section>
+            </contents>
+            <!-- evoke : 템플릿 끝 -->
+        </div>
+    </div>
+
+</body>
+</html>

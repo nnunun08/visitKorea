@@ -1,0 +1,1202 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="common-inner">
+        <div class="template__type1__section">
+            <contents>
+                <style>
+                    /* common.css */
+                    @charset "UTF-8";
+                    /* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap'); */
+                    html, body, div, span, applet, object, iframe,
+                    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+                    a, abbr, acronym, address, big, cite, code,
+                    del, dfn, em, img, ins, kbd, q, s, samp,
+                    small, strike, strong, sub, sup, tt, var,
+                    b, u, i, center,
+                    dl, dt, dd, ol, ul, li,
+                    fieldset, form, label, legend,
+                    table, caption, tbody, tfoot, thead, tr, th, td,
+                    article, aside, canvas, details, embed,
+                    figure, figcaption, footer, header, hgroup,
+                    menu, nav, output, ruby, section, summary,
+                    time, mark, audio, video {
+                    margin: 0;
+                    padding: 0;
+                    border: 0;
+                    font-size: 100%;
+                    font: inherit;
+                    vertical-align: baseline;
+                    }
+                    /* HTML5 display-role reset for older browsers */
+                    article, aside, details, figcaption, figure,
+                    footer, header, hgroup, menu, nav, section {
+                    display: block;
+                    }
+                    body {
+                    line-height: 1;
+                    }
+                    ol, ul {
+                    list-style: none;
+                    }
+                    blockquote, q {
+                    quotes: none;
+                    }
+                    blockquote:before, blockquote:after,
+                    q:before, q:after {
+                    content: "";
+                    content: none;
+                    }
+                    table {
+                    border-collapse: collapse;
+                    border-spacing: 0;
+                    }
+                    Select {
+                    font-family: inherit; /* 폰트 상속 */
+                    background: url(../img/btn-drop-arrow.svg) no-repeat 98% 50%;
+                    /* 네이티브 화살표를 커스텀 화살표로 대체 */
+                    -webkit-appearance: none;
+                    /* 네이티브 외형 감추기 */
+                    -moz-appearance: none;
+                    appearance: none;
+                    }
+                    Select::-ms-expand {
+                    display: none; /* 화살표 없애기 for IE10, 11*/
+                    }
+                    input {
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    -webkit-border-radius: 0;
+                    border-radius: 0;
+                    }
+                    /* IE10 이상에서 input box 에 추가된 지우기 버튼 제거 */
+                    input::-ms-clear {
+                    display: none;
+                    }
+                    /* input type number 에서 화살표 제거 */
+                    input[type=number]::-webkit-inner-spin-button,
+                    input[type=number]::-webkit-outer-spin-button {
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    }
+                    body {
+                        background: #f5f5f5;
+                    }
+                    .common-inner {
+                        padding: 0 30px;
+                        max-width: 1300px;
+                        box-sizing: border-box;
+                        margin: 0 auto;
+                        margin-top: 40px;
+                        padding: 0 40px;
+                        padding-bottom: 120px;
+                    }
+                    .template__type1__section {
+                        padding: 30px;
+                        border: 1px solid #e0e0e0;
+                        background: #fff;
+                        border-radius: 18px;
+                    }
+                    @media (max-width: 1200px) {
+                        .common-inner {
+                            padding: 0 20px;
+                        }
+                    }
+                
+                    .page-content {
+                    color: #000;
+                    letter-spacing: -0.5px;
+                    line-height: 140%;
+                    font-family: system-ui, -apple-system, "Poppins", "MS PGothic", "Microsoft YaHei", "Arial", "Malgun Gothic", "Dotum", sans-serif;
+                    max-width: none;
+                    }
+                    .page-content .fullSize {
+                    margin-left: -30px;
+                    margin-right: -30px;
+                    }
+                    .page-content .visualImg {
+                    max-width: 926px;
+                    margin: 0 auto;
+                    }
+                    .page-content .visualImg img {
+                    width: 100%;
+                    }
+                    .page-content .visualImg .imgName {
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 140%; /* 140% */
+                    letter-spacing: -0.5px;
+                    text-align: center;
+                    margin-bottom: 40px;
+                    }
+                    .page-content .pageDesc {
+                    margin-bottom: 80px;
+                    }
+                    .page-content .pageDesc li + li {
+                    margin-top: 30px;
+                    }
+                    .page-content .pageDesc p {
+                    color: #000;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 172%; /* 172.308% */
+                    letter-spacing: -0.5px;
+                    }
+                    .page-content .pageDesc p::before {
+                    content: "";
+                    display: inline-block;
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 5px;
+                    margin-bottom: 3px;
+                    background-color: #000;
+                    }
+                    .page-content .division {
+                    display: flex;
+                    align-items: stretch;
+                    justify-content: center;
+                    margin-bottom: 40px;
+                    margin-top: 85px;
+                    }
+                    .page-content .division.divisionAuto {
+                    min-height: auto;
+                    }
+                    .page-content .division.divisionAuto .left,
+                    .page-content .division.divisionAuto .right {
+                    padding: 35px 6.5%;
+                    }
+                    .page-content .division .h2 {
+                    font-size: 36px;
+                    font-weight: bold;
+                    line-height: 100%;
+                    margin-bottom: 27px;
+                    }
+                    .page-content .division .left {
+                    width: 50%;
+                    box-sizing: border-box;
+                    border-radius: 0 45px 45px 0;
+                    overflow: hidden;
+                    }
+                    .page-content .division .left img {
+                    width: 100%;
+                    height: 100%;
+                    -o-object-fit: cover;
+                        object-fit: cover;
+                    display: block;
+                    }
+                    .page-content .division .left.bgFill {
+                    display: flex;
+                    align-items: center;
+                    padding: 6.5%;
+                    color: #fff;
+                    }
+                    .page-content .division .left .h2 {
+                    margin: 0;
+                    }
+                    .page-content .division .right {
+                    background-color: #000;
+                    box-sizing: border-box;
+                    border-radius: 45px 0 0 45px;
+                    width: 50%;
+                    color: #fff;
+                    padding: 100px 80px;
+                    padding: 6.5%;
+                    }
+                    .page-content .division .right p {
+                    font-size: 16px;
+                    line-height: 140%;
+                    }
+                    .page-content .division-grey {
+                    min-height: 0;
+                    margin-top: 0;
+                    }
+                    .page-content .division-grey .left {
+                    background-color: #DEDEDE;
+                    padding: 23px 32px;
+                    }
+                    .page-content .division-grey .left .caption {
+                    font-size: 20px;
+                    font-weight: 300;
+                    margin-bottom: 12px;
+                    }
+                    .page-content .division-grey .left .caption::after {
+                        display: none;
+                    }
+                    .page-content .division-grey .left .line {
+                    width: 66px;
+                    height: 1px;
+                    background-color: #000;
+                    margin-bottom: 20px;
+                    }
+                    .page-content .division-grey .left .h3 {
+                    font-size: 24px;
+                    font-weight: bold;
+                    margin-bottom: 42px;
+                    }
+                    .page-content .division-grey .left p {
+                    font-size: 16px;
+                    line-height: 175%;
+                    }
+                    .page-content .division-grey .right {
+                    background-color: #DEDEDE;
+                    padding: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    }
+                    .page-content .division-grey .right img {
+                    width: 100%;
+                    }
+                    .page-content .division-border {
+                    margin-top: 30px;
+                    }
+                    .page-content .division-border .left {
+                    padding: 17px 32px 27px;
+                    flex: 1 0 0;
+                    }
+                    .page-content .division-border .left .caption {
+                    font-size: 20px;
+                    font-weight: 300;
+                    margin-bottom: 12px;
+                    }
+                    .page-content .division-border .left .line {
+                    width: 66px;
+                    height: 1px;
+                    background-color: #000;
+                    margin-bottom: 20px;
+                    }
+                    .page-content .division-border .left .h3 {
+                    font-size: 24px;
+                    font-weight: bold;
+                    margin-bottom: 42px;
+                    }
+                    .page-content .division-border .left .h3 span {
+                    font-weight: 400;
+                    }
+                    .page-content .division-border .left p {
+                    font-size: 16px;
+                    line-height: 175%;
+                    }
+                    .page-content .division-border .left b {
+                    font-weight: bold;
+                    }
+                    .page-content .division-border .right {
+                    flex: 0 0 auto;
+                    background-color: transparent;
+                    padding: 0;
+                    padding-right: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    }
+                    .page-content .division-border .right img {
+                    width: 100%;
+                    }
+                    .page-content .division-border-2 .left {
+                    width: 83%;
+                    padding-right: 5.8%;
+                    }
+                    .page-content .division-border-2 .right {
+                    width: 35%;
+                    max-width: 414px;
+                    }
+                    .page-content .division-border-2 .right img {
+                    max-height: 375px;
+                    -o-object-fit: contain;
+                        object-fit: contain;
+                    }
+                    .page-content .tableWrap table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    font-size: 14px;
+                    margin-bottom: 45px;
+                    }
+                    .page-content .tableWrap table td {
+                    vertical-align: top;
+                    border: 1px solid #BBBBBB;
+                    box-sizing: border-box;
+                    text-align: left;
+                    }
+                    .page-content .tableWrap table td:nth-child(1) {
+                    border-left: 0;
+                    vertical-align: middle;
+                    }
+                    .page-content .tableWrap table td:nth-child(1) img {
+                    width: 100%;
+                    min-width: 50px;
+                    -o-object-fit: contain;
+                        object-fit: contain;
+                    }
+                    .page-content .tableWrap table td:nth-child(2) {
+                    border-right: 0;
+                    padding: 40px 70px;
+                    padding: 3.3% 5.8%;
+                    padding: 40px 5.8%;
+                    }
+                    .page-content .tableWrap table .h3 {
+                    font-size: 24px;
+                    font-weight: bold;
+                    margin-bottom: 28px;
+                    }
+                    .page-content .tableWrap table .h3::before {
+                    display: inline-block;
+                    color: #000;
+                    margin-right: 6px;
+                    }
+                    .page-content .tableWrap table tr:nth-child(1) .h3::before {
+                    content: "①";
+                    }
+                    .page-content .tableWrap table tr:nth-child(2) .h3::before {
+                    content: "②";
+                    }
+                    .page-content .tableWrap table tr:nth-child(3) .h3::before {
+                    content: "③";
+                    }
+                    .page-content .tableWrap table tr:nth-child(4) .h3::before {
+                    content: "④";
+                    }
+                    .page-content .tableWrap table p {
+                    font-size: 14px;
+                    margin-bottom: 7px;
+                    }
+                    .page-content .tableWrap table li {
+                    font-size: 14px;
+                    line-height: 100%;
+                    padding-left: 22px;
+                    position: relative;
+                    word-break: break-all;
+                    }
+                    .page-content .tableWrap table li::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 15px;
+                    height: 15px;
+                    display: inline-block;
+                    }
+                    .page-content .tableWrap table li.location::before {
+                    background-image: url(/public/internal/musthaveitem/img/common/ic_location.svg);
+                    }
+                    .page-content .tableWrap table li.tel::before {
+                    background-image: url(/public/internal/musthaveitem/img/common/ic_tel.svg);
+                    }
+                    .page-content .tableWrap table li.web::before {
+                    background-image: url(/public/internal/musthaveitem/img/common/ic_web.svg);
+                    }
+                    .page-content .tableWrap table li.price::before {
+                    background-image: url(/public/internal/musthaveitem/img/common/ic_price.svg);
+                    }
+                    .page-content .tableWrap table li.cart::before {
+                    background-image: url(/public/internal/musthaveitem/img/common/ic_cart.svg);
+                    }
+                    .page-content .tableWrap table li.noti::before {
+                    background-image: url(/public/internal/musthaveitem/img/common/ic_noti.svg);
+                    }
+                    .page-content .tableWrap table li + li {
+                    margin-top: 7px;
+                    }
+                    .page-content.theme-red .color {
+                    color: #F0514D !important;
+                    }
+                    .page-content.theme-red .bgFill {
+                    background-color: #F0514D !important;
+                    }
+                    .page-content.theme-red .pageDesc p::before {
+                    background-color: #F0514D;
+                    }
+                    .page-content.theme-red .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+                    background: rgba(240, 81, 77, 0.1);
+                    }
+                    .page-content.theme-red .division-border {
+                    border: 3px solid #F0514D;
+                    box-sizing: border-box;
+                    }
+                    .page-content.theme-navy .color {
+                    color: #036A9B !important;
+                    }
+                    .page-content.theme-navy .bgFill {
+                    background-color: #036A9B !important;
+                    }
+                    .page-content.theme-navy .pageDesc p::before {
+                    background-color: #036A9B;
+                    }
+                    .page-content.theme-navy .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+                    background: rgba(3, 106, 155, 0.1);
+                    }
+                    .page-content.theme-navy .division-border {
+                    border: 3px solid #036A9B;
+                    box-sizing: border-box;
+                    }
+                    .page-content.theme-yellow .color {
+                    color: #EDB51E !important;
+                    }
+                    .page-content.theme-yellow .bgFill {
+                    background-color: #EDB51E !important;
+                    }
+                    .page-content.theme-yellow .pageDesc p::before {
+                    background-color: #EDB51E;
+                    }
+                    .page-content.theme-yellow .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+                    background: rgba(237, 181, 30, 0.15);
+                    }
+                    .page-content.theme-yellow .division-border {
+                    border: 3px solid #EDB51E;
+                    box-sizing: border-box;
+                    }
+                    .page-content.theme-green .color {
+                    color: #4C9667 !important;
+                    }
+                    .page-content.theme-green .bgFill {
+                    background-color: #4C9667 !important;
+                    }
+                    .page-content.theme-green .pageDesc p::before {
+                    background-color: #4C9667;
+                    }
+                    .page-content.theme-green .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+                    background: rgba(76, 150, 103, 0.1);
+                    }
+                    .page-content.theme-green .division-border {
+                    border: 3px solid #4C9667;
+                    box-sizing: border-box;
+                    }
+                    .page-content.theme-pink .color {
+                    color: #F598A6 !important;
+                    }
+                    .page-content.theme-pink .bgFill {
+                    background-color: #F598A6 !important;
+                    }
+                    .page-content.theme-pink .pageDesc p::before {
+                    background-color: #F598A6;
+                    }
+                    .page-content.theme-pink .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+                    background: rgba(245, 152, 166, 0.15);
+                    }
+                    .page-content.theme-pink .division-border {
+                    border: 3px solid #F598A6;
+                    box-sizing: border-box;
+                    }
+                    .page-content.theme-blue .color {
+                    color: #2587C8 !important;
+                    }
+                    .page-content.theme-blue .bgFill {
+                    background-color: #2587C8 !important;
+                    }
+                    .page-content.theme-blue .pageDesc p::before {
+                    background-color: #2587C8;
+                    }
+                    .page-content.theme-blue .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+                    background: rgba(37, 135, 200, 0.15);
+                    }
+                    .page-content.theme-blue .division-border {
+                    border: 3px solid #2587C8;
+                    box-sizing: border-box;
+                    }
+                    @media screen and (max-width: 767px) {
+                    .page-content .division {
+                        flex-direction: column;
+                    }
+                    .page-content .division .left {
+                        width: 100%;
+                        border-radius: 0;
+                    }
+                    .page-content .division .right {
+                        width: 100%;
+                        border-radius: 0;
+                    }
+                    .page-content .division-border-2 .left {
+                        width: 100%;
+                        padding: 17px 32px 27px;
+                    }
+                    .page-content .division-border .left {
+                        flex: 1 0 auto;
+                    }
+                    .page-content .division-border .right {
+                        padding: 17px 32px;
+                    }
+                    .page-content .division-border-2 .right {
+                        max-width: 100%;
+                    }
+                    .page-content .division-border-2 .right img {
+                        width: 100%;
+                        -o-object-fit: contain;
+                        object-fit: contain;
+                        max-height: 240px;
+                    }
+                    .page-content .tableWrap {
+                        display: block;
+                    }
+                    .page-content .tableWrap table {
+                        display: block;
+                    }
+                    .page-content .tableWrap table colgroup {
+                        display: none;
+                    }
+                    .page-content .tableWrap table td {
+                        display: block;
+                        width: 100%;
+                        border: 1px solid #BBBBBB !important;
+                        margin-top: -1px;
+                    }
+                    .page-content .tableWrap table td:nth-child(1) {
+                        display: flex;
+                    }
+                    .page-content .tableWrap table td:nth-child(1) img {
+                        max-height: 350px;
+                        width: 50%;
+                        margin: 0 auto;
+                    }
+                    }
+                </style>
+                <!-- evoke : 템플릿 시작 -->
+                <section class="page-content theme-pink">
+                    <!-- comp -->
+                    <div class="visualImg">
+                        <img src="/public/internal/musthaveitem/img/detail/jnn/img01.jpg" alt="...">
+                        <div class="imgName">돌산과 자산공원을 잇는 여수 해상케이블카</div>
+                    </div>
+                    <!-- comp -->
+                    <div class="pageDesc">
+                        <ul>
+                            <li>
+                                <p>
+                                    전라남도에는 고즈넉하면서도 아름다움을 간직한 명소가 무척 많다. 한번 오르면 다시 내려가고 싶지 않을 만큼 자연경관이 뛰어난 지리산, 월출산, 무등산 등 명산도 다수다. 바다 위에 둥실둥실 떠 있는 다도해와 갯벌이 드넓게 펼쳐진 해변도 이색적이다. 발길 닿는 곳마다 문화재로 뒤덮여 있다고 해도 과언이 아닐 만큼 문화유산이 풍성하며, 맛있고 푸짐한 음식이 남도 여행의 매력을 더해준다. 대나무의 도시로 통하는 담양은 죽녹원에서 시작해 천연기념물 제366호로 지정된 관방제림, 메타세쿼이아 가로수길까지, 세 가지 숲길을 즐길 수 있다. 
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    탁 트인 바다 위 1004개의 아름다운 섬이 수놓인 신안. 해질녘 섬이 붉게 물들어 일몰이 아름답기로 유명한 홍도, 하트 모양 해변이 있는 비금도와 최서남단 섬 가거도까지 둘러봐야 할 섬이 가득하다. 여기에 국내 최대 규모의 갯벌과 전국 천일염 생산량의 70%를 차지하는 넓은 염전도 놓치지 말아야 할 포인트다. 맑고 깨끗한 자연에서 재배한 유자와 석류는 고흥의 대표 특산품. 특히 11월이면 노랗게 익어 상큼한 향을 풍기는 유자밭이 여기저기 널려 있어 장관을 이룬다. 보성은 국내에서 가장 오래된 녹차 재배지이며 우리나라 최남단에 위치한 해남은 비옥한 토양과 풍부한 수자원, 고대 유적이 살아 숨 쉬는 지역이다. 
+                            </p>
+                            </li>
+                            <li>
+                                <p>
+                                    봄이 되면 구불구불한 섬진강 강줄기를 따라 새하얀 매화와 노란 유채가 광양과 세계 5대 연안 습지인 순천만습지로 유명한 순천, 1000년의 비색을 자랑하는 청자의 고장이자 남도 한정식의 본향인 강진도 놓치지 말자. 마지막으로 국내 대표 미항이자 아름다운 바다를 간직한 여수. 푸른 바다 위를 건너며 아름다운 정경을 한눈에 감상할 수 있는 해상 케이블카를 추천한다. 더불어 전국 4대 관음 기도처 중 한 곳으로 아름다운 일출을 감상할 수 있는 향일암, 여수 아쿠아플라넷, 오동도, 해양레일바이크 등 다채로운 여행 코스도 즐겨보자.
+                            </p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- comp : contents -->
+                    <div class="division fullSize"><div class="left">
+                        <img src="/public/internal/musthaveitem/img/detail/jnn/img02.jpg" alt="..."></div><div class="right bgFill"><div class="h2">
+                            담양 대나무 죽제품
+                        </div><p>
+                            담양은 기후가 따뜻하고 강수량이 많아 대나무가 자라기 좋은 조건을 갖추었다. 그래서 우리나라 대나무면적의 35%를 차지하는 최대 산지다. 대나무는 하루에 50cm 이상 자랄 만큼 빠른 속도로 곧고 높이생장하고 뿌리에서 잎까지 버릴 게 하나도 없을 정도로 활용도가 높다
+                        </p></div></div><div class="tableWrap fullSize"><table><colgroup><col width="380px"><col width="840px"></colgroup>
+
+                        <tr><td>
+                            <img src="/public/internal/musthaveitem/img/detail/jnn/tb_img01.jpg" alt="..."></td><td><div class="h3 color">
+                                고려전통식품 기순도 죽염
+                            </div><p>
+                                통이 굵고 껍질이 단단한 최고급 담양산 대나무에 신안 태평염전의 천일염을 넣고 3~4일간 구워 만든 죽염. 명인이 만드는 된장, 고추장 등 모든 전통장에 모두 사용하는 죽염으로 화학첨가물이나 인공조미료를 일절 넣지 않아 믿고 먹을 수 있다. 일반 소금에 비해 염도가 낮고 대나무 수액이 스며 감칠맛이 도는 것이 특징이다.     
+                            </p><ul class="color">
+                            <li class="location">
+                                전라남도 담양군 창평면 유천길 154-15(고려전통식품)
+                            </li>
+                            <li class="tel">
+                                061-383-6209 
+                            </li>
+                            <li class="web">
+                                ksdo.co.kr 
+                            </li>
+                            <li class="price">
+                                250g 1만원 대
+                            </li>
+                            </ul></td>
+                        </tr>
+
+                        <tr><td>
+                            <img src="/public/internal/musthaveitem/img/detail/jnn/tb_img02.jpg" alt="..."></td><td><div class="h3 color">
+                                대나무코리아 7죽봉
+                            </div><p>
+                                특유의 단단함과 시원함을 지닌 대나무를 ㄱ자 모양으로 만든 안마봉인 ‘7죽봉’. 어깨, 목, 머리 등 피로가 쌓이고 뭉쳐 불편한 부분을 두드려주면 말끔히 해소된다.       
+                            </p><ul class="color">
+                            <li class="location">
+                                전라남도 담양군 월산면 왕산길 14 (대나무코리아) 
+                            </li>
+                            <li class="tel">
+                                061-381-4770
+                            </li>
+                            <li class="web">
+                                bchealing.modoo.at
+                            </li>
+                            <li class="price">
+                                3만원 대
+                            </li>
+                            </ul></td>
+                        </tr>
+
+                        <tr><td>
+                            <img src="/public/internal/musthaveitem/img/detail/jnn/tb_img03.jpg" alt="..."></td><td><div class="h3 color">
+                                대나무코리아 대나무 공예품
+                            </div><p>
+                                다양한 측정 단위로 주문 제작 가능한 자, 사이즈가 넉넉해 다양한 용도로 사용할 수 있는 트레이, 책상 위에 올려두고 문구용품을 정리하기에 좋은 수납함까지. 대나무로 만들 수 있는 공예품은 무궁무진하다. 
+                            </p><ul class="color">
+                            <li class="location">
+                                전라남도 담양군 월산면 왕산길 14 (대나무코리아) 
+                            </li>
+                            <li class="tel">
+                                061-381-4770
+                            </li>
+                            <li class="web">
+                                bchealing.modoo.at
+                            </li>
+                            <li class="price">
+                                트레이 10만원 대, 명패 25만원 대, 대나무옻칠차상 500만원 대 
+                            </li>
+                            <li class="noti">
+                                매년 5월 담양대나무축제
+                            </li>
+                            </ul></td>
+                        </tr>
+
+                    </table></div>
+
+                    <!-- comp : Mini Interview -->
+                    <div class="division division-border division-border-2 fullSize"><div class="left"><div class="caption">Mini Interview</div><div class="line"></div><div class="h3">
+                        고려전통식품
+                        <span>
+                        기순도 명인
+                        </span></div><p><b>
+                        Q 죽염과 인연을 맺은 계기가 있다면요?
+                        </b> 
+                        1980년대부터 남편이 죽염을 연구해왔기에 자연스레 제가 만드는 모든 장과 음식에 소금 대신 죽염을 사용했습니다. 대나무 특유의 단맛을 내는 성분이 감칠맛을 더하고 천일염의 불순물과 이물질이 제거된 죽염은 음식의 풍미를 끌어올립니다. 370여 년간 이어져 내려온 10대 종가의 장 담그는 법과 어우러져 죽염을 사용한 장이 더 달고 맛있어지니 모든 음식 맛이 좋아지는 것은 당연합니다. 
+                        </p><p><b>
+                        Q 기순도 명인의 죽염이 지닌 특징이 있을까요?
+                        </b> 
+                        담양산 왕대나무를 한 마디씩 잘라 간수를 뺀 국산 천일염을 잘 다져 넣습니다. 그런 다음 내화 벽돌과 황토로 만든 죽염 가마에 차곡차곡 쌓은 후 고온으로 3일 이상 구워내면 대나무는 타서 없어지고 하얀 죽염 기둥 원석만 남습니다. 국산 천일염과 담양 대나무가 고온에서 어우러진 기순도 죽염은 메주장을 담들 때는 물론이고 김장과 고기를 구울 때, 양치질할 때도 사용할 수 있는 활용도 높은 제품입니다.
+                        </p></div><div class="right">
+                        <img src="/public/internal/musthaveitem/img/detail/jnn/img03.jpg" alt="...">
+                        </div>
+                    </div>
+
+
+                    <!-- comp : contents -->
+                    <div class="division fullSize"><div class="left">
+                        <img src="/public/internal/musthaveitem/img/detail/jnn/img04.jpg" alt="..."></div><div class="right bgFill"><div class="h2">
+                            신안 함초 소금
+                        </div><p>
+                            신안은 청정 해역과 광활한 갯벌을 갖춘 지역으로 고품질 천일염이 생산된다. 또, 미네랄과 효소가 다량 함유되어 ‘바다의산삼’으로 불리는 함초도 가득하다. 함초를 가장 손쉽게 맛볼 수 있는 방법이 바로 함초 소금. 신안 천일염에 함초 성분을 넣은 것으로 뒷맛이 깔끔해 다양한 요리에 사용하기 좋다.
+                        </p></div></div><div class="tableWrap fullSize"><table><colgroup><col width="380px"><col width="840px"></colgroup>
+
+                        <tr><td>
+                            <img src="/public/internal/musthaveitem/img/detail/jnn/tb_img04.jpg" alt="..."></td><td><div class="h3 color">
+                                6형제 소금밭 함초 소금
+                            </div><p>
+                                국내 최초 ‘우수 천일염 인증 염전’으로 선정된 6형제 소금밭에서 만든 제품. 신의도 앞바다에서 생산한 천일염에 함초 분말을 섞어 만든 ‘함초소금’은 은근한 단맛이 돌며 나트륨 함량이 적다.  천일염 중 가장 고품질에 속하는 토판염과 함초를 황토 그릇에 담아 800℃ 가마에서 12시간 구워 만든 ‘토판구운함초소금’도 인기. 짠맛과 쓴맛이 전혀 없고 풍미가 가득해 음식 맛을 살려준다. 
+                            </p><ul class="color">
+                            <li class="location">
+                                전라남도 신안군 신의면 하태길 2(6형제소금밭장터) 
+                            </li>
+                            <li class="tel">
+                                010-4693-6778  
+                            </li>
+                            <li class="web">
+                                www.6salt.com 
+                            </li>
+                            <li class="price">
+                                750g 1만원 대, 750g 3개 세트 4만원 대
+                            </li>
+                            </ul></td>
+                        </tr>
+
+                        <tr><td>
+                            <img src="/public/internal/musthaveitem/img/detail/jnn/tb_img05.jpg" alt="..."></td><td><div class="h3 color">
+                                함초 미네랄밸런스 소금
+                            </div><p>
+                                조수간만의 차가 크고 모래기가 적어 세계 최고 수준의 갯벌이라 불리는 신안 증도. 이곳 태평염전에서 자연에 가까운 방식으로 생산한 천일염에 유기농으로 재배한 함초를 건조해 넣었다. 단맛이 살짝 밴 짠맛으로 국물 요리는 시원한 맛을, 나물 무침에는 깔끔한 맛을 더한다. 
+                            </p><ul class="color">
+                            <li class="location">
+                                전라남도 신안군 증도면 지도증도로 1083-4(태평염전) 
+                            </li>
+                            <li class="tel">
+                                080-275-7541 
+                            </li>
+                            <li class="web">
+                                www.taepyungsalt.com 
+                            </li>
+                            <li class="price">
+                                450g 1만원 대
+                            </li>
+                            </ul></td>
+                        </tr>
+
+                      </table></div>
+
+                 
+
+
+                    <!-- comp : contents -->
+                    <div class="division fullSize"><div class="left">
+                        <img src="/public/internal/musthaveitem/img/detail/jnn/img05.jpg" alt="..."></div><div class="right bgFill"><div class="h2">
+                            여수 김치
+                        </div><p>
+                            여수는 한겨울에도 기온이 영하로 떨어지는 일이 드문 따뜻한 해양성기후와 알칼리성 토질, 남해안의 바닷바람 등으로 돌산갓이 자라기에 최적인 지역이다. 돌산갓은 다른 갓과 달리 잎과 줄기에 털이 없으며, 이파리가 연하고 넓어 김치로 만들어 먹기에 좋다. 톡 쏘는 매운맛과 알싸한 향이 있어 한번 맛본 사람은 다시 찾을 만큼 매력적이다.
+                              </p></div></div><div class="tableWrap fullSize"><table><colgroup><col width="380px"><col width="840px"></colgroup>
+
+                        <tr><td>
+                            <img src="/public/internal/musthaveitem/img/detail/jnn/tb_img06.jpg" alt="..."></td><td><div class="h3 color">
+                                황제돌산갓김치 돌산갓김치
+                            </div><p>
+                                해풍을 맞고 자라 독특한 향과 맛이 있는 돌산갓에 여수 앞바다의 멸치로 직접 만든 멸치젓갈과 생새우, 해물 국물 등으로 감칠맛을 더했다. 고춧가루, 양파, 마늘은 물론 김치에 사용하는 모든 재료는 국내산으로 까다롭게 선별한다. 갓 담근 갓김치는 아삭한 식감과 쌉싸래한 맛이 좋고 숙성될수록 매운맛은 덜하고 깊은 맛이 우러난다. 
+                            </p><ul class="color">
+                            <li class="location">
+                                전라남도 여수시 돌산읍 돌산로 3537(황제돌산갓김치)
+                            </li>
+                            <li class="tel">
+                                061-644-1147
+                            </li>
+                            <li class="web">
+                                www.황제돌산갓김치.com 
+                            </li>
+                            <li class="price">
+                                3kg 2만원 대
+                            </li>
+                            </ul></td>
+                        </tr>
+
+                        <tr><td>
+                            <img src="/public/internal/musthaveitem/img/detail/jnn/tb_img07.jpg" alt="..."></td><td><div class="h3 color">
+                                킴스갓김치 갓나물 장아찌 & 갓피클
+                            </div><p>
+                                당일 수확한 신선한 여수돌산갓을 간장 베이스의 숙성장에 절여 장아찌로 만들고 생레몬을 넣어 상큼한 소스로 갓피클을 만들었다. 한식은 물론 스테이크, 파스타 등 어떤 메뉴와도 조화가 좋다. 원터치 캔 방식으로 보관과 이동이 편리하다.  
+                            </p><ul class="color">
+                            <li class="location">
+                                전라남도 여수시 둔덕1길 5(킴스갓김치)
+                            </li>
+                            <li class="tel">
+                                070-8844-0376 
+                            </li>
+                            <li class="web">
+                                www.kimsgodkimchi.com
+                            </li>
+                            <li class="price">
+                                갓나물 장아찌 1만원 미만, 갓피클 1만원 대
+                            </li>
+                            </ul></td>
+                        </tr>
+                        
+                    </table></div>
+
+                    
+                    <!-- comp : contents -->
+                    <div class="division fullSize"><div class="left">
+                        <img src="/public/internal/musthaveitem/img/detail/jnn/img06.jpg" alt="..."></div><div class="right bgFill"><div class="h2">
+                            고흥 유자차
+                        </div><p>
+                            전국 유자 생산량의 70%를 차지하는 고흥은 일교차가 크지 않고 겨울이라도 눈이 쌓이는 날은 연평균 6~7일에 불과하기 때문에 유자를 재배하기 좋은 기후를 갖추었다. 유자에 함유된 비타민 C는 귤의 3배에 이른다. 찬 바람 부는 날이면 진한 유자차 한잔 마시며 에너지를 보충하게 되는 건 이때문이다.
+                        </p></div></div><div class="tableWrap fullSize"><table><colgroup><col width="380px"><col width="840px"></colgroup>
+
+                        <tr><td>
+                            <img src="/public/internal/musthaveitem/img/detail/jnn/tb_img08.jpg" alt="..."></td><td><div class="h3 color">
+                                에덴식품영농법인 고흥 유자차
+                            </div><p>
+                                친환경 무농약으로 재배한 유자를 지하수로 3회 이상 세척한 후 슬라이스하고 유기농 설탕을 50:50으로 혼합해 절여 만든다. 이외의 첨가물은 없다. 설탕에 절인 유자는 바로 영하 18℃의 냉동 창고로 향한다. 완전히 얼기까지 보름 정도 소요되는데, 별도의 숙성 기간을 거치지 않더라도 어는 동안 숙성되기 때문에 최상의 맛을 유지할 수 있다.  
+                            </p><ul class="color">
+                            <li class="location">
+                                전라남도 고흥군 두원면 연강예회길 311(에덴식품영농법인)
+                            </li>
+                            <li class="tel">
+                                061-834-1003 
+                            </li>
+                            <li class="web">
+                                gouhanmall.kr 
+                            </li>
+                            <li class="price">
+                                2만원 대 
+                            </li>
+                            <li class="noti">
+                                11월 고흥유자석류축제 
+                            </li>
+                            </ul></td>
+                        </tr>
+                        
+                    </table></div>
+
+                    <!-- comp : contents -->
+                    <div class="division fullSize"><div class="left">
+                        <img src="/public/internal/musthaveitem/img/detail/jnn/img07.jpg" alt="..."></div><div class="right bgFill"><div class="h2">
+                            보성 녹차 • 장흥 청태전
+                        </div><p>
+                            보성은 기온이 따뜻하고 안개 일수가 많아 차 맛을 좋게 하는 천혜의 특징을 지니고 있다. 부드러운 맛이 일품인 보성 녹차는 찻잎 그대로 우려 마시거나 요리에 활용하기에 좋다. 장흥은 전통 발효차인 청태전으로 유명하다. 찻잎을 쪄서 동그랗게 빚은 다음 가운데 구멍을 뚫어 말린 것으로 향긋한 맛이 일품이다.
+                        </p></div></div><div class="tableWrap fullSize"><table><colgroup><col width="380px"><col width="840px"></colgroup>
+
+                        <tr><td>
+                            <img src="/public/internal/musthaveitem/img/detail/jnn/tb_img09.jpg" alt="..."></td><td><div class="h3 color">
+                                보향다원 안개차
+                            </div><p>
+                                이슬이 걷힌 후 봄에 틘 첫물차를 채취해 5대째 이어온 전통 제대 방식으로 손수 덖고 쪄 완성한 프리미엄 차. 티소믈리에와 티 전문가 12인의 블라인드 테이스팅을 통해 맛과 우수성을 입증했다. 고소하고 싱그러운 녹차, 은은한 감칠맛이 매력적인 황차, 꽃과 과일이 어우러진 홍차, 새콤달콤한 흑차 등을 갖추어 취향대로 고를 수 있다.  
+                            </p><ul class="color">
+                            <li class="location">
+                                전라남도 보성군 보성읍 동암1길 144(보향다원)
+                            </li>
+                            <li class="tel">
+                                061-852-0626 
+                            </li>
+                            <li class="web">
+                                bohyang.com 
+                            </li>
+                            <li class="price">
+                                9만원 대 
+                            </li>
+                            <li class="noti">
+                                5월 보성다향대축제
+                            </li>
+                            </ul></td>
+                        </tr>
+
+                        <tr><td>
+                            <img src="/public/internal/musthaveitem/img/detail/jnn/tb_img10.jpg" alt="..."></td><td><div class="h3 color">
+                                청룡다원 기산차
+                            </div><p>
+                                전라남도 지정 제28호 유기농 명인이 청정 녹차밭에서 길러낸 순수한 녹차. 봄에 새로 올라온 작고 어린잎만 사용해 부드럽고 순한 맛이 일품이다. 녹차 완제품으로는 국내에서 처음으로 미국FDA 식품안전검사에서 합격한 것으로 더욱 신뢰하고 마실 수 있다. 
+                            </p><ul class="color">
+                            <li class="location">
+                                전라남도 보성군 보성읍 대련로 60-6(청룡다원)
+                            </li>
+                            <li class="tel">
+                                061-852-6625 
+                            </li>
+                            <li class="web">
+                                smartstore.naver.com/organictea 
+                            </li>
+                            <li class="price">
+                                대작 100g 2만원 대, 유기농 기산차 80g 3만원 대
+                            </li>
+                            </ul></td>
+                        </tr>
+
+                        <tr><td>
+                            <img src="/public/internal/musthaveitem/img/detail/jnn/tb_img11.jpg" alt="..."></td><td><div class="h3 color">
+                                장흥 다예원 청태전
+                            </div><p>
+                                산속에서 자란 야생 녹찻잎을 따 절구질을 해 동그랗게 성형하고, 10여 개씩 대꼬챙이에 끼워 매달아 실내에서 20일가량 자연 건조시킨 뒤 항아리에 담아 1년 이상 발효 과정을 거쳐 만든다. 완성된 청태전은 맥반석 위에서 은은하게 한번 구운 뒤 끓는 물에 우리면 진홍빛을 띤다. 발효 과정을 거치면서 녹차의 떫은맛이 자연스레 사라지고, 부드러운 맛과 고소한 향만 남아 마실수록 독특한 매력에 끌린다.     
+                            </p><ul class="color">
+                            <li class="location">
+                                전라남도 장흥군 안양면 기산길 21(장흥 다예원)
+                            </li>
+                            <li class="tel">
+                                061-863-8758 
+                            </li>
+                            <li class="web">
+                                www.jangheungdawon.com 
+                            </li>
+                            <li class="price">
+                                지함 5구 4만원 대, 목함 선물세트 5구 6만원 대
+                            </li>
+                            </ul></td>
+                        </tr>
+                        
+                    </table></div>
+
+                    <!-- comp : contents -->
+                    <div class="division fullSize"><div class="left">
+                        <img src="/public/internal/musthaveitem/img/detail/jnn/img08.jpg" alt="..."></div><div class="right bgFill"><div class="h2">
+                            해남 고구마빵
+                        </div><p>
+                            해남은 우리나라 고구마의 주산지로 특히 고구마 생육에 큰 영향을 미치는 토양의 질이 우수해 일반 고구마보다 빛깔이 좋고 당도가 높다. 고소하고 포슬포슬한 밤고구마, 달달하고 촉촉한 호박고구마를 그냥 찌거나 구워 먹어도 맛있지만 고구마빵, 말랭이, 아이스 고구마 등 이색 간식으로 다양하게 만날 수 있다.
+                        </p></div></div><div class="tableWrap fullSize"><table><colgroup><col width="380px"><col width="840px"></colgroup>
+
+                        <tr><td>
+                            <img src="/public/internal/musthaveitem/img/detail/jnn/tb_img12.jpg" alt="..."></td><td><div class="h3 color">
+                                해남고구마빵 피낭시에 자색 고구마빵
+                            </div><p>
+                                국산 자색고구마가루를 사용해 고구마 껍질의 보라색을 살리고, 해남산 유기농 멥쌀가루를 이용해 쫀득한 피를 만들었으며, 해남산 고구마로 앙금을 만들었다. 노란 고구마 앙금이 가득 찬 가운데 부분은 촉촉하고 식감이 쫀쫀한데, 뾰족한 끄트머리는 바게트같이 바삭하다.  
+                            </p><ul class="color">
+                            <li class="location">
+                                전라남도 해남군 해남읍 읍내길 8(해남고구마빵 피낭시에)
+                            </li>
+                            <li class="tel">
+                                0507-1393-6262 
+                            </li>
+                            <li class="price">
+                                개당 1만원 미만, 7개입 1상자 1만원 대
+                            </li>
+                            </ul></td>
+                        </tr>
+
+                        <tr><td>
+                            <img src="/public/internal/musthaveitem/img/detail/jnn/tb_img13.jpg" alt="..."></td><td><div class="h3 color">
+                                그린떡사랑 고구마 쌀빵
+                            </div><p>
+                                고구마 색과 비슷한 홍국쌀 반죽에 해남 고구마로 속을 채워 만든 고구마 쌀빵. 밀가루 대신 100% 유기농 쌀을 사용해 남녀노소 누구나 속 편하게 먹을 수 있는 별미다. 해남 고구마 특유의 단맛이 풍부하고 쫀득하면서도 부드러운 식감이 일품이다. 
+                            </p><ul class="color">
+                            <li class="location">
+                                전라남도 해남군 해남읍 고산로 162(그린떡사랑) 
+                            </li>
+                            <li class="tel">
+                                061-535-6626
+                            </li>
+                            <li class="web">
+                                smartstore.naver.com/therice  
+                            </li>
+                            <li class="price">
+                                10개입 2만원 대
+                            </li>
+                            </ul></td>
+                        </tr>
+                        
+                    </table></div>
+
+
+                    <!-- comp : contents -->
+                    <div class="division fullSize"><div class="left">
+                        <img src="/public/internal/musthaveitem/img/detail/jnn/img09.jpg" alt="..."></div><div class="right bgFill"><div class="h2">
+                            강진 도자기
+                        </div><p>
+                            양질의 점토가 풍부한 강진은 고려청자의 발상지다. 고려청자는 철분이 포함돼 비취색을 내는 유약과 태토에 무늬를 파내고 흰색과 검은색의 흙을 메워 넣는 상감기법이 특색인 도자기다. 강진은 500여 년 동안 고려청자를 만들어낸 지역으로 우리나라의 국보•보물급으로 지정된 청자 90%가 강진에서 생산된 것이다.
+                        </p></div></div><div class="tableWrap fullSize"><table><colgroup><col width="380px"><col width="840px"></colgroup>
+
+                        <tr><td>
+                            <img src="/public/internal/musthaveitem/img/detail/jnn/tb_img14.jpg" alt="..."></td><td><div class="h3 color">
+                                유어사이드 청자 화병
+                            </div><p>
+                                다양한 크기와 형태로 꽃을 꽂지 않고 올려만 두어도 훌륭한 장식품이 된다. 인위적이지 않고 흙빛만으로 만들어내는 푸른빛이 화려한 색의 꽃과도 잘 어우러진다. 한국의 전통적인 공예미가 깃든 작품을 기념으로 간직한다면 의미가 깊을 것이다. 
+                            </p><ul class="color">
+                            <li class="location">
+                                전라남도 강진군 강진읍 중앙로 140-1 1층(유어사이드)
+                            </li>
+                            <li class="tel">
+                                010-6679-4644 
+                            </li>
+                            <li class="price">
+                                15만원 대
+                            </li>
+                            </ul></td>
+                        </tr>
+
+                        <tr><td>
+                            <img src="/public/internal/musthaveitem/img/detail/jnn/tb_img15.jpg" alt="..."></td><td><div class="h3 color">
+                                유어사이드 청자 마사지 도구
+                            </div><p>
+                                괄사처럼 뭉친 근육을 풀어주고 뻐근한 부위를 두드려 통증을 완화하는 데 도움을 주는 마사지 도구. 화병처럼 생긴 독특한 모양과 청자 특유의 빛깔이 고급스럽다. 독창적인 강진 청자의 매력이 돋보이는 제품이다.     
+                            </p><ul class="color">
+                            <li class="location">
+                                전라남도 강진군 강진읍 중앙로 140-1 1층(유어사이드)
+                            </li>
+                            <li class="tel">
+                                010-6679-4644 
+                            </li>
+                            <li class="price">
+                                3만원 대
+                            </li>
+                            </ul></td>
+                        </tr>
+
+                        <tr><td>
+                            <img src="/public/internal/musthaveitem/img/detail/jnn/tb_img16.jpg" alt="..."></td><td><div class="h3 color">
+                                유어사이드 청자 머그컵
+                            </div><p>
+                                실용적이고 활용도가 넓은 넉넉한 사이즈의 머그잔. 물과 음료 무엇을 담아도 우아하고 은은한 멋을 풍긴다. 나뭇잎과 꽃 등 자연을 상감 문양으로 새겨 넣었다.   
+                            </p><ul class="color">
+                            <li class="location">
+                                전라남도 강진군 강진읍 중앙로 140-1 1층(유어사이드)
+                            </li>
+                            <li class="tel">
+                                010-6679-4644 
+                            </li>
+                            <li class="price">
+                                3만원 대
+                            </li>
+                            </ul></td>
+                        </tr>
+                        
+                    </table></div>
+                    
+                    <!-- comp : contents -->
+                    <div class="division fullSize"><div class="left">
+                        <img src="/public/internal/musthaveitem/img/detail/jnn/img10.jpg" alt="..."></div><div class="right bgFill"><div class="h2">
+                            광양•순천 매실
+                        </div><p>
+                            광양과 순천은 지리산과 백운산이 북서 계절풍을 막아줘 연평균기온이 13~14℃ 내외로 연중 온난하고 따뜻하며, 청정 섬진강의 풍부한 수원, 전국 최고의 일조량 등 최적의 기후 조건을 갖춰 국내 최대 매실 주산지로 자리매김했다. 여기서 자란 매실은 타 지역보다 개화 시기가 빨라 충분한 적산 온도를 유지해 과즙이 많고 맛이 뛰어나다.
+                        </p></div></div><div class="tableWrap fullSize"><table><colgroup><col width="380px"><col width="840px"></colgroup>
+
+                        <tr><td>
+                            <img src="/public/internal/musthaveitem/img/detail/jnn/tb_img17.jpg" alt="..."></td><td><div class="h3 color">
+                                청매실농원 매실청
+                            </div><p>
+                                발효 숙성시켜 만든 매실청은 상큼한 맛이 좋아 음료로 마시거나 요리에 설탕 대신 사용하는 등 활용도가 높은 아이템이다. 
+                            </p><ul class="color">
+                            <li class="location">
+                                전라남도 다압면 도사리 414(청매실농원)
+                            </li>
+                            <li class="tel">
+                                061-772-4066 
+                            </li>
+                            <li class="web">
+                                maesil.co.kr 
+                            </li>
+                            <li class="price">
+                                600ml 2만원 대
+                            </li>
+                            <li class="noti">
+                                3월 광양매화축제 
+                            </li>
+                            </ul></td>
+                        </tr>
+
+                        <tr><td>
+                            <img src="/public/internal/musthaveitem/img/detail/jnn/tb_img18.jpg" alt="..."></td><td><div class="h3 color">
+                                순천주조 하늘담 매실주
+                            </div><p>
+                                순천에서 재배한 청매실과 술의 풍미를 높이는 미네랄 성분이 풍부한 천연 암반수, 100% 국내산 햅쌀로 고두밥을 지어 전통 발효 과정을 거쳐서 만들었다. 매실의 달콤하고 상큼한 맛에 부드러운 곡물 향의 밸런스가 훌륭하다. 
+                            </p><ul class="color">
+                            <li class="location">
+                                전라남도 순천시 이수로 97(순천주조) 
+                            </li>
+                            <li class="tel">
+                                0507-1390-3161 
+                            </li>
+                            <li class="web">
+                                www.haneuldam.com 
+                            </li>
+                            <li class="price">
+                                1만원 대 
+                            </li>
+                            <li class="cart">
+                                순천로컬푸드 순천만국가정원점, 순천로컬푸드 신대점 
+                            </li>
+                            </ul></td>
+                        </tr>
+                        
+                    </table></div>
+
+                    <!-- comp : contents -->
+                    <div class="division fullSize"><div class="left">
+                        <img src="/public/internal/musthaveitem/img/detail/jnn/img11.jpg" alt="..."></div><div class="right bgFill"><div class="h2">
+                            순천만 굿즈
+                        </div><p>
+                            세계 5대 연안 습지 중 한 곳이자 2021년 유네스코 세계자연유산에 등재된 순천만. 고흥반도와 여수반도로 둘러싸인 해수역에 드넓게 펼쳐진 갈대밭으로 유명하다.
+                        </p></div></div><div class="tableWrap fullSize"><table><colgroup><col width="380px"><col width="840px"></colgroup>
+
+                        <tr><td>
+                            <img src="/public/internal/musthaveitem/img/detail/jnn/tb_img19.jpg" alt="..."></td><td><div class="h3 color">
+                                유익한상점 갈대 빗자루
+                            </div><p>
+                                직접 채취한 갈대꽃을 그늘과 햇빛에 번갈아 말리고 갈대 향을 유지하기 위해 오동나무장에서 건조시키는 등 공이 많이 든 제품이다.
+                            </p><ul class="color">
+                            <li class="location">
+                                전라남도 순천시 역전길 77(유익한상점)
+                            </li>
+                            <li class="tel">
+                                0507-1315-0027 
+                            </li>
+                            <li class="web">
+                                smartstore.naver.com/uikstore
+                            </li>
+                            <li class="price">
+                                4만원 대
+                            </li>
+                            </ul></td>
+                        </tr>
+
+                        <tr><td>
+                            <img src="/public/internal/musthaveitem/img/detail/jnn/tb_img20.jpg" alt="..."></td><td><div class="h3 color">
+                                화월당 볼카스테라
+                            </div><p>
+                                화월당은 순천 남부시장에서 90년간 자리를 지켜온 빵집. 부드럽고 촉촉한 카스텔라 안에 팥소가 가득 들어 있는 볼카스테라가 인기다
+                            </p><ul class="color">
+                            <li class="location">
+                                전라남도 순천시 중앙로 90-1(화월당)
+                            </li>
+                            <li class="tel">
+                                061-752-2016 
+                            </li>
+                            <li class="price">
+                                12개 1박스 2만원 대
+                            </li>
+                            </ul></td>
+                        </tr>
+
+                        <tr><td>
+                            <img src="/public/internal/musthaveitem/img/detail/jnn/tb_img21.jpg" alt="..."></td><td><div class="h3 color">
+                                흑두루미 오카리나
+                            </div><p>
+                                매년 겨울 순천의 하늘을 수놓는 흑두루미. 이를 형상화한 오카리나로 흑두루미의 우아한 날갯짓을 고스란히 표현했다. 부리와 머리, 몸통 등에 유약을 바르는 형태를 달리해 두루미 색상을 자연스럽게 표현한 것이 특징이다. 
+                            </p><ul class="color">
+                            <li class="location">
+                                전라남도 순천시 유동2길 31(흙과불)
+                            </li>
+                            <li class="tel">
+                                010-6878-8980
+                            </li>
+                            <li class="price">
+                                3만원~6만원 대(크기별 상이) 
+                            </li>
+                            <li class="cart">
+                                순천만습지 공예특산품관, 순천만국가정원 동문 기념품 판매점, 순천만국가정원 서문 기념품 판매점
+                            </li>
+                            </ul></td>
+                        </tr>
+                        
+                    </table></div>
+
+                    <!-- comp : contents -->
+                    <div class="division fullSize"><div class="left">
+                        <img src="/public/internal/musthaveitem/img/detail/jnn/img12.jpg" alt="..."></div><div class="right bgFill"><div class="h2">
+                            여수 동백 오일
+                        </div><p>
+                            동백은 온난대성 나무로 섬과 남부 해안지역에 주로 서식하는데, 특히 여수 오동도는 동백이 흐드러지게 피어 섬 전체가 붉게 물들 정도다. 오동도의 동백꽃은 촘촘하게 피는 것이 특징이다.
+                        </p></div></div><div class="tableWrap fullSize"><table><colgroup><col width="380px"><col width="840px"></colgroup>
+
+                        <tr><td>
+                            <img src="/public/internal/musthaveitem/img/detail/jnn/tb_img22.jpg" alt="..."></td><td><div class="h3 color">
+                                리얼듀 동백 오일
+                            </div><p>
+                               동백 오일 100%로 얼굴 및 몸은 물론 모발에도 바를 수 있는 제품. 천연 오일로 끈적임이 덜하고 빠른 흡수력이 특징이다. 단독으로 사용해도 되고, 평소 사용하는 스킨케어 제품에 1~2방울 떨어뜨려 함께 사용하면 더욱 효과적이다.   
+                            </p><ul class="color">
+                            <li class="location">
+                                전라남도 여수시 덕충2길 32 303호(리얼듀)
+                            </li>
+                            <li class="tel">
+                                02-318-1022 
+                            </li>
+                            <li class="web">
+                                smartstore.naver.com/lnknature1022
+                            </li>
+                            <li class="price">
+                                3만원 대
+                            </li>
+                            </ul></td>
+                        </tr>
+
+                        <tr><td>
+                            <img src="/public/internal/musthaveitem/img/detail/jnn/tb_img23.jpg" alt="..."></td><td><div class="h3 color">
+                                리얼듀 동백 수분크림
+                            </div><p>
+                                천연 동백 오일이 10% 이상 함유된 수분크림. 피부 속 깊이 다량의 수분을 공급하고 자극 없이 빠르게 흡수되어 피부를 촉촉하게 유지해준다.   
+                            </p><ul class="color">
+                            <li class="location">
+                                전라남도 여수시 덕충2길 32 303호(리얼듀)
+                            </li>
+                            <li class="tel">
+                                02-318-1022 
+                            </li>
+                            <li class="web">
+                                smartstore.naver.com/lnknature1022 
+                            </li>
+                            <li class="price">
+                                2만원 대
+                            </li>
+                            </ul></td>
+                        </tr>
+                        
+                    </table></div>
+        
+                </section>
+            </contents>
+            <!-- evoke : 템플릿 끝 -->
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,1113 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="common-inner">
+        <div class="template__type1__section">
+            <!-- evoke : 템플릿 시작 -->
+            <contents>
+                <style>
+                    /* common.css */
+                    @charset "UTF-8";
+                    /* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap'); */
+                    html, body, div, span, applet, object, iframe,
+                    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+                    a, abbr, acronym, address, big, cite, code,
+                    del, dfn, em, img, ins, kbd, q, s, samp,
+                    small, strike, strong, sub, sup, tt, var,
+                    b, u, i, center,
+                    dl, dt, dd, ol, ul, li,
+                    fieldset, form, label, legend,
+                    table, caption, tbody, tfoot, thead, tr, th, td,
+                    article, aside, canvas, details, embed,
+                    figure, figcaption, footer, header, hgroup,
+                    menu, nav, output, ruby, section, summary,
+                    time, mark, audio, video {
+                    margin: 0;
+                    padding: 0;
+                    border: 0;
+                    font-size: 100%;
+                    font: inherit;
+                    vertical-align: baseline;
+                    }
+                    /* HTML5 display-role reset for older browsers */
+                    article, aside, details, figcaption, figure,
+                    footer, header, hgroup, menu, nav, section {
+                    display: block;
+                    }
+                    body {
+                    line-height: 1;
+                    }
+                    ol, ul {
+                    list-style: none;
+                    }
+                    blockquote, q {
+                    quotes: none;
+                    }
+                    blockquote:before, blockquote:after,
+                    q:before, q:after {
+                    content: "";
+                    content: none;
+                    }
+                    table {
+                    border-collapse: collapse;
+                    border-spacing: 0;
+                    }
+                    Select {
+                    font-family: inherit; /* 폰트 상속 */
+                    background: url(../img/btn-drop-arrow.svg) no-repeat 98% 50%;
+                    /* 네이티브 화살표를 커스텀 화살표로 대체 */
+                    -webkit-appearance: none;
+                    /* 네이티브 외형 감추기 */
+                    -moz-appearance: none;
+                    appearance: none;
+                    }
+                    Select::-ms-expand {
+                    display: none; /* 화살표 없애기 for IE10, 11*/
+                    }
+                    input {
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    -webkit-border-radius: 0;
+                    border-radius: 0;
+                    }
+                    /* IE10 이상에서 input box 에 추가된 지우기 버튼 제거 */
+                    input::-ms-clear {
+                    display: none;
+                    }
+                    /* input type number 에서 화살표 제거 */
+                    input[type=number]::-webkit-inner-spin-button,
+                    input[type=number]::-webkit-outer-spin-button {
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    }
+                    body {
+                        background: #f5f5f5;
+                    }
+                    .common-inner {
+                        padding: 0 30px;
+                        max-width: 1300px;
+                        box-sizing: border-box;
+                        margin: 0 auto;
+                        margin-top: 40px;
+                        padding: 0 40px;
+                        padding-bottom: 120px;
+                    }
+                    .template__type1__section {
+                        padding: 30px;
+                        border: 1px solid #e0e0e0;
+                        background: #fff;
+                        border-radius: 18px;
+                    }
+                    @media (max-width: 1200px) {
+                        .common-inner {
+                            padding: 0 20px;
+                        }
+                    }
+                
+                    .page-content {
+                    color: #000;
+                    letter-spacing: -0.5px;
+                    line-height: 140%;
+                    font-family: system-ui, -apple-system, "Poppins", "MS PGothic", "Microsoft YaHei", "Arial", sans-serif;
+                    max-width: none;
+                    }
+                    .page-content .fullSize {
+                    margin-left: -30px;
+                    margin-right: -30px;
+                    }
+                    .page-content .visualImg {
+                    max-width: 926px;
+                    margin: 0 auto;
+                    }
+                    .page-content .visualImg img {
+                    width: 100%;
+                    }
+                    .page-content .visualImg .imgName {
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 140%; /* 140% */
+                    letter-spacing: -0.5px;
+                    text-align: center;
+                    margin-bottom: 40px;
+                    }
+                    .page-content .pageDesc {
+                    margin-bottom: 80px;
+                    }
+                    .page-content .pageDesc li + li {
+                    margin-top: 30px;
+                    }
+                    .page-content .pageDesc p {
+                    color: #000;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 172%; /* 172.308% */
+                    letter-spacing: -0.5px;
+                    }
+                    .page-content .pageDesc p::before {
+                    content: "";
+                    display: inline-block;
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 5px;
+                    margin-bottom: 3px;
+                    background-color: #000;
+                    }
+                    .page-content .division {
+                    display: flex;
+                    align-items: stretch;
+                    justify-content: center;
+                    margin-bottom: 40px;
+                    margin-top: 85px;
+                    }
+                    .page-content .division.divisionAuto {
+                    min-height: auto;
+                    }
+                    .page-content .division.divisionAuto .left,
+                    .page-content .division.divisionAuto .right {
+                    padding: 35px 6.5%;
+                    }
+                    .page-content .division .h2 {
+                    font-size: 36px;
+                    font-weight: bold;
+                    line-height: 100%;
+                    margin-bottom: 27px;
+                    }
+                    .page-content .division .left {
+                    width: 50%;
+                    box-sizing: border-box;
+                    border-radius: 0 45px 45px 0;
+                    overflow: hidden;
+                    }
+                    .page-content .division .left img {
+                    width: 100%;
+                    height: 100%;
+                    -o-object-fit: cover;
+                        object-fit: cover;
+                    display: block;
+                    }
+                    .page-content .division .left.bgFill {
+                    display: flex;
+                    align-items: center;
+                    padding: 6.5%;
+                    color: #fff;
+                    }
+                    .page-content .division .left .h2 {
+                    margin: 0;
+                    }
+                    .page-content .division .right {
+                    background-color: #000;
+                    box-sizing: border-box;
+                    border-radius: 45px 0 0 45px;
+                    width: 50%;
+                    color: #fff;
+                    padding: 100px 80px;
+                    padding: 6.5%;
+                    }
+                    .page-content .division .right p {
+                    font-size: 16px;
+                    line-height: 140%;
+                    }
+                    .page-content .division-grey {
+                    min-height: 0;
+                    margin-top: 0;
+                    }
+                    .page-content .division-grey .left {
+                    background-color: #DEDEDE;
+                    padding: 23px 32px;
+                    }
+                    .page-content .division-grey .left .caption {
+                    font-size: 20px;
+                    font-weight: 300;
+                    margin-bottom: 12px;
+                    }
+                    .page-content .division-grey .left .caption::after {
+                        display: none;
+                    }
+                    .page-content .division-grey .left .line {
+                    width: 66px;
+                    height: 1px;
+                    background-color: #000;
+                    margin-bottom: 20px;
+                    }
+                    .page-content .division-grey .left .h3 {
+                    font-size: 24px;
+                    font-weight: bold;
+                    margin-bottom: 42px;
+                    }
+                    .page-content .division-grey .left p {
+                    font-size: 16px;
+                    line-height: 175%;
+                    }
+                    .page-content .division-grey .right {
+                    background-color: #DEDEDE;
+                    padding: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    }
+                    .page-content .division-grey .right img {
+                    width: 100%;
+                    }
+                    .page-content .division-border {
+                    margin-top: 30px;
+                    }
+                    .page-content .division-border .left {
+                    padding: 17px 32px 27px;
+                    flex: 1 0 0;
+                    }
+                    .page-content .division-border .left .caption {
+                    font-size: 20px;
+                    font-weight: 300;
+                    margin-bottom: 12px;
+                    }
+                    .page-content .division-border .left .line {
+                    width: 66px;
+                    height: 1px;
+                    background-color: #000;
+                    margin-bottom: 20px;
+                    }
+                    .page-content .division-border .left .h3 {
+                    font-size: 24px;
+                    font-weight: bold;
+                    margin-bottom: 42px;
+                    }
+                    .page-content .division-border .left .h3 span {
+                    font-weight: 400;
+                    }
+                    .page-content .division-border .left p {
+                    font-size: 16px;
+                    line-height: 175%;
+                    }
+                    .page-content .division-border .left b {
+                    font-weight: bold;
+                    }
+                    .page-content .division-border .right {
+                    flex: 0 0 auto;
+                    background-color: transparent;
+                    padding: 0;
+                    padding-right: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    }
+                    .page-content .division-border .right img {
+                    width: 100%;
+                    }
+                    .page-content .division-border-2 .left {
+                    width: 83%;
+                    padding-right: 5.8%;
+                    }
+                    .page-content .division-border-2 .right {
+                    width: 35%;
+                    max-width: 414px;
+                    }
+                    .page-content .division-border-2 .right img {
+                    max-height: 375px;
+                    -o-object-fit: contain;
+                        object-fit: contain;
+                    }
+                    .page-content .tableWrap table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    font-size: 14px;
+                    margin-bottom: 45px;
+                    }
+                    .page-content .tableWrap table td {
+                    vertical-align: top;
+                    border: 1px solid #BBBBBB;
+                    box-sizing: border-box;
+                    text-align: left;
+                    }
+                    .page-content .tableWrap table td:nth-child(1) {
+                    border-left: 0;
+                    vertical-align: middle;
+                    }
+                    .page-content .tableWrap table td:nth-child(1) img {
+                    width: 100%;
+                    min-width: 50px;
+                    -o-object-fit: contain;
+                        object-fit: contain;
+                    }
+                    .page-content .tableWrap table td:nth-child(2) {
+                    border-right: 0;
+                    padding: 40px 70px;
+                    padding: 3.3% 5.8%;
+                    padding: 40px 5.8%;
+                    }
+                    .page-content .tableWrap table .h3 {
+                    font-size: 24px;
+                    font-weight: bold;
+                    margin-bottom: 28px;
+                    }
+                    .page-content .tableWrap table .h3::before {
+                    display: inline-block;
+                    color: #000;
+                    margin-right: 6px;
+                    }
+                    .page-content .tableWrap table tr:nth-child(1) .h3::before {
+                    content: "①";
+                    }
+                    .page-content .tableWrap table tr:nth-child(2) .h3::before {
+                    content: "②";
+                    }
+                    .page-content .tableWrap table tr:nth-child(3) .h3::before {
+                    content: "③";
+                    }
+                    .page-content .tableWrap table tr:nth-child(4) .h3::before {
+                    content: "④";
+                    }
+                    .page-content .tableWrap table p {
+                    font-size: 14px;
+                    margin-bottom: 7px;
+                    }
+                    .page-content .tableWrap table li {
+                    font-size: 14px;
+                    line-height: 100%;
+                    padding-left: 22px;
+                    position: relative;
+                    word-break: break-all;
+                    }
+                    .page-content .tableWrap table li::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 15px;
+                    height: 15px;
+                    display: inline-block;
+                    }
+                    .page-content .tableWrap table li.location::before {
+                    background-image: url(/public/internal/musthaveitem/img/common/ic_location.svg);
+                    }
+                    .page-content .tableWrap table li.tel::before {
+                    background-image: url(/public/internal/musthaveitem/img/common/ic_tel.svg);
+                    }
+                    .page-content .tableWrap table li.web::before {
+                    background-image: url(/public/internal/musthaveitem/img/common/ic_web.svg);
+                    }
+                    .page-content .tableWrap table li.price::before {
+                    background-image: url(/public/internal/musthaveitem/img/common/ic_price.svg);
+                    }
+                    .page-content .tableWrap table li.cart::before {
+                    background-image: url(/public/internal/musthaveitem/img/common/ic_cart.svg);
+                    }
+                    .page-content .tableWrap table li.noti::before {
+                    background-image: url(/public/internal/musthaveitem/img/common/ic_noti.svg);
+                    }
+                    .page-content .tableWrap table li + li {
+                    margin-top: 7px;
+                    }
+                    .page-content.theme-red .color {
+                    color: #F0514D !important;
+                    }
+                    .page-content.theme-red .bgFill {
+                    background-color: #F0514D !important;
+                    }
+                    .page-content.theme-red .pageDesc p::before {
+                    background-color: #F0514D;
+                    }
+                    .page-content.theme-red .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+                    background: rgba(240, 81, 77, 0.1);
+                    }
+                    .page-content.theme-red .division-border {
+                    border: 3px solid #F0514D;
+                    box-sizing: border-box;
+                    }
+                    .page-content.theme-navy .color {
+                    color: #036A9B !important;
+                    }
+                    .page-content.theme-navy .bgFill {
+                    background-color: #036A9B !important;
+                    }
+                    .page-content.theme-navy .pageDesc p::before {
+                    background-color: #036A9B;
+                    }
+                    .page-content.theme-navy .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+                    background: rgba(3, 106, 155, 0.1);
+                    }
+                    .page-content.theme-navy .division-border {
+                    border: 3px solid #036A9B;
+                    box-sizing: border-box;
+                    }
+                    .page-content.theme-yellow .color {
+                    color: #EDB51E !important;
+                    }
+                    .page-content.theme-yellow .bgFill {
+                    background-color: #EDB51E !important;
+                    }
+                    .page-content.theme-yellow .pageDesc p::before {
+                    background-color: #EDB51E;
+                    }
+                    .page-content.theme-yellow .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+                    background: rgba(237, 181, 30, 0.15);
+                    }
+                    .page-content.theme-yellow .division-border {
+                    border: 3px solid #EDB51E;
+                    box-sizing: border-box;
+                    }
+                    .page-content.theme-green .color {
+                    color: #4C9667 !important;
+                    }
+                    .page-content.theme-green .bgFill {
+                    background-color: #4C9667 !important;
+                    }
+                    .page-content.theme-green .pageDesc p::before {
+                    background-color: #4C9667;
+                    }
+                    .page-content.theme-green .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+                    background: rgba(76, 150, 103, 0.1);
+                    }
+                    .page-content.theme-green .division-border {
+                    border: 3px solid #4C9667;
+                    box-sizing: border-box;
+                    }
+                    .page-content.theme-pink .color {
+                    color: #F598A6 !important;
+                    }
+                    .page-content.theme-pink .bgFill {
+                    background-color: #F598A6 !important;
+                    }
+                    .page-content.theme-pink .pageDesc p::before {
+                    background-color: #F598A6;
+                    }
+                    .page-content.theme-pink .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+                    background: rgba(245, 152, 166, 0.15);
+                    }
+                    .page-content.theme-pink .division-border {
+                    border: 3px solid #F598A6;
+                    box-sizing: border-box;
+                    }
+                    .page-content.theme-blue .color {
+                    color: #2587C8 !important;
+                    }
+                    .page-content.theme-blue .bgFill {
+                    background-color: #2587C8 !important;
+                    }
+                    .page-content.theme-blue .pageDesc p::before {
+                    background-color: #2587C8;
+                    }
+                    .page-content.theme-blue .tableWrap table tr:nth-child(2n-1) td:nth-child(2) {
+                    background: rgba(37, 135, 200, 0.15);
+                    }
+                    .page-content.theme-blue .division-border {
+                    border: 3px solid #2587C8;
+                    box-sizing: border-box;
+                    }
+                    @media screen and (max-width: 767px) {
+                    .page-content .division {
+                        flex-direction: column;
+                    }
+                    .page-content .division .left {
+                        width: 100%;
+                        border-radius: 0;
+                    }
+                    .page-content .division .right {
+                        width: 100%;
+                        border-radius: 0;
+                    }
+                    .page-content .division-border-2 .left {
+                        width: 100%;
+                        padding: 17px 32px 27px;
+                    }
+                    .page-content .division-border .left {
+                        flex: 1 0 auto;
+                    }
+                    .page-content .division-border .right {
+                        padding: 17px 32px;
+                    }
+                    .page-content .division-border-2 .right {
+                        max-width: 100%;
+                    }
+                    .page-content .division-border-2 .right img {
+                        width: 100%;
+                        -o-object-fit: contain;
+                        object-fit: contain;
+                        max-height: 240px;
+                    }
+                    .page-content .tableWrap {
+                        display: block;
+                    }
+                    .page-content .tableWrap table {
+                        display: block;
+                    }
+                    .page-content .tableWrap table colgroup {
+                        display: none;
+                    }
+                    .page-content .tableWrap table td {
+                        display: block;
+                        width: 100%;
+                        border: 1px solid #BBBBBB !important;
+                        margin-top: -1px;
+                    }
+                    .page-content .tableWrap table td:nth-child(1) {
+                        display: flex;
+                    }
+                    .page-content .tableWrap table td:nth-child(1) img {
+                        max-height: 350px;
+                        width: 50%;
+                        margin: 0 auto;
+                    }
+                    }
+                </style>
+                <section class="page-content theme-blue">
+                    <!-- comp -->
+                    <div class="visualImg">
+                        <img src="/public/internal/musthaveitem/img/detail/pus/img01.jpg" alt="...">
+                        <div class="imgName">부산의 랜드마크로 꼽히는 광안대교의 웅장한 모습</div>
+                    </div>
+                    <!-- comp -->
+                    <div class="pageDesc">
+                        <ul>
+                            <li>
+                                <p>
+                                    물과 자연, 문화가 아름답게 어우러지는 부산은 대한민국에서 가장 매력적인 도시 중 하나다. 국내외 관광객들에게 인기 있는 여행지로, 다양한 매력과 활동을 즐길 수 있다. 부산 여행에서 가야 할 곳은 손가락이 부족할 정도다. 제2의 수도라 불리는 부산은 먹거리 천국, 볼거리 천국인 여행지다. 부산역에서 내리면 15분 안에 부산의 남포동, 국제시장, 자갈치시장에 갈 수 있다. 
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    부산을 대표하는 해변은 해운대, 광안리, 송정해수욕장 등이다. 해운대는 부산의 대표적인 관광지 중 하나로 백사장이 길면서 모래가 고와 걸어 다니기 좋다. 밤이 되면 버스킹으로 거리가 북적북적하다. 광안리는 부산의 대표적인 야경 명소로, 광안대교를 바라보며 고요한 바다 소리를 들으면 마음이 안정되고 편안함을 느낄 수 있다. 
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    다양한 문화를 즐길 수 있는 도시이기도 한 부산에는 국립대극장, 부산시립미술관, 부산박물관 등 다양한 문화 시설이 있다. 또 다양한 축제와 행사가 개최되는데, 부산국제영화제, 부산국제단편영화제, 부산불꽃축제 등이 유명하다. 특히 부산국제영화제는 전 세계 영화인들과 관객이 함께 모여 열광하는 문화 행사다.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- comp : contents -->
+                    <div class="division fullSize"><div class="left">
+                        <img src="/public/internal/musthaveitem/img/detail/pus/img02.jpg" alt="..."></div><div class="right bgFill"><div class="h2">동백 굿즈</div>
+                        <p>
+                            매년 많은 관광객은 겨울에 붉은 꽃을 피우는 동백나무 숲을 방문한다. 흐드러지게 핀 동백꽃과 함께 사진을 찍으면 오묘한 분위기를 연출할 수 있다. 동백은 11월 말부터 꽃을 피우기 시작해 2~3월이 되면 만개한다. 부산을 상징하는 아름다운 꽃, 동백을 기념하기 위해 동백을 모티브로 한 기념품들을 소개한다.
+                        </p></div></div><div class="tableWrap fullSize"><table><colgroup><col width="380px"><col width="840px"></colgroup>
+
+                        <tr><td>
+                            <img src="/public/internal/musthaveitem/img/detail/pus/tb_img01.jpg" alt="..."></td><td><div class="h3 color">
+                                동백 손가방
+                            </div><p>
+                                동백꽃의 꽃말은 ’누구보다 당신을 사랑합니다‘라는 뜻을 가지고 있다. 동백 손가방은 색감이 예쁘고, 가볍게 들고 다니기 좋다. 빨갛게 물든 동백꽃은 실용적인 선물로 일상에서 들기 좋은 손가방이다.
+                            </p><ul class="color">
+                            <li class="location">
+                                부산광역시 동구 고관로 9 (오앤유갤러리) 
+                            </li>
+                            <li class="tel">
+                                0507-1330-4572
+                            </li>
+                            <li class="cart">
+                                판판샵, 동백상회  
+                            </li>
+                            <li class="web">
+                                smartstore.naver.com/sygallery 
+                            </li>
+                            <li class="price">
+                                미니 손가방 3만원 대
+                            </li>
+                            </ul></td>
+                        </tr>
+
+                        <tr><td>
+                            <img src="/public/internal/musthaveitem/img/detail/pus/tb_img02.jpg" alt="..."></td><td><div class="h3 color">
+                                부산을 담은 대나무 텀블러
+                            </div><p>
+                                동백꽃이 그려진 텀블러는 핸드메이드 제품으로 깔끔하면서, 들고 다니기 편리하다. 또한, 대나무 재질로 만들어져서 튼튼하다. 텀블러는 여행을 다니면서 음료를 넣어 먹기 좋으며, 동백꽃의 포인트인 텀블러와 동백 손가방을 함께 매치하면 센스있는 선물아이템으로 추천한다.
+                            </p><ul class="color">
+                            <li class="location">
+                                부산광역시 동구 중앙대로 210(동백상회) 
+                            </li>
+                            <li class="tel">
+                                0507-1482-1328
+                            </li>
+                            <li class="price">
+	                        대나무 텀블러 2만원 대
+                            </li>
+                            </ul></td>
+                        </tr>
+                        
+                    </table></div>
+
+                    <!-- comp : contents -->
+                    <div class="division fullSize"><div class="left">
+                        <img src="/public/internal/musthaveitem/img/detail/pus/img03.jpg" alt="..."></div><div class="right bgFill"><div class="h2">
+                            대선 소주잔
+                        </div><p>
+                            부산하면 대선 소주가 가장 먼저 떠오른다. 파도 모양의 디자인이 인상적인 대선은 알코올 도수가 16.5도로, 90년 역사를 자랑한다. 부산의 대표 소주 대선을 모티브로 만든 소주잔과 병따개도 인기가 많다. 소주잔과 병따개는 한국의 소주 문화와 술 마시는 방식을 느낄 수 있는 대표적인 아이템이다.
+                        </p></div></div><div class="tableWrap fullSize"><table><colgroup><col width="380px"><col width="840px"></colgroup>
+
+                        <tr><td>
+                            <img src="/public/internal/musthaveitem/img/detail/pus/tb_img03.jpg" alt="..."></td><td><div class="h3 color">
+                                부산언니X대선소주잔 세트
+                            </div><p>
+                               부산의 대표 소주 브랜드 ‘대선’과 부산의 대표 캐릭터 부산언니, 부산오빠가 협업해 만든 소주잔이다. 커플 세트로 인기 있는 아이템이며, 병따개도 함께 들어가 있다. 기념일이나 집들이 선물, 장식용으로 좋다
+                            </p><ul class="color">
+                            <li class="location">
+                                부산광역시 동구 중앙대로 210(동백상회) 
+                            </li>
+                            <li class="tel">
+                                0507-1482-1328  
+                            </li>
+                            <li class="price">
+                                소주잔 개당 1만원 미만 
+                            </li>
+                            <li class="cart">
+                                해운대 선물가게, 여가거가 광안리
+                            </li>
+                            </ul></td>
+                        </tr>
+                        
+                    </table></div>
+
+                    <!-- comp : contents -->
+                    <div class="division fullSize"><div class="left">
+                        <img src="/public/internal/musthaveitem/img/detail/pus/img04.jpg" alt="..."></div><div class="right bgFill"><div class="h2">
+                            기장 미역
+                        </div><p>
+                           미역국은 한국인들이 생일날 꼭 먹는 음식이기도 하고, 산후조리할 때도 먹을 정도로 칼슘과 영양이 풍부하다. 기장 미역은 부산 기장군에서 생산되는 미역이다. 기장 미역은 깨끗한 바닷물과 풍부한 영양분으로 맛과 영양이 뛰어나며, 면역력 강화, 빈혈 예방, 다이어트, 피부 미용, 눈 건강 등에 도움을 준다.
+                        </p></div></div><div class="tableWrap fullSize"><table><colgroup><col width="380px"><col width="840px"></colgroup>
+
+                        <tr><td>
+                            <img src="/public/internal/musthaveitem/img/detail/pus/tb_img04.jpg" alt="..."></td><td><div class="h3 color">
+                                기장사람들 하트미역
+                            </div><p>
+                                ‘기장사람들 하트미역’은 좋은 원초의 미역으로 자사 공장에서 수작업해 제품을 만든다. 하트미역 전용 트레이를 사용해 부서지는 것을 방지한다. 크기가 작아 보관이 편리하다. 
+                            </p><ul class="color">
+                            <li class="location">
+                                부산광역시 동구 중앙대로 210(동백상회) 
+                            </li>
+                            <li class="tel">
+                                0507-1482-1328
+                            </li>
+                            <li class="web">
+                                smartstore.naver.com/egijang 
+                            </li>
+                            <li class="price">
+                                1개 1만원 미만
+                            </li>
+                            <li class="cart">
+                                해운대 선물가게, 여가거가  광안리
+                            </li>
+                            </ul></td>
+                        </tr>
+
+                        <tr><td>
+                            <img src="/public/internal/musthaveitem/img/detail/pus/tb_img05.jpg" alt="..."></td><td><div class="h3 color">
+                                영주상회 기장 미역
+                            </div><p>
+                                항암 작용과 혈관 질환, 뼈 건강, 모발 건강에도 좋은 기장 미역. 수온과 조류 등 최적의 어장에서 자라 미역 중 최상품으로 인식되며, 쫄깃한 식감과 고유의 향이 특징이다. 부산 KTX 역사 내에서 부산 기장 특산품을 판매해 쉽게 구매할 수 있다. 
+                            </p><ul class="color">
+                            <li class="location">
+                                부산광역시 동구 중앙대로 206  부산역(영주상회) 
+                            </li>
+                            <li class="tel">
+                                0507-1401-0394 
+                            </li>
+                            <li class="price">
+                                1세트 2만원 대
+                            </li>
+                            </ul></td>
+                        </tr>
+                        
+                    </table></div>
+
+                    <!-- comp : contents -->
+                    <div class="division fullSize"><div class="left">
+                        <img src="/public/internal/musthaveitem/img/detail/pus/img05.jpg" alt="..."></div><div class="right bgFill"><div class="h2">
+                            옵스(OPS) 빵 
+                        </div><p>
+                            부산 여행의 빵지순례를 테마로 맛있는 빵과 디저트를 찾아 여행하고 싶다면, ‘옵스빵’에 꼭 들러야 한다. 가게에 들어서는 순간, 많은 빵냄새에 후각이 황홀해진다. 옵스에는 다양한 선물용 패키지가 있는데, 구운 과자세트와 학원전 박스 세트, 옵스 기획세트가 고급스러워 답례품이나 선물로 많이 구매하기 좋다.
+                        </p></div></div><div class="tableWrap fullSize"><table><colgroup><col width="380px"><col width="840px"></colgroup>
+
+                        <tr><td>
+                            <img src="/public/internal/musthaveitem/img/detail/pus/tb_img06.jpg" alt="..."></td><td><div class="h3 color">
+                                학원전
+                            </div><p>
+                                옵스의 시그너처, 학원전. 담백한 카스텔라 맛으로 우유나 사과 주스와 함께 먹으면 찰떡궁합이다. 부드럽고 촉촉한 학원전은 ‘학원에 가기 전에 먹는 빵’이라는 의미를 지니고 있다. 귀여운 학원 버스 모양 패키지에 담긴 학원전은 선물용으로도 좋다.
+                            </p><ul class="color">
+                            <li class="location">
+                                부산광역시 해운대구 중동1로 31(옵스 해운대점)   
+                            </li>
+                            <li class="tel">
+                                051-747-6886 
+                            </li>
+                            <li class="web">
+                                ops.co.kr/category/빵/26/  
+                            </li>
+                            <li class="price">
+                                개당 1만원 미만
+                            </li>
+                            <li class="cart">
+                                옵스 마린시티점, 롯데백화점 부산 본점
+                            </li>
+                            </ul></td>
+                        </tr>
+                        
+                    </table></div>
+
+                    <!-- comp : contents -->
+                    <div class="division fullSize"><div class="left">
+                        <img src="/public/internal/musthaveitem/img/detail/pus/img06.jpg" alt="..."></div><div class="right bgFill"><div class="h2">
+                            영도할매빵•갈매기빵
+                        </div><p>
+                            부산을 상징하는 빵으로 ‘영도할매빵’과 ‘갈매기빵’이 있다. 부산 영도 주민들의 수호신인 영도할매는 영도 주민을 지켜준다는 긍정적인 의미도 담고 있으며, 여행 기간 동안 좋은 기운을 함께 얻어갈 수 있다. 부산하면 떠오르는 바다, 그리고 그 바다의 주인공인 갈매기 모양을 본딴 갈매기빵도 특별하다.
+                        </p></div></div><div class="tableWrap fullSize"><table><colgroup><col width="380px"><col width="840px"></colgroup>
+
+                        <tr><td>
+                            <img src="/public/internal/musthaveitem/img/detail/pus/tb_img07.jpg" alt="..."></td><td><div class="h3 color">
+                                영도할매빵
+                            </div><p>
+                                영도할매빵은 부산 영도의 수호신 영도할매를 테마로 고구마 필링과 크림치즈를 넣은 머핀이다. 매장에서 직접 구워 부드러우면서 달달하다. 카페에 들러 영도할매빵을 선물로 사고 잠시 바깥 풍경을 바라보면 부산항대교와 오륙도를 눈에 담을 수 있다.
+                            </p><ul class="color">
+                            <li class="location">
+                                부산광역시 영도구 동삼동 176-2(카페 385)
+                            </li>
+                            <li class="tel">
+                                051-403-0385 
+                            </li>
+                            <li class="web">
+                                www.instagram.com/cafe385_/ 
+                            </li>
+                            <li class="price">
+                                1박스 1만원 대 
+                            </li>
+                            <li class="cart">
+                                여가거가 광안리
+                            </li>
+                            </ul></td>
+                        </tr>
+                        
+                        <tr><td>
+                            <img src="/public/internal/musthaveitem/img/detail/pus/tb_img08.jpg" alt="..."></td><td><div class="h3 color">
+                                갈매기빵
+                            </div><p>
+                                바닷가에 있는 부산은 갈매기가 유명하다. 갈매기빵은 부산 대표 갈매기를 꿈꾸는 ‘꼬마 갈매기 런즈’를 활용한 앙금빵이다. 꼬마 갈매기 런즈는 부산 시민들에게 사랑받는 캐릭터다. 달콤한 초코 앙금과 향긋한 바닐라 반죽으로 이루어졌으며, 소포장되어 있다. 전자레인지 10초 돌리면 더욱 맛있게 먹을 수 있다.
+                            </p><ul class="color">
+                            <li class="location">
+                                부산광역시 동구 중앙대로 210(동백상회)
+                            </li>
+                            <li class="tel">
+                                0507-1482-1328 
+                            </li>
+                            <li class="price">
+                                1박스 1만원 대 
+                            </li>
+                            <li class="cart">
+                                해운대 선물가게, 여가거가 광안리
+                            </li>
+                            </ul></td>
+                        </tr>
+                        
+                    </table></div>
+
+                    <!-- comp : Tourist -->
+                    <div class="division division-grey fullSize">
+                        <div class="left"><div class="caption">Tourist Attraction</div><div class="line"></div>
+                            <div class="h3">
+                                해운대 해수욕장
+                            </div>
+                            <p>
+                               해운대 해수욕장은 수심이 얕고 조수의 변화가 심하지 않으며 주변에 오락시설과 부대시설이 많아 해마다 천만명이 넘는피서객이 찾아오고 있다. 매년 해수욕장 개장 할 때, 각종행사와 축제가 개최되어 해운대를 찾는 관광객들에게 풍성한 볼거리를 제공하고 있다. 해수욕장 입구에 들어서 있는 부산아쿠아리움을 비롯해 해운대 관광안내소가 있으며 해맞이축제, 달맞이 온천축제,바다축제 등 연중 다양한 볼거리와 즐길거리가 많은 곳이다.
+                            </p>
+                        </div><div class="right">
+                            <img src="/public/internal/musthaveitem/img/detail/pus/img07.jpg" alt="...">
+                        </div>
+                    </div>
+
+
+                    <!-- comp : contents -->
+                    <div class="division fullSize"><div class="left">
+                        <img src="/public/internal/musthaveitem/img/detail/pus/img08.jpg" alt="..."></div><div class="right bgFill"><div class="h2">
+                            로컬 커피
+                        </div><p>
+                            부산은 한국 최초로 커피를 마셨다는 기록이 남아있는 '커피의 도시'다. 한국의 커피 생두 수입 물량의 90% 이상이 부산항을 통해 들어오는 만큼 맛 좋은 커피를 파는 곳들도 찾을 수 있다. 부산에서 커피를 마시고 싶다면 모모스 커피를 찾아보자. 스페셜티 전문 커피 브랜드로 다양한 커피를 즐길 수 있다.
+                        </p></div></div><div class="tableWrap fullSize"><table><colgroup><col width="380px"><col width="840px"></colgroup>
+
+                        <tr><td>
+                            <img src="/public/internal/musthaveitem/img/detail/pus/tb_img09.jpg" alt="..."></td><td><div class="h3 color">
+                                드립백
+                            </div><p>
+                               특별한 날, 모모스의 맛있는 커피를 선물하면 어떨까? 모모스의 대표 블렌드 에스쇼콜라와 과일 사탕의 산뜻한 달콤함이 느껴지는 프루티 봉봉, 다양한 향미를 지닌 산지별 원두를 담은 드립백 선물 세트를 구입할 수 있다. 블렌드 3종, 싱글 2종류, 총 5종류를 15개입으로 구성해, 언제 어디서나 향긋한 커피와 함께할 수 있다.
+                            </p><ul class="color">
+                            <li class="location">
+                                부산광역시 금정구 오시게로 20(모모스커피 본점)
+                            </li>
+                            <li class="tel">
+                                051-512-0700 
+                            </li>
+                            <li class="web">
+                                www.momos.co.kr 
+                            </li>
+                            <li class="price">
+                                시그니처 블렌드 드립백 3종 3만원 대 
+                            </li>
+                            <li class="cart">
+                                모모스로스터리 & 커피바
+                            </li>
+                            </ul></td>
+                        </tr>
+                        
+                        <tr><td>
+                            <img src="/public/internal/musthaveitem/img/detail/pus/tb_img10.jpg" alt="..."></td><td><div class="h3 color">
+                                콜드브루 RDT(Ready to Drink)
+                            </div><p>
+                                콜드부르 RTD는 물에 희석할 필요 없이 바로 먹을 수 있는 콜드브루다. 에스쇼콜라는 에스프레소 및 다양한 베리에이션으로 많은 사랑을받고 있는 모모스커피의 시그너처 블렌딩이다. 캔으로 바로 먹어도 좋고, 잔에 얼음과 함께 마셔도 좋다. 콜드브루에 우유를 넣어 마시면 더부드러운 맛을 느낄 수 있다. 다양한 방법으로 마시고 싶다면 캔에 담은 콜드브루를 추천한다.
+                            </p><ul class="color">
+                            <li class="location">
+                                부산광역시 금정구 오시게로 20(모모스커피 본점)
+                            </li>
+                            <li class="tel">
+                                051-512-0700 
+                            </li>
+                            <li class="web">
+                                www.momos.co.kr 
+                            </li>
+                            <li class="price">
+                                콜드브루 므쵸베리 1만원 미만
+                            </li>
+                            <li class="cart">
+                                모모스로스터리 & 커피바
+                            </li>
+                            </ul></td>
+                        </tr>
+                        
+                    </table></div>
+
+                    <!-- comp : Mini Interview -->
+                    <div class="division division-border division-border-2 fullSize"><div class="left"><div class="caption">Mini Interview</div><div class="line"></div><div class="h3">
+                        모모스커피
+                        <span>
+                        전주연 대표
+                        </span></div><p><b>
+                        Q. 모모스커피는 어떤 곳이고, 특별한 점은 무엇인가요?
+                        </b> 
+                        모모스커피는 2007년 온천장에 위치한 작은 식당 창고에서 출발해 지금까지 그 자리를 지키며 확장해나가고 있는 부산의 지역 브랜드입니다. 2011년 좋은 재료를 찾기 위해 시작한 다이렉트 트레이드로 스페셜티 커피 브랜드로서의 기반을 다졌습니다. 2019년에는 한국인 최초 월드 바리스타 챔피언을 배출하고, 2022년에는 세계에서 가장 주목할 만한 로스터리를 선정하는 ‘올해의 로스터’로 선정되어 커피를 좋아하는 국내외 관광객을 부산으로 불러들이고 있습니다.모모스커피는 최상의 커피를 선보이기 위해 노력합니다. 더 나아가 스페셜티 커피라는 특별한 커피를 모두가 향유할 수 있도록 정진하고 있습니다. 특별함을 모두에게’라는 슬로건 아래 생두에서 한 잔의 커피에 이르기까지 특별하게 여겨지는 영역을 일상에 자연스레 스며들게 함으로써 누구나 커피를 통해 기억할 만한 순간을 경험할 수 있도록 노력합니다. 
+                        </p><p><b>
+                        Q. 모모스커피가 추구하는 가치와 좋은 커피란 무엇일까요?
+                        </b> 
+                        모모스 커피는 스페셜티 커피를 추구합니다. 단순히 고품질 커피를 넘어 왜 스페셜티 커피를 해야하는가를 생각하며 커피를 생산하는 사람, 커피를 만드는 사람, 커피를 소비하는 사람 모두가 행복할 수 있는 커피를 만들어갑니다.
+                        </p></div><div class="right">
+                        <img src="/public/internal/musthaveitem/img/detail/pus/img09.jpg" alt="...">
+                        </div>
+                    </div>
+
+                    <!-- comp : contents -->
+                    <div class="division fullSize"><div class="left">
+                        <img src="/public/internal/musthaveitem/img/detail/pus/img10.jpg" alt="..."></div><div class="right bgFill"><div class="h2">
+                            감천마을 굿즈 
+                        </div><p>
+                           감천문화마을은 한국전쟁 당시 피란민이 터를 잡고 산 데서 비롯된 곳으로 현재는 많은 관광객이 사랑하는 마을로 탈바꿈했다. 감천문화마을을 한 바퀴 돌다 보면 형형색색의 집과 아름다운 벽화를 볼 수 있다. 감천문화마을의 다양한 기념품 숍과 먹거리는 여행의 재미를 더해준다.
+                        </p></div></div><div class="tableWrap fullSize"><table><colgroup><col width="380px"><col width="840px"></colgroup>
+
+                        <tr><td>
+                            <img src="/public/internal/musthaveitem/img/detail/pus/tb_img11.jpg" alt="..."></td><td><div class="h3 color">
+                                감천문화마을 블록
+                            </div><p>
+                                옥스퍼드 블록은 감천문화마을을 표현한 블록으로 제작했다. 감천문화마을의 계단식 지형의 아기자기한 집들의 색깔을 잘 표현했다. 조립한 후 집 안에 놓아두면 인테리어 소품 역할을 한다. 특히 아이들이 좋아하는 블록 완구의 재미를 선물하고 싶다면 추천한다.  
+                            </p><ul class="color">
+                            <li class="location">
+                                부산광역시 사하구 감내2로 201(감천문화마을기념품숍)
+                            </li>
+                            <li class="tel">
+                                051-204-1444 
+                            </li>
+                            <li class="price">
+                                2만원 대
+                            </li>
+                            </ul></td>
+                        </tr>
+                        
+                        <tr><td>
+                            <img src="/public/internal/musthaveitem/img/detail/pus/tb_img12.jpg" alt="..."></td><td><div class="h3 color">
+                                감천문화마을 직소퍼즐 150 Pcs
+                            </div><p>
+                                감천문화마을의 모습을 직소 퍼즐로 제작했다. 액자에 끼워 전시도 할 수 있는 퍼즐은 많은 사람들이 구매하는 기념품이다. 세 종류로 선보이며, 원하는 취향에 따라 선택해 퍼즐을 맞출 수 있다.
+                            </p><ul class="color">
+                            <li class="location">
+                                부산광역시 사하구 감내2로 201(감천문화마을기념품숍)
+                            </li>
+                            <li class="tel">
+                                051-204-1444 
+                            </li>
+                            <li class="price">
+                                1만원 미만
+                            </li>
+                            </ul></td>
+                        </tr>
+                        
+                    </table></div>
+
+                    <!-- comp : contents -->
+                    <div class="division fullSize"><div class="left">
+                        <img src="/public/internal/musthaveitem/img/detail/pus/img11.jpg" alt="..."></div><div class="right bgFill"><div class="h2">
+                            어묵
+                        </div><p>
+                            부산은 바다와 인접해 해산물을 쉽게 구할 수 있는데, 어묵은 생선을 갈아서 만든 것이다. 부산에는 어묵이 유명한데 맛이 좋고 종류가 다양해 가지각색의 어묵을 맛볼 수 있다. 부산 어묵은 어육 함량이 높으며, 오징어, 맛살, 만두, 버섯, 치즈어묵, 고구마 등 다양한 모양과 맛을 선보인다
+                        </p></div></div><div class="tableWrap fullSize"><table><colgroup><col width="380px"><col width="840px"></colgroup>
+
+                        <tr><td>
+                            <img src="/public/internal/musthaveitem/img/detail/pus/tb_img13.jpg" alt="..."></td><td><div class="h3 color">
+                                부묵이 캐릭터 인형
+                            </div><p>
+                                부묵이는 부산 대표 음식 중 하나인 부산 어묵을 캐릭터화 했다. 둥근 형태의 미니 어묵으로 울퉁불퉁한 질감을 부드러운 곡선으로 표현해 어묵의 특징과 탱글함을 표현했다. 엉덩이에는 부산 어묵의 주재료인 생선의 꼬리를 달아 정직하게 만든 어묵이라는 것을 드러냈다. 손에는 어묵 꼬챙이를 들고 다니며 간장 종지를 배처럼 타고 부산의 아름다운 명소과 맛을 소개한다.
+                            </p><ul class="color">
+                            <li class="location">
+                                부산광역시 동구 중앙대로 210(동백상회)
+                            </li>
+                            <li class="tel">
+                                0507-1482-1328 
+                            </li>
+                            <li class="price">
+                                부묵이 샤워볼 1만원 미만
+                            </li>
+                            <li class="cart">
+                                해운대 선물가게, 여가거가 광안리
+                            </li>
+                            </ul></td>
+                        </tr>
+                        
+                        <tr><td>
+                            <img src="/public/internal/musthaveitem/img/detail/pus/tb_img14.jpg" alt="..."></td><td><div class="h3 color">
+                                부산 어묵
+                            </div><p>
+                                부산에는 어묵 맛집이 참 많다. 그중에서 유명한 어묵집은 ’고래사어묵‘과 ’삼진어묵‘이 꼽힌다. 부산의 어묵은 생선 함량이 높아 쫄깃하면서도 부드러운 맛을 느낄 수 있다. 매장을 방문해 먹고 싶은 어묵을 골라 먹어보길 추천한다. 마음에 드는 어묵은 선물용으로 골라 포장하면 된다.
+                            </p><ul class="color">
+                            <li class="location">
+                                부산광역시 영도구 태종로99번길 36(삼진어묵 본점)
+                            </li>
+                            <li class="tel">
+                                051-412-5468
+                            </li>
+                            <li class="price">
+                                삼진어묵 어묵고로케 1만원 미만, 1953세트(1호) 2만원 대
+                            </li>
+                            <li class="cart">
+                                부산 내 삼진어묵, 고래사어묵 매장들
+                            </li>
+                            </ul></td>
+                        </tr>
+                        
+                    </table></div>
+
+                    <!-- comp : contents -->
+                    <div class="division fullSize"><div class="left">
+                        <img src="/public/internal/musthaveitem/img/detail/pus/img12.jpg" alt="..."></div><div class="right bgFill"><div class="h2">
+                            부산 수제 맥주
+                        </div><p>
+                            ’한국 최고 맥주‘로 인정받은 부산 맥주는 수제 맥주 페스티벌이 열릴 정도로 수제 맥주의 중심지다. 부산 곳곳에는 수제 맥주 브루어리가 있다. 갈매기 브루잉, 와일드 웨이브 브루잉, 고릴라 브루잉 등 다양한 브루어리가 저마다 경험과 노하우를 맥주에 담고, 펍 분위기를 선사한다.
+                        </p></div></div><div class="tableWrap fullSize"><table><colgroup><col width="380px"><col width="840px"></colgroup>
+
+                        <tr><td>
+                            <img src="/public/internal/musthaveitem/img/detail/pus/tb_img15.jpg" alt="..."></td><td><div class="h3 color">
+                                부산수제맥주 6종
+                            </div><p>
+                                ’부산수제맥주‘는 부산과 인접한 도시 중 하나인 양산의 역사 깊은 브루어리에서 생산된 제품이다. 맥주 순수령을 고집하는데, 이는 물, 홉, 몰트, 효모 외 첨가물을 넣지 않는 것을 뜻한다. 6종으로 페일에일, IPA, 위트비어, 다크에일, 블랙 라거 등으로 구성되어 있다. 맥주 캔이 알록달록하고, 취향에 따라 선택할 수 있다. 풍미가 가벼운 페일 라거부터 블랙 라거, 자갈치 휘트비어, 해운대 다크에일까지, 각각 특색이 있어 다채로운 맛을 즐길 수 있다.
+                            </p><ul class="color">
+                            <li class="location">
+                                경상남도 양산시 어실로 485(부산맥주)
+                            </li>
+                            <li class="tel">
+                                0507-1393-4344   
+                            </li>
+                            <li class="web">
+                                www.instagram.com/busanbeer_brewing
+                            </li>
+                            <li class="price">
+                                6종 2만원 대
+                            </li>
+                            <li class="noti">
+                                11월 각종 브루어리 투어
+                            </li>
+                            </ul></td>
+                        </tr>
+                        
+                    </table></div>
+
+                    <!-- comp : contents -->
+                    <div class="division fullSize"><div class="left">
+                        <img src="/public/internal/musthaveitem/img/detail/pus/img13.jpg" alt="..."></div><div class="right bgFill"><div class="h2">
+                            부산 바다 굿즈
+                        </div><p>
+                            부산은 바다와 산으로 둘러싸인 아름다운 도시다. 그중에서도 부산 바다는 즐길 거리가 많은 액티비티의 천국이다. 부산 바다는 관광객에게 인기 있는 휴양지이기도 하다. 해운대해수욕장, 광안리해수욕장, 송정해수욕장 등은 부산에서 가장 유명한 해수욕장으로 꼭 들러보길 추천한다. 수영, 스노클링, 스쿠버 다이빙, 요트, 낚시 등 다양한 해양 스포츠를 즐기는 재미 또한 놓칠 수 없다. 부산 바다에서 신나는 시간을 즐겼다면 이제 기념이 될만한 아이템으로 추억을 더욱 풍성하게 간직해보자.
+                        </p></div></div><div class="tableWrap fullSize"><table><colgroup><col width="380px"><col width="840px"></colgroup>
+
+                        <tr><td>
+                            <img src="/public/internal/musthaveitem/img/detail/pus/tb_img16.jpg" alt="..."></td><td><div class="h3 color">
+                                조개먹은 고래술잔
+                            </div><p>
+                                부산바다의 조개 모형이 고래 술잔 안에 담겨있다. 술잔에 고래 모양이 새져겨 있고, 부산 바다를 떠올릴 수 있다. 고래는 가족과 행운을 상징하며, 바다 생물을 도와주는 바다의 수호천사다. 행운의 의미를 담은 술잔을 선물하면 어떨까?
+                            </p><ul class="color">
+                            <li class="location">
+                                부산광역시 동구 중앙대로 210(동백상회)
+                            </li>
+                            <li class="tel">
+                                0507-1482-1328 
+                            </li>
+                            <li class="price">
+                                1만원 미만 
+                            </li>
+                            <li class="cart">
+                                해운대 선물가게, 여가거가 광안리
+                            </li>
+                            </ul></td>
+                        </tr>
+                        
+                        <tr><td>
+                            <img src="/public/internal/musthaveitem/img/detail/pus/tb_img17.jpg" alt="..."></td><td><div class="h3 color">
+                                부산 바다 키링
+                            </div><p>
+                               부산 바다를 담은 레진키링이다. 반짝이는 바다 보석으로 물결과 색깔이 담긴 작품으로, 부산 그대로의 감성을 고스란히 느낄 수 있다.
+                            </p><ul class="color">
+                            <li class="location">
+                                부산광역시 동구 중앙대로 210(동백상회)
+                            </li>
+                            <li class="tel">
+                                0507-1482-1328 
+                            </li>
+                            <li class="price">
+                                1만원 대 
+                            </li>
+                            <li class="cart">
+                                해운대 선물가게, 여가거가 광안리
+                            </li>
+                            </ul></td>
+                        </tr>
+                        
+                        <tr><td>
+                            <img src="/public/internal/musthaveitem/img/detail/pus/tb_img18.jpg" alt="..."></td><td><div class="h3 color">
+                                부산 바다 엽서
+                            </div><p>
+                                부산 바다가 담겨있는 엽서들 중 가장 마음에 드는 것을 골라보기를 추천한다. 사진을 보면 바다의 촉감, 소리와 추억을 상상할 수 있다. 일상의 휴식을 주는 부산 바다를 떠올리면서 여행지의 추억에 잠길 수 있다. 불가사리와 해변, 모래까지 바다를 담아놓은 키링은 선물로 아주 좋은 아이템이다.
+                            </p><ul class="color">
+                            <li class="location">
+                                부산광역시 동구 중앙대로 210(동백상회)
+                            </li>
+                            <li class="tel">
+                                0507-1482-1328 
+                            </li>
+                            <li class="price">
+                                사진엽서 1만원 미만
+                            </li>
+                            <li class="cart">
+                                해운대 선물가게, 여가거가 광안리
+                            </li>
+                            </ul></td>
+                        </tr>
+                        
+                    </table></div>
+                </section>
+            </contents>
+            <!-- evoke : 템플릿 끝 -->
+        </div>
+    </div>
+
+</body>
+</html>
